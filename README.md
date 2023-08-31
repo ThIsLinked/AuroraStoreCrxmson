@@ -9,7 +9,7 @@ A custom moddify-project the original [Aurora Store source project](https://gitl
 
 ###### @ 2023 [ThIsLinked](https://t.me/thislinked) / [dhwh](https://4pda.to/forum/index.php?showuser=9870529)
 
-# Main changelog from original
+# Main changes from original
 > **Note:**
 ```
 Android Studio mangles the code of some resources at compiling time.
