@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Common Colors-->
+    <color name="colorAccent">@android:color/system_accent1_600</color>
+    <color name="colorOnPrimary">@android:color/system_accent1_900</color>
+</resources>

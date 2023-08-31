@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Aurora Store
+  ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
+  ~
+  ~  Aurora Store is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 2 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  Aurora Store is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+-->
+<resources>
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">?android:colorBackground</item>
+        <item name="android:statusBarColor">?colorPrimaryDark</item>
+        <item name="android:navigationBarColor">?colorPrimaryDark</item>
+        <item name="scrim">@color/colorScrim</item>
+        <item name="scrimAccent">@color/colorScrimAccent</item>
+        <item name="scrimAlt">@color/colorScrimAlt</item>
+        <item name="scrimBlack">@color/colorScrimBlack</item>
+        <item name="colorShimmer">@color/colorShimmer</item>
+        <item name="colorStroke">@color/colorStroke</item>
+        <item name="chipStyle">@style/Widget.Aurora.Chip</item>
+        <item name="preferenceTheme">@style/AppTheme.PreferenceThemeOverlay</item>
+    </style>
+
+    <style name="AppTheme.Light" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorWhite</item>
+        <item name="android:windowBackground">@color/colorWhite</item>
+        <item name="android:colorBackground">@color/colorWhite</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarColor">@color/colorWhite</item>
+        <item name="scrim">@color/colorScrim</item>
+        <item name="scrimAccent">@color/colorScrimAccent</item>
+        <item name="scrimAlt">@color/colorScrimAlt</item>
+        <item name="scrimBlack">@color/colorScrimBlack</item>
+        <item name="colorShimmer">@color/colorShimmer</item>
+        <item name="colorStroke">@color/colorStroke</item>
+        <item name="chipStyle">@style/Widget.Aurora.Chip</item>
+        <item name="preferenceTheme">@style/AppTheme.PreferenceThemeOverlay</item>
+    </style>
+
+    <style name="AppTheme.Dark" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorDarkPrimaryDark</item>
+        <item name="colorBackgroundFloating">@color/colorDarkBackground</item>
+        <item name="android:windowBackground">@color/colorDarkWindowBackground</item>
+        <item name="android:colorBackground">@color/colorDarkBackground</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:navigationBarColor">@color/colorDarkPrimaryDark</item>
+        <item name="scrim">@color/colorScrim</item>
+        <item name="scrimAccent">@color/colorScrimAccent</item>
+        <item name="scrimAlt">@color/colorScrimAlt</item>
+        <item name="scrimBlack">@color/colorScrimBlack</item>
+        <item name="colorShimmer">@color/colorShimmerDark</item>
+        <item name="colorStroke">@color/colorStrokeDark</item>
+        <item name="chipStyle">@style/Widget.Aurora.Chip</item>
+        <item name="preferenceTheme">@style/AppTheme.PreferenceThemeOverlay</item>
+    </style>
+
+    <style name="AppTheme.DarkX" parent="AppTheme.Dark">
+        <item name="colorPrimaryDark">@color/colorDarkXPrimaryDark</item>
+        <item name="colorBackgroundFloating">@color/colorDarkXBackground</item>
+        <item name="android:windowBackground">@color/colorDarkXWindowBackground</item>
+        <item name="android:colorBackground">@color/colorDarkXBackground</item>
+        <item name="android:navigationBarColor">@color/colorDarkXPrimaryDark</item>
+        <item name="colorShimmer">@color/colorShimmerDarkX</item>
+        <item name="colorStroke">@color/colorStrokeDarkX</item>
+        <item name="preferenceTheme">@style/AppTheme.PreferenceThemeOverlay</item>
+    </style>
+
+    <style name="AppTheme.Darkord" parent="AppTheme.Dark">
+        <item name="colorPrimaryDark">@color/colorDarkordPrimaryDark</item>
+        <item name="colorBackgroundFloating">@color/colorDarkordBackground</item>
+        <item name="android:windowBackground">@color/colorDarkordWindowBackground</item>
+        <item name="android:colorBackground">@color/colorDarkordBackground</item>
+        <item name="android:navigationBarColor">@color/colorDarkordPrimaryDark</item>
+        <item name="colorShimmer">@color/colorShimmerDarkord</item>
+        <item name="colorStroke">@color/colorStrokeDarkord</item>
+        <item name="preferenceTheme">@style/AppTheme.PreferenceThemeOverlay</item>
+    </style>
+
+    <style name="AppTheme.Black" parent="AppTheme.Dark">
+        <item name="colorPrimaryDark">@color/colorBlack</item>
+        <item name="android:windowBackground">@color/colorBlack</item>
+        <item name="android:colorBackground">@color/colorBlack</item>
+        <item name="colorBackgroundFloating">@color/colorBlack</item>
+        <item name="android:navigationBarColor">@color/colorBlack</item>
+        <item name="colorShimmer">@color/colorShimmerBlack</item>
+        <item name="colorStroke">@color/colorStrokeBlack</item>
+        <item name="preferenceTheme">@style/AppTheme.PreferenceThemeOverlay</item>
+    </style>
+
+    <style name="AppTheme.PreferenceThemeOverlay" parent="@style/PreferenceThemeOverlay">
+        <item name="android:layout">@layout/fragment_setting</item>
+        <item name="switchPreferenceCompatStyle">@style/AppTheme.SwitchPreference</item>
+    </style>
+
+    <style name="AppTheme.SwitchPreference" parent="@style/Preference.SwitchPreferenceCompat.Material">
+        <item name="widgetLayout">@layout/preference_material_switch</item>
+    </style>
+
+    <style name="AppTheme.Dialog" parent="Theme.Material3.DayNight.BottomSheetDialog" />
+
+    <style name="Accent_0">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+    </style>
+
+    <style name="Accent_1">
+        <item name="colorAccent">@color/colorAccent_1</item>
+        <item name="colorPrimary">@color/colorPrimary_1</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_1</item>
+    </style>
+
+    <style name="Accent_2">
+        <item name="colorAccent">@color/colorAccent_2</item>
+        <item name="colorPrimary">@color/colorPrimary_2</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_2</item>
+    </style>
+
+    <style name="Accent_3">
+        <item name="colorAccent">@color/colorAccent_3</item>
+        <item name="colorPrimary">@color/colorPrimary_3</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_3</item>
+    </style>
+
+    <style name="Accent_4">
+        <item name="colorAccent">@color/colorAccent_4</item>
+        <item name="colorPrimary">@color/colorPrimary_4</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_4</item>
+    </style>
+
+    <style name="Accent_5">
+        <item name="colorAccent">@color/colorAccent_5</item>
+        <item name="colorPrimary">@color/colorPrimary_5</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_5</item>
+    </style>
+
+    <style name="Accent_6">
+        <item name="colorAccent">@color/colorAccent_6</item>
+        <item name="colorPrimary">@color/colorPrimary_6</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_6</item>
+    </style>
+
+    <style name="Accent_7">
+        <item name="colorAccent">@color/colorAccent_7</item>
+        <item name="colorPrimary">@color/colorPrimary_7</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_7</item>
+    </style>
+
+    <style name="Accent_8">
+        <item name="colorAccent">@color/colorAccent_8</item>
+        <item name="colorPrimary">@color/colorPrimary_8</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_8</item>
+    </style>
+
+    <style name="Accent_9">
+        <item name="colorAccent">@color/colorAccent_9</item>
+        <item name="colorPrimary">@color/colorPrimary_9</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_9</item>
+    </style>
+
+    <style name="Accent_10">
+        <item name="colorAccent">@color/colorAccent_10</item>
+        <item name="colorPrimary">@color/colorPrimary_10</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_10</item>
+    </style>
+
+    <style name="Accent_11">
+        <item name="colorAccent">@color/colorAccent_11</item>
+        <item name="colorPrimary">@color/colorPrimary_11</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_11</item>
+    </style>
+
+    <style name="Accent_12">
+        <item name="colorAccent">@color/colorAccent_12</item>
+        <item name="colorPrimary">@color/colorPrimary_12</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_12</item>
+    </style>
+
+    <style name="Accent_13">
+        <item name="colorAccent">@color/colorAccent_13</item>
+        <item name="colorPrimary">@color/colorPrimary_13</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_13</item>
+    </style>
+
+    <style name="Accent_14">
+        <item name="colorAccent">@color/colorAccent_14</item>
+        <item name="colorPrimary">@color/colorPrimary_14</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_14</item>
+    </style>
+
+    <style name="Accent_15">
+        <item name="colorAccent">@color/colorAccent_15</item>
+        <item name="colorPrimary">@color/colorPrimary_15</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_15</item>
+    </style>
+
+    <style name="Accent_16">
+        <item name="colorAccent">@color/colorAccent_16</item>
+        <item name="colorPrimary">@color/colorPrimary_16</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_16</item>
+    </style>
+
+    <style name="Accent_17">
+        <item name="colorAccent">@color/colorAccent_17</item>
+        <item name="colorPrimary">@color/colorPrimary_17</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_17</item>
+    </style>
+
+    <style name="Accent_18">
+        <item name="colorAccent">@color/colorAccent_18</item>
+        <item name="colorPrimary">@color/colorPrimary_18</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_18</item>
+    </style>
+
+    <!-- Title Styles -->
+    <style name="AuroraTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">12sp</item>
+        <item name="autoSizeStepGranularity">1sp</item>
+        <item name="autoSizePresetSizes">@array/auto_size_text_sizes</item>
+    </style>
+
+    <style name="AuroraTextStyle.Rating" parent="AuroraTextStyle">
+        <item name="autoSizeMinTextSize">24sp</item>
+        <item name="autoSizeStepGranularity">1sp</item>
+        <item name="autoSizePresetSizes">@array/auto_size_text_sizes_large</item>
+        <item name="android:textAppearance">@style/TextAppearance.Aurora.Title.Rating</item>
+    </style>
+
+    <style name="AuroraTextStyle.Title" parent="AuroraTextStyle">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="autoSizeMaxTextSize">20sp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Aurora.Title</item>
+    </style>
+
+    <style name="AuroraTextStyle.Title.Primary" parent="AuroraTextStyle.Title">
+        <item name="android:textAppearance">@style/TextAppearance.Aurora.Title.Primary</item>
+    </style>
+
+    <style name="TextAppearance.Aurora.Title" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Aurora.Title.Rating" parent="TextAppearance.Aurora.Title.Primary">
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <style name="TextAppearance.Aurora.Title.Primary" parent="TextAppearance.Aurora.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <!--  Subtitle Styles  -->
+    <style name="AuroraTextStyle.Subtitle" parent="AuroraTextStyle">
+        <item name="autoSizeMaxTextSize">16sp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Aurora.SubTitle</item>
+    </style>
+
+    <style name="AuroraTextStyle.Subtitle.Alt" parent="AuroraTextStyle">
+        <item name="autoSizeMaxTextSize">18sp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Aurora.SubTitle.Alt</item>
+    </style>
+
+    <style name="AuroraTextStyle.Subtitle.Secondary" parent="AuroraTextStyle">
+        <item name="autoSizeMaxTextSize">16sp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Aurora.Line1</item>
+    </style>
+
+    <style name="TextAppearance.Aurora.SubTitle" parent="TextAppearance.Aurora.Title">
+        <item name="android:letterSpacing">0.025</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.Aurora.SubTitle.Alt" parent="TextAppearance.Aurora.Title">
+        <item name="android:letterSpacing">0.005</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- Line Styles -->
+    <style name="AuroraTextStyle.Line1" parent="AuroraTextStyle">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="autoSizeMaxTextSize">14sp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Aurora.Line1</item>
+    </style>
+
+    <style name="AuroraTextStyle.Line2" parent="AuroraTextStyle.Line1">
+        <item name="autoSizeMaxTextSize">12sp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Aurora.Line2</item>
+    </style>
+
+    <style name="AuroraTextStyle.Line3" parent="AuroraTextStyle.Line1">
+        <item name="autoSizeMaxTextSize">10sp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Aurora.Line3</item>
+    </style>
+
+    <style name="TextAppearance.Aurora.Line1" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Aurora.Line2" parent="TextAppearance.Aurora.Line1">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="TextAppearance.Aurora.Line3" parent="TextAppearance.Aurora.Line2">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">?android:attr/textColorTertiary</item>
+    </style>
+
+    <style name="TextAppearance.Aurora.Tab" parent="Widget.AppCompat.Light.ActionBar.TabText">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.Aurora.Tab.Title" parent="TextAppearance.Aurora.Tab">
+        <item name="android:letterSpacing">0.075</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.Aurora.Chip" parent="TextAppearance.Aurora.SubTitle">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Chips -->
+    <style name="Widget.Aurora.Chip.Info" parent="@style/Widget.MaterialComponents.Chip.Action">
+        <item name="iconStartPadding">2dp</item>
+        <item name="enforceTextAppearance">true</item>
+        <item name="rippleColor">@color/colorTransparent</item>
+        <item name="chipEndPadding">@dimen/margin_xxsmall</item>
+        <item name="chipStartPadding">@dimen/margin_xxsmall</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Aurora.Chip</item>
+        <item name="chipBackgroundColor">?android:colorBackground</item>
+    </style>
+
+    <style name="Widget.Aurora.Chip.Review" parent="@style/Widget.MaterialComponents.Chip.Filter">
+        <item name="iconStartPadding">2dp</item>
+        <item name="enforceTextAppearance">true</item>
+        <item name="rippleColor">@color/colorTransparent</item>
+        <item name="chipBackgroundColor">?android:colorBackground</item>
+        <item name="chipEndPadding">@dimen/margin_xxsmall</item>
+        <item name="chipStartPadding">@dimen/margin_xxsmall</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipStrokeColor">?android:attr/strokeColor</item>
+        <item name="android:textAppearance">@style/TextAppearance.Aurora.Chip</item>
+    </style>
+
+    <style name="Widget.Aurora.Chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@android:color/transparent</item>
+        <item name="chipStrokeColor">@color/chip_stroke_selector</item>
+        <item name="android:textColor">@color/chip_txt_selector</item>
+        <item name="chipSurfaceColor">@color/chip_surface_selector</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipStartPadding">@dimen/margin_normal</item>
+        <item name="chipEndPadding">@dimen/margin_normal</item>
+        <item name="android:textAppearance">@style/TextAppearance.Aurora.Chip</item>
+    </style>
+
+    <style name="ViewStyle.Aurora.Chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@android:color/transparent</item>
+        <item name="chipStrokeColor">@color/chip_stroke_selector</item>
+        <item name="android:textColor">@color/chip_txt_selector</item>
+        <item name="chipSurfaceColor">@color/chip_surface_selector</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipStartPadding">@dimen/padding_normal</item>
+        <item name="chipEndPadding">@dimen/padding_normal</item>
+        <item name="android:textAppearance">@style/TextAppearance.Aurora.Chip</item>
+    </style>
+
+    <style name="AuroraProgressView">
+        <item name="minWidth">32dp</item>
+        <item name="maxWidth">46dp</item>
+        <item name="minHeight">36dp</item>
+        <item name="maxHeight">36dp</item>
+        <item name="indicatorName">BallPulseIndicator</item>
+    </style>
+
+    <style name="AuroraProgressView.Large">
+        <item name="minWidth">48dp</item>
+        <item name="maxWidth">48dp</item>
+        <item name="minHeight">56dp</item>
+        <item name="maxHeight">56dp</item>
+        <item name="indicatorName">BallPulseIndicator</item>
+    </style>
+
+    <style name="AuroraProgressView.Small">
+        <item name="minWidth">24dp</item>
+        <item name="maxWidth">24dp</item>
+        <item name="minHeight">24dp</item>
+        <item name="maxHeight">24dp</item>
+        <item name="indicatorName">BallPulseIndicator</item>
+    </style>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Content created by ThIsLinked / dhwh (unless otherwise noted) under licensed GPL v2.0 and is strictly prohibited for purposes of plagiarism.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108.0dip"
+    android:height="108.0dip"
+    android:viewportWidth="108.0"
+    android:viewportHeight="108.0">
+    <path
+        android:fillColor="@color/ic_launcher_background"
+        android:pathData="M0 0H108V108H0V0Z" />
+</vector>

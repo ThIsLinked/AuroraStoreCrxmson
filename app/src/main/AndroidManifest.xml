@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Aurora Store
+  ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
+  ~  Copyright (C) 2022, The Calyx Institute
+  ~  Copyright (C) 2023, grrfe <grrfe@420blaze.it>
+  ~
+  ~  Aurora Store is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 2 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  Aurora Store is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:installLocation="auto">
+
+    <uses-sdk tools:overrideLibrary="rikka.shizuku.api, rikka.shizuku.provider, rikka.shizuku.shared, rikka.shizuku.aidl" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.UPDATE_PACKAGES_WITHOUT_USER_ACTION" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- root-access -->
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
+    <uses-permission android:name="eu.chainfire.supersu.ACCESS_SUPERUSER" />
+    <uses-permission android:name="com.topjohnwu.magisk.ACCESS_SUPERUSER" />
+
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.gamepad"
+        android:required="false" />
+
+    <application
+        android:banner="@drawable/ic_banner"
+        android:icon="@drawable/ic_launcher"
+        android:roundIcon="@drawable/ic_launcher_round"
+
+        android:extractNativeLibs="false"
+        android:networkSecurityConfig="@xml/network_security_config"
+
+        android:name=".AuroraApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/backup_rules"
+        android:hardwareAccelerated="true"
+        android:fullBackupContent="@xml/backup_rules_legacy"
+        android:killAfterRestore="false"
+        android:label="@string/app_label"
+        android:requestLegacyExternalStorage="true"
+        android:restoreAnyVersion="true"
+        android:restoreNeedsApplication="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_label_launcher"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <nav-graph android:value="@navigation/mobile_navigation" />
+        </activity>
+
+        <activity
+            android:name="ru.maximoff.aurora.store.DeepLink"
+            android:exported="true"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="details"
+                    android:scheme="market" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="market.android.com" />
+                <data android:path="/store/apps/details" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="play.google.com" />
+                <data android:path="/store/apps/details" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="play.google.com" />
+                <data android:path="/store/apps/dev" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".data.service.NotificationService" />
+        <service android:name=".data.installer.InstallerService" />
+        <service android:name=".data.service.UpdateService" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
+        </provider>
+
+        <provider
+            android:name="rikka.shizuku.ShizukuProvider"
+            android:authorities="${applicationId}.shizuku"
+            android:enabled="true"
+            android:exported="true"
+            android:multiprocess="false"
+            android:permission="android.permission.INTERACT_ACROSS_USERS_FULL"
+            tools:ignore="MissingClass" />
+
+        <receiver android:name=".data.receiver.DownloadResumeReceiver" />
+        <receiver android:name=".data.receiver.DownloadPauseReceiver" />
+        <receiver android:name=".data.receiver.DownloadCancelReceiver" />
+    </application>
+</manifest>
