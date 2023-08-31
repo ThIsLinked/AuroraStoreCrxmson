@@ -31,7 +31,7 @@ exactly as they were supposed to in the specification.
 * Changed the background interval check for apps updates - from 30 hours to 24 hours;
 * Removed automatic update of Aurora itself;
 
-> ### Binary APK only:
+> ### Only in apk's published by me:
 > * Removal of obfuscation and/or minification;
 > * Removal of Logcat calls;
 > * Cleanup Smali from garbage, included debugging-line's;
