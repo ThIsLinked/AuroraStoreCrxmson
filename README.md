@@ -43,38 +43,38 @@ exactly as they were supposed to in the specification.
 > <details>
 > <summary>Sign dhwh hash</summary>
 >
-> *HEX/DEC:*
-> *0x97d83e3e (-1747435970)*
+> **HEX/DEC:**
+> 0x97d83e3e (-1747435970)
 >
-> *CRC32/DEC:*
-> *0x6a8059f7 (1786796535)*
+> **CRC32/DEC:**
+> 0x6a8059f7 (1786796535)
 >
-> *MD5:*
-> *050284900ab95f8de385b8552951cbcc*
+> **MD5:**
+> 050284900ab95f8de385b8552951cbcc
 >
-> *SHA1:*
-> *6e6b12dbb39099654d1043826e7f9480eee29b55*
+> **SHA1:**
+> 6e6b12dbb39099654d1043826e7f9480eee29b55
 >
-> *SHA256:*
-> *b21ac037532ea9ae47e98afacb9756fb116f0b11c51860c8115d29512a69eb6c*
+> **SHA256:**
+> b21ac037532ea9ae47e98afacb9756fb116f0b11c51860c8115d29512a69eb6c
 > </details>
 > <details>
 > <summary>Sign ThIsLinked hash</summary>
 >
-> *HEX/DEC:*
-> *0x6264f009 (1650782217)*
+> **HEX/DEC:**
+> 0x6264f009 (1650782217)
 >
-> *CRC32/DEC:*
-> *0xe2e95680 (-488024448)*
+> **CRC32/DEC:**
+> 0xe2e95680 (-488024448)
 >
-> *MD5:*
-> *21247d96e07877efc1867081d6697a56*
+> **MD5:**
+> 21247d96e07877efc1867081d6697a56
 >
-> *SHA1:*
-> *052e470e98d916ad731fca81c38a80b5309eea0e*
+> **SHA1:**
+> 052e470e98d916ad731fca81c38a80b5309eea0e
 >
-> *SHA256:*
-> *52d2e593e349bfff9b371228604579d30028719fe13e97d5ca0610d92ea6c948*
+> **SHA256:**
+> 52d2e593e349bfff9b371228604579d30028719fe13e97d5ca0610d92ea6c948
 > </details>
 
 # Screenshots
