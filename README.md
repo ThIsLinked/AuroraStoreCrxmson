@@ -14,7 +14,7 @@ A custom moddify-project the original [Aurora Store source project](https://gitl
 ```
 Android Studio mangles the code of some resources at compiling time.
 Use the source code only for research or custom variants. The apk's,
-posted by me, do not have such a defect,since I corrected them from
+posted by me, do not have such a defect, since I corrected them from
 such a misunderstanding. Use them in case of pure use – they look
 exactly as they were supposed to in the specification.
 ```
