@@ -23,7 +23,7 @@ exactly as they were supposed to in the specification.
 * On the application page, some elements are now available for highlighting with the cursor (so that the text can be copied to the clipboard);
 * Redesigned and/or rearranged sections and items in settings;
 * Restoring full functionality of [Deep Links](https://developer.android.com/training/app-links/deep-linking) (fix [#7082](https://4pda.to/forum/index.php?showtopic=887569&view=findpost&p=124420039));
-* Added Play Store version selection ([merge !193](https://gitlab.com/AuroraOSS/AuroraStore/-/merge_requests/193));
+* Added Play Store version selection in settings ([merge !193](https://gitlab.com/AuroraOSS/AuroraStore/-/merge_requests/193));
 * Added mono-profiles: xxhdpi, API 27, all languages and architectures - ARMv7, ARM64-v8, x86 and x64. *The original source of the original configuration – [#2896](https://4pda.to/forum/index.php?showtopic=887569&view=findpost&p=106493433);*
 * Redesigned icons in about + transferred array from Smali to ARSC;
 * Redesigned launcher icon: VectorDrawable rendering only, API 26 and above – adaptive, API 33 and above – monochrome (optiomal);
