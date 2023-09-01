@@ -86,5 +86,6 @@ Developed for non-commercial purposes primarily for final personal use. Allowed 
 from yourself face. Use for plagiarism purposes is prohibited. Content created by the community
 that contributed to this project, as well as content freely available on global web used here,
 de jure inherits the original license, de facto unlicensed still protected by copyrighted.
-*If you use someone else's material in your work, do not forget who exactly created this material...*
+
+If you use someone else's material in your work, do not forget who exactly created this material...
 ```
