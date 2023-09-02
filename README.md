@@ -1,9 +1,9 @@
 <img align="center" src="LogoProject.webp"  alt="Aurora Store Crxmson" />
 
-A custom moddify-project the original [Aurora Store source project](https://gitlab.com/AuroraOSS/AuroraStore). Developable for non-commercial purposes for end-personal use.
+A moddify-project/fork the original [Aurora Store source project](https://gitlab.com/AuroraOSS/AuroraStore). Developable for non-commercial purposes for end-personal use.
 
-* [Topic Aurora Store on the 4PDA forum](https://4pda.to/forum/index.php?showtopic=887569)
 * [Moddification post on the 4PDA forum](https://4pda.to/forum/index.php?showtopic=887569&view=findpost&p=116441910)
+* [Topic Aurora Store on the 4PDA forum](https://4pda.to/forum/index.php?showtopic=887569)
 
 *This project is intended for the CIS territory. There is no localizations for other regions. Except for English USA - it acts as default localization.*
 
