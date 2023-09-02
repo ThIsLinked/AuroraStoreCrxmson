@@ -18,7 +18,6 @@
   ~
 -->
 <resources>
-
     <style name="AuroraTextStyle" parent="Widget.AppCompat.TextView">
         <item name="android:autoSizeTextType">uniform</item>
         <item name="android:autoSizeMinTextSize">12sp</item>
