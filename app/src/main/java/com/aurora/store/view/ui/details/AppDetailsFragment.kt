@@ -43,13 +43,14 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import coil.load
+import coil.transform.RoundedCornersTransformation
 import com.airbnb.epoxy.EpoxyRecyclerView
 import com.aurora.Constants
 import com.aurora.extensions.browse
 import com.aurora.extensions.getString
 import com.aurora.extensions.hide
 import com.aurora.extensions.isRAndAbove
-import com.aurora.extensions.load
 import com.aurora.extensions.runOnUiThread
 import com.aurora.extensions.share
 import com.aurora.extensions.show
@@ -92,7 +93,6 @@ import com.aurora.store.view.epoxy.views.details.ScreenshotViewModel_
 import com.aurora.store.view.ui.commons.BaseFragment
 import com.aurora.store.viewmodel.details.AppDetailsViewModel
 import com.aurora.store.viewmodel.details.DetailsClusterViewModel
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetBehavior.BottomSheetCallback
 import com.tonyodev.fetch2.AbstractFetchGroupListener
@@ -501,7 +501,7 @@ class AppDetailsFragment : BaseFragment(R.layout.fragment_details) {
         binding.layoutDetailsApp.apply {
             imgIcon.load(app.iconArtwork.url) {
                 placeholder(R.drawable.bg_placeholder)
-                transform(RoundedCorners(32))
+                transformations(RoundedCornersTransformation(32F))
             }
 
             txtLine1.text = app.displayName

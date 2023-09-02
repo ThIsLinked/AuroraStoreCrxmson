@@ -25,16 +25,16 @@ import android.os.Build
 import java.util.*
 
 
-fun isMAndAbove(): Boolean {
-    return Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
-}
-
 fun isNAndAbove(): Boolean {
     return Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
 }
 
 fun isOAndAbove(): Boolean {
     return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
+}
+
+fun isOMR1AndAbove(): Boolean {
+    return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1
 }
 
 fun isPAndAbove(): Boolean {

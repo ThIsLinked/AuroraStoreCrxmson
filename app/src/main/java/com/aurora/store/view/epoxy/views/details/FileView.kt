@@ -63,10 +63,5 @@ class FileView : RelativeLayout {
     fun file(file: File) {
         B.line1.text = file.name
         B.line2.text = CommonUtil.addSiPrefix(file.size)
-        setTextIsSelectable(true)
-    }
-
-    private fun setTextIsSelectable(b: Boolean) {
-
     }
 }

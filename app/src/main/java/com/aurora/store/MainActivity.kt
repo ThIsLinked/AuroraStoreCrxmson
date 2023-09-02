@@ -36,6 +36,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.ColorUtils
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.FloatingWindow
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -44,7 +45,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.aurora.Constants
 import com.aurora.extensions.accentColor
-import com.aurora.extensions.applyTheme
+import com.aurora.extensions.applyThemeAccent
 import com.aurora.extensions.isRAndAbove
 import com.aurora.extensions.toast
 import com.aurora.gplayapi.data.models.AuthData
@@ -83,9 +84,7 @@ class MainActivity : AppCompatActivity() {
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val themeId = Preferences.getInteger(this, Preferences.PREFERENCE_THEME_TYPE)
-        val accentId = Preferences.getInteger(this, Preferences.PREFERENCE_THEME_ACCENT)
-        applyTheme(themeId, accentId)
+        applyThemeAccent()
         super.onCreate(savedInstanceState)
 
         B = ActivityMainBinding.inflate(layoutInflater)
@@ -171,19 +170,21 @@ class MainActivity : AppCompatActivity() {
 
         // Handle views on fragments
         navController.addOnDestinationChangedListener { _, navDestination, _ ->
-            when (navDestination.id) {
-                in topLevelFrags -> {
-                    B.searchFab.visibility = View.VISIBLE
-                    B.navView.visibility = View.VISIBLE
-                    B.toolbar.visibility = View.VISIBLE
-                }
+            if (navDestination !is FloatingWindow) {
+                when (navDestination.id) {
+                    in topLevelFrags -> {
+                        B.searchFab.visibility = View.VISIBLE
+                        B.navView.visibility = View.VISIBLE
+                        B.toolbar.visibility = View.VISIBLE
+                    }
 
-                R.id.appDetailsFragment -> {
-                    hideTopLevelOnlyViews()
-                }
+                    R.id.appDetailsFragment -> {
+                        hideTopLevelOnlyViews()
+                    }
 
-                else -> {
-                    hideTopLevelOnlyViews()
+                    else -> {
+                        hideTopLevelOnlyViews()
+                    }
                 }
             }
         }

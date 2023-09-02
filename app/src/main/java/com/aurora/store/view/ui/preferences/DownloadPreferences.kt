@@ -28,9 +28,7 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreferenceCompat
 import com.aurora.extensions.isOAndAbove
-import com.aurora.extensions.runOnUiThread
 import com.aurora.extensions.showDialog
-import com.aurora.extensions.toast
 import com.aurora.store.BuildConfig
 import com.aurora.store.R
 import com.aurora.store.data.installer.AMInstaller
@@ -38,7 +36,6 @@ import com.aurora.store.data.installer.AppInstaller
 import com.aurora.store.data.installer.ServiceInstaller
 import com.aurora.store.data.installer.ShizukuInstaller
 import com.aurora.store.data.work.UpdateWorker
-import com.aurora.store.util.CommonUtil
 import com.aurora.store.util.Log
 import com.aurora.store.util.PackageUtil
 import com.aurora.store.util.Preferences

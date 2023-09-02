@@ -23,11 +23,9 @@ import android.content.Context
 import android.util.AttributeSet
 import android.widget.RelativeLayout
 import androidx.core.text.HtmlCompat
-import com.airbnb.epoxy.CallbackProp
+import coil.load
 import com.airbnb.epoxy.ModelProp
 import com.airbnb.epoxy.ModelView
-import com.airbnb.epoxy.OnViewRecycled
-import com.aurora.extensions.load
 import com.aurora.gplayapi.data.models.details.Badge
 import com.aurora.store.R
 import com.aurora.store.databinding.ViewMoreBadgeBinding
@@ -85,14 +83,5 @@ class MoreBadgeView : RelativeLayout {
                 placeholder(R.drawable.ic_arrow_right)
             }
         }
-    }
-
-    @CallbackProp
-    fun click(onClickListener: OnClickListener?) {
-
-    }
-
-    @OnViewRecycled
-    fun clear() {
     }
 }
