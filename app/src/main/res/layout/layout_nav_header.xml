@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<?xml version="1.0" encoding="utf-8"?>
+<!--
   ~ Aurora Store
   ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
   ~
@@ -15,8 +16,7 @@
   ~  You should have received a copy of the GNU General Public License
   ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
   ~
-  -->
-
+-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_header_layout"
@@ -33,12 +33,31 @@
         android:layout_height="@dimen/icon_size_large"
         app:srcCompat="@drawable/ic_logo" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_name"
-        style="@style/AuroraTextStyle.Subtitle"
+    <RelativeLayout
+        android:id="@+id/nav_header_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/img"
         android:layout_marginTop="@dimen/margin_small"
-        android:text="@string/app_label_colored" />
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_name"
+            style="@style/AuroraTextStyle.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_label_short" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_name_crxmson"
+            style="@style/AuroraTextStyle.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4sp"
+            android:layout_toEndOf="@id/txt_name"
+            android:text="@string/app_label_crxmson"
+            android:textColor="?colorAccent" />
+
+    </RelativeLayout>
+
 </RelativeLayout>

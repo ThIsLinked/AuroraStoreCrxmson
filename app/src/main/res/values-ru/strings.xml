@@ -35,15 +35,6 @@
     <string name="action_close">Закрыть</string>
     <string name="action_clear">Очистить</string>
     <string name="action_cancel">Отмена</string>
-    <string name="about_paypal">PayPal</string>
-    <string name="about_libera">Liberapay</string>
-    <string name="about_gitlab">GitLab</string>
-    <string name="about_ethereum">Ethereum</string>
-    <string name="about_fdroid">F-Droid</string>
-    <string name="about_bitcoin">Bitcoin</string>
-    <string name="about_bhim">BHIM - UPI</string>
-    <string name="about_bitcoin_bch">Bitcoin Сash</string>
-    <string name="about_telegram">Telegram</string>
     <string name="action_blacklist_add">Добавить в черный список</string>
     <string name="action_blacklist">Черный список</string>
     <string name="action_back">Назад</string>
@@ -55,7 +46,6 @@
     <string name="account_anonymous">Анонимный</string>
     <string name="about_telegram_summary">Присоединяйтесь к группе поддержки Aurora для обсуждения или предложений.</string>
     <string name="about_xda_summary">Присоединяйтесь к обсуждению Aurora Store в теме.</string>
-    <string name="about_xda">XDA</string>
     <string name="about_paypal_summary">Пожертвовать через PayPal</string>
     <string name="about_libera_summary">Стать спонсором на Liberapay</string>
     <string name="about_gitlab_summary">Исходный код Aurora Store в Aurora OSS на GitLab.</string>
@@ -255,6 +245,7 @@
     <string name="pref_ui_no_for_you">Рекомендаций</string>
     <string name="pref_filter_search_summary">Поисковые фильтры сбрасываются при каждом поиске. Отключите, чтобы сохранить их</string>
     <string name="details_no_app_match">Приложения не найдены</string>
+    <string name="about_bhim">,</string>
     <string name="toast_manual_available">Поздравляем, запрошенный код версии доступен. Начинаем загрузку.</string>
     <string name="toast_manual_unavailable">Запрошенный вами код версии недоступен.</string>
     <string name="menu_manual_download">Ручная загрузка</string>
@@ -299,7 +290,6 @@
     <string name="pref_advanced_search_in_ctt_desc">Открывает результаты поиска во вкладке браузера</string>
     <string name="pref_advanced_search_in_ctt">Поиск во вкладке браузера</string>
     <string name="search_hint">Поиск в Приложениях и Играх</string>
-    <string name="spoof_property"><xliff:g id="manufacturer">%1$s</xliff:g> • API <xliff:g id="api">%2$s</xliff:g></string>
     <string name="requesting_new_session">Запрос новой сессии</string>
     <string name="server_maintenance">Сервер отключён на техобслуживание</string>
     <string name="action_import">Импортировать</string>
@@ -347,11 +337,13 @@
     <string name="details_info">Инфа про разработчика</string>
     <string name="details_permissions_count">обнаружено</string>
     <string name="sheet_manual_download_textinputHelper">Введите versionCode, который нужно загрузить</string>
+    <string name="menu_download_manager">Загрузки</string>
 
     <string name="about_templateToGoTo">(нажмите, чтобы перейти)</string>
     <string name="about_githubModdification_summary">Исходный код модификации на GitHub</string>
     <string name="about_topicPost_4pda">Пост на 4PDA</string>
     <string name="about_topic_4pda">Топик на 4PDA</string>
+
     <string name="pref_category_downloads">Загрузки</string>
     <string name="pref_category_installations">Установка</string>
     <string name="pref_category_updates">Обновления</string>
@@ -359,5 +351,4 @@
     <string name="pref_category_spoofing">Подмена</string>
     <string name="pref_vending_version_title">Версия Play Store</string>
     <string name="pref_vending_version_device">По-умолчанию (значение из текущего профиля)</string>
-    <string name="menu_download_manager">Загрузки</string>
 </resources>

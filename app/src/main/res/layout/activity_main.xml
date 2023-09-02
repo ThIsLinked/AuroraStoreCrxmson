@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:navigationIcon="@drawable/ic_menu_unfold"
-                app:title="@string/app_label_colored" />
+                app:title="@string/app_label" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/nav_host_fragment"

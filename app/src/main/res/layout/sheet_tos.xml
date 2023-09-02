@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<?xml version="1.0" encoding="utf-8"?>
+<!--
   ~ Aurora Store
   ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
   ~
@@ -15,8 +16,7 @@
   ~  You should have received a copy of the GNU General Public License
   ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
   ~
-  -->
-
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -42,18 +42,40 @@
                 android:layout_centerVertical="true"
                 app:srcCompat="@drawable/ic_logo" />
 
-            <TextView
-                android:id="@+id/txt_header"
+
+            <RelativeLayout
+                android:id="@+id/sheet_tos_label_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/margin_normal"
                 android:layout_marginBottom="@dimen/margin_normal"
                 android:layout_toEndOf="@id/img_icon"
-                android:maxLines="1"
-                android:text="@string/app_label_colored"
-                android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.Aurora.SubTitle" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="@string/app_label_short"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.Aurora.SubTitle" />
+
+                <TextView
+                    android:id="@+id/txt_header_crxmson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5sp"
+                    android:layout_toEndOf="@id/txt_header"
+                    android:maxLines="1"
+                    android:text="@string/app_label_crxmson"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.Aurora.SubTitle"
+                    android:textColor="?colorAccent" />
+
+            </RelativeLayout>
+
         </RelativeLayout>
 
         <TextView
@@ -104,5 +126,7 @@
             android:layout_height="@dimen/height_button"
             android:layout_weight="1"
             android:text="@string/action_accept" />
+
     </LinearLayout>
+
 </LinearLayout>

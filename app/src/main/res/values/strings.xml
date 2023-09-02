@@ -20,25 +20,25 @@
   ~
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="about_bhim">BHIM - UPI</string>
+    <string name="about_bhim" translatable="false">BHIM - UPI</string>
     <string name="about_bhim_summary">Donate via UPI</string>
-    <string name="about_bitcoin_bch">Bitcoin Cash</string>
+    <string name="about_bitcoin_bch" translatable="false">Bitcoin Cash</string>
     <string name="about_bitcoin_bch_summary">Donate via Bitcoin Cash (BCH)</string>
-    <string name="about_bitcoin">Bitcoin</string>
+    <string name="about_bitcoin" translatable="false">Bitcoin</string>
     <string name="about_bitcoin_summary">Donate via Bitcoin (BTC)</string>
-    <string name="about_ethereum">Ethereum</string>
+    <string name="about_ethereum" translatable="false">Ethereum</string>
     <string name="about_ethereum_summary">Donate via Ethereum (ETH)</string>
-    <string name="about_fdroid">F-Droid</string>
+    <string name="about_fdroid" translatable="false">F-Droid</string>
     <string name="about_fdroid_summary">Get the Aurora Store via F-Droid.</string>
-    <string name="about_gitlab">GitLab</string>
+    <string name="about_gitlab" translatable="false">GitLab</string>
     <string name="about_gitlab_summary">Get the Aurora Store source code from Aurora OSS on GitLab.</string>
-    <string name="about_libera">Liberapay</string>
+    <string name="about_libera" translatable="false">Libera Pay</string>
     <string name="about_libera_summary">Become a patron on Liberapay</string>
-    <string name="about_paypal">PayPal</string>
+    <string name="about_paypal" translatable="false">PayPal</string>
     <string name="about_paypal_summary">Donate via PayPal</string>
-    <string name="about_telegram">Telegram</string>
+    <string name="about_telegram" translatable="false">Telegram</string>
     <string name="about_telegram_summary">Join the Aurora Support group for discussions or suggestions.</string>
-    <string name="about_xda">Dev Thread</string>
+    <string name="about_xda" translatable="false">XDA</string>
     <string name="about_xda_summary">See the Aurora Store XDA thread for discussions or suggestions.</string>
     <string name="account_anonymous">Anonymous</string>
     <string name="account_anonymous_insecure">Anonymous (insecure)</string>
@@ -348,7 +348,7 @@
     <string name="menu">Menu</string>
     <string name="expand">Expand</string>
     <string name="open_in_aurora">Open in Aurora Store</string>
-    <string name="spoof_property"><xliff:g id="manufacturer">%1$s</xliff:g> • API <xliff:g id="api">%2$s</xliff:g></string>
+    <string name="spoof_property" translatable="false"><xliff:g id="manufacturer">%1$s</xliff:g> • API <xliff:g id="api">%2$s</xliff:g></string>
     <string name="permissions_denied">Required permissions were denied. Please grant them in order to continue the action</string>
     <string name="search_hint">Search for Apps &amp; Games</string>
     <string name="requesting_new_session">Requesting new session</string>
@@ -373,10 +373,10 @@
     <string name="verifying_new_session">Verifying new session</string>
     <string name="failed_generating_session">Failed to generate session, error code: <xliff:g id="status_code">%1$d</xliff:g></string>
     <string name="check_connectivity">Check internet connectivity</string>
-    <string name="app_language">App Language</string>
+    <string name="app_language">App language</string>
     <string name="pref_category_interface">Interface</string>
     <string name="pref_ui_layout_tab">Select default tab</string>
-    <string name="app_links_title">App Links</string>
+    <string name="app_links_title">App links</string>
     <string name="app_links_desc">Allow Aurora Store to open supported links</string>
     <string name="action_enable">Enable</string>
     <string name="action_enabled">Enabled</string>
@@ -386,22 +386,19 @@
     <string name="activity_download_manager_title">Downloads</string>
     <string name="menu_download_manager">Downloads</string>
 
-    <string name="app_label_colored" translatable="false">Aurora Store <font color="#E30B5C">Crxmson</font></string>
-    <string name="app_label_long" translatable="false">Aurora Store Crxmson</string>
-    <string name="app_label_short" translatable="false">Aurora Store</string>
-    <string name="app_label" translatable="false">@string/app_label_long</string>
-    <string name="app_label_launcher" translatable="false">@string/app_label_short</string>
+    <string name="app_label" translatable="false">Aurora Store Crxmson</string>
+    <string name="app_label_launcher" translatable="false">Aurora Store</string>
+    <string name="app_label_short" translatable="false">@string/app_label_launcher</string>
+    <string name="app_label_crxmson" translatable="false">Crxmson</string>
     <string name="app_list_rating" translatable="false">%1$s • %2$s★ • %3$s</string>
     <string name="download_speed_bytes">%1$d B/s</string>
     <string name="download_speed_kb">%1$s Kb/s</string>
     <string name="download_speed_mb">%1$s Mb/s</string>
-    <string name="pref_vending_version_title">Play Store version</string>
-    <string name="pref_vending_version_device">Default (value from current profile)</string>
 
-    <string name="app_versionName" translatable="false">4.3.1-nightly-01.09.23 // moddify 01.09.23 (by ThIsLinked)</string>
-    <string name="app_versionName_nightly" translatable="false">01.09.2023</string>
-    <string name="about_version_full" translatable="false">v4.3.1 // Nightly by 01.09.23</string>
-    <string name="about_version_moddify" translatable="false">Moddify 01.09.2023 (by ThIsLinked)</string>
+    <string name="app_versionName" translatable="false">4.3.1-nightly-02.09.23 // moddify 02.09.23 (by ThIsLinked)</string>
+    <string name="app_versionName_nightly" translatable="false">02.09.2023</string>
+    <string name="about_version_full" translatable="false">v4.3.1 // Nightly by 02.09.23</string>
+    <string name="about_version_moddify" translatable="false">Moddify 02.09.2023 (by ThIsLinked)</string>
 
     <string name="apps_installed">installed</string>
     <string name="apps_purchased">purchased</string>
@@ -420,8 +417,10 @@
     <string name="about_topic_4pda_summary" translatable="false">@string/about_templateToGoTo</string>
 
     <string name="pref_category_downloads">Downloads</string>
-    <string name="pref_category_installations">Installations</string>
+    <string name="pref_category_installations">Installation</string>
     <string name="pref_category_updates">Updates</string>
     <string name="pref_category_network">Network</string>
     <string name="pref_category_spoofing">Spoofing</string>
+    <string name="pref_vending_version_title">Play Store version</string>
+    <string name="pref_vending_version_device">Default (value from current a profile)</string>
 </resources>

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<?xml version="1.0" encoding="utf-8"?>
+<!--
   ~ Aurora Store
   ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
   ~
@@ -15,8 +16,7 @@
   ~  You should have received a copy of the GNU General Public License
   ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
   ~
-  -->
-
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -43,41 +43,61 @@
             android:layout_marginTop="@dimen/margin_small"
             app:srcCompat="@drawable/ic_logo" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/line1"
-            style="@style/TextAppearance.Aurora.Title"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/about_label_container"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/img_icon"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/margin_normal"
             android:layout_marginBottom="@dimen/margin_xsmall"
-            android:text="@string/app_label_colored" />
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/line1"
+                style="@style/TextAppearance.Aurora.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_label_short" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/line2"
+                style="@style/TextAppearance.Aurora.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6sp"
+                android:layout_toEndOf="@id/line1"
+                android:text="@string/app_label_crxmson"
+                android:textColor="?colorAccent" />
+
+        </RelativeLayout>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/line2"
-            style="@style/TextAppearance.Aurora.Line1"
+            android:id="@+id/line3"
+            style="@style/TextAppearance.Aurora.Line2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/line1"
+            android:layout_below="@+id/about_label_container"
             android:layout_centerHorizontal="true"
             android:text="@string/about_version_full" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/line3"
-            style="@style/TextAppearance.Aurora.Line3"
+            android:id="@+id/line4"
+            style="@style/TextAppearance.Aurora.Line2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/line2"
+            android:layout_below="@+id/line3"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/margin_xsmall"
             android:text="@string/about_version_moddify" />
+
     </RelativeLayout>
 
     <com.airbnb.epoxy.EpoxyRecyclerView
         android:id="@+id/epoxy_recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
         android:clipToPadding="false"
         android:orientation="vertical"
         android:overScrollMode="never"
@@ -85,8 +105,7 @@
         android:paddingTop="@dimen/padding_small"
         android:paddingEnd="@dimen/padding_normal"
         android:paddingBottom="@dimen/padding_small"
-        android:layout_marginTop="12dp"
         app:itemSpacing="@dimen/margin_small"
         tools:listitem="@layout/view_link" />
-</LinearLayout>
 
+</LinearLayout>
