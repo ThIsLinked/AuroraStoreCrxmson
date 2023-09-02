@@ -25,7 +25,6 @@ import android.net.Network
 import android.net.NetworkCapabilities
 import android.net.NetworkRequest
 import android.util.Log
-import com.aurora.extensions.isMAndAbove
 import com.aurora.store.data.model.NetworkStatus
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
@@ -68,9 +67,7 @@ class NetworkProvider(context: Context) {
         val networkRequest = NetworkRequest.Builder()
             .addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
 
-        if (isMAndAbove()) {
-            networkRequest.addCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED)
-        }
+        networkRequest.addCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED)
         return networkRequest.build()
     }
 }

@@ -126,114 +126,133 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary</item>
     </style>
 
     <style name="Accent_1">
         <item name="colorAccent">@color/colorAccent_1</item>
         <item name="colorPrimary">@color/colorPrimary_1</item>
         <item name="colorOnPrimary">@color/colorOnPrimary_1</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary_1</item>
     </style>
 
     <style name="Accent_2">
         <item name="colorAccent">@color/colorAccent_2</item>
         <item name="colorPrimary">@color/colorPrimary_2</item>
         <item name="colorOnPrimary">@color/colorOnPrimary_2</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary_2</item>
     </style>
 
     <style name="Accent_3">
         <item name="colorAccent">@color/colorAccent_3</item>
         <item name="colorPrimary">@color/colorPrimary_3</item>
         <item name="colorOnPrimary">@color/colorOnPrimary_3</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary_3</item>
     </style>
 
     <style name="Accent_4">
         <item name="colorAccent">@color/colorAccent_4</item>
         <item name="colorPrimary">@color/colorPrimary_4</item>
         <item name="colorOnPrimary">@color/colorOnPrimary_4</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary_4</item>
     </style>
 
     <style name="Accent_5">
         <item name="colorAccent">@color/colorAccent_5</item>
         <item name="colorPrimary">@color/colorPrimary_5</item>
         <item name="colorOnPrimary">@color/colorOnPrimary_5</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary_5</item>
     </style>
 
     <style name="Accent_6">
         <item name="colorAccent">@color/colorAccent_6</item>
         <item name="colorPrimary">@color/colorPrimary_6</item>
         <item name="colorOnPrimary">@color/colorOnPrimary_6</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary_6</item>
     </style>
 
     <style name="Accent_7">
         <item name="colorAccent">@color/colorAccent_7</item>
         <item name="colorPrimary">@color/colorPrimary_7</item>
         <item name="colorOnPrimary">@color/colorOnPrimary_7</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary_7</item>
     </style>
 
     <style name="Accent_8">
         <item name="colorAccent">@color/colorAccent_8</item>
         <item name="colorPrimary">@color/colorPrimary_8</item>
         <item name="colorOnPrimary">@color/colorOnPrimary_8</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary_8</item>
     </style>
 
     <style name="Accent_9">
         <item name="colorAccent">@color/colorAccent_9</item>
         <item name="colorPrimary">@color/colorPrimary_9</item>
         <item name="colorOnPrimary">@color/colorOnPrimary_9</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary_9</item>
     </style>
 
     <style name="Accent_10">
         <item name="colorAccent">@color/colorAccent_10</item>
         <item name="colorPrimary">@color/colorPrimary_10</item>
         <item name="colorOnPrimary">@color/colorOnPrimary_10</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary_10</item>
     </style>
 
     <style name="Accent_11">
         <item name="colorAccent">@color/colorAccent_11</item>
         <item name="colorPrimary">@color/colorPrimary_11</item>
         <item name="colorOnPrimary">@color/colorOnPrimary_11</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary_11</item>
     </style>
 
     <style name="Accent_12">
         <item name="colorAccent">@color/colorAccent_12</item>
         <item name="colorPrimary">@color/colorPrimary_12</item>
         <item name="colorOnPrimary">@color/colorOnPrimary_12</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary_12</item>
     </style>
 
     <style name="Accent_13">
         <item name="colorAccent">@color/colorAccent_13</item>
         <item name="colorPrimary">@color/colorPrimary_13</item>
         <item name="colorOnPrimary">@color/colorOnPrimary_13</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary_13</item>
     </style>
 
     <style name="Accent_14">
         <item name="colorAccent">@color/colorAccent_14</item>
         <item name="colorPrimary">@color/colorPrimary_14</item>
         <item name="colorOnPrimary">@color/colorOnPrimary_14</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary_14</item>
     </style>
 
     <style name="Accent_15">
         <item name="colorAccent">@color/colorAccent_15</item>
         <item name="colorPrimary">@color/colorPrimary_15</item>
         <item name="colorOnPrimary">@color/colorOnPrimary_15</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary_15</item>
     </style>
 
     <style name="Accent_16">
         <item name="colorAccent">@color/colorAccent_16</item>
         <item name="colorPrimary">@color/colorPrimary_16</item>
         <item name="colorOnPrimary">@color/colorOnPrimary_16</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary_16</item>
     </style>
 
     <style name="Accent_17">
         <item name="colorAccent">@color/colorAccent_17</item>
         <item name="colorPrimary">@color/colorPrimary_17</item>
         <item name="colorOnPrimary">@color/colorOnPrimary_17</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary_17</item>
     </style>
 
     <style name="Accent_18">
         <item name="colorAccent">@color/colorAccent_18</item>
         <item name="colorPrimary">@color/colorPrimary_18</item>
         <item name="colorOnPrimary">@color/colorOnPrimary_18</item>
+        <item name="colorPrimaryContainer">@color/colorOnPrimary_18</item>
     </style>
 
     <!-- Title Styles -->

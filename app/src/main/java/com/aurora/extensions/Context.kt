@@ -112,8 +112,7 @@ fun <T> Context.open(className: Class<T>, newTask: Boolean = false) {
 }
 
 fun Context.restartApp() {
-    val flags = if (isMAndAbove()) PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE
-    else PendingIntent.FLAG_CANCEL_CURRENT
+    val flags = PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE
     val pendingIntent = PendingIntent.getActivity(
         this,
         1337,

@@ -73,11 +73,7 @@ fun AppCompatActivity.applyThemeAccent() {
 private fun AppCompatActivity.setSystemBarConfiguration(light: Boolean) {
     WindowInsetsControllerCompat(this.window, this.window.decorView.rootView).apply {
         // Status bar color
-        if (isMAndAbove()) {
-            isAppearanceLightStatusBars = light
-        } else {
-            window.statusBarColor = ColorUtils.setAlphaComponent(Color.BLACK, 120)
-        }
+        isAppearanceLightStatusBars = light
 
         // Navigation bar color
         if (isOMR1AndAbove()) {
