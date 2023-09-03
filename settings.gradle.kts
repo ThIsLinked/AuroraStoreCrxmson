@@ -36,4 +36,4 @@ dependencyResolutionManagement {
     }
 }
 include(":app")
-rootProject.name = "v4.3.1-nightly-03.09.23"
+rootProject.name = "Aurora Store Crxmson v4.3.1-nightly-03.09.23"
