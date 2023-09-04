@@ -336,7 +336,7 @@
     <string name="details_more">Ещё</string>
     <string name="details_info">Инфа про разработчика</string>
     <string name="details_permissions_count">обнаружено</string>
-    <string name="sheet_manual_download_textinputHelper">Введите versionCode, который нужно загрузить</string>
+    <string name="sheet_manual_download_textinputTooltip">Введите versionCode, который нужно загрузить</string>
     <string name="menu_download_manager">Загрузки</string>
 
     <string name="about_templateToGoTo">(нажмите, чтобы перейти)</string>

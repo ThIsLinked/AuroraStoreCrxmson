@@ -406,7 +406,7 @@
     <string name="details_more">More</string>
     <string name="details_info">Developer information</string>
     <string name="details_permissions_count">found</string>
-    <string name="sheet_manual_download_textinputHelper">Enter the versionCode number to download</string>
+    <string name="sheet_manual_download_textinputTooltip">Enter the versionCode number to download</string>
 
     <string name="about_templateToGoTo">(click to go to)</string>
     <string name="about_githubModdification" translatable="false">GitHub</string>

@@ -215,13 +215,7 @@ class UpdatesFragment : BaseFragment() {
                     add(
                         UpdateHeaderViewModel_()
                             .id("header_all")
-                            .title(
-                                "${updateFileMap.size} " +
-                                        if (updateFileMap.size == 1)
-                                            getString(R.string.updates_available)
-                                        else
-                                            getString(R.string.updates_available)
-                            )
+                            .title("${updateFileMap.size} getString(R.string.updates_available")
                             .action(
                                 if (VM.updateAllEnqueued)
                                     getString(R.string.action_cancel)

@@ -75,6 +75,9 @@
     <color name="colorOrange">#FF9933</color>
     <color name="colorGreen">#49A942</color>
 
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+
     <color name="colorAccent_1">@color/material_red_600</color>
     <color name="colorAccent_2">@color/material_pink_600</color>
     <color name="colorAccent_3">@color/material_purple_600</color>
@@ -131,9 +134,50 @@
     <color name="colorOnPrimary_16">@color/material_deep_orange_900</color>
     <color name="colorOnPrimary_17">@color/material_brown_900</color>
     <color name="colorOnPrimary_18">@color/material_blue_grey_900</color>
-    <!-- -->
+
+    <!-- Fragments foreground general logo -->
+    <color name="ic_logo_foreground_1">#FFE0E0E0</color>
+    <color name="ic_logo_foreground_2">#FFFF87AE</color>
+    <color name="ic_logo_foreground_3">#FFE1115C</color>
+    <color name="ic_logo_foreground_4">#FF49CBC4</color>
+    <color name="ic_logo_foreground_5">#FFEEEEEE</color>
+    <color name="ic_logo_foreground_6">#FFF4F4F4</color>
+    <color name="ic_logo_foreground_7">#FFE4E4E4</color>
+    <color name="ic_logo_foreground_8">#FFF9F9F9</color>
+    <color name="ic_logo_foreground_9">#FFFF3E83</color>
+    <color name="ic_logo_foreground_10">#FF00C3F8</color>
+    <color name="ic_logo_foreground_11">#FFFFAA37</color>
+
+    <color name="ic_launcher_foreground_1">@color/ic_logo_foreground_1</color>
+    <color name="ic_launcher_foreground_2">@color/ic_logo_foreground_2</color>
+    <color name="ic_launcher_foreground_3">@color/ic_logo_foreground_3</color>
+    <color name="ic_launcher_foreground_4">@color/ic_logo_foreground_4</color>
+    <color name="ic_launcher_foreground_5">@color/ic_logo_foreground_5</color>
+    <color name="ic_launcher_foreground_6">@color/ic_logo_foreground_6</color>
+    <color name="ic_launcher_foreground_7">@color/ic_logo_foreground_7</color>
+    <color name="ic_launcher_foreground_8">@color/ic_logo_foreground_8</color>
+    <color name="ic_launcher_foreground_9">@color/ic_logo_foreground_9</color>
+    <color name="ic_launcher_foreground_10">@color/ic_logo_foreground_10</color>
+    <color name="ic_launcher_foreground_11">@color/ic_logo_foreground_11</color>
+
+    <color name="ic_banner_foreground_1">@color/ic_launcher_foreground_1</color>
+    <color name="ic_banner_foreground_2">@color/ic_launcher_foreground_2</color>
+    <color name="ic_banner_foreground_3">@color/ic_launcher_foreground_3</color>
+    <color name="ic_banner_foreground_4">@color/ic_launcher_foreground_4</color>
+    <color name="ic_banner_foreground_5">@color/ic_launcher_foreground_5</color>
+    <color name="ic_banner_foreground_6">@color/ic_launcher_foreground_6</color>
+    <color name="ic_banner_foreground_7">@color/ic_launcher_foreground_7</color>
+    <color name="ic_banner_foreground_8">@color/ic_launcher_foreground_8</color>
+    <color name="ic_banner_foreground_9">@color/ic_launcher_foreground_9</color>
+    <color name="ic_banner_foreground_10">@color/ic_launcher_foreground_10</color>
+    <color name="ic_banner_foreground_11">@color/ic_launcher_foreground_11</color>
+
+    <!-- Crimson's -->
+    <color name="crimson">#ffe30b5c</color>
+    <color name="crimsonPrimary">#ff5e2028</color>
+
     <!-- All palette of Material Design colors -->
-    <!-- -->
+
     <!-- Red -->
     <color name="material_red_50">#ffffebee</color>
     <color name="material_red_100">#ffffcdd2</color>
@@ -149,7 +193,7 @@
     <color name="material_red_a200">#ffff5252</color>
     <color name="material_red_a400">#ffff1744</color>
     <color name="material_red_a700">#ffd50000</color>
-    <!-- -->
+
     <!-- Pink -->
     <color name="material_pink_50">#fffce4ec</color>
     <color name="material_pink_100">#fff8bbd0</color>
@@ -165,7 +209,7 @@
     <color name="material_pink_a200">#ffff4081</color>
     <color name="material_pink_a400">#fff50057</color>
     <color name="material_pink_a700">#ffc51162</color>
-    <!-- -->
+
     <!-- Purple -->
     <color name="material_purple_50">#fff3e5f5</color>
     <color name="material_purple_100">#ffe1bee7</color>
@@ -181,7 +225,7 @@
     <color name="material_purple_a200">#ffe040fb</color>
     <color name="material_purple_a400">#ffd500f9</color>
     <color name="material_purple_a700">#ffaa00ff</color>
-    <!-- -->
+
     <!-- Deep Purple -->
     <color name="material_deep_purple_50">#ffede7f6</color>
     <color name="material_deep_purple_100">#ffd1c4e9</color>
@@ -197,7 +241,7 @@
     <color name="material_deep_purple_a200">#ff7c4dff</color>
     <color name="material_deep_purple_a400">#ff651fff</color>
     <color name="material_deep_purple_a700">#ff6200ea</color>
-    <!-- -->
+
     <!-- Indigo -->
     <color name="material_indigo_50">#ffe8eaf6</color>
     <color name="material_indigo_100">#ffc5cae9</color>
@@ -213,7 +257,7 @@
     <color name="material_indigo_a200">#ff536dfe</color>
     <color name="material_indigo_a400">#ff3d5afe</color>
     <color name="material_indigo_a700">#ff304ffe</color>
-    <!-- -->
+
     <!-- Blue -->
     <color name="material_blue_50">#ffe3f2fd</color>
     <color name="material_blue_100">#ffbbdefb</color>
@@ -229,7 +273,7 @@
     <color name="material_blue_a200">#ff448aff</color>
     <color name="material_blue_a400">#ff2979ff</color>
     <color name="material_blue_a700">#ff2962ff</color>
-    <!-- -->
+
     <!-- Light Blue -->
     <color name="material_light_blue_50">#ffe1f5fe</color>
     <color name="material_light_blue_100">#ffb3e5fc</color>
@@ -245,7 +289,7 @@
     <color name="material_light_blue_a200">#ff40c4ff</color>
     <color name="material_light_blue_a400">#ff00b0ff</color>
     <color name="material_light_blue_a700">#ff0091ea</color>
-    <!-- -->
+
     <!-- Cyan -->
     <color name="material_cyan_50">#ffe0f7fa</color>
     <color name="material_cyan_100">#ffb2ebf2</color>
@@ -261,7 +305,7 @@
     <color name="material_cyan_a200">#ff18ffff</color>
     <color name="material_cyan_a400">#ff00e5ff</color>
     <color name="material_cyan_a700">#ff00b8d4</color>
-    <!-- -->
+
     <!-- Teal -->
     <color name="material_teal_50">#ffe0f2f1</color>
     <color name="material_teal_100">#ffb2dfdb</color>
@@ -277,7 +321,7 @@
     <color name="material_teal_a200">#ff64ffda</color>
     <color name="material_teal_a400">#ff1de9b6</color>
     <color name="material_teal_a700">#ff00bfa5</color>
-    <!-- -->
+
     <!-- Green -->
     <color name="material_green_50">#ffe8f5e9</color>
     <color name="material_green_100">#ffc8e6c9</color>
@@ -293,7 +337,7 @@
     <color name="material_green_a200">#ff69f0ae</color>
     <color name="material_green_a400">#ff00e676</color>
     <color name="material_green_a700">#ff00c853</color>
-    <!-- -->
+
     <!-- Light Green -->
     <color name="material_light_green_50">#fff1f8e9</color>
     <color name="material_light_green_100">#ffdcedc8</color>
@@ -309,7 +353,7 @@
     <color name="material_light_green_a200">#ffb2ff59</color>
     <color name="material_light_green_a400">#ff76ff03</color>
     <color name="material_light_green_a700">#ff64dd17</color>
-    <!-- -->
+
     <!-- Lime -->
     <color name="material_lime_50">#fff9fbe7</color>
     <color name="material_lime_100">#fff0f4c3</color>
@@ -325,7 +369,7 @@
     <color name="material_lime_a200">#ffeeff41</color>
     <color name="material_lime_a400">#ffc6ff00</color>
     <color name="material_lime_a700">#ffaeea00</color>
-    <!-- -->
+
     <!-- Yellow -->
     <color name="material_yellow_50">#fffffde7</color>
     <color name="material_yellow_100">#fffff9c4</color>
@@ -341,7 +385,7 @@
     <color name="material_yellow_a200">#ffffff00</color>
     <color name="material_yellow_a400">#ffffea00</color>
     <color name="material_yellow_a700">#ffffd600</color>
-    <!-- -->
+
     <!-- Amber -->
     <color name="material_amber_50">#fffff8e1</color>
     <color name="material_amber_100">#ffffecb3</color>
@@ -357,7 +401,7 @@
     <color name="material_amber_a200">#ffffd740</color>
     <color name="material_amber_a400">#ffffc400</color>
     <color name="material_amber_a700">#ffffab00</color>
-    <!-- -->
+
     <!-- Orange -->
     <color name="material_orange_50">#fffff3e0</color>
     <color name="material_orange_100">#ffffe0b2</color>
@@ -373,7 +417,7 @@
     <color name="material_orange_a200">#ffffab40</color>
     <color name="material_orange_a400">#ffff9100</color>
     <color name="material_orange_a700">#ffff6d00</color>
-    <!-- -->
+
     <!-- Deep Orange -->
     <color name="material_deep_orange_50">#fffbe9e7</color>
     <color name="material_deep_orange_100">#ffffccbc</color>
@@ -389,7 +433,7 @@
     <color name="material_deep_orange_a200">#ffff6e40</color>
     <color name="material_deep_orange_a400">#ffff3d00</color>
     <color name="material_deep_orange_a700">#ffdd2c00</color>
-    <!-- -->
+
     <!-- Brown -->
     <color name="material_brown_50">#ffefebe9</color>
     <color name="material_brown_100">#ffd7ccc8</color>
@@ -401,7 +445,7 @@
     <color name="material_brown_700">#ff5d4037</color>
     <color name="material_brown_800">#ff4e342e</color>
     <color name="material_brown_900">#ff3e2723</color>
-    <!-- -->
+
     <!-- Grey -->
     <color name="material_grey_50">#fffafafa</color>
     <color name="material_grey_100">#fff5f5f5</color>
@@ -412,11 +456,11 @@
     <color name="material_grey_600">#ff757575</color>
     <color name="material_grey_700">#ff616161</color>
     <color name="material_grey_800">#ff424242</color>
-    <color name="material_grey_850">#ff303030</color> <!-- ** -->
+    <color name="material_grey_850">#ff303030</color>
     <color name="material_grey_900">#ff212121</color>
-    <color name="material_grey_950">#ff1e1e1e</color> <!-- ** -->
-    <color name="material_grey_1000">#ff0e0e0e</color> <!-- ** -->
-    <!-- -->
+    <color name="material_grey_950">#ff1e1e1e</color>
+    <color name="material_grey_1000">#ff0e0e0e</color>
+
     <!-- Blue Grey -->
     <color name="material_blue_grey_50">#ffeceff1</color>
     <color name="material_blue_grey_100">#ffcfd8dc</color>
@@ -428,21 +472,4 @@
     <color name="material_blue_grey_700">#ff455a64</color>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
-    <!-- -->
-    <!-- Crimson's -->
-    <color name="crimson">#ffe30b5c</color>
-    <color name="crimsonPrimary">#ff5e2028</color>
-    <!-- -->
-    <!-- Fragments foreground general logo -->
-    <color name="ic_launcher_foreground_1">#FFE0E0E0</color>
-    <color name="ic_launcher_foreground_2">#FFFF87AE</color>
-    <color name="ic_launcher_foreground_3">#FFE1115C</color>
-    <color name="ic_launcher_foreground_4">#FF49CBC4</color>
-    <color name="ic_launcher_foreground_5">#FFEEEEEE</color>
-    <color name="ic_launcher_foreground_6">#FFF4F4F4</color>
-    <color name="ic_launcher_foreground_7">#FFE4E4E4</color>
-    <color name="ic_launcher_foreground_8">#FFF9F9F9</color>
-    <color name="ic_launcher_foreground_9">#FFFF3E83</color>
-    <color name="ic_launcher_foreground_10">#FF00C3F8</color>
-    <color name="ic_launcher_foreground_11">#FFFFAA37</color>
 </resources>

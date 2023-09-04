@@ -335,7 +335,7 @@
     <string name="details_more">Більше</string>
     <string name="details_info">Інфа про розробника</string>
     <string name="details_permissions_count">виявлено</string>
-    <string name="sheet_manual_download_textinputHelper">Введіть versionCode, який потрібно завантажити</string>
+    <string name="sheet_manual_download_textinputTooltip">Введіть versionCode, який потрібно завантажити</string>
     <string name="menu_download_manager">Завантаження</string>
 
     <string name="about_templateToGoTo">(натисніть, щоб перейти)</string>

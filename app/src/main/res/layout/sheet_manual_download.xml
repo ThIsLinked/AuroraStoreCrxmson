@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<?xml version="1.0" encoding="utf-8"?>
+<!--
   ~ Aurora Store
   ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
   ~
@@ -15,8 +16,7 @@
   ~  You should have received a copy of the GNU General Public License
   ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
   ~
-  -->
-
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -97,7 +97,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:helperText="Enter version code you wish to download">
+            app:helperText="@string/sheet_manual_download_textinputTooltip">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/version_code_inp"
@@ -107,6 +107,7 @@
                 android:inputType="number" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -130,5 +131,7 @@
             android:layout_height="@dimen/height_button"
             android:layout_weight="1"
             android:text="@string/action_check" />
+
     </LinearLayout>
+
 </LinearLayout>
