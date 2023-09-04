@@ -39,7 +39,7 @@ java {
 
 android {
     namespace = "com.aurora.store"
-    compileSdk = 34
+    compileSdk = 33
 
     defaultConfig {
         applicationId = "com.aurora.store"
@@ -79,12 +79,9 @@ android {
                 signingConfig = signingConfigs.getByName("release")
             }
         }
-        create("global") {
-        }
     }
 
     buildFeatures {
-        buildConfig = true
         viewBinding = true
         aidl = true
     }

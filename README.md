@@ -1,6 +1,6 @@
 <img align="center" src="LogoProject.webp"  alt="Aurora Store Crxmson" />
 
-A moddify-project/fork the original [Aurora Store source project](https://gitlab.com/AuroraOSS/AuroraStore). Developable for non-commercial purposes for end-personal use.
+A moddify/fork the original [Aurora Store source project](https://gitlab.com/AuroraOSS/AuroraStore). Developable for non-commercial purposes for end-personal use.
 
 * [Moddification post on the 4PDA forum](https://4pda.to/forum/index.php?showtopic=887569&view=findpost&p=116441910)
 * [Topic Aurora Store on the 4PDA forum](https://4pda.to/forum/index.php?showtopic=887569)
@@ -14,11 +14,11 @@ A moddify-project/fork the original [Aurora Store source project](https://gitlab
 ```
 Android Studio mangles the code of some resources at compiling time.
 Use the source code only for research or custom variants. The apk's,
-posted by me, do not have such a defect, since I corrected them from
+published by me, do not have such a defect, since I corrected them from
 such a misunderstanding. Use them in case of pure use – they look
 exactly as they were supposed to in the specification.
 ```
-* Some interface edits and improvements + changed default color to Crimson;
+* Some interface edits and improvements + changed default color to Crimson, v31 and above – system dynamic color.;
 * The list colors for accent is taken from the [Material Design palette](https://m2.material.io/design/color/the-color-system.html#color-theme-creation);
 * On the application page, some elements are now available for highlighting with the cursor (so that the text can be copied to the clipboard);
 * Redesigned and/or rearranged sections and items in settings;
@@ -38,33 +38,33 @@ exactly as they were supposed to in the specification.
 > * Cleanup resources from garbage;
 > * Removed mdpi, ldpi and ldrtl;
 > * Optimization of apk at archive level;
-> * Signature dhwh v1+v2+v3 (on 4PDA);
-> * Signature ThIsLinked v1+v2+v3 (on the general web);
+> * Sign dhwh v1+v2+v3 (on 4PDA);
+> * SignThIsLinked v1+v2+v3 (on the general web);
 > <details>
-> <summary>Sign dhwh hash</summary>
+> <summary>Signature dhwh hash</summary>
 >
-> **HEX/DEC:** 0x97d83e3e (-1747435970)
+> _**HEX/DEC:** 0x97d83e3e (-1747435970)_
 >
-> **CRC32/DEC:** 0x6a8059f7 (1786796535)
+> _**CRC32/DEC:** 0x6a8059f7 (1786796535)_
 >
-> **MD5:** 050284900ab95f8de385b8552951cbcc
+> _**MD5:** 050284900ab95f8de385b8552951cbcc_
 >
-> **SHA1:** 6e6b12dbb39099654d1043826e7f9480eee29b55
+> _**SHA1:** 6e6b12dbb39099654d1043826e7f9480eee29b55_
 >
-> **SHA256:** b21ac037532ea9ae47e98afacb9756fb116f0b11c51860c8115d29512a69eb6c
+> _**SHA256:** b21ac037532ea9ae47e98afacb9756fb116f0b11c51860c8115d29512a69eb6c_
 > </details>
 > <details>
-> <summary>Sign ThIsLinked hash</summary>
+> <summary>Signature ThIsLinked hash</summary>
 >
-> **HEX/DEC:** 0x6264f009 (1650782217)
+> _**HEX/DEC:** 0x6264f009 (1650782217)_
 >
-> **CRC32/DEC:** 0xe2e95680 (-488024448)
+> _**CRC32/DEC:** 0xe2e95680 (-488024448)_
 >
-> **MD5:** 21247d96e07877efc1867081d6697a56
+> _**MD5:** 21247d96e07877efc1867081d6697a56_
 >
-> **SHA1:** 052e470e98d916ad731fca81c38a80b5309eea0e
+> _**SHA1:** 052e470e98d916ad731fca81c38a80b5309eea0e_
 >
-> **SHA256:** 2d2e593e349bfff9b371228604579d30028719fe13e97d5ca0610d92ea6c948
+> _**SHA256:** 2d2e593e349bfff9b371228604579d30028719fe13e97d5ca0610d92ea6c948_
 > </details>
 
 # Screenshots

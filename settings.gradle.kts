@@ -25,6 +25,7 @@ pluginManagement {
         mavenCentral()
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -35,5 +36,7 @@ dependencyResolutionManagement {
         maven("https://maven.google.com/")
     }
 }
+
 include(":app")
+
 rootProject.name = "Aurora Store Crxmson v4.3.1-nightly-03.09.23"
