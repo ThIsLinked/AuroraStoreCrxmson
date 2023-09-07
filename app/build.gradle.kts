@@ -99,9 +99,6 @@ android {
         lintConfig = file("lint.xml")
     }
 
-    androidResources {
-        generateLocaleConfig = true
-    }
     buildToolsVersion = "34.0.0"
     ndkVersion = "25.2.9519653"
 }
@@ -109,7 +106,7 @@ android {
 dependencies {
 
     //Protobuf
-    implementation("com.google.protobuf:protobuf-javalite:3.22.3")
+    implementation("com.google.protobuf:protobuf-javalite:3.24.2")
 
     //Google's Goodies
     implementation("com.google.android.material:material:1.9.0")
@@ -118,7 +115,6 @@ dependencies {
     //AndroidX
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.viewpager2:viewpager2:1.0.0")
-    implementation("androidx.vectordrawable:vectordrawable:1.1.0")
     implementation("androidx.preference:preference-ktx:1.2.1")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
