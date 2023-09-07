@@ -25,12 +25,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.aurora.extensions.browse
-import com.aurora.extensions.copyToClipBoard
 import com.aurora.store.R
-import com.aurora.store.data.model.Link
 import com.aurora.store.databinding.FragmentAboutBinding
-import com.aurora.store.view.epoxy.views.preference.LinkViewModel_
 
 class AboutFragment : Fragment(R.layout.fragment_about) {
 
@@ -51,45 +47,44 @@ class AboutFragment : Fragment(R.layout.fragment_about) {
         binding.epoxyRecycler.layoutManager =
             LinearLayoutManager(view.context, RecyclerView.VERTICAL, false)
 
-/*updateController()*/
-}
-/*
-override fun onDestroyView() {
-super.onDestroyView()
-_binding = null
-}
+        updateController()
+    }
 
-private fun updateController() {
-val linkURLS = resources.getStringArray(R.array.link_urls)
-val linkTitles = resources.getStringArray(R.array.link_titles)
-val linkSummary = resources.getStringArray(R.array.link_subtitle)
-val linkIcons = resources.obtainTypedArray(R.array.link_icons)
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 
-binding.epoxyRecycler.withModels {
-    for (i in linkURLS.indices) {
-        val link = Link(
-            id = i,
-            title = linkTitles[i],
-            subtitle = linkSummary[i],
-            url = linkURLS[i],
-            icon = linkIcons.getResourceId(i, 0)
-        )
-        add(
-            LinkViewModel_()
-                .id(i)
-                .link(link)
-                .click { _ -> processUrl(link.url) }
-        )
+    private fun updateController() {
+        val linkURLS = resources.getStringArray(R.array.link_urls)
+        val linkTitles = resources.getStringArray(R.array.link_titles)
+        val linkSummary = resources.getStringArray(R.array.link_subtitle)
+        val linkIcons = resources.obtainTypedArray(R.array.link_icons)
+
+        binding.epoxyRecycler.withModels {
+            for (i in linkURLS.indices) {
+                val link = Link(
+                    id = i,
+                    title = linkTitles[i],
+                    subtitle = linkSummary[i],
+                    url = linkURLS[i],
+                    icon = linkIcons.getResourceId(i, 0)
+                )
+                add(
+                    LinkViewModel_()
+                        .id(i)
+                        .link(link)
+                        .click { _ -> processUrl(link.url) }
+                )
+            }
+        }
+    }
+
+    private fun processUrl(url: String) {
+        when {
+            url.startsWith("http") -> context?.browse(url)
+            url.startsWith("upi") -> context?.browse(url)
+            else -> context?.copyToClipBoard(url)
+        }
     }
 }
-}
-
-private fun processUrl(url: String) {
-when {
-    url.startsWith("http") -> context?.browse(url)
-    url.startsWith("upi") -> context?.browse(url)
-    else -> context?.copyToClipBoard(url)
-}
-}
-}
-*/
