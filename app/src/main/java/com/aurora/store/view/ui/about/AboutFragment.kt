@@ -25,8 +25,12 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.aurora.extensions.browse
+import com.aurora.extensions.copyToClipBoard
 import com.aurora.store.R
+import com.aurora.store.data.model.Link
 import com.aurora.store.databinding.FragmentAboutBinding
+import com.aurora.store.view.epoxy.views.preference.LinkViewModel_
 
 class AboutFragment : Fragment(R.layout.fragment_about) {
 
