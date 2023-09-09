@@ -39,7 +39,7 @@ java {
 
 android {
     namespace = "com.aurora.store"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.aurora.store"
@@ -84,6 +84,7 @@ android {
     buildFeatures {
         viewBinding = true
         aidl = true
+        buildConfig = true /* Enable generate BuildConfig */
     }
 
     kotlinOptions {
@@ -104,75 +105,70 @@ android {
 }
 
 dependencies {
-
-    //Protobuf
+    // Protobuf
     implementation("com.google.protobuf:protobuf-javalite:3.24.2")
 
-    //Google's Goodies
+    // Google's Goodies
     implementation("com.google.android.material:material:1.9.0")
     implementation("com.google.code.gson:gson:2.10.1")
 
-    //AndroidX
+    // AndroidX
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.viewpager2:viewpager2:1.0.0")
     implementation("androidx.preference:preference-ktx:1.2.1")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
-    //Arch LifeCycle
-    val life_version = "2.6.1"
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$life_version")
-    implementation("androidx.lifecycle:lifecycle-service:$life_version")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$life_version")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:$life_version")
+    // Arch LifeCycle
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$2.6.1")
+    implementation("androidx.lifecycle:lifecycle-service:2.6.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1")
 
-    //Arch Navigation
-    val nav_version = "2.7.1"
-    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
-    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    // Arch Navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.1")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.1")
 
-    //Coil
+    // Coil
     implementation("io.coil-kt:coil:2.4.0")
 
-    //Shimmer
+    // Shimmer
     implementation("com.facebook.shimmer:shimmer:0.5.0")
 
-    //Epoxy
-    val epoxy_version = "5.1.3"
-    implementation("com.airbnb.android:epoxy:$epoxy_version")
-    ksp("com.airbnb.android:epoxy-processor:$epoxy_version")
+    // Epoxy
+    implementation("com.airbnb.android:epoxy:5.1.3")
+    ksp("com.airbnb.android:epoxy-processor:5.1.3")
 
-    //HTTP Clients
+    // HTTP Clients
     implementation("com.squareup.okhttp3:okhttp:4.11.0")
 
-    //Fetch - Downloader
+    // Fetch - Downloader
     implementation("androidx.tonyodev.fetch2:xfetch2:3.1.6")
 
-    //EventBus
+    // EventBus
     implementation("org.greenrobot:eventbus:3.3.1")
 
-    //Lib-SU
+    // Lib-SU
     implementation("com.github.topjohnwu.libsu:core:5.0.5")
 
-    //Love <3
+    // Love <3
     implementation("com.gitlab.AuroraOSS:gplayapi:3.1.4")
 
-    //Browser
+    // Browser
     implementation("androidx.browser:browser:1.6.0")
 
-    //Shizuku
-    val shizuku_version = "13.1.4"
+    // Shizuku
     compileOnly("dev.rikka.hidden:stub:4.2.0")
     implementation("dev.rikka.tools.refine:runtime:4.3.0")
-    implementation("dev.rikka.shizuku:api:${shizuku_version}")
-    implementation("dev.rikka.shizuku:provider:${shizuku_version}")
+    implementation("dev.rikka.shizuku:api:13.1.4")
+    implementation("dev.rikka.shizuku:provider:13.1.4")
 
     implementation("org.lsposed.hiddenapibypass:hiddenapibypass:4.3")
 
-    //Test
+    // Test
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-    //WorkManager
+    // WorkManager
     implementation("androidx.work:work-runtime-ktx:2.8.1")
 }
