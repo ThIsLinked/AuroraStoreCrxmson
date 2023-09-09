@@ -20,6 +20,8 @@
 
 rootProject.name = "Aurora Store Crxmson v4.3.1-nightly-03.09.23"
 
+include(":app")
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -38,5 +40,3 @@ dependencyResolutionManagement {
         maven("https://maven.google.com/")
     }
 }
-
-include(":app")
