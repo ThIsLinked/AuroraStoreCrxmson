@@ -35,11 +35,11 @@ proguard/
 gradle-app.setting
 *.zip
 
-app/release/*
-app/degub/*
-app/beta/*
-app/alpha/*
-app/nightly/*
+*/release/*
+*/degub/*
+*/beta/*
+*/alpha/*
+*/nightly/*
 
 release/*
 degub/*
