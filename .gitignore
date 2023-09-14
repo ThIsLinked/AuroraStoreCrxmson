@@ -41,6 +41,12 @@ app/beta/*
 app/alpha/*
 app/nightly/*
 
+release/*
+degub/*
+beta/*
+alpha/*
+nightly/*
+
 
 #Exclude signing configurations & keystore
 signing.properties
