@@ -394,9 +394,9 @@
     <string name="download_speed_kb">%1$s Kb/s</string>
     <string name="download_speed_mb">%1$s Mb/s</string>
 
-    <string name="app_versionName" translatable="false">4.3.1-nightly-02.09.23 // moddify 02.09.23 (by ThIsLinked)</string>
+    <string name="app_versionName" translatable="false">4.3.1-nightly-14.09.23 // moddify 14.09.23 (by ThIsLinked)</string>
     <string name="app_versionName_nightly" translatable="false">02.09.2023</string>
-    <string name="about_version_full" translatable="false">v4.3.1 // Nightly by 02.09.23</string>
+    <string name="about_version_full" translatable="false">v4.3.1 // Nightly by 14.09.23</string>
     <string name="about_version_moddify" translatable="false">Moddify 02.09.2023 (by ThIsLinked)</string>
 
     <string name="apps_installed">installed</string>
