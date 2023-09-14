@@ -33,6 +33,7 @@ exactly as they were supposed to in the specification.
 
 > ### Only in apk's published by me:
 > * Removal of obfuscation and/or minification;
+> * Removed stock profiles;
 > * Removal of Logcat calls;
 > * Cleanup Smali from garbage, included debugging-line's;
 > * Cleanup resources from garbage;

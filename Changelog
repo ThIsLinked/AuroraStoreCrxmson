@@ -1,2 +1,9 @@
+
+v4.3.1-nightly-14.09.23 (49)
+ • Pulled up to nightly 14.09.23;
+ • Fixed colorPrimaryContainer for switches in "pressed" state;
+ • Fixed the background fill for the sections button in the recommendations;
+ • Various fixes;
+
 v4.3.1-nightly-03.09.23 (49)
- • Release
+ • Release;
