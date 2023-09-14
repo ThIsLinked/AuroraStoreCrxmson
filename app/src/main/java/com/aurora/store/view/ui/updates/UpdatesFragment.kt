@@ -215,49 +215,58 @@ class UpdatesFragment : BaseFragment() {
                     add(
                         UpdateHeaderViewModel_()
                             .id("header_all")
-                            .title("${updateFileMap.size} getString(R.string.updates_available")
-                            .action(
-                                if (VM.updateAllEnqueued)
-                                    getString(R.string.action_cancel)
-                                else
-                                    getString(R.string.action_update_all)
-                            )
-                            .click { _ ->
-                                if (VM.updateAllEnqueued)
-                                    cancelAll()
-                                else
-                                    updateFileMap.values.forEach { updateSingle(it.app, true) }
+                            .title("${updateFileMap.size} ${getString(R.string.updates_available)}")
+                                .action(
+                                    if (VM.updateAllEnqueued)
+                                        getString(R.string.action_cancel)
+                                    else
+                                        getString(R.string.action_update_all)
+                                )
+                                    .click { _ ->
+                                        if (VM.updateAllEnqueued)
+                                            cancelAll()
+                                        else
+                                            updateFileMap.values.forEach {
+                                                updateSingle(
+                                                    it.app,
+                                                    true
+                                                )
+                                            }
 
-                                requestModelBuild()
-                            }
-                    )
+                                        requestModelBuild()
+                                    }
+                                )
 
-                    updateFileMap.values.forEach { updateFile ->
-                        add(
-                            AppUpdateViewModel_()
-                                .id(updateFile.hashCode())
-                                .updateFile(updateFile)
-                                .click { _ ->
-                                    openDetailsFragment(
-                                        updateFile.app.packageName,
-                                        updateFile.app
+                                updateFileMap.values.forEach { updateFile ->
+                                    add(
+                                        AppUpdateViewModel_()
+                                            .id(updateFile.hashCode())
+                                            .updateFile(updateFile)
+                                            .click { _ ->
+                                                openDetailsFragment(
+                                                    updateFile.app.packageName,
+                                                    updateFile.app
+                                                )
+                                            }
+                                            .longClick { _ ->
+                                                openAppMenuSheet(updateFile.app)
+                                                false
+                                            }
+                                            .positiveAction { _ -> updateSingle(updateFile.app) }
+                                            .negativeAction { _ -> cancelSingle(updateFile.app) }
+                                            .installAction { _ ->
+                                                updateFile.group?.downloads?.let {
+                                                    VM.install(
+                                                        requireContext(),
+                                                        updateFile.app.packageName,
+                                                        it
+                                                    )
+                                                }
+                                            }
+                                            .state(updateFile.state)
                                     )
                                 }
-                                .longClick { _ ->
-                                    openAppMenuSheet(updateFile.app)
-                                    false
                                 }
-                                .positiveAction { _ -> updateSingle(updateFile.app) }
-                                .negativeAction { _ -> cancelSingle(updateFile.app) }
-                                .installAction { _ ->
-                                    updateFile.group?.downloads?.let {
-                                        VM.install(requireContext(), updateFile.app.packageName, it)
-                                    }
-                                }
-                                .state(updateFile.state)
-                        )
-                    }
-                }
             }
         }
     }
