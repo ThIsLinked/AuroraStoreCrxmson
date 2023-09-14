@@ -331,8 +331,8 @@
     <string name="ui_accent_7" translatable="false">Light Blue</string>
     <string name="ui_accent_8" translatable="false">Cyan</string>
     <string name="ui_accent_9" translatable="false">Teal</string>
-    <string name="ui_accent_11" translatable="false">Green</string>
-    <string name="ui_accent_10" translatable="false">Light Green</string>
+    <string name="ui_accent_10" translatable="false">Green</string>
+    <string name="ui_accent_11" translatable="false">Light Green</string>
     <string name="ui_accent_12" translatable="false">Lime</string>
     <string name="ui_accent_13" translatable="false">Yellow</string>
     <string name="ui_accent_14" translatable="false">Amber</string>
