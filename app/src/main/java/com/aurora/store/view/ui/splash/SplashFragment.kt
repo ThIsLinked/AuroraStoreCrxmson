@@ -21,7 +21,6 @@ package com.aurora.store.view.ui.splash
 
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.aurora.extensions.hide
@@ -32,9 +31,10 @@ import com.aurora.store.databinding.FragmentSplashBinding
 import com.aurora.store.util.Preferences
 import com.aurora.store.util.Preferences.PREFERENCE_DEFAULT_SELECTED_TAB
 import com.aurora.store.util.Preferences.PREFERENCE_INTRO
+import com.aurora.store.view.ui.commons.BaseFragment
 import com.aurora.store.viewmodel.auth.AuthViewModel
 
-class SplashFragment : Fragment(R.layout.fragment_splash) {
+class SplashFragment : BaseFragment(R.layout.fragment_splash) {
 
     private var _binding: FragmentSplashBinding? = null
     private val binding: FragmentSplashBinding
@@ -86,7 +86,13 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
                 }
 
                 AuthState.Valid -> {
-                    navigateToDefaultTab()
+                    val packageName = requireArguments().getString("packageName") ?: ""
+                    if (packageName.isBlank()) {
+                        navigateToDefaultTab()
+                    } else {
+                        requireArguments().remove("packageName")
+                        openDetailsFragment(packageName)
+                    }
                 }
 
                 AuthState.Available -> {
@@ -100,7 +106,13 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
                 }
 
                 AuthState.SignedIn -> {
-                    navigateToDefaultTab()
+                    val packageName = requireArguments().getString("packageName") ?: ""
+                    if (packageName.isBlank()) {
+                        navigateToDefaultTab()
+                    } else {
+                        requireArguments().remove("packageName")
+                        openDetailsFragment(packageName)
+                    }
                 }
 
                 AuthState.SignedOut -> {

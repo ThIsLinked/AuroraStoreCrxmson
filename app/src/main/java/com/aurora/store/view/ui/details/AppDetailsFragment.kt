@@ -331,7 +331,10 @@ class AppDetailsFragment : BaseFragment(R.layout.fragment_details) {
                     binding.layoutDetailsPrivacy.headerPrivacy.addClickListener {
                         findNavController().navigate(
                             AppDetailsFragmentDirections
-                                .actionAppDetailsFragmentToDetailsExodusFragment(report)
+                                .actionAppDetailsFragmentToDetailsExodusFragment(
+                                    app.displayName,
+                                    report
+                                )
                         )
                     }
                 } else {
@@ -1127,7 +1130,7 @@ class AppDetailsFragment : BaseFragment(R.layout.fragment_details) {
                     }
 
                     override fun onAppClick(app: App) {
-                        openDetailsFragment(app)
+                        openDetailsFragment(app.packageName, app)
                     }
 
                     override fun onAppLongClick(app: App) {
