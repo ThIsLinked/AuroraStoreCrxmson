@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer name="app_versionCode">49</integer>
-    <integer name="app_versionCode_nightly">20230914</integer>
+    <integer name="app_versionCode">50</integer>
+    <integer name="app_versionCode_nightly">20230922</integer>
 </resources>

@@ -182,7 +182,7 @@
     <string name="notification_channel_alert">Quick notification</string>
     <string name="notification_channel_general">General notification</string>
     <string name="onboarding_installer_select">Select a suitable installer</string>
-    <string name="onboarding_permission_select">Aurora Store requires following permissions</string>
+    <string name="onboarding_permissions_summary">The following permissions are required for correct operation</string>
     <string name="onboarding_theme_select">Select what you like</string>
     <string name="onboarding_title_accent">Accent</string>
     <string name="onboarding_title_installer">Installer</string>
@@ -194,13 +194,15 @@
     <string name="onboarding_tos_confirmation">I have read the Aurora Store\'s Terms of Service.</string>
     <string name="onboarding_tos_error">You need to mark TOS read first.</string>
     <string name="onboarding_welcome_select">How you doing?</string>
-    <string name="onboarding_permission_esa">External Storage Access</string>
-    <string name="onboarding_permission_esa_desc">To save downloads (APKs &amp; OBBs), export and import device configs to and from external storage.</string>
-    <string name="onboarding_permission_esm">External Storage Manager</string>
-    <string name="onboarding_permission_installer">Installer Permission</string>
-    <string name="onboarding_permission_installer_desc">Allow installing apps from Aurora Store</string>
-    <string name="onboarding_permission_notifications">Notifications</string>
-    <string name="onboarding_permission_notifications_desc">Send notifications regarding installations status</string>
+
+    <string name="onboarding_permissions_storageAccess_title">Доступ к памяти</string>
+    <string name="onboarding_permissions_storageAccess_summary">Download apk and other, export and import spoof profiles to internal storage.</string>
+    <string name="onboarding_permissions_storageManager_title">Storage manager</string>
+    <string name="onboarding_permissions_storageManager_summary">Required on devices running Android R and above, in addition to storage access.</string>
+    <string name="onboarding_permissions_install_title">Install</string>
+    <string name="onboarding_permissions_install_summary">Installing applications from the inside out.</string>
+    <string name="onboarding_permissions_notifications_title">Notifications</string>
+
     <string name="pref_abandon_session">Force clear installation sessions</string>
     <string name="pref_abandon_session_desc">Clear abandon or pending installation sessions</string>
     <string name="pref_app_download">Downloads</string>
@@ -375,29 +377,34 @@
     <string name="app_language">App language</string>
     <string name="pref_category_interface">Interface</string>
     <string name="pref_ui_layout_tab">Select default tab</string>
-    <string name="app_links_title">App links</string>
-    <string name="app_links_desc">Allow Aurora Store to open supported links</string>
-    <string name="action_enable">Enable</string>
-    <string name="action_enabled">Enabled</string>
-    <string name="app_link_enabled">App link enabled!</string>
-    <string name="app_link_play_store" translatable="false">play.google.com</string>
-    <string name="google_play_store_desc">Google Play, also known as the Google Play Store and formerly Android Market.</string>
     <string name="activity_download_manager_title">Downloads</string>
     <string name="menu_download_manager">Downloads</string>
 
-    <string name="app_label" translatable="false">Aurora Store Crxmson</string>
-    <string name="app_label_launcher" translatable="false">Aurora Store</string>
-    <string name="app_label_short" translatable="false">@string/app_label_launcher</string>
-    <string name="app_label_crxmson" translatable="false">Crxmson</string>
     <string name="app_list_rating" translatable="false">%1$s • %2$s★ • %3$s</string>
     <string name="download_speed_bytes">%1$d B/s</string>
     <string name="download_speed_kb">%1$s Kb/s</string>
     <string name="download_speed_mb">%1$s Mb/s</string>
 
-    <string name="app_versionName" translatable="false">4.3.1-nightly-14.09.23 // moddify 14.09.23 (by ThIsLinked)</string>
-    <string name="app_versionName_nightly" translatable="false">14.09.2023</string>
-    <string name="about_version_full" translatable="false">v4.3.1 // Nightly by 14.09.23</string>
-    <string name="about_version_moddify" translatable="false">Moddify 14.09.2023 (by ThIsLinked)</string>
+    <string name="apps_links_title">Apps links</string>
+    <string name="apps_links_summary">Allow Aurora to open supported links</string>
+    <string name="apps_links_action_enable">Enable</string>
+    <string name="apps_links_action_enabled">Enabled</string>
+    <string name="apps_links_fullEnabled">App links enabled</string>
+    <string name="apps_links_playStore_title" translatable="false">play.google.com</string>
+    <string name="apps_links_playStore_summary">Google\'s all-famous Play Store. In the past, there was Android Market.</string>
+    <string name="apps_links_androidMarket_title" translatable="false">market.android.com</string>
+    <string name="apps_links_androidMarket_summary">Android Market domain in due course. Required to maintain links to this domain.</string>
+    <string name="apps_links_amazonAppStore_title" translatable="false">www.amazon.com</string>
+    <string name="apps_links_amazonAppStore_summary">Amazon AppStore is an app store for Android-compatible platforms operated by Amazon.</string>
+
+    <string name="app_label" translatable="false">Aurora Store Crxmson</string>
+    <string name="app_label_launcher" translatable="false">Aurora Store</string>
+    <string name="app_label_short" translatable="false">@string/app_label_launcher</string>
+    <string name="app_label_crxmson" translatable="false">Crxmson</string>
+    <string name="app_versionName" translatable="false">4.3.2-nightly-22.09.23 // moddify 22.09.23 (by ThIsLinked)</string>
+    <string name="app_versionName_nightly" translatable="false">22.09.2023</string>
+    <string name="about_version_full" translatable="false">v4.3.2 // Nightly by 22.09.23</string>
+    <string name="about_version_moddify" translatable="false">Moddify 22.09.2023 (by ThIsLinked)</string>
 
     <string name="apps_installed">installed</string>
     <string name="apps_purchased">purchased</string>
@@ -422,4 +429,5 @@
     <string name="pref_category_spoofing">Spoofing</string>
     <string name="pref_vending_version_title">Play Store version</string>
     <string name="pref_vending_version_device">Default (value from current a profile)</string>
+    <string name="onboarding_permissions_notifications_summary">Send notifications regarding installations status.</string>
 </resources>

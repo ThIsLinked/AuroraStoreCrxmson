@@ -194,11 +194,6 @@
     <string name="pref_app_download">Завантаження</string>
     <string name="pref_abandon_session_desc">Видалення сеансів черги встановлень або відкладених</string>
     <string name="pref_abandon_session">Примусово очистити сеанси встановлення</string>
-    <string name="onboarding_permission_installer_desc">Дозволити встановлення застосунків з Aurora Store</string>
-    <string name="onboarding_permission_installer">Дозвіл встановлювача</string>
-    <string name="onboarding_permission_esm">Менеджер зовнішнього сховища</string>
-    <string name="onboarding_permission_esa_desc">Щоб зберігати завантаження (APK &amp; OBB), експортувати та імпортувати конфігурації пристроїв на та із зовнішнього сховища.</string>
-    <string name="onboarding_permission_esa">Доступ до зовнішнього сховища</string>
     <string name="onboarding_welcome_select">Як справи\?</string>
     <string name="onboarding_tos_error">Спочатку ви повинні позначити, що прочитали умови надання послуг.</string>
     <string name="onboarding_tos_confirmation">Мною прочитано Умови надання послуг Aurora Store.</string>
@@ -210,8 +205,17 @@
     <string name="onboarding_title_installer">Встановлювач</string>
     <string name="onboarding_title_accent">Акцент</string>
     <string name="onboarding_theme_select">Виберіть те, що вам подобається</string>
-    <string name="onboarding_permission_select">Aurora Store використовує такі дозволи</string>
     <string name="onboarding_installer_select">Виберіть відповідний встановлювач</string>
+
+    <string name="onboarding_permissions_storageAccess_title">Доступ до сховища</string>
+    <string name="onboarding_permissions_storageAccess_summary">Завантаження apk та інших, експорт та імпорт помилкових профілів на внутрішнє сховище.</string>
+    <string name="onboarding_permissions_storageManager_title">Менеджер сховища</string>
+    <string name="onboarding_permissions_storageManager_summary">Потрібен на пристроях з ОС Android R і вище, окрім доступу до сховища.</string>
+    <string name="onboarding_permissions_install_title">Встановлення</string>
+    <string name="onboarding_permissions_install_summary">Установка додатків зсередини.</string>
+    <string name="onboarding_permissions_notifications_title">Notifications</string>
+    <string name="onboarding_permissions_notifications_summary">Надсилати сповіщення про стан встановлення.</string>
+
     <string name="notification_channel_general">Загальне сповіщення</string>
     <string name="notification_channel_alert">Швидке сповіщення</string>
     <string name="dialog_desc_native_split">Неможливо встановити пакети застосунків (split) через системний встановлювач Android. Змініть встановлювач на Session, служби Aurora або Root.</string>
@@ -274,12 +278,10 @@
     <string name="error">Сталася помилка!</string>
     <string name="menu">Меню</string>
     <string name="search_hint">Пошук застосунків та іграх</string>
-    <string name="onboarding_permission_notifications">Сповіщення</string>
     <string name="download_eta_sec">Залишилося %1$dс</string>
     <string name="download_paused">Призупинено • <xliff:g id="completed_downloads">%1$d</xliff:g> / <xliff:g id="all_downloads">%2$d</xliff:g></string>
     <string name="download_eta_hrs">Залишилося %1$dгод %2$dхв %3$dс</string>
     <string name="download_progress">Завантаження • <xliff:g id="completed_downloads">%1$d</xliff:g> / <xliff:g id="all_downloads">%2$d</xliff:g> • <xliff:g id="speed">%3$s</xliff:g></string>
-    <string name="onboarding_permission_notifications_desc">Надсилати сповіщення про стан встановлення</string>
     <string name="pref_advanced_search_in_ctt">Пошук на власній вкладці</string>
     <string name="session_good">Вау! Усе добре.</string>
     <string name="session_enjoy">Увійдіть і насолоджуйтесь.</string>
@@ -317,18 +319,22 @@
     <string name="check_connectivity">Перевірте інтернет-з\'єднання</string>
     <string name="app_language">Мова застосунку</string>
     <string name="failed_to_generate_session">Не вдалося згенерувати сеанс</string>
-    <string name="app_links_desc">Aurora Store може відкривати підтримувані посилання</string>
     <string name="verifying_new_session">Підтвердження нового сеансу</string>
-    <string name="app_links_title">Посилання на застосунки</string>
-    <string name="action_enable">Увімкнути</string>
-    <string name="action_enabled">Увімкнено</string>
-    <string name="app_link_enabled">Посилання на застосунок увімкнено!</string>
-    <string name="google_play_store_desc">Google Play, також відомий як Google Play Маркет, а раніше - Android Market.</string>
     <string name="activity_download_manager_title">Завантаження</string>
 
     <string name="download_speed_bytes">%1$d Б/с</string>
     <string name="download_speed_kb">%1$s Кб/с</string>
     <string name="download_speed_mb">%1$s Мб/с</string>
+
+    <string name="apps_links_title">Посилання на додатки</string>
+    <string name="apps_links_summary">Дозволити Аврорі відкривати підтримувані посилання</string>
+    <string name="apps_links_action_enable">Увімкнути</string>
+    <string name="apps_links_action_enabled">Увімкнено</string>
+    <string name="apps_links_fullEnabled">Посилання на додатки ввімкнено</string>
+    <string name="apps_links_playStore_summary">Усім відомий Play Store від Google. У минулому був Android Market.</string>
+    <string name="apps_links_androidMarket_summary">Домен Android Market свого часу. Потрібно для підтримки посилань на цей домен.</string>
+    <string name="apps_links_amazonAppStore_summary">Amazon AppStore - це магазин додатків для Android-сумісних платформ, яким керує Amazon.</string>
+
     <string name="apps_installed">встановлено</string>
     <string name="apps_purchased">куплено</string>
     <string name="details_files">Файли встановлення</string>
@@ -350,4 +356,5 @@
     <string name="pref_category_spoofing">Підміна</string>
     <string name="pref_vending_version_title">Версiя Play Store</string>
     <string name="pref_vending_version_device">За промовчанням (значення з поточного профілю)</string>
+    <string name="onboarding_permissions_summary">Для коректної роботи потрібні такі дозволи</string>
 </resources>

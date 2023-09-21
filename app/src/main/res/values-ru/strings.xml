@@ -192,11 +192,6 @@
     <string name="pref_app_download">Загрузки</string>
     <string name="pref_abandon_session_desc">Очистить отмененные или ожидающие сеансы установки</string>
     <string name="pref_abandon_session">Принудительно очистить сеансы установки</string>
-    <string name="onboarding_permission_installer_desc">Разрешить установку приложений из Aurora Store</string>
-    <string name="onboarding_permission_installer">Разрешения установщика</string>
-    <string name="onboarding_permission_esm">Менеджер памяти</string>
-    <string name="onboarding_permission_esa_desc">Для сохранения загрузок (APK и OBB), экспорта и импорта конфигураций устройства во внешнее хранилище.</string>
-    <string name="onboarding_permission_esa">Доступ к памяти</string>
     <string name="onboarding_welcome_select">Как дела\?</string>
     <string name="onboarding_tos_error">Сначала нужно отметить Условия предоставления услуг прочитанными.</string>
     <string name="onboarding_tos_confirmation">Я прочитал Условия предоставления услуг Aurora Store.</string>
@@ -208,8 +203,17 @@
     <string name="onboarding_title_installer">Установщик</string>
     <string name="onboarding_title_accent">Акцент</string>
     <string name="onboarding_theme_select">Выберите то, что вам нравится</string>
-    <string name="onboarding_permission_select">Aurora Store требует следующих разрешений</string>
     <string name="onboarding_installer_select">Выберите подходящий способ установки</string>
+
+    <string name="onboarding_permissions_storageAccess_title">Доступ к памяти</string>
+    <string name="onboarding_permissions_storageAccess_summary">Загрузка apk и других, экспорт и импорт ложных профилей на внутреннее хранилище.</string>
+    <string name="onboarding_permissions_storageManager_title">Менеджер памяти</string>
+    <string name="onboarding_permissions_storageManager_summary">Требуется на устройствах под управлением Android R и более поздних версий, а также для доступа к памяти.</string>
+    <string name="onboarding_permissions_install_title">Установка</string>
+    <string name="onboarding_permissions_install_summary">Установка приложений изнутри наружу.</string>
+    <string name="onboarding_permissions_notifications_title">Уведомления</string>
+    <string name="onboarding_permissions_notifications_summary">Отправляйте уведомления о состоянии установок.</string>
+
     <string name="notification_channel_general">Общее уведомление</string>
     <string name="notification_channel_alert">Быстрое уведомление</string>
     <string name="device_miui_extra">При желании вы можете выбрать системный установщик, но тогда вы не сможете устанавливать split APK, поэтому выбор за вами.</string>
@@ -272,11 +276,9 @@
     <string name="menu">Меню</string>
     <string name="expand">Развернуть</string>
     <string name="open_in_aurora">Открыть в Aurora Store</string>
-    <string name="onboarding_permission_notifications_desc">Показывать уведомления о состоянии установки</string>
     <string name="download_eta_hrs">Осталось %1$d час %2$d мин %3$d сек</string>
     <string name="download_eta_min">Осталось %1$d мин %2$d сек</string>
     <string name="download_eta_sec">Осталось %1$d сек</string>
-    <string name="onboarding_permission_notifications">Уведомления</string>
     <string name="session_good">Отлично.</string>
     <string name="session_init">Подготовка…</string>
     <string name="session_login">Необходимо выполнить вход</string>
@@ -316,19 +318,23 @@
     <string name="access_denied_using_vpn">Доступ запрещен! Вы используете VPN или Tor\?</string>
     <string name="check_connectivity">Проверьте соединение с интернетом</string>
     <string name="app_language">Язык приложения</string>
-    <string name="action_enable">Включить</string>
     <string name="failed_to_generate_session">Не удалось создать сессию</string>
     <string name="verifying_new_session">Проверка новой сессии</string>
-    <string name="app_links_desc">Aurora Store может открывать поддерживаемые ссылки</string>
-    <string name="app_link_enabled">Ссылка на приложение включена!</string>
-    <string name="app_links_title">Ссылки на приложения</string>
-    <string name="action_enabled">Включено</string>
-    <string name="google_play_store_desc">Google Play, также известный как Google Play Store, а ранее - Android Market.</string>
     <string name="activity_download_manager_title">Загрузки</string>
 
     <string name="download_speed_bytes">%1$d Б/с</string>
     <string name="download_speed_kb">%1$s Кб/с</string>
     <string name="download_speed_mb">%1$s Мб/с</string>
+
+    <string name="apps_links_title">Ссылки на приложения</string>
+    <string name="apps_links_summary">Разрешить Авроре открывать поддерживаемые ссылки</string>
+    <string name="apps_links_action_enable">Включить</string>
+    <string name="apps_links_action_enabled">Включено</string>
+    <string name="apps_links_fullEnabled">Ссылки на приложения включены</string>
+    <string name="apps_links_playStore_summary">Всеми известный Play Store от Google. В прошлом был Android Market.</string>
+    <string name="apps_links_androidMarket_summary">Домен Android Market в своё время. Требуется для поддержки ссылок на этот домен.</string>
+    <string name="apps_links_amazonAppStore_summary">Amazon AppStore - это магазин приложений для Android-совместимых платформ, управляемый компанией Amazon.</string>
+
     <string name="apps_installed">установлено</string>
     <string name="apps_purchased">куплено</string>
     <string name="details_files">Установочные файлы</string>
@@ -350,4 +356,5 @@
     <string name="pref_category_spoofing">Подмена</string>
     <string name="pref_vending_version_title">Версия Play Store</string>
     <string name="pref_vending_version_device">По-умолчанию (значение из текущего профиля)</string>
+    <string name="onboarding_permissions_summary">Для корректной работы нужны следующие разрешения</string>
 </resources>
