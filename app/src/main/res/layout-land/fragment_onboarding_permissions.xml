@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:paddingStart="@dimen/padding_normal"
             android:paddingEnd="@dimen/padding_normal"
-            android:text="@string/onboarding_permission_select"
+            android:text="@string/onboarding_permissions_summary"
             android:textAlignment="textStart" />
     </LinearLayout>
 
