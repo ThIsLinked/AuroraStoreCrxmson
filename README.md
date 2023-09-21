@@ -7,6 +7,8 @@ A moddify/fork the original [Aurora Store source project](https://gitlab.com/Aur
 
 *This project is intended for the CIS territory. There is no localizations for other regions. Except for English USA - it acts as default localization.*
 
+<font style="color:royalblue">Current status project: Developing</font>
+
 ###### @ 2023 [ThIsLinked](https://t.me/thislinked) / [dhwh](https://4pda.to/forum/index.php?showuser=9870529)
 
 # Main changes from original
