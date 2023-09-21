@@ -7,7 +7,7 @@ A moddify/fork the original [Aurora Store source project](https://gitlab.com/Aur
 
 *This project is intended for the CIS territory. There is no localizations for other regions. Except for English USA - it acts as default localization.*
 
-**Current status project:** Waiting for updates <img src="README.kitten.webp"  alt=" =^.^= " />
+**Current status project:** Waiting for updates <img src="README.kitten.webp"  alt=" =^.^= " style="width: 35px;" />
 
 ###### @ 2023 [ThIsLinked](https://t.me/thislinked) / [dhwh](https://4pda.to/forum/index.php?showuser=9870529)
 
