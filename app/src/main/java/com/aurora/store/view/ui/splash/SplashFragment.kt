@@ -37,14 +37,20 @@ import com.aurora.store.viewmodel.auth.AuthViewModel
 class SplashFragment : BaseFragment(R.layout.fragment_splash) {
 
     private var _binding: FragmentSplashBinding? = null
-    private val binding: FragmentSplashBinding
-        get() = _binding!!
+    private val binding get() = _binding!!
 
     private val viewModel: AuthViewModel by activityViewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentSplashBinding.bind(view)
+
+        if (!Preferences.getBoolean(requireContext(), PREFERENCE_INTRO)) {
+            findNavController().navigate(
+                SplashFragmentDirections.actionSplashFragmentToOnboardingFragment()
+            )
+            return
+        }
 
         // Toolbar
         binding.layoutToolbarAction.toolbar.apply {
@@ -68,12 +74,6 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
             }
         }
 
-        if (!Preferences.getBoolean(requireContext(), PREFERENCE_INTRO)) {
-            findNavController().navigate(
-                SplashFragmentDirections.actionSplashFragmentToOnboardingFragment()
-            )
-        }
-
         attachActions()
 
         //Initial status
@@ -86,7 +86,7 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
                 }
 
                 AuthState.Valid -> {
-                    val packageName = requireArguments().getString("packageName") ?: ""
+                    val packageName = getPackageName()
                     if (packageName.isBlank()) {
                         navigateToDefaultTab()
                     } else {
@@ -106,7 +106,7 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
                 }
 
                 AuthState.SignedIn -> {
-                    val packageName = requireArguments().getString("packageName") ?: ""
+                    val packageName = getPackageName()
                     if (packageName.isBlank()) {
                         navigateToDefaultTab()
                     } else {
@@ -211,5 +211,14 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
                 else -> SplashFragmentDirections.actionSplashFragmentToNavigationApps()
             }
         findNavController().navigate(directions)
+    }
+
+    private fun getPackageName(): String {
+        // Navigation component cannot handle market scheme as its missing a valid host
+        return if (activity?.intent != null && activity?.intent?.scheme == "market") {
+            requireActivity().intent.data!!.getQueryParameter("id") ?: ""
+        } else {
+            requireArguments().getString("packageName") ?: ""
+        }
     }
 }

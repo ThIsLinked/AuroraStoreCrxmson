@@ -13,19 +13,24 @@ import com.aurora.extensions.isSAndAbove
 import com.aurora.extensions.toast
 import com.aurora.store.R
 import com.aurora.store.databinding.FragmentAppLinksBinding
+import com.google.android.material.button.MaterialButton
 
 class AppLinksFragment : Fragment(R.layout.fragment_app_links) {
 
     private var _binding: FragmentAppLinksBinding? = null
-    private val binding: FragmentAppLinksBinding
-        get() = _binding!!
+    private val binding get() = _binding!!
 
     private val playStoreDomain = "play.google.com"
+    private val androidMarketDomain = "market.android.com"
+    private val amazonAppStoreDomain = "www.amazon.com"
+
+    // AppLink buttons
+    private lateinit var buttons: Map<String, MaterialButton>
 
     private val startForResult =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-            if (isSAndAbove() && playStoreDomainVerified()) {
-                toast(R.string.app_link_enabled)
+            if (isSAndAbove() && buttons.keys.any { domainVerified(it) }) {
+                toast(R.string.apps_links_action_enabled)
             }
             updateButtonState()
         }
@@ -34,40 +39,53 @@ class AppLinksFragment : Fragment(R.layout.fragment_app_links) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentAppLinksBinding.bind(view)
 
+        buttons = mapOf(
+            playStoreDomain to binding.appLinksPlayStoreButton,
+            androidMarketDomain to binding.appLinksAndroidMarketButton,
+            amazonAppStoreDomain to binding.appLinksAmazonAppStoreButton
+        )
+
         updateButtonState()
         if (isSAndAbove()) {
-            binding.btnAction.setOnClickListener {
-                val intent = Intent(
-                    ACTION_APP_OPEN_BY_DEFAULT_SETTINGS,
-                    Uri.parse("package:${view.context.packageName}")
-                )
-                startForResult.launch(intent)
+            buttons.values.forEach {
+                it.setOnClickListener {
+                    val intent = Intent(
+                        ACTION_APP_OPEN_BY_DEFAULT_SETTINGS,
+                        Uri.parse("package:${view.context.packageName}")
+                    )
+                    startForResult.launch(intent)
+                }
             }
         }
     }
 
     override fun onDestroyView() {
+        buttons = emptyMap()
         _binding = null
         super.onDestroyView()
     }
 
     private fun updateButtonState() {
         if (isSAndAbove()) {
-            if (playStoreDomainVerified()) {
-                binding.btnAction.apply {
-                    text = getString(R.string.action_enabled)
-                    isEnabled = false
+            buttons.forEach { (domain, button) ->
+                if (domainVerified(domain)) {
+                    button.apply {
+                        text = getString(R.string.apps_links_action_enabled)
+                        isEnabled = false
+                    }
                 }
             }
         } else {
-            binding.btnAction.apply {
-                text = getString(R.string.action_enabled)
-                isEnabled = false
+            buttons.forEach { (_, button) ->
+                button.apply {
+                    text = getString(R.string.apps_links_action_enabled)
+                    isEnabled = false
+                }
             }
         }
     }
 
-    private fun playStoreDomainVerified(): Boolean {
+    private fun domainVerified(domain: String): Boolean {
         return if (isSAndAbove()) {
             val domainVerificationManager = requireContext().getSystemService(
                 DomainVerificationManager::class.java
@@ -76,8 +94,8 @@ class AppLinksFragment : Fragment(R.layout.fragment_app_links) {
                 requireContext().packageName
             )
 
-            val playStoreDomain = userState?.hostToStateMap?.filterKeys { it == playStoreDomain }
-            playStoreDomain?.values?.first() == DomainVerificationUserState.DOMAIN_STATE_SELECTED
+            val domainMap = userState?.hostToStateMap?.filterKeys { it == domain }
+            domainMap?.values?.first() == DomainVerificationUserState.DOMAIN_STATE_SELECTED
         } else {
             true
         }

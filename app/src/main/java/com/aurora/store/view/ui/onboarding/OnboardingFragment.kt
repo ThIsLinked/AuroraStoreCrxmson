@@ -22,7 +22,8 @@ package com.aurora.store.view.ui.onboarding
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
+import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
@@ -55,8 +56,27 @@ import com.google.android.material.tabs.TabLayoutMediator
 class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
 
     private var _binding: FragmentOnboardingBinding? = null
-    private val binding: FragmentOnboardingBinding
-        get() = _binding!!
+    private val binding get() = _binding!!
+
+    private var lastPosition = 0
+
+    internal class PagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
+        FragmentStateAdapter(fragmentManager, lifecycle) {
+        override fun createFragment(position: Int): Fragment {
+            when (position) {
+                0 -> return WelcomeFragment()
+                1 -> return InstallerFragment()
+                2 -> return ThemeFragment()
+                3 -> return AppLinksFragment()
+                4 -> return PermissionsFragment()
+            }
+            return Fragment()
+        }
+
+        override fun getItemCount(): Int {
+            return 5
+        }
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -68,14 +88,31 @@ class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
             loadDefaultPreferences()
         }
 
-        attachViewPager()
+        // ViewPager2
+        binding.viewpager2.apply {
+            adapter = PagerAdapter(childFragmentManager, viewLifecycleOwner.lifecycle)
+            isUserInputEnabled = false
+            setCurrentItem(0, true)
+            registerOnPageChangeCallback(object : OnPageChangeCallback() {
+                override fun onPageSelected(position: Int) {
+                    activity?.runOnUiThread {
+                        lastPosition = position
+                        refreshButtonState()
+                    }
+                }
+            })
+        }
+
+        TabLayoutMediator(binding.tabLayout, binding.viewpager2, true) { tab, position ->
+            tab.text = (position + 1).toString()
+        }.attach()
 
         binding.btnForward.setOnClickListener {
-            moveForward()
+            binding.viewpager2.setCurrentItem(binding.viewpager2.currentItem + 1, true)
         }
 
         binding.btnBackward.setOnClickListener {
-            moveBackward()
+            binding.viewpager2.setCurrentItem(binding.viewpager2.currentItem - 1, true)
         }
 
         if (!Preferences.getBoolean(view.context, Preferences.PREFERENCE_TOS_READ)) {
@@ -87,34 +124,6 @@ class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
         super.onDestroyView()
         _binding = null
     }
-
-    private fun attachViewPager() {
-        binding.viewpager2.adapter = PagerAdapter(requireActivity())
-        binding.viewpager2.isUserInputEnabled = false
-        binding.viewpager2.setCurrentItem(0, true)
-        binding.viewpager2.registerOnPageChangeCallback(object : OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                activity?.runOnUiThread {
-                    lastPosition = position
-                    refreshButtonState()
-                }
-            }
-        })
-
-        TabLayoutMediator(binding.tabLayout, binding.viewpager2, true) { tab, position ->
-            tab.text = (position + 1).toString()
-        }.attach()
-    }
-
-    private fun moveForward() {
-        binding.viewpager2.setCurrentItem(binding.viewpager2.currentItem + 1, true)
-    }
-
-    private fun moveBackward() {
-        binding.viewpager2.setCurrentItem(binding.viewpager2.currentItem - 1, true)
-    }
-
-    var lastPosition = 0
 
     fun refreshButtonState() {
         binding.btnBackward.isEnabled = lastPosition != 0
@@ -170,23 +179,5 @@ class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
 
         /* Advanced */
         save(PREFERENCE_ADVANCED_SEARCH_IN_CTT, false)
-    }
-
-    internal class PagerAdapter(fragmentActivity: FragmentActivity) :
-        FragmentStateAdapter(fragmentActivity) {
-        override fun createFragment(position: Int): Fragment {
-            when (position) {
-                0 -> return WelcomeFragment()
-                1 -> return InstallerFragment()
-                2 -> return ThemeFragment()
-                3 -> return AppLinksFragment()
-                4 -> return PermissionsFragment()
-            }
-            return Fragment()
-        }
-
-        override fun getItemCount(): Int {
-            return 5
-        }
     }
 }
