@@ -1,4 +1,4 @@
-<img align="center" src="LogoProject.webp"  alt="Aurora Store Crxmson" />
+<img align="center" src="README.logo.webp"  alt="Aurora Store Crxmson" />
 
 A moddify/fork the original [Aurora Store source project](https://gitlab.com/AuroraOSS/AuroraStore). Developable for non-commercial purposes for end-personal use.
 
@@ -7,7 +7,7 @@ A moddify/fork the original [Aurora Store source project](https://gitlab.com/Aur
 
 *This project is intended for the CIS territory. There is no localizations for other regions. Except for English USA - it acts as default localization.*
 
-<font style="color:royalblue">Current status project: Developing</font>
+**Current status project:** Waiting for updates <img src="README.kitten.gif"  alt=" =^.^= " />
 
 ###### @ 2023 [ThIsLinked](https://t.me/thislinked) / [dhwh](https://4pda.to/forum/index.php?showuser=9870529)
 
