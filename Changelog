@@ -1,4 +1,11 @@
 
+v4.3.2-nightly-22.09.23 (50)
+ • Pulled up to nightly 22.09.23 (included stable 4.3.2);
+ • Fixed a couple of bugs;
+ • Removed forced tinting colorOnPrimary in switch. Now, like last time, tinting is used from inherit the current accent;
+ • In the initial setup wizard, the Apps Links section added a scroll for the list by reworking the code;
+ • Updated localizations;
+
 v4.3.1-nightly-14.09.23 (49)
  • Pulled up to nightly 14.09.23;
  • Fixed colorPrimaryContainer for switches in "pressed" state;
