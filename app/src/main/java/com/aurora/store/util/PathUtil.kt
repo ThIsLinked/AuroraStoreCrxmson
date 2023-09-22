@@ -48,7 +48,7 @@ object PathUtil {
         packageName: String,
         versionCode: Int
     ): String {
-        return getPackageDirectory(context, packageName) + "/$versionCode"
+        return getPackageDirectory(context, packageName) + ".$versionCode"
     }
 
     fun getApkDownloadFile(context: Context, app: App, file: File): String {
@@ -61,7 +61,7 @@ object PathUtil {
 
     fun getExternalPath(): String {
         val auroraDir =
-            java.io.File("${Environment.getExternalStorageDirectory().absolutePath}/Aurora/Store")
+            java.io.File("${Environment.getExternalStorageDirectory().absolutePath}/Download/AuroraStore")
         auroraDir.mkdirs()
         return auroraDir.absolutePath
     }
@@ -85,7 +85,7 @@ object PathUtil {
     }
 
     fun getSpoofDirectory(context: Context): String {
-        return "${context.getInternalBaseDirectory()}/SpoofConfigs"
+        return "${context.getInternalBaseDirectory()}/Spoof"
     }
 
     fun getNewEmptySpoofConfig(context: Context): java.io.File {
