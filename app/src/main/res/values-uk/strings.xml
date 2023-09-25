@@ -269,8 +269,8 @@
     <string name="installer_am_unavailable">Встановити Менеджер застосунків або змінити встановлювач.</string>
     <string name="download_eta_min">Залишилося %1$dхв %2$dс</string>
     <string name="session_init">Приготування…</string>
-    <string name="session_login">Спочатку ввійдіть</string>
-    <string name="session_login_failed_google">Не вдалось увійти через Google</string>
+    <string name="session_login">Необхідно увійти в акаунт</string>
+    <string name="session_login_failed_google">Не вдалося увійти через Google</string>
     <string name="session_scrapped">Останній сеанс скасовано</string>
     <string name="session_verifying">Перевірка сеансу</string>
     <string name="session_verifying_google">Перевірка сеансу Google</string>
@@ -284,7 +284,7 @@
     <string name="download_progress">Завантаження • <xliff:g id="completed_downloads">%1$d</xliff:g> / <xliff:g id="all_downloads">%2$d</xliff:g> • <xliff:g id="speed">%3$s</xliff:g></string>
     <string name="pref_advanced_search_in_ctt">Пошук на власній вкладці</string>
     <string name="session_good">Вау! Усе добре.</string>
-    <string name="session_enjoy">Увійдіть і насолоджуйтесь.</string>
+    <string name="session_enjoy">Потрібно увійти в акаунт із перерахованих методів.</string>
     <string name="pref_advanced_search_in_ctt_desc">Відкриває результати пошуку у власній вкладці браузера</string>
     <string name="title_advanced">Розширені</string>
     <string name="updates_available">доступно</string>

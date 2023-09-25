@@ -272,7 +272,7 @@
     <string name="session_scrapped">Последний сеанс отменен</string>
     <string name="session_verifying">Проверка сеанса</string>
     <string name="session_verifying_google">Проверка сеанса Google</string>
-    <string name="session_enjoy">Требуется вход.</string>
+    <string name="session_enjoy">Нужно войти в аккаунт из перечисленных методов.</string>
     <string name="menu">Меню</string>
     <string name="expand">Развернуть</string>
     <string name="open_in_aurora">Открыть в Aurora Store</string>
@@ -281,8 +281,8 @@
     <string name="download_eta_sec">Осталось %1$d сек</string>
     <string name="session_good">Отлично.</string>
     <string name="session_init">Подготовка…</string>
-    <string name="session_login">Необходимо выполнить вход</string>
-    <string name="session_login_failed_google">Невозможно войти через Google</string>
+    <string name="session_login">Необходимо войти в аккаунт</string>
+    <string name="session_login_failed_google">Не удалось войти через Google</string>
     <string name="title_advanced">Дополнительно</string>
     <string name="updates_available">доступно</string>
     <string name="error">Произошла ошибка!</string>
