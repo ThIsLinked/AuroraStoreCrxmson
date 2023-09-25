@@ -18,7 +18,7 @@
  *
  */
 
-rootProject.name = "Aurora Store Crxmson v4.3.2-nightly-22.09.23 (50)"
+rootProject.name = "Aurora Store Crxmson v4.3.2-nightly-25.09.23 (50)"
 
 include(":app")
 
