@@ -75,7 +75,7 @@
                     android:layout_marginStart="6sp"
                     android:layout_toEndOf="@id/line1"
                     android:text="@string/app_label_crxmson"
-                    android:textColor="?colorAccent" />
+                    android:textColor="@color/crimson" />
 
             </RelativeLayout>
 
