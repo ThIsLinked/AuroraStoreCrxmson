@@ -34,6 +34,23 @@
     </androidx.preference.PreferenceCategory>
 
     <androidx.preference.PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:singleLineTitle="false"
+        app:title="@string/pref_category_spoof">
+
+        <com.aurora.store.view.custom.preference.AuroraListPreference
+            app:defaultValue="0"
+            app:entries="@array/pref_vending_version_name"
+            app:entryValues="@array/pref_vending_version_value"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_VENDING_VERSION"
+            app:singleLineTitle="false"
+            app:title="@string/pref_vending_version_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory
         app:allowDividerAbove="true"
         app:allowDividerBelow="true"
         app:iconSpaceReserved="false"

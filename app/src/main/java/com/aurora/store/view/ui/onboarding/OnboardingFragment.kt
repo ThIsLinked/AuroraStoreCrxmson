@@ -57,6 +57,7 @@ import com.aurora.store.util.Preferences.PREFERENCE_THEME_TYPE
 import com.aurora.store.util.Preferences.PREFERENCE_UPDATES_CHECK
 import com.aurora.store.util.Preferences.PREFERENCE_UPDATES_CHECK_INTERVAL
 import com.aurora.store.util.Preferences.PREFERENCE_UPDATES_EXTENDED
+import com.aurora.store.util.Preferences.PREFERENCE_VENDING_VERSION
 import com.aurora.store.util.save
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -185,6 +186,7 @@ class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
 
         /* Network */
         save(PREFERENCE_INSECURE_ANONYMOUS, false)
+        save(PREFERENCE_VENDING_VERSION, 0)
         save(PREFERENCE_PROXY_ENABLED, false)
         save(PREFERENCE_PROXY_URL, "")
         save(PREFERENCE_PROXY_INFO, "{}")
