@@ -302,12 +302,12 @@ class AuthViewModel(application: Application) : BaseAndroidViewModel(application
 
             authData.deviceInfoProvider?.properties?.setProperty(
                 "Vending.version",
-                resources.getStringArray(R.array.pref_vending_version_codes)[versionId]
+                resources.getStringArray(R.array.pref_vending_version_code)[versionId]
             )
 
             authData.deviceInfoProvider?.properties?.setProperty(
                 "Vending.versionString",
-                resources.getStringArray(R.array.pref_vending_version)[versionId]
+                resources.getStringArray(R.array.pref_vending_version_name)[versionId]
             )
         }
 
