@@ -80,8 +80,7 @@ class AuthViewModel(application: Application) : BaseAndroidViewModel(application
         liveData.postValue(AuthState.Fetching)
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                var properties =
-                    NativeDeviceInfoProvider(getApplication()).getNativeDeviceProperties()
+                var properties = NativeDeviceInfoProvider(getApplication()).getNativeDeviceProperties()
                 if (spoofProvider.isDeviceSpoofEnabled())
                     properties = spoofProvider.getSpoofDeviceProperties()
 
@@ -122,7 +121,7 @@ class AuthViewModel(application: Application) : BaseAndroidViewModel(application
                     properties = spoofProvider.getSpoofDeviceProperties()
 
                 val playResponse = HttpClient
-                    .getPreferredClient()
+                    .getPreferredClient(getApplication())
                     .postAuth(
                         Constants.URL_DISPENSER,
                         gson.toJson(properties).toByteArray()
@@ -158,7 +157,7 @@ class AuthViewModel(application: Application) : BaseAndroidViewModel(application
                     properties = spoofProvider.getSpoofDeviceProperties()
 
                 val playResponse = HttpClient
-                    .getPreferredClient()
+                    .getPreferredClient(getApplication())
                     .getAuth(
                         Constants.URL_DISPENSER
                     )
@@ -241,7 +240,6 @@ class AuthViewModel(application: Application) : BaseAndroidViewModel(application
                                 )
                                 buildGoogleAuthData(email, aasToken)
                             }
-
                             AccountType.ANONYMOUS -> {
                                 buildAnonymousAuthData()
                             }
@@ -252,11 +250,9 @@ class AuthViewModel(application: Application) : BaseAndroidViewModel(application
                         is UnknownHostException -> {
                             (getApplication() as Context).getString(R.string.title_no_network)
                         }
-
                         is ConnectException -> {
                             (getApplication() as Context).getString(R.string.server_unreachable)
                         }
-
                         else -> {
                             (getApplication() as Context).getString(R.string.bad_request)
                         }
@@ -279,7 +275,7 @@ class AuthViewModel(application: Application) : BaseAndroidViewModel(application
     private fun isValid(authData: AuthData): Boolean {
         return try {
             AuthValidator(authData)
-                .using(HttpClient.getPreferredClient())
+                .using(HttpClient.getPreferredClient(getApplication()))
                 .isValid()
         } catch (e: Exception) {
             false

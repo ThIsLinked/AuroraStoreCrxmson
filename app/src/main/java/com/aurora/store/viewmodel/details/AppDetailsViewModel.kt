@@ -49,7 +49,7 @@ class AppDetailsViewModel : ViewModel() {
             try {
                 val authData = AuthProvider.with(context).getAuthData()
                 _app.emit(
-                    AppDetailsHelper(authData).using(HttpClient.getPreferredClient())
+                    AppDetailsHelper(authData).using(HttpClient.getPreferredClient(context))
                         .getAppByPackageName(packageName)
                 )
             } catch (exception: Exception) {
@@ -63,10 +63,8 @@ class AppDetailsViewModel : ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val authData = AuthProvider.with(context).getAuthData()
-                _reviews.emit(
-                    ReviewsHelper(authData).using(HttpClient.getPreferredClient())
-                        .getReviewSummary(packageName)
-                )
+                _reviews.emit(ReviewsHelper(authData).using(HttpClient.getPreferredClient(context))
+                    .getReviewSummary(packageName))
             } catch (exception: Exception) {
                 Log.e(TAG, "Failed to fetch app reviews", exception)
                 _reviews.emit(emptyList())
@@ -78,17 +76,15 @@ class AppDetailsViewModel : ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val authData = AuthProvider.with(context).getAuthData()
-                _userReview.emit(
-                    ReviewsHelper(authData)
-                        .using(HttpClient.getPreferredClient())
-                        .addOrEditReview(
-                            packageName,
-                            review.title,
-                            review.comment,
-                            review.rating,
-                            isBeta
-                        )!!
-                )
+                _userReview.emit(ReviewsHelper(authData)
+                    .using(HttpClient.getPreferredClient(context))
+                    .addOrEditReview(
+                        packageName,
+                        review.title,
+                        review.comment,
+                        review.rating,
+                        isBeta
+                    )!!)
             } catch (exception: Exception) {
                 Log.e(TAG, "Failed to post review", exception)
                 _userReview.emit(Review())
@@ -97,7 +93,7 @@ class AppDetailsViewModel : ViewModel() {
     }
 
 
-    fun fetchAppReport(packageName: String) {
+    fun fetchAppReport(context: Context,packageName: String) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val headers: MutableMap<String, String> = mutableMapOf()
@@ -106,7 +102,7 @@ class AppDetailsViewModel : ViewModel() {
                 headers["Authorization"] = exodusApiKey
 
                 val url = exodusBaseUrl + packageName
-                val playResponse = HttpClient.getPreferredClient().get(url, headers)
+                val playResponse = HttpClient.getPreferredClient(context).get(url, headers)
 
                 _report.emit(parseResponse(String(playResponse.responseBytes), packageName)[0])
             } catch (exception: Exception) {

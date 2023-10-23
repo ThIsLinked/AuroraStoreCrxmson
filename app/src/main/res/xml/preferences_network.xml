@@ -33,4 +33,30 @@
 
     </androidx.preference.PreferenceCategory>
 
+    <androidx.preference.PreferenceCategory
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:iconSpaceReserved="false"
+        app:key="PREFERENCE_CATEGORY_PROXY"
+        app:singleLineTitle="false"
+        app:summary="@string/pref_network_proxy_tooltip"
+        app:title="@string/pref_category_proxy">
+
+        <androidx.preference.SwitchPreferenceCompat
+            app:disableDependentsState="false"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_PROXY_ENABLED"
+            app:singleLineTitle="false"
+            app:summary="@string/pref_network_proxy_enable_title"
+            app:title="@string/pref_network_proxy_enable_summary" />
+
+        <androidx.preference.EditTextPreference
+            app:dependency="PREFERENCE_PROXY_ENABLED"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_PROXY_URL"
+            app:singleLineTitle="false"
+            app:title="@string/pref_network_proxy_url" />
+
+    </androidx.preference.PreferenceCategory>
+
 </androidx.preference.PreferenceScreen>

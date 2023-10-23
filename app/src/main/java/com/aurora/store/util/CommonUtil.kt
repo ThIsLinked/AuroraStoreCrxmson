@@ -21,6 +21,7 @@ package com.aurora.store.util
 
 import android.content.Context
 import com.aurora.store.R
+import com.aurora.store.data.model.ProxyInfo
 import java.text.DecimalFormat
 import java.util.Locale
 import kotlin.math.ln
@@ -185,6 +186,31 @@ object CommonUtil {
             17 -> R.style.Accent_17
             18 -> R.style.Accent_18
             else -> R.style.Accent_0
+        }
+    }
+
+    fun parseProxyUrl(proxyUrl: String): ProxyInfo? {
+        val pattern = """^(https?|socks)://(?:([^\s:@]+):([^\s:@]+)@)?([^\s:@]+):(\d+)$""".toRegex()
+        val match = pattern.find(proxyUrl)
+
+        return when {
+            match != null -> {
+                val protocol = match.groupValues[1].uppercase()
+                val username = match.groupValues[2]
+                val password = match.groupValues[3]
+                val url = match.groupValues[4]
+                val port = match.groupValues[5]
+
+                ProxyInfo(
+                    protocol,
+                    url,
+                    port.toInt(),
+                    username,
+                    password
+                )
+            }
+
+            else -> null
         }
     }
 }

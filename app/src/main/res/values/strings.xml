@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<?xml version="1.0" encoding="utf-8"?>
+<!--
   ~ Aurora Store
   ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
   ~  Copyright (C) 2022, The Calyx Institute
@@ -44,8 +45,8 @@
     <string name="about_topicPost_4pda_summary" translatable="false">@string/about_templateToGoTo</string>
     <string name="about_topic_4pda">Topic on 4PDA</string>
     <string name="about_topic_4pda_summary" translatable="false">@string/about_templateToGoTo</string>
-    <string name="about_version_full" translatable="false">v4.3.5 // Nightly by 20.10.23</string>
-    <string name="about_version_moddify" translatable="false">Moddify 20.10.2023 (by ThIsLinked // dhwh)</string>
+    <string name="about_version_full" translatable="false">v4.3.5 // Nightly by 23.10.23</string>
+    <string name="about_version_moddify" translatable="false">Moddify 23.10.2023 (by ThIsLinked // dhwh)</string>
     <string name="about_xda" translatable="false">XDA</string>
     <string name="about_xda_summary">See the Aurora Store XDA thread for discussions or suggestions.</string>
 
@@ -123,8 +124,8 @@
     <string name="app_updater_service_notif_text">Enables background app download</string>
     <string name="app_updater_service_notif_title">Background app download</string>
     <string name="app_versionName" translatable="false">4.3.5</string>
-    <string name="app_versionName_full" translatable="false">4.3.5-nightly-20.10.23 // moddify 20.10.23 (by ThIsLinked // dhwh)</string>
-    <string name="app_versionName_nightly" translatable="false">20.10.2023</string>
+    <string name="app_versionName_full" translatable="false">4.3.5-nightly-23.10.23 // moddify 23.10.23 (by ThIsLinked // dhwh)</string>
+    <string name="app_versionName_nightly" translatable="false">23.10.2023</string>
 
     <string name="apps_installed">installed</string>
     <string name="apps_purchased">purchased</string>
@@ -193,9 +194,9 @@
     <string name="download_none">No downloads</string>
     <string name="download_pause_all">Pause all</string>
     <string name="download_paused">
-        Paused • <xliff:g id="completed_downloads">%1$d</xliff:g>/ <xliff:g id="all_downloads">%2$d</xliff:g></string>
+                Paused • <xliff:g id="completed_downloads">%1$d</xliff:g>/ <xliff:g id="all_downloads">%2$d</xliff:g></string>
     <string name="download_progress">
-        Downloading • <xliff:g id="completed_downloads">%1$d</xliff:g>/ <xliff:g id="all_downloads">%2$d</xliff:g>• <xliff:g id="speed">%3$s</xliff:g></string>
+                Downloading • <xliff:g id="completed_downloads">%1$d</xliff:g>/ <xliff:g id="all_downloads">%2$d</xliff:g>• <xliff:g id="speed">%3$s</xliff:g></string>
     <string name="download_queued">Queued</string>
     <string name="download_resume_all">Resume all</string>
     <string name="download_speed_bytes">%1$d B/s</string>
@@ -204,7 +205,7 @@
     <string name="download_speed_mb">%1$s Mb/s</string>
 
     <string name="downloading_dep">
-        Downloading additional files for <xliff:g id="app">%1$s</xliff:g></string>
+                Downloading additional files for <xliff:g id="app">%1$s</xliff:g></string>
 
     <string name="error">An error occurred!</string>
 
@@ -217,7 +218,7 @@
     <string name="expand">Expand</string>
 
     <string name="failed_generating_session">
-        Failed to generate session, error <xliff:g id="status_code">%1$d</xliff:g></string>
+                Failed to generate session, error <xliff:g id="status_code">%1$d</xliff:g></string>
     <string name="failed_to_fetch_report">Failed to fetch privacy report</string>
     <string name="failed_to_generate_session">Could not generate session</string>
 
@@ -260,10 +261,12 @@
     <string name="notification_channel_updater_service">App background download service</string>
     <string name="notification_channel_updates">Updates notifications</string>
     <string name="notification_update_available">
-        Available <xliff:g id="apps_count">%1$d</xliff:g>update
+                Available <xliff:g id="apps_count">%1$d</xliff:g>update
+    
     </string>
     <string name="notification_updates_available">
-        Available <xliff:g id="apps_count">%1$d</xliff:g>updates
+                Available <xliff:g id="apps_count">%1$d</xliff:g>updates
+    
     </string>
 
     <string name="onboarding_appsLinks_allEnabled">All links enabled</string>
@@ -301,6 +304,7 @@
     <string name="pref_category_install">Install</string>
     <string name="pref_category_interface">Interface</string>
     <string name="pref_category_network">Network</string>
+    <string name="pref_category_proxy" translatable="false">Proxy</string>
     <string name="pref_category_search">Search</string>
     <string name="pref_category_spoof">Spoof</string>
     <string name="pref_category_updates">Updates</string>
@@ -335,6 +339,10 @@
     <string name="pref_install_mode_title">Installation method</string>
     <string name="pref_install_profile_summary">Select the target profile to install apps to. Only works with the root installation method</string>
     <string name="pref_install_profile_title">Installation profiles (Experimental)</string>
+    <string name="pref_network_proxy_enable_summary">Allow all traffic to be transported through a proxy</string>
+    <string name="pref_network_proxy_enable_title">Enable proxy</string>
+    <string name="pref_network_proxy_tooltip">Sample: protocol://user:password@host:port</string>
+    <string name="pref_network_proxy_url">Proxy address</string>
     <string name="pref_network_title">Network, spoofing</string>
     <string name="pref_ui_accent_title">Accent</string>
     <string name="pref_ui_layout">Layout</string>
@@ -444,6 +452,9 @@
     <string name="toast_manual_unavailable">The version code you are requesting is unavailable.</string>
     <string name="toast_page_unavailable">Browse page unavailable</string>
     <string name="toast_permission_granted">Permission granted</string>
+    <string name="toast_proxy_failed">Failed to specify</string>
+    <string name="toast_proxy_invalid">Invalid address</string>
+    <string name="toast_proxy_success">Successfully</string>
     <string name="toast_purchase_blocked">App purchases not available on Anonymous accounts.</string>
     <string name="toast_rated_failed">Could not submit rating</string>
     <string name="toast_rated_success">Rated, it may take a while to show</string>

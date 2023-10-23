@@ -37,7 +37,7 @@ class LibraryAppsViewModel(application: Application) : BaseAndroidViewModel(appl
 
     private val authData: AuthData = AuthProvider.with(application).getAuthData()
     private val clusterHelper: ClusterHelper =
-        ClusterHelper(authData).using(HttpClient.getPreferredClient())
+        ClusterHelper(authData).using(HttpClient.getPreferredClient(application))
 
     val liveData: MutableLiveData<StreamCluster> = MutableLiveData()
     var streamCluster: StreamCluster = StreamCluster()
@@ -57,13 +57,11 @@ class LibraryAppsViewModel(application: Application) : BaseAndroidViewModel(appl
                             updateCluster(newCluster)
                             liveData.postValue(streamCluster)
                         }
-
                         streamCluster.hasNext() -> {
                             val newCluster = clusterHelper.next(streamCluster.clusterNextPageUrl)
                             updateCluster(newCluster)
                             liveData.postValue(streamCluster)
                         }
-
                         else -> {
                             requestState = RequestState.Complete
                         }

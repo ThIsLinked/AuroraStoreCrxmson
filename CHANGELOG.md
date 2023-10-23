@@ -1,5 +1,5 @@
-> **v4.3.5-nightly-19.10.23 (53)**
-> * Pulled up to nightly 19.10.23 (includes stable 4.3.5);
+> **v4.3.5-nightly-23.10.23 (53)**
+> * Pulled up to nightly 23.10.23 (include stable 4.3.5);
 > * Complete re-creation of the project. This has improved cleaning, use and convenience;
 > * Redesign of the settings wizard;
 > * In the settings wizard, I added a section «Apps links» for landscape orientation and adapted it;
@@ -22,7 +22,7 @@
 > * Removed the colorAccent color inheritance in the "Crxmson" caption on the About page. It now has a static crimson color;
 
 > **v4.3.2-nightly-22.09.23 (50)**
-> * Pulled up to nightly 22.09.23 (includes stable 4.3.2);
+> * Pulled up to nightly 22.09.23 (include stable 4.3.2);
 > * Fixed a couple of bugs;
 > * Removed forced tinting colorOnPrimary in switch. Now, like last time, tinting is used from inherit the current accent;
 > * In the initial setup wizard, the Apps Links section added a scroll for the list by reworking the code;
