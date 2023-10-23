@@ -15,10 +15,10 @@ class RequestGroupIdBuilder {
         fun getGroupIDsForApp(context: Context, appID: Int): MutableList<Int> {
             val data = Preferences.getPrefs(context).getString(PREFERENCE_UNIQUE_GROUP_IDS, "")!!
             val gson = Gson()
-            var groupIDMap = HashMap<Int, RequestGroupIdBuilder.AppIDnVersion>()
+            var groupIDMap = HashMap<Int, AppIDnVersion>()
             if (data.isNotEmpty()) {
                 val empMapType =
-                    object : TypeToken<Map<Int, RequestGroupIdBuilder.AppIDnVersion>?>() {}.type
+                    object : TypeToken<Map<Int, AppIDnVersion>?>() {}.type
                 groupIDMap = HashMap(gson.fromJson(data, empMapType) ?: HashMap())
             }
             val out = mutableListOf<Int>()

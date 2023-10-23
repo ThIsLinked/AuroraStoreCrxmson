@@ -48,6 +48,9 @@ import com.aurora.store.util.Preferences.PREFERENCE_FOR_YOU
 import com.aurora.store.util.Preferences.PREFERENCE_INSECURE_ANONYMOUS
 import com.aurora.store.util.Preferences.PREFERENCE_INSTALLER_ID
 import com.aurora.store.util.Preferences.PREFERENCE_INTRO
+import com.aurora.store.util.Preferences.PREFERENCE_PROXY_ENABLED
+import com.aurora.store.util.Preferences.PREFERENCE_PROXY_INFO
+import com.aurora.store.util.Preferences.PREFERENCE_PROXY_URL
 import com.aurora.store.util.Preferences.PREFERENCE_SIMILAR
 import com.aurora.store.util.Preferences.PREFERENCE_THEME_ACCENT
 import com.aurora.store.util.Preferences.PREFERENCE_THEME_TYPE
@@ -56,9 +59,6 @@ import com.aurora.store.util.Preferences.PREFERENCE_UPDATES_CHECK_INTERVAL
 import com.aurora.store.util.Preferences.PREFERENCE_UPDATES_EXTENDED
 import com.aurora.store.util.save
 import com.google.android.material.tabs.TabLayoutMediator
-import com.aurora.store.util.Preferences.PREFERENCE_PROXY_ENABLED
-import com.aurora.store.util.Preferences.PREFERENCE_PROXY_INFO
-import com.aurora.store.util.Preferences.PREFERENCE_PROXY_URL
 
 class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
 

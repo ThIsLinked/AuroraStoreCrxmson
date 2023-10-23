@@ -53,7 +53,7 @@ class AMInstaller(context: Context) : InstallerBase(context) {
                 context.applicationContext.packageName + ".fileProvider",
                 file
             ), "application/octet-stream"
-        );
+        )
         intent.flags =
             Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION or Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION
         context.startActivity(intent)

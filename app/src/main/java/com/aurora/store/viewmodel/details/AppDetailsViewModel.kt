@@ -63,8 +63,10 @@ class AppDetailsViewModel : ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val authData = AuthProvider.with(context).getAuthData()
-                _reviews.emit(ReviewsHelper(authData).using(HttpClient.getPreferredClient(context))
-                    .getReviewSummary(packageName))
+                _reviews.emit(
+                    ReviewsHelper(authData).using(HttpClient.getPreferredClient(context))
+                        .getReviewSummary(packageName)
+                )
             } catch (exception: Exception) {
                 Log.e(TAG, "Failed to fetch app reviews", exception)
                 _reviews.emit(emptyList())
@@ -76,15 +78,17 @@ class AppDetailsViewModel : ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val authData = AuthProvider.with(context).getAuthData()
-                _userReview.emit(ReviewsHelper(authData)
-                    .using(HttpClient.getPreferredClient(context))
-                    .addOrEditReview(
-                        packageName,
-                        review.title,
-                        review.comment,
-                        review.rating,
-                        isBeta
-                    )!!)
+                _userReview.emit(
+                    ReviewsHelper(authData)
+                        .using(HttpClient.getPreferredClient(context))
+                        .addOrEditReview(
+                            packageName,
+                            review.title,
+                            review.comment,
+                            review.rating,
+                            isBeta
+                        )!!
+                )
             } catch (exception: Exception) {
                 Log.e(TAG, "Failed to post review", exception)
                 _userReview.emit(Review())
@@ -93,7 +97,7 @@ class AppDetailsViewModel : ViewModel() {
     }
 
 
-    fun fetchAppReport(context: Context,packageName: String) {
+    fun fetchAppReport(context: Context, packageName: String) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val headers: MutableMap<String, String> = mutableMapOf()

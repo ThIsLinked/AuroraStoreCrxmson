@@ -80,7 +80,8 @@ class AuthViewModel(application: Application) : BaseAndroidViewModel(application
         liveData.postValue(AuthState.Fetching)
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                var properties = NativeDeviceInfoProvider(getApplication()).getNativeDeviceProperties()
+                var properties =
+                    NativeDeviceInfoProvider(getApplication()).getNativeDeviceProperties()
                 if (spoofProvider.isDeviceSpoofEnabled())
                     properties = spoofProvider.getSpoofDeviceProperties()
 
@@ -240,6 +241,7 @@ class AuthViewModel(application: Application) : BaseAndroidViewModel(application
                                 )
                                 buildGoogleAuthData(email, aasToken)
                             }
+
                             AccountType.ANONYMOUS -> {
                                 buildAnonymousAuthData()
                             }
@@ -250,9 +252,11 @@ class AuthViewModel(application: Application) : BaseAndroidViewModel(application
                         is UnknownHostException -> {
                             (getApplication() as Context).getString(R.string.title_no_network)
                         }
+
                         is ConnectException -> {
                             (getApplication() as Context).getString(R.string.server_unreachable)
                         }
+
                         else -> {
                             (getApplication() as Context).getString(R.string.bad_request)
                         }

@@ -41,7 +41,8 @@ class PurchasedViewModel(application: Application) : BaseAndroidViewModel(applic
 
     private val authData = AuthProvider.with(application).getAuthData()
 
-    private val purchaseHelper = PurchaseHelper(authData).using(HttpClient.getPreferredClient(application))
+    private val purchaseHelper =
+        PurchaseHelper(authData).using(HttpClient.getPreferredClient(application))
 
     private var appList: MutableList<App> = mutableListOf()
 
@@ -59,10 +60,12 @@ class PurchasedViewModel(application: Application) : BaseAndroidViewModel(applic
                         .filter { it.displayName.isNotEmpty() }
 
                     if (nextAppList.isEmpty()) {
-                        liveData.postValue(PaginatedAppList(
-                            appList,
-                            false
-                        ))
+                        liveData.postValue(
+                            PaginatedAppList(
+                                appList,
+                                false
+                            )
+                        )
                     } else {
                         appList.addAll(nextAppList)
                         liveData.postValue(

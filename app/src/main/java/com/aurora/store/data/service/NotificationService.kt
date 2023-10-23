@@ -425,7 +425,7 @@ class NotificationService : Service() {
     override fun onDestroy() {
         Log.i("Notification Service Stopped")
         fetch.removeListener(fetchListener)
-        EventBus.getDefault().unregister(this);
+        EventBus.getDefault().unregister(this)
         super.onDestroy()
     }
 }

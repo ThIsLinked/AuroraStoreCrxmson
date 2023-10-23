@@ -67,7 +67,7 @@ class TopChartFragment : BaseFragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         B = FragmentTopContainerBinding.bind(
             inflater.inflate(
                 R.layout.fragment_top_container,

@@ -160,7 +160,7 @@ class InstallerFragment : BaseFragment(R.layout.fragment_onboarding_installer) {
             4 -> {
                 if (hasAppManager(requireContext())) {
                     this.installerId = installerId
-                    save(Preferences.PREFERENCE_INSTALLER_ID, installerId)
+                    save(PREFERENCE_INSTALLER_ID, installerId)
                 } else {
                     showDialog(
                         R.string.action_installations,

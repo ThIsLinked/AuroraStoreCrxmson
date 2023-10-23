@@ -40,22 +40,20 @@ class RatingView : RelativeLayout {
         init(context)
     }
 
-    constructor(context: Context?) : super(context) {}
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs) {}
+    constructor(context: Context?) : super(context)
+    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(
         context,
         attrs,
         defStyleAttr
-    ) {
-    }
+    )
 
     constructor(
         context: Context?,
         attrs: AttributeSet?,
         defStyleAttr: Int,
         defStyleRes: Int
-    ) : super(context, attrs, defStyleAttr, defStyleRes) {
-    }
+    ) : super(context, attrs, defStyleAttr, defStyleRes)
 
     private fun init(context: Context) {
         val view = inflate(context, R.layout.view_rating, this)

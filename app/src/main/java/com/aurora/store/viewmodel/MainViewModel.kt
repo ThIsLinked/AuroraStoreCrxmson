@@ -29,7 +29,8 @@ class MainViewModel : ViewModel() {
             try {
                 val gson: Gson =
                     GsonBuilder().excludeFieldsWithModifiers(Modifier.TRANSIENT).create()
-                val response = HttpClient.getPreferredClient(context).get(Constants.UPDATE_URL, mapOf())
+                val response =
+                    HttpClient.getPreferredClient(context).get(Constants.UPDATE_URL, mapOf())
                 val selfUpdate =
                     gson.fromJson(String(response.responseBytes), SelfUpdate::class.java)
 
