@@ -73,6 +73,7 @@ class EditorImageView : RelativeLayout {
                     transformations(RoundedCornersTransformation(8.px.toFloat()))
                 }
             }
+
             else -> {
                 B.img.layoutParams.width = 24.px.toInt()
                 B.img.layoutParams.height = 24.px.toInt()

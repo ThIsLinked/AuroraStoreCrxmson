@@ -96,6 +96,7 @@ class ScreenshotView : RelativeLayout {
                     normalizedHeight = 192f
                     normalizedWidth = 192f
                 }
+
                 else -> {
                     val factor = artworkHeight / 192f
                     normalizedHeight = 192f

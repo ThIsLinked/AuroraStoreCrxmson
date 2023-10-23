@@ -59,10 +59,12 @@ class PurchasedViewModel(application: Application) : BaseAndroidViewModel(applic
                         .filter { it.displayName.isNotEmpty() }
 
                     if (nextAppList.isEmpty()) {
-                        liveData.postValue(PaginatedAppList(
-                            appList,
-                            false
-                        ))
+                        liveData.postValue(
+                            PaginatedAppList(
+                                appList,
+                                false
+                            )
+                        )
                     } else {
                         appList.addAll(nextAppList)
                         liveData.postValue(

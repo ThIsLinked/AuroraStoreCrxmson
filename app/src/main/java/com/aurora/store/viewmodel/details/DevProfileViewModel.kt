@@ -45,7 +45,7 @@ class DevProfileViewModel(application: Application) : BaseAndroidViewModel(appli
     private var streamHelper = StreamHelper(authData)
 
     val liveData: MutableLiveData<ViewState> = MutableLiveData()
-    var devStream:DevStream = DevStream()
+    var devStream: DevStream = DevStream()
     var streamBundle: StreamBundle = StreamBundle()
 
     lateinit var type: StreamHelper.Type
@@ -78,7 +78,8 @@ class DevProfileViewModel(application: Application) : BaseAndroidViewModel(appli
             supervisorScope {
                 try {
                     if (streamCluster.hasNext()) {
-                        val newCluster = streamHelper.getNextStreamCluster(streamCluster.clusterNextPageUrl)
+                        val newCluster =
+                            streamHelper.getNextStreamCluster(streamCluster.clusterNextPageUrl)
                         updateCluster(newCluster)
                         devStream.streamBundle = streamBundle
                         liveData.postValue(ViewState.Success(devStream))

@@ -87,6 +87,7 @@ class ServiceInstaller(context: Context) : InstallerBase(context) {
 
                 xInstall(packageName, uriList, fileList)
             }
+
             else -> {
                 postError(
                     packageName,
@@ -223,7 +224,11 @@ class ServiceInstaller(context: Context) : InstallerBase(context) {
                                         )
                                     } catch (e: RemoteException) {
                                         removeFromInstallQueue(packageName)
-                                        postError(packageName, e.localizedMessage, e.stackTraceToString())
+                                        postError(
+                                            packageName,
+                                            e.localizedMessage,
+                                            e.stackTraceToString()
+                                        )
                                         readyWithAction.set(true)
                                     }
                                 } else {
@@ -241,7 +246,11 @@ class ServiceInstaller(context: Context) : InstallerBase(context) {
                                     )
                                 } catch (e: RemoteException) {
                                     removeFromInstallQueue(packageName)
-                                    postError(packageName, e.localizedMessage, e.stackTraceToString())
+                                    postError(
+                                        packageName,
+                                        e.localizedMessage,
+                                        e.stackTraceToString()
+                                    )
                                     readyWithAction.set(true)
                                 }
                             }
@@ -292,6 +301,7 @@ class ServiceInstaller(context: Context) : InstallerBase(context) {
                         )
                     )
                 }
+
                 else -> {
                     val error = AppInstaller.getErrorString(
                         context,
@@ -322,6 +332,7 @@ class ServiceInstaller(context: Context) : InstallerBase(context) {
                         )
                     )
                 }
+
                 else -> {
                     val error = AppInstaller.getErrorString(
                         context,

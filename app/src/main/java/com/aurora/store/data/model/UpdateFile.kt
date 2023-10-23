@@ -37,6 +37,7 @@ data class UpdateFile(val app: App) {
             is UpdateFile -> other.app.id == app.id
                     && other.state == state
                     && isGroupSame(group, other.group)
+
             else -> false
         }
     }

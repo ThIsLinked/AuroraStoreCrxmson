@@ -1,4 +1,4 @@
-<img align="center" src="Readme.logo.webp"  alt="Aurora Store Crxmson" />
+<img id="logo" align="center" src="Readme.logo.webp"  alt="Aurora Store Crxmson" />
 
 A moddify/fork the original [Aurora Store source project](https://gitlab.com/AuroraOSS/AuroraStore). Developable for non-commercial purposes for end-personal use.
 
@@ -12,7 +12,9 @@ A moddify/fork the original [Aurora Store source project](https://gitlab.com/Aur
 ###### @ 2023 [ThIsLinked](https://t.me/thislinked) / [dhwh](https://4pda.to/forum/index.php?showuser=9870529)
 
 # Main changes from original
+
 > **Note:**
+
 ```
 Android Studio mangles the code of some resources at compiling time.
 Use the source code only for research or custom variants. The apk's,
@@ -20,6 +22,7 @@ published by me, do not have such a defect, since I corrected them from
 such a misunderstanding. Use them in case of pure use – they look
 exactly as they were supposed to in the specification.
 ```
+
 * Some interface edits and improvements + changed default color to Crimson, v31 and above – system dynamic color.;
 * The list colors for accent is taken from the [Material Design palette](https://m2.material.io/design/color/the-color-system.html#color-theme-creation);
 * On the application page, some elements are now available for highlighting with the cursor (so that the text can be copied to the clipboard);
@@ -43,8 +46,7 @@ exactly as they were supposed to in the specification.
 > * Optimization of apk at archive level;
 > * Sign dhwh v1+v2+v3 (on 4PDA);
 > * SignThIsLinked v1+v2+v3 (on the general web);
-> <details>
-> <summary>Signature dhwh hash</summary>
+> <details><summary>Signature dhwh hash</summary>
 >
 > _**HEX/DEC:** 0x97d83e3e (-1747435970)_
 >
@@ -56,8 +58,7 @@ exactly as they were supposed to in the specification.
 >
 > _**SHA256:** b21ac037532ea9ae47e98afacb9756fb116f0b11c51860c8115d29512a69eb6c_
 > </details>
-> <details>
-> <summary>Signature ThIsLinked hash</summary>
+> <details><summary>Signature ThIsLinked hash</summary>
 >
 > _**HEX/DEC:** 0x6264f009 (1650782217)_
 >
@@ -71,18 +72,20 @@ exactly as they were supposed to in the specification.
 > </details>
 
 # Screenshots
-<details>
-<summary>[click spoiler]</summary>
+
+<details><summary>[click spoiler]</summary>
 <img src="Screenshots/Screenshot_1.webp" alt="Screenshot_1" /><img src="Screenshots/Screenshot_2.webp" alt="Screenshot_2" /><img src="Screenshots/Screenshot_2-amber.webp" alt="Screenshot_2-amber" /><img src="Screenshots/Screenshot_2-indigo.webp" alt="Screenshot_2-indigo" /><img src="Screenshots/Screenshot_2-dark.webp" alt="Screenshot_2-dark" /><img src="Screenshots/Screenshot_2-black.webp" alt="Screenshot_2-black" /><img src="Screenshots/Screenshot_3.webp" alt="Screenshot_3" /><img src="Screenshots/Screenshot_4.webp" alt="Screenshot_4" /><img src="Screenshots/Screenshot_5.webp" alt="Screenshot_5" /><img src="Screenshots/Screenshot_6.webp" alt="Screenshot_6" /><img src="Screenshots/Screenshot_7.webp" alt="Screenshot_7" /><img src="Screenshots/Screenshot_8.webp" alt="Screenshot_8" /><img src="Screenshots/Screenshot_8-listAccents.webp" alt="Screenshot_8-listAccents" /><img src="Screenshots/Screenshot_9.webp" alt="Screenshot_9" />
 </details>
 
 # Gratitudes
+
 * vladrevers ([GitLab](https://gitlab.com/vladrevers), [4PDA](https://4pda.to/forum/index.php?showuser=5081201)) – Help in Smali and educational directions;
 * Maximoff ([official site](https://maximoff.su/), [GitLab](https://gitlab.com/maximoff), [4PDA](https://4pda.to/forum/index.php?showuser=4424665)) – Source code for implementing functions;
 * tigr1234566 ([Telegram](https://t.me/tommyhellatigr), [4PDA](https://4pda.to/forum/index.php?showuser=6432902)) – Tester;
 * master1274 ([GitLab](https://gitlab.com/anikin.rusl), [4PDA](https://4pda.to/forum/index.php?showuser=5042804)) – Tester;
 
 # License
+
 ```
 This project has inherited the original license (GPL v3.0) provided by the original developer.
 Developed for non-commercial purposes primarily for final personal use. Allowed further editing

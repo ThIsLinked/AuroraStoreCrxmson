@@ -126,10 +126,12 @@ class PermissionBottomSheet : BaseBottomSheet() {
                 permissionGroupInfo.icon = R.drawable.ic_permission_android
                 permissionGroupInfo.name = "android"
             }
+
             "com.google.android.gsf", "com.android.vending" -> {
                 permissionGroupInfo.icon = R.drawable.ic_permission_google
                 permissionGroupInfo.name = "google"
             }
+
             else -> {
                 permissionGroupInfo.icon = R.drawable.ic_permission_unknown
                 permissionGroupInfo.name = "unknown"

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!--
+<?xml version="1.0" encoding="UTF-8" ?><!--
   ~ Aurora Store
   ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
   ~
@@ -27,8 +26,8 @@
         <androidx.preference.SwitchPreferenceCompat
             app:defaultValue="false"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="PREFERENCE_INSECURE_ANONYMOUS"
+            app:singleLineTitle="false"
             app:summary="@string/pref_insecure_anonymous_summary"
             app:title="@string/pref_insecure_anonymous_title" />
 

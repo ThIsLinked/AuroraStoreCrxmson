@@ -11,7 +11,6 @@ import androidx.lifecycle.LifecycleService
 import com.aurora.Constants
 import com.aurora.gplayapi.data.models.App
 import com.aurora.gplayapi.data.models.File
-import com.aurora.store.BuildConfig
 import com.aurora.store.R
 import com.aurora.store.data.downloader.DownloadManager
 import com.aurora.store.data.downloader.RequestBuilder.buildRequest

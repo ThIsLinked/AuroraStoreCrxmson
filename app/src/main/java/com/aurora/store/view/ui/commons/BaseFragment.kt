@@ -31,7 +31,7 @@ import java.lang.reflect.Modifier
 
 open class BaseFragment : Fragment {
 
-    constructor(): super()
+    constructor() : super()
 
     constructor(@LayoutRes contentLayoutId: Int) : super(contentLayoutId)
 

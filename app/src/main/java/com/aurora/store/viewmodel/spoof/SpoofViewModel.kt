@@ -10,9 +10,10 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import java.util.Properties
 
-class SpoofViewModel: ViewModel() {
+class SpoofViewModel : ViewModel() {
 
-    private val _availableDevices: MutableStateFlow<List<Properties>> = MutableStateFlow(emptyList())
+    private val _availableDevices: MutableStateFlow<List<Properties>> =
+        MutableStateFlow(emptyList())
     val availableDevices = _availableDevices.asStateFlow()
 
     fun fetchAvailableDevices(context: Context) {

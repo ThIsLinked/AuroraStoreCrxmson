@@ -22,10 +22,10 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash_rootContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:id="@+id/splash_rootContainer"
     android:weightSum="2"
     tools:context=".view.ui.splash.SplashFragment">
 
@@ -34,9 +34,9 @@
         layout="@layout/view_toolbar_native" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/splash_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/splash_container"
         android:baselineAligned="false"
         android:orientation="horizontal"
         android:weightSum="2">
@@ -87,8 +87,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/splash_label_container"
-                android:layout_marginTop="@dimen/margin_large"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_large"
                 android:textAlignment="center"
                 tools:text="Sign in first" />
 

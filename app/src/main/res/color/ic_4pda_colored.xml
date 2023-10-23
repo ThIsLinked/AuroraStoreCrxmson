@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <gradient xmlns:android="http://schemas.android.com/apk/res/android"
-    android:startX="5.1519"
-    android:startY="4.6"
+    android:angle="0.0"
     android:endX="30.8481"
     android:endY="31.5"
-    android:angle="0.0"
+    android:startX="5.1519"
+    android:startY="4.6"
     android:type="linear">
     <item
         android:color="@color/crimson"

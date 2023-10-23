@@ -32,10 +32,12 @@ class AMInstaller(context: Context) : InstallerBase(context) {
                 fileList.size == 1 -> {
                     xInstall(File(fileList.first()))
                 }
+
                 fileList.size > 1 -> {
                     val apks = zipFile(fileList)
                     xInstall(apks)
                 }
+
                 else -> {
                     throw Exception("Invalid data, expecting non empty fileList")
                 }

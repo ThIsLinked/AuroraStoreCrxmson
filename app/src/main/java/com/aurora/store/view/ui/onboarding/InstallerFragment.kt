@@ -132,6 +132,7 @@ class InstallerFragment : BaseFragment(R.layout.fragment_onboarding_installer) {
                 this.installerId = installerId
                 save(PREFERENCE_INSTALLER_ID, installerId)
             }
+
             2 -> {
                 if (hasRootAccess()) {
                     this.installerId = installerId
@@ -143,6 +144,7 @@ class InstallerFragment : BaseFragment(R.layout.fragment_onboarding_installer) {
                     )
                 }
             }
+
             3 -> {
                 if (hasAuroraService(requireContext())) {
                     this.installerId = installerId
@@ -154,6 +156,7 @@ class InstallerFragment : BaseFragment(R.layout.fragment_onboarding_installer) {
                     )
                 }
             }
+
             4 -> {
                 if (hasAppManager(requireContext())) {
                     this.installerId = installerId
@@ -165,6 +168,7 @@ class InstallerFragment : BaseFragment(R.layout.fragment_onboarding_installer) {
                     )
                 }
             }
+
             5 -> {
                 if (hasShizuku(requireContext()) && isOAndAbove()) {
                     if (shizukuAlive && hasShizukuPerm()) {
@@ -185,6 +189,7 @@ class InstallerFragment : BaseFragment(R.layout.fragment_onboarding_installer) {
                     )
                 }
             }
+
             else -> {
                 this.installerId = installerId
                 save(PREFERENCE_INSTALLER_ID, installerId)

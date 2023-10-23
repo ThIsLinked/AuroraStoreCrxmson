@@ -28,23 +28,23 @@
             app:defaultValue="true"
             app:disableDependentsState="false"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="PREFERENCE_DOWNLOAD_EXTERNAL"
+            app:singleLineTitle="false"
             app:summary="@string/pref_downloader_external_desc"
             app:title="@string/pref_downloader_external" />
 
         <androidx.preference.EditTextPreference
             app:dependency="PREFERENCE_DOWNLOAD_EXTERNAL"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="PREFERENCE_DOWNLOAD_DIRECTORY"
+            app:singleLineTitle="false"
             app:title="@string/pref_downloader_path_title" />
 
         <androidx.preference.SwitchPreferenceCompat
             app:defaultValue="false"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="PREFERENCE_DOWNLOAD_WIFI_ONLY"
+            app:singleLineTitle="false"
             app:title="@string/pref_downloader_wifi_title" />
 
         <androidx.preference.SeekBarPreference
@@ -55,9 +55,9 @@
             android:title="@string/pref_downloader_active_title"
             app:adjustable="true"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:min="1"
-            app:showSeekBarValue="true" />
+            app:showSeekBarValue="true"
+            app:singleLineTitle="false" />
 
     </androidx.preference.PreferenceCategory>
 
@@ -71,41 +71,41 @@
             app:entries="@array/pref_installation_method"
             app:entryValues="@array/pref_installation_method_values"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="PREFERENCE_INSTALLER_ID"
+            app:singleLineTitle="false"
             app:summary="@string/pref_install_mode_summary"
             app:title="@string/pref_install_mode_title" />
 
         <androidx.preference.Preference
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="INSTALLATION_ABANDON_SESSION"
+            app:singleLineTitle="false"
             app:summary="@string/pref_abandon_session_desc"
             app:title="@string/pref_abandon_session" />
 
         <androidx.preference.ListPreference
             app:defaultValue="0"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:isPreferenceVisible="false"
             app:key="PREFERENCE_INSTALLATION_PROFILE"
+            app:singleLineTitle="false"
             app:summary="@string/pref_install_profile_summary"
             app:title="@string/pref_install_profile_title" />
 
         <androidx.preference.SwitchPreferenceCompat
             app:defaultValue="false"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:isPreferenceVisible="false"
             app:key="PREFERENCE_AUTO_INSTALL"
+            app:singleLineTitle="false"
             app:summary="@string/pref_install_auto_summary"
             app:title="@string/pref_install_auto_title" />
 
         <androidx.preference.SwitchPreferenceCompat
             app:defaultValue="false"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="PREFERENCE_AUTO_DELETE"
+            app:singleLineTitle="false"
             app:summary="@string/pref_install_delete_summary"
             app:title="@string/pref_install_delete_title" />
 
@@ -119,8 +119,8 @@
         <androidx.preference.SwitchPreferenceCompat
             app:defaultValue="false"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="PREFERENCE_UPDATES_EXTENDED"
+            app:singleLineTitle="false"
             app:summary="@string/pref_updates_extended_desc"
             app:title="@string/pref_updates_extended" />
 
@@ -128,8 +128,8 @@
             app:defaultValue="true"
             app:disableDependentsState="false"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="PREFERENCE_UPDATES_CHECK"
+            app:singleLineTitle="false"
             app:summary="@string/pref_updates_check_desc"
             app:title="@string/pref_updates_check" />
 
@@ -142,9 +142,9 @@
             android:title="@string/pref_updates_check_frequency"
             app:adjustable="true"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:min="1"
-            app:showSeekBarValue="true" />
+            app:showSeekBarValue="true"
+            app:singleLineTitle="false" />
 
     </androidx.preference.PreferenceCategory>
 

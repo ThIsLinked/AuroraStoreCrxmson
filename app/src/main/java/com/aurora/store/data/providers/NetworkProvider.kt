@@ -71,6 +71,6 @@ class NetworkProvider(context: Context) {
         if (isMAndAbove()) {
             networkRequest.addCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED)
         }
-        return  networkRequest.build()
+        return networkRequest.build()
     }
 }

@@ -60,6 +60,7 @@ object RequestBuilder {
         val fileName = when (file.type) {
             File.FileType.BASE,
             File.FileType.SPLIT -> PathUtil.getApkDownloadFile(context, app, file)
+
             File.FileType.OBB,
             File.FileType.PATCH -> PathUtil.getObbDownloadFile(app, file)
         }

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item type="drawable" name="ic_launcher_round">@drawable/ic_launcher_round</item>
+    <item name="ic_launcher_round" type="drawable">@drawable/ic_launcher_round</item>
 </resources>

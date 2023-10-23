@@ -186,21 +186,24 @@ class NotificationService : Service() {
                 builder.setSmallIcon(R.drawable.ic_download_pause)
                 builder.setContentText(getString(R.string.download_paused))
             }
+
             Status.CANCELLED -> {
                 builder.setSmallIcon(R.drawable.ic_download_cancel)
                 builder.setContentText(getString(R.string.download_canceled))
                 builder.color = Color.RED
             }
-            Status.FAILED ->
-            {
+
+            Status.FAILED -> {
                 builder.setSmallIcon(R.drawable.ic_download_fail)
                 builder.setContentText(getString(R.string.download_failed))
                 builder.color = Color.RED
             }
+
             Status.COMPLETED -> if (fetchGroup.groupDownloadProgress == 100) {
                 builder.setSmallIcon(android.R.drawable.stat_sys_download_done)
                 builder.setContentText(getString(R.string.download_completed))
             }
+
             else -> {
                 builder.setSmallIcon(android.R.drawable.stat_sys_download)
                 builder.setContentText(getString(R.string.download_metadata))
@@ -272,6 +275,7 @@ class NotificationService : Service() {
                 builder.setContentIntent(getContentIntentForDetails(app))
                 builder.setStyle(progressBigText)
             }
+
             else -> {
 
             }
@@ -354,7 +358,8 @@ class NotificationService : Service() {
     fun onEventMainThread(event: Any) {
         when (event) {
             is InstallerEvent.Success -> {
-                val groupIDsOfPackageName = RequestGroupIdBuilder.getGroupIDsForApp(this, event.packageName.hashCode())
+                val groupIDsOfPackageName =
+                    RequestGroupIdBuilder.getGroupIDsForApp(this, event.packageName.hashCode())
                 var app: App? = null
                 for (item in groupIDsOfPackageName) {
                     app = appMap[item]
@@ -365,8 +370,10 @@ class NotificationService : Service() {
                 if (app != null)
                     notifyInstallationStatus(app, event.extra)
             }
+
             is InstallerEvent.Failed -> {
-                val groupIDsOfPackageName = RequestGroupIdBuilder.getGroupIDsForApp(this, event.packageName.hashCode())
+                val groupIDsOfPackageName =
+                    RequestGroupIdBuilder.getGroupIDsForApp(this, event.packageName.hashCode())
                 var app: App? = null
                 for (item in groupIDsOfPackageName) {
                     app = appMap[item]
@@ -377,6 +384,7 @@ class NotificationService : Service() {
                 if (app != null)
                     notifyInstallationStatus(app, event.error)
             }
+
             else -> {
 
             }

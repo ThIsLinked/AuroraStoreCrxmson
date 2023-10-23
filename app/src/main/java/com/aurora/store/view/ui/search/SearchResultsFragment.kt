@@ -285,7 +285,7 @@ class SearchResultsFragment : BaseFragment(R.layout.fragment_search_result),
     }
 
     private fun filter(appList: MutableList<App>): List<App> {
-        val tempList:MutableList<App> = mutableListOf()
+        val tempList: MutableList<App> = mutableListOf()
         tempList.addAll(appList)
 
         filter = FilterProvider.with(requireContext()).getSavedFilter()

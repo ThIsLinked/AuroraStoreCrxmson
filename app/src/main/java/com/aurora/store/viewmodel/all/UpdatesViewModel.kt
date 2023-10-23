@@ -82,7 +82,8 @@ class UpdatesViewModel(application: Application) : BaseAppsViewModel(application
             updateFileMap.clear()
 
             apps.forEach {
-                updateFileMap[it.getGroupId(getApplication<Application>().applicationContext)] = UpdateFile(it)
+                updateFileMap[it.getGroupId(getApplication<Application>().applicationContext)] =
+                    UpdateFile(it)
             }
 
             liveUpdateData.postValue(updateFileMap)
@@ -96,12 +97,15 @@ class UpdatesViewModel(application: Application) : BaseAppsViewModel(application
             is BusEvent.InstallEvent -> {
                 updateListAndPost(event.packageName)
             }
+
             is BusEvent.UninstallEvent -> {
                 updateListAndPost(event.packageName)
             }
+
             is BusEvent.Blacklisted -> {
                 updateListAndPost(event.packageName)
             }
+
             else -> {
 
             }
@@ -114,13 +118,18 @@ class UpdatesViewModel(application: Application) : BaseAppsViewModel(application
             is InstallerEvent.Success -> {
 
             }
+
             is InstallerEvent.Cancelled -> {
 
             }
+
             is InstallerEvent.Failed -> {
                 val packageName = event.packageName
                 packageName?.let {
-                    val groupIDsOfPackageName = RequestGroupIdBuilder.getGroupIDsForApp(getApplication<Application>().applicationContext, packageName.hashCode())
+                    val groupIDsOfPackageName = RequestGroupIdBuilder.getGroupIDsForApp(
+                        getApplication<Application>().applicationContext,
+                        packageName.hashCode()
+                    )
                     groupIDsOfPackageName.forEach {
                         updateDownload(it, null, true)
                     }
@@ -145,10 +154,12 @@ class UpdatesViewModel(application: Application) : BaseAppsViewModel(application
                 updateFileMap[id]?.state = State.IDLE
                 updateFileMap[id]?.group = null
             }
+
             isComplete -> {
                 updateFileMap[id]?.state = State.COMPLETE
                 updateFileMap[id]?.group = group
             }
+
             else -> {
                 updateFileMap[id]?.state = State.PROGRESS
                 updateFileMap[id]?.group = group
@@ -177,7 +188,10 @@ class UpdatesViewModel(application: Application) : BaseAppsViewModel(application
     }
 
     private fun updateListAndPost(packageName: String) {
-        val groupIDsOfPackageName = RequestGroupIdBuilder.getGroupIDsForApp(getApplication<Application>().applicationContext, packageName.hashCode())
+        val groupIDsOfPackageName = RequestGroupIdBuilder.getGroupIDsForApp(
+            getApplication<Application>().applicationContext,
+            packageName.hashCode()
+        )
         groupIDsOfPackageName.forEach {
             //Remove from map
             updateFileMap.remove(it)

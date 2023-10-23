@@ -25,13 +25,17 @@ public class AuroraProgressView extends View {
 
     private static final int MIN_SHOW_TIME = 500; // ms
     private static final int MIN_DELAY = 500; // ms
-
+    int minWidth;
+    int maxWidth;
+    int minHeight;
+    int maxHeight;
     private long startTime = -1;
-
     private boolean postedHide = false;
     private boolean postedShow = false;
     private boolean dismissed = false;
-
+    private Indicator indicator;
+    private int indicatorColor;
+    private boolean mShouldStartAnimationDrawable;
     private final Runnable mDelayedHide = new Runnable() {
 
         @Override
@@ -41,7 +45,6 @@ public class AuroraProgressView extends View {
             setVisibility(View.GONE);
         }
     };
-
     private final Runnable mDelayedShow = new Runnable() {
 
         @Override
@@ -53,16 +56,6 @@ public class AuroraProgressView extends View {
             }
         }
     };
-
-    int minWidth;
-    int maxWidth;
-    int minHeight;
-    int maxHeight;
-
-    private Indicator indicator;
-    private int indicatorColor;
-
-    private boolean mShouldStartAnimationDrawable;
 
     public AuroraProgressView(Context context) {
         super(context);
@@ -129,11 +122,6 @@ public class AuroraProgressView extends View {
         }
     }
 
-    public void setIndicatorColor(int color) {
-        this.indicatorColor = color;
-        indicator.setColor(color);
-    }
-
     public void setIndicator(String indicatorName) {
         if (TextUtils.isEmpty(indicatorName)) {
             return;
@@ -153,6 +141,11 @@ public class AuroraProgressView extends View {
         } catch (Exception exception) {
             Log.e(TAG, "Failed to set indicator!", exception);
         }
+    }
+
+    public void setIndicatorColor(int color) {
+        this.indicatorColor = color;
+        indicator.setColor(color);
     }
 
     public void smoothToShow() {

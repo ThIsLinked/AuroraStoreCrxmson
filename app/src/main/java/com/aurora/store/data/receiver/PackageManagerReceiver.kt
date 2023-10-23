@@ -73,7 +73,8 @@ open class PackageManagerReceiver : BroadcastReceiver() {
     private fun clearNotification(context: Context, packageName: String) {
         val notificationManager = context.applicationContext
             .getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        val groupIDsOfPackageName = RequestGroupIdBuilder.getGroupIDsForApp(context, packageName.hashCode())
+        val groupIDsOfPackageName =
+            RequestGroupIdBuilder.getGroupIDsForApp(context, packageName.hashCode())
         groupIDsOfPackageName.forEach {
             notificationManager.cancel(packageName, it)
         }

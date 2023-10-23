@@ -63,8 +63,10 @@ class AppDetailsViewModel : ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val authData = AuthProvider.with(context).getAuthData()
-                _reviews.emit(ReviewsHelper(authData).using(HttpClient.getPreferredClient())
-                    .getReviewSummary(packageName))
+                _reviews.emit(
+                    ReviewsHelper(authData).using(HttpClient.getPreferredClient())
+                        .getReviewSummary(packageName)
+                )
             } catch (exception: Exception) {
                 Log.e(TAG, "Failed to fetch app reviews", exception)
                 _reviews.emit(emptyList())
@@ -76,15 +78,17 @@ class AppDetailsViewModel : ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val authData = AuthProvider.with(context).getAuthData()
-                _userReview.emit(ReviewsHelper(authData)
-                    .using(HttpClient.getPreferredClient())
-                    .addOrEditReview(
-                        packageName,
-                        review.title,
-                        review.comment,
-                        review.rating,
-                        isBeta
-                    )!!)
+                _userReview.emit(
+                    ReviewsHelper(authData)
+                        .using(HttpClient.getPreferredClient())
+                        .addOrEditReview(
+                            packageName,
+                            review.title,
+                            review.comment,
+                            review.rating,
+                            isBeta
+                        )!!
+                )
             } catch (exception: Exception) {
                 Log.e(TAG, "Failed to post review", exception)
                 _userReview.emit(Review())
@@ -144,7 +148,7 @@ class AppDetailsViewModel : ViewModel() {
     private fun parseResponse(response: String, packageName: String): List<Report> {
         try {
             val gson = GsonBuilder().excludeFieldsWithModifiers(Modifier.TRANSIENT, Modifier.STATIC)
-                    .create()
+                .create()
 
             val jsonObject = JSONObject(response)
             val exodusObject = jsonObject.getJSONObject(packageName)

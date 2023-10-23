@@ -83,6 +83,7 @@ class ForYouFragment : BaseFragment(), GenericCarouselController.Callbacks {
         when (pageType) {
             0 -> VM =
                 ViewModelProvider(requireActivity()).get(AppsForYouViewModel::class.java)
+
             1 -> VM =
                 ViewModelProvider(requireActivity()).get(GamesForYouViewModel::class.java)
         }
@@ -99,15 +100,19 @@ class ForYouFragment : BaseFragment(), GenericCarouselController.Callbacks {
             when (it) {
                 is ViewState.Empty -> {
                 }
+
                 is ViewState.Loading -> {
                     updateController(null)
                 }
+
                 is ViewState.Error -> {
 
                 }
+
                 is ViewState.Status -> {
 
                 }
+
                 is ViewState.Success<*> -> {
                     if (!::streamBundle.isInitialized)
                         attachRecycler()

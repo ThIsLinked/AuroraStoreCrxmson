@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Aurora Store
   ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
   ~
@@ -23,9 +22,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:paddingHorizontal="28dp"
     android:paddingTop="@dimen/margin_large"
-    android:paddingBottom="@dimen/margin_xsmall"
-    android:paddingHorizontal="28dp">
+    android:paddingBottom="@dimen/margin_xsmall">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img"

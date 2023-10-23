@@ -1,6 +1,3 @@
-import com.android.ide.common.resources.findUnusedResources
-import org.jetbrains.kotlin.js.inline.clean.removeUnusedImports
-
 /*
  * Aurora Store
  *  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>

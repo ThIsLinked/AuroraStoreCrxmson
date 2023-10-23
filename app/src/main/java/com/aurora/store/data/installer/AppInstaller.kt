@@ -47,6 +47,7 @@ open class AppInstaller private constructor(var context: Context) {
                 else -> context.getString(R.string.installer_status_failure)
             }
         }
+
         fun getInstance(context: Context): AppInstaller {
             if (instance == null) {
                 instance = AppInstaller(context.applicationContext)
@@ -107,6 +108,7 @@ open class AppInstaller private constructor(var context: Context) {
                 choiceAndInstaller[prefValue] = installer
                 installer
             }
+
             2 -> {
                 val installer = if (hasRootAccess()) {
                     RootInstaller(context)
@@ -116,6 +118,7 @@ open class AppInstaller private constructor(var context: Context) {
                 choiceAndInstaller[prefValue] = installer
                 installer
             }
+
             3 -> {
                 val installer = if (hasAuroraService(context)) {
                     ServiceInstaller(context)
@@ -125,6 +128,7 @@ open class AppInstaller private constructor(var context: Context) {
                 choiceAndInstaller[prefValue] = installer
                 installer
             }
+
             4 -> {
                 val installer = if (hasAppManager(context)) {
                     AMInstaller(context)
@@ -134,6 +138,7 @@ open class AppInstaller private constructor(var context: Context) {
                 choiceAndInstaller[prefValue] = installer
                 installer
             }
+
             5 -> {
                 if (isOAndAbove()) {
                     val installer = if (hasShizuku(context) && hasShizukuPerm()) {
@@ -147,6 +152,7 @@ open class AppInstaller private constructor(var context: Context) {
                     SessionInstaller(context)
                 }
             }
+
             else -> {
                 val installer = SessionInstaller(context)
                 choiceAndInstaller[prefValue] = installer

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Aurora Store
   ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
   ~
@@ -22,8 +21,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:paddingStart="@dimen/padding_normal"
-    android:paddingEnd="@dimen/padding_normal"
     android:paddingTop="@dimen/padding_xsmall"
+    android:paddingEnd="@dimen/padding_normal"
     android:paddingBottom="@dimen/padding_xsmall">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -47,8 +46,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textIsSelectable="@bool/details_textIsSelectable"
             android:textAlignment="viewEnd"
+            android:textIsSelectable="@bool/details_textIsSelectable"
             tools:text="Subtitle" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>

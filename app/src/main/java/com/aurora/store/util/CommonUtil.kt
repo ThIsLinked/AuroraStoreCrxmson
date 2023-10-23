@@ -20,7 +20,6 @@
 package com.aurora.store.util
 
 import android.content.Context
-import com.aurora.extensions.isSAndAbove
 import com.aurora.store.R
 import java.text.DecimalFormat
 import java.util.Locale
@@ -82,9 +81,11 @@ object CommonUtil {
             hours > 0 -> {
                 context.getString(R.string.download_eta_hrs, hours, minutes, seconds)
             }
+
             minutes > 0 -> {
                 context.getString(R.string.download_eta_min, minutes, seconds)
             }
+
             else -> {
                 context.getString(R.string.download_eta_sec, seconds)
             }
@@ -126,9 +127,11 @@ object CommonUtil {
             mb >= 1 -> {
                 context.getString(R.string.download_speed_mb, decimalFormat.format(mb))
             }
+
             kb >= 1 -> {
                 context.getString(R.string.download_speed_kb, decimalFormat.format(kb))
             }
+
             else -> {
                 context.getString(R.string.download_speed_bytes, downloadedBytesPerSecond)
             }

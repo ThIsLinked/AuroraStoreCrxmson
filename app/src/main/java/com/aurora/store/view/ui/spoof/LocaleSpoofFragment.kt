@@ -88,20 +88,20 @@ class LocaleSpoofFragment : BaseFragment() {
             locales
                 .sortedBy { it.displayName }
                 .forEach {
-                add(
-                    LocaleViewModel_()
-                        .id(it.language)
-                        .markChecked(locale == it)
-                        .checked { _, checked ->
-                            if (checked) {
-                                locale = it
-                                saveSelection(it)
-                                requestModelBuild()
+                    add(
+                        LocaleViewModel_()
+                            .id(it.language)
+                            .markChecked(locale == it)
+                            .checked { _, checked ->
+                                if (checked) {
+                                    locale = it
+                                    saveSelection(it)
+                                    requestModelBuild()
+                                }
                             }
-                        }
-                        .locale(it)
-                )
-            }
+                            .locale(it)
+                    )
+                }
         }
     }
 

@@ -39,7 +39,7 @@ class AuroraApplication : Application() {
 
     private lateinit var fetch: Fetch
 
-    companion object{
+    companion object {
         val enqueuedInstalls: MutableSet<String> = mutableSetOf()
     }
 

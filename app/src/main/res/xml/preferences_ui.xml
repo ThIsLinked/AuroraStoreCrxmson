@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!--
+<?xml version="1.0" encoding="UTF-8" ?><!--
   ~ Aurora Store
   ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
   ~
@@ -29,8 +28,8 @@
             app:entries="@array/pref_themes"
             app:entryValues="@array/pref_themes_values"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="PREFERENCE_THEME_TYPE"
+            app:singleLineTitle="false"
             app:title="@string/pref_ui_theme_title"
             app:useSimpleSummaryProvider="true" />
 
@@ -39,15 +38,15 @@
             app:entries="@array/pref_accent"
             app:entryValues="@array/pref_accent_values"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="PREFERENCE_THEME_ACCENT"
+            app:singleLineTitle="false"
             app:title="@string/pref_ui_accent_title"
             app:useSimpleSummaryProvider="true" />
 
         <androidx.preference.Preference
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="PREFERENCE_APP_LANGUAGE"
+            app:singleLineTitle="false"
             app:title="@string/app_language" />
 
         <com.aurora.store.view.custom.preference.AuroraListPreference
@@ -55,24 +54,24 @@
             app:entries="@array/pref_default_tab"
             app:entryValues="@array/pref_default_tab_values"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="PREFERENCE_DEFAULT_SELECTED_TAB"
+            app:singleLineTitle="false"
             app:title="@string/pref_ui_layout_tab"
             app:useSimpleSummaryProvider="true" />
 
         <androidx.preference.SwitchPreferenceCompat
             app:defaultValue="false"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="PREFERENCE_FOR_YOU"
+            app:singleLineTitle="false"
             app:summary="@string/pref_ui_no_for_you_desc"
             app:title="@string/pref_ui_no_for_you" />
 
         <androidx.preference.SwitchPreferenceCompat
             app:defaultValue="false"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="PREFERENCE_SIMILAR"
+            app:singleLineTitle="false"
             app:summary="@string/pref_ui_similar_apps_desc"
             app:title="@string/pref_ui_similar_apps" />
 
@@ -86,32 +85,32 @@
         <androidx.preference.SwitchPreferenceCompat
             app:defaultValue="true"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="PREFERENCE_FILTER_SEARCH"
+            app:singleLineTitle="false"
             app:summary="@string/pref_filter_search_summary"
             app:title="@string/pref_filter_search_title" />
 
         <androidx.preference.SwitchPreferenceCompat
             app:defaultValue="false"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="PREFERENCE_FILTER_AURORA_ONLY"
+            app:singleLineTitle="false"
             app:summary="@string/pref_aurora_only_desc"
             app:title="@string/pref_aurora_only" />
 
         <androidx.preference.SwitchPreferenceCompat
             app:defaultValue="false"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="PREFERENCE_FILTER_GOOGLE"
+            app:singleLineTitle="false"
             app:summary="@string/pref_filter_google_summary"
             app:title="@string/pref_filter_google_title" />
 
         <androidx.preference.SwitchPreferenceCompat
             app:defaultValue="true"
             app:iconSpaceReserved="false"
-            app:singleLineTitle="false"
             app:key="PREFERENCE_FILTER_FDROID"
+            app:singleLineTitle="false"
             app:summary="@string/pref_filter_fdroid_summary"
             app:title="@string/pref_filter_fdroid_title" />
 

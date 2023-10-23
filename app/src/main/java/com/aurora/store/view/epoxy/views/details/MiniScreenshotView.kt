@@ -96,6 +96,7 @@ class MiniScreenshotView : RelativeLayout {
                     normalizedHeight = 120f
                     normalizedWidth = 120f
                 }
+
                 else -> {
                     val factor = artworkHeight / 120f
                     normalizedHeight = 120f

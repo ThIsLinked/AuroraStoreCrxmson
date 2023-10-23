@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="about_bhim_summary">Пожертвовать через UPI</string>
     <string name="about_bitcoin_bch_summary">Пожертвовать через Bitcoin Cash (BCH)</string>
@@ -84,11 +84,6 @@
     <string name="app_updater_service_notif_title">Фоновая загрузка приложений</string>
 
     <string name="apps_installed">установлено</string>
-    <string name="onboarding_appsLinks_allEnabled">Все ссылки включены</string>
-    <string name="onboarding_appsLinks_amazonAppStore_summary">Amazon AppStore — это магазин приложений для Android-совместимых платформ, управляемый Amazon.</string>
-    <string name="onboarding_appsLinks_androidMarket_summary">Домен прошлого Android Market. Требуется для перехода по ссылкам.</string>
-    <string name="onboarding_appsLinks_playStore_summary">Знаменитый магазин Google Play. Раньше был Android Market.</string>
-    <string name="onboarding_appsLinks_title">Ссылки на приложения</string>
     <string name="apps_purchased">куплено</string>
 
     <string name="bad_request">Внутренняя ошибка! Пожалуйста, повторите попытку через некоторое время</string>
@@ -154,8 +149,10 @@
     <string name="download_metadata">Получение метаданных</string>
     <string name="download_none">Нет загрузок</string>
     <string name="download_pause_all">Приостановить все</string>
-    <string name="download_paused">Пауза • <xliff:g id="completed_downloads">%1$d</xliff:g>/ <xliff:g id="all_downloads">%2$d</xliff:g></string>
-    <string name="download_progress">Загрузка • <xliff:g id="completed_downloads">%1$d</xliff:g>/ <xliff:g id="all_downloads">%2$d</xliff:g>• <xliff:g id="speed">%3$s</xliff:g></string>
+    <string name="download_paused">
+        Пауза • <xliff:g id="completed_downloads">%1$d</xliff:g>/ <xliff:g id="all_downloads">%2$d</xliff:g></string>
+    <string name="download_progress">
+        Загрузка • <xliff:g id="completed_downloads">%1$d</xliff:g>/ <xliff:g id="all_downloads">%2$d</xliff:g>• <xliff:g id="speed">%3$s</xliff:g></string>
     <string name="download_queued">В очереди</string>
     <string name="download_resume_all">Продолжить все</string>
     <string name="download_speed_bytes">%1$d Б/с</string>
@@ -163,7 +160,8 @@
     <string name="download_speed_kb">%1$d Кб/с</string>
     <string name="download_speed_mb">%1$d Мб/с</string>
 
-    <string name="downloading_dep">Скачивание дополнительных файлов для <xliff:g id="app">%1$s</xliff:g></string>
+    <string name="downloading_dep">
+        Скачивание дополнительных файлов для <xliff:g id="app">%1$s</xliff:g></string>
 
     <string name="error">Произошла ошибка!</string>
 
@@ -174,7 +172,8 @@
 
     <string name="expand">Развернуть</string>
 
-    <string name="failed_generating_session">Не удалось сгенерировать сеанс, ошибка <xliff:g id="status_code">%1$d</xliff:g></string>
+    <string name="failed_generating_session">
+        Не удалось сгенерировать сеанс, ошибка <xliff:g id="status_code">%1$d</xliff:g></string>
     <string name="failed_to_fetch_report">Не удалось получить отчет о конфиденциальности</string>
     <string name="failed_to_generate_session">Не удалось создать сессию</string>
 
@@ -216,9 +215,18 @@
     <string name="notification_channel_general">Общее уведомление</string>
     <string name="notification_channel_updater_service">Служба фоновой загрузки приложений</string>
     <string name="notification_channel_updates">Уведомления об обновлениях</string>
-    <string name="notification_update_available">Доступно <xliff:g id="apps_count">%1$d</xliff:g> обновление</string>
-    <string name="notification_updates_available">Доступно <xliff:g id="apps_count">%1$d</xliff:g> обновлений</string>
+    <string name="notification_update_available">
+        Доступно <xliff:g id="apps_count">%1$d</xliff:g>обновление
+    </string>
+    <string name="notification_updates_available">
+        Доступно <xliff:g id="apps_count">%1$d</xliff:g>обновлений
+    </string>
 
+    <string name="onboarding_appsLinks_allEnabled">Все ссылки включены</string>
+    <string name="onboarding_appsLinks_amazonAppStore_summary">Amazon AppStore — это магазин приложений для Android-совместимых платформ, управляемый Amazon.</string>
+    <string name="onboarding_appsLinks_androidMarket_summary">Домен прошлого Android Market. Требуется для перехода по ссылкам.</string>
+    <string name="onboarding_appsLinks_playStore_summary">Знаменитый магазин Google Play. Раньше был Android Market.</string>
+    <string name="onboarding_appsLinks_title">Ссылки на приложения</string>
     <string name="onboarding_permissions_install_summary">Установка приложений после загрузки</string>
     <string name="onboarding_permissions_install_title">Установка</string>
     <string name="onboarding_permissions_notifications_summary">Отправка уведомлений о различных событиях</string>

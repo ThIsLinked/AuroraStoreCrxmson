@@ -125,6 +125,7 @@ class DownloadView : RelativeLayout {
                 B.txtSpeed.visibility = VISIBLE
                 B.txtEta.visibility = VISIBLE
             }
+
             else -> {
                 B.txtSpeed.visibility = INVISIBLE
                 B.txtEta.visibility = INVISIBLE

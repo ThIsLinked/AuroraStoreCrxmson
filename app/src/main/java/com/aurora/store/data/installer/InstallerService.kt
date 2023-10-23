@@ -63,8 +63,14 @@ class InstallerService : Service() {
     private fun postStatus(status: Int, packageName: String?, extra: String?) {
         when (status) {
             PackageInstaller.STATUS_SUCCESS -> {
-                EventBus.getDefault().post(InstallerEvent.Success(packageName, this.getString(R.string.installer_status_success)))
+                EventBus.getDefault().post(
+                    InstallerEvent.Success(
+                        packageName,
+                        this.getString(R.string.installer_status_success)
+                    )
+                )
             }
+
             PackageInstaller.STATUS_FAILURE_ABORTED -> {
                 val errorString = AppInstaller.getErrorString(this, status)
                 val event =
@@ -72,6 +78,7 @@ class InstallerService : Service() {
                 Log.e("$packageName : $errorString")
                 EventBus.getDefault().post(event)
             }
+
             else -> {
                 val errorString =
                     AppInstaller.getErrorString(this, status)

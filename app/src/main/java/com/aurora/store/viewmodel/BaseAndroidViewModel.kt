@@ -56,6 +56,7 @@ abstract class BaseAndroidViewModel(application: Application) : AndroidViewModel
             RequestState.Pending -> {
                 observe()
             }
+
             else -> {
 
             }

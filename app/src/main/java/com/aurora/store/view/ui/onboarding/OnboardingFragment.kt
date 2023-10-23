@@ -27,13 +27,13 @@ import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
-import com.aurora.extensions.isSAndAbove
 import com.aurora.store.R
 import com.aurora.store.data.work.UpdateWorker
 import com.aurora.store.databinding.FragmentOnboardingBinding
 import com.aurora.store.util.PathUtil
 import com.aurora.store.util.Preferences
 import com.aurora.store.util.Preferences.PREFERENCE_AUTO_DELETE
+import com.aurora.store.util.Preferences.PREFERENCE_AUTO_INSTALL
 import com.aurora.store.util.Preferences.PREFERENCE_DEFAULT
 import com.aurora.store.util.Preferences.PREFERENCE_DEFAULT_SELECTED_TAB
 import com.aurora.store.util.Preferences.PREFERENCE_DOWNLOAD_ACTIVE
@@ -54,7 +54,6 @@ import com.aurora.store.util.Preferences.PREFERENCE_THEME_TYPE
 import com.aurora.store.util.Preferences.PREFERENCE_UPDATES_CHECK
 import com.aurora.store.util.Preferences.PREFERENCE_UPDATES_CHECK_INTERVAL
 import com.aurora.store.util.Preferences.PREFERENCE_UPDATES_EXTENDED
-import com.aurora.store.util.Preferences.PREFERENCE_AUTO_INSTALL
 import com.aurora.store.util.save
 import com.google.android.material.tabs.TabLayoutMediator
 

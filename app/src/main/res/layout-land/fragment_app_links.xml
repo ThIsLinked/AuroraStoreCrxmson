@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboarding_appsLinks_rootContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:id="@+id/onboarding_appsLinks_rootContainer">
+    android:orientation="horizontal">
 
     <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/onboarding_appsLinks_titleContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:id="@+id/onboarding_appsLinks_titleContainer"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -31,8 +29,8 @@
         android:id="@+id/onboarding_appsLinks_scrollContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_weight="1"
+        android:orientation="vertical"
         android:scrollbars="none">
 
         <androidx.appcompat.widget.LinearLayoutCompat

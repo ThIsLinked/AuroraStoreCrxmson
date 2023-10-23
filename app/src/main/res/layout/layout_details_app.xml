@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Aurora Store
   ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
   ~
@@ -37,9 +36,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_normal"
         android:layout_toEndOf="@id/img_icon"
-        android:textIsSelectable="@bool/details_textIsSelectable"
         android:maxLines="2"
         android:textAppearance="@style/TextAppearance.Aurora.SubTitle"
+        android:textIsSelectable="@bool/details_textIsSelectable"
         tools:text="App Name" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -49,9 +48,9 @@
         android:layout_below="@id/txt_line1"
         android:layout_alignStart="@id/txt_line1"
         android:layout_alignEnd="@id/txt_line1"
-        android:textIsSelectable="@bool/details_textIsSelectable"
         android:textAppearance="@style/TextAppearance.Aurora.Line1"
         android:textColor="?colorAccent"
+        android:textIsSelectable="@bool/details_textIsSelectable"
         tools:text="Company Name" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -62,8 +61,8 @@
         android:layout_alignStart="@id/txt_line1"
         android:layout_alignEnd="@id/txt_line1"
         android:textAlignment="viewStart"
-        android:textIsSelectable="@bool/details_textIsSelectable"
         android:textAppearance="@style/TextAppearance.Aurora.Line3"
+        android:textIsSelectable="@bool/details_textIsSelectable"
         tools:text="com.aurora.store" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -74,8 +73,8 @@
         android:layout_alignStart="@id/txt_line1"
         android:layout_alignEnd="@id/txt_line1"
         android:textAlignment="viewStart"
-        android:textIsSelectable="@bool/details_textIsSelectable"
         android:textAppearance="@style/TextAppearance.Aurora.Line3"
+        android:textIsSelectable="@bool/details_textIsSelectable"
         tools:text="5.8" />
 
     <androidx.appcompat.widget.AppCompatTextView

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Aurora Store
   ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
   ~
@@ -133,8 +132,8 @@
                 android:id="@+id/txt_changelog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textIsSelectable="true"
-                android:background="@drawable/bg_changelog" />
+                android:background="@drawable/bg_changelog"
+                android:textIsSelectable="true" />
 
             <com.aurora.store.view.custom.layouts.ActionHeaderLayout
                 android:id="@+id/header_description"
@@ -146,8 +145,8 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txt_description"
                 android:layout_width="match_parent"
-                android:textIsSelectable="true"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

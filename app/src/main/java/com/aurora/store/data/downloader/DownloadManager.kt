@@ -82,7 +82,8 @@ class DownloadManager private constructor(var context: Context) {
         if (packageList.contains(download.tag)) {
             val packageName = download.tag
             if (packageName != null) {
-                val groupIDsOfPackageName = RequestGroupIdBuilder.getGroupIDsForApp(context, packageName.hashCode())
+                val groupIDsOfPackageName =
+                    RequestGroupIdBuilder.getGroupIDsForApp(context, packageName.hashCode())
                 groupIDsOfPackageName.forEach {
                     fetch.deleteGroup(it)
                 }

@@ -35,8 +35,8 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textIsSelectable="true"
-            android:textAppearance="@style/TextAppearance.Aurora.Line1" />
+            android:textAppearance="@style/TextAppearance.Aurora.Line1"
+            android:textIsSelectable="true" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/txt_subtitle"
@@ -44,8 +44,8 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="2"
-            android:textIsSelectable="true"
-            android:textAppearance="@style/TextAppearance.Aurora.Line2" />
+            android:textAppearance="@style/TextAppearance.Aurora.Line2"
+            android:textIsSelectable="true" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/txt_description"
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textIsSelectable="true"
-            android:textAppearance="@style/TextAppearance.Aurora.Line3" />
+            android:textAppearance="@style/TextAppearance.Aurora.Line3"
+            android:textIsSelectable="true" />
     </LinearLayout>
 </RelativeLayout>

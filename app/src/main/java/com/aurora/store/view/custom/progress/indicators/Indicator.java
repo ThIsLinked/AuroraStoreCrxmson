@@ -19,12 +19,10 @@ public abstract class Indicator extends Drawable implements Animatable {
 
     private final HashMap<ValueAnimator, ValueAnimator.AnimatorUpdateListener> updateListenerHashMap = new HashMap<>();
     private final Paint paint = new Paint();
-
+    protected Rect drawBounds = ZERO_BOUNDS_RECT;
     private int alpha = 255;
     private ArrayList<ValueAnimator> animators;
     private boolean hasAnimators;
-
-    protected Rect drawBounds = ZERO_BOUNDS_RECT;
 
     public Indicator() {
         paint.setColor(Color.WHITE);
@@ -41,13 +39,13 @@ public abstract class Indicator extends Drawable implements Animatable {
     }
 
     @Override
-    public void setAlpha(int alpha) {
-        this.alpha = alpha;
+    public int getAlpha() {
+        return alpha;
     }
 
     @Override
-    public int getAlpha() {
-        return alpha;
+    public void setAlpha(int alpha) {
+        this.alpha = alpha;
     }
 
     @Override
@@ -149,10 +147,6 @@ public abstract class Indicator extends Drawable implements Animatable {
         setDrawBounds(bounds);
     }
 
-    public void setDrawBounds(Rect drawBounds) {
-        setDrawBounds(drawBounds.left, drawBounds.top, drawBounds.right, drawBounds.bottom);
-    }
-
     public void setDrawBounds(int left, int top, int right, int bottom) {
         this.drawBounds = new Rect(left, top, right, bottom);
     }
@@ -163,6 +157,10 @@ public abstract class Indicator extends Drawable implements Animatable {
 
     public Rect getDrawBounds() {
         return drawBounds;
+    }
+
+    public void setDrawBounds(Rect drawBounds) {
+        setDrawBounds(drawBounds.left, drawBounds.top, drawBounds.right, drawBounds.bottom);
     }
 
     public int getWidth() {

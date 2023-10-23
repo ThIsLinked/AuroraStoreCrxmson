@@ -81,17 +81,21 @@ class DownloadMenuSheet : BaseBottomSheet() {
                         requireContext().copyToClipBoard(args.downloadFile.download.url)
                         requireContext().toast(requireContext().getString(R.string.toast_clipboard_copied))
                     }
+
                     R.id.action_pause -> {
                         fetch.pause(args.downloadFile.download.id)
                     }
+
                     R.id.action_resume -> if (status == Status.FAILED.value || status == Status.CANCELLED.value) {
                         fetch.retry(args.downloadFile.download.id)
                     } else {
                         fetch.resume(args.downloadFile.download.id)
                     }
+
                     R.id.action_cancel -> {
                         fetch.cancel(args.downloadFile.download.id)
                     }
+
                     R.id.action_clear -> {
                         fetch.delete(args.downloadFile.download.id)
                     }

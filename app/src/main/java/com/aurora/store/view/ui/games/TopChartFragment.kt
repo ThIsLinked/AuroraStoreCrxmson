@@ -86,10 +86,13 @@ class TopChartFragment : BaseFragment() {
             0 -> when (chartCategory) {
                 0 -> VM =
                     ViewModelProvider(requireActivity()).get(TopFreeAppChartViewModel::class.java)
+
                 1 -> VM =
                     ViewModelProvider(requireActivity()).get(TopGrossingAppChartViewModel::class.java)
+
                 2 -> VM =
                     ViewModelProvider(requireActivity()).get(TrendingAppChartViewModel::class.java)
+
                 3 -> VM =
                     ViewModelProvider(requireActivity()).get(TopPaidAppChartViewModel::class.java)
             }
@@ -97,10 +100,13 @@ class TopChartFragment : BaseFragment() {
             1 -> when (chartCategory) {
                 0 -> VM =
                     ViewModelProvider(requireActivity()).get(TopFreeGameChartViewModel::class.java)
+
                 1 -> VM =
                     ViewModelProvider(requireActivity()).get(TopGrossingGameChartViewModel::class.java)
+
                 2 -> VM =
                     ViewModelProvider(requireActivity()).get(TrendingGameChartViewModel::class.java)
+
                 3 -> VM =
                     ViewModelProvider(requireActivity()).get(TopPaidGameChartViewModel::class.java)
             }

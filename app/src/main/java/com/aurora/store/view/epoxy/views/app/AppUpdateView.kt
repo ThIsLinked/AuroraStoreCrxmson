@@ -34,7 +34,6 @@ import com.airbnb.epoxy.ModelView
 import com.airbnb.epoxy.OnViewRecycled
 import com.aurora.extensions.invisible
 import com.aurora.extensions.px
-import com.aurora.extensions.show
 import com.aurora.store.R
 import com.aurora.store.State
 import com.aurora.store.data.model.UpdateFile
@@ -96,10 +95,12 @@ class AppUpdateView : RelativeLayout {
 
                 B.headerIndicator.setOnClickListener {
                     if (B.txtChangelog.isVisible) {
-                        B.headerIndicator.icon = ContextCompat.getDrawable(context, R.drawable.ic_arrow_down)
+                        B.headerIndicator.icon =
+                            ContextCompat.getDrawable(context, R.drawable.ic_arrow_down)
                         B.txtChangelog.visibility = View.GONE
                     } else {
-                        B.headerIndicator.icon = ContextCompat.getDrawable(context, R.drawable.ic_arrow_up)
+                        B.headerIndicator.icon =
+                            ContextCompat.getDrawable(context, R.drawable.ic_arrow_up)
                         B.txtChangelog.visibility = View.VISIBLE
                     }
                 }
@@ -113,11 +114,13 @@ class AppUpdateView : RelativeLayout {
                         B.progressDownload.show()
                         B.btnAction.updateState(State.QUEUED)
                     }
+
                     State.IDLE, State.CANCELED -> {
                         B.progressDownload.progress = 0
                         B.progressDownload.invisible()
                         B.btnAction.updateState(State.IDLE)
                     }
+
                     State.PROGRESS -> {
                         val progress = it.groupDownloadProgress
                         if (progress > 0) {
@@ -129,6 +132,7 @@ class AppUpdateView : RelativeLayout {
                             }
                         }
                     }
+
                     State.COMPLETE -> {
                         B.progressDownload.invisible()
                         B.btnAction.updateState(State.COMPLETE)

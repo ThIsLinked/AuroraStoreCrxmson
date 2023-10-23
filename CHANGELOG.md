@@ -1,4 +1,3 @@
-
 > **v4.3.5-nightly-19.10.23 (53)**
 > * Pulled up to nightly 19.10.23 (includes stable 4.3.5);
 > * Complete re-creation of the project. This has improved cleaning, use and convenience;
@@ -7,11 +6,11 @@
 > * In the initial setup wizard, the first tab had an inactive “Back” button. This means that there is a condition under which she will be available. But physically there is no previous tab. It wasn't logical. Now on the first tab the button will be invisible;
 > * Reworking the code in the «Apps links» layout made it possible to implement it more concisely, and also lightened the amount of code overall;
 > * Reworked some decals in the interface;
-> * Expanded the range of text selection on the application page. I was focusing on what the user might need to highlight and copy;
+> * Expanded the range of text selection on the application page. I was focusing on what the user might need to highlight and copy. Configured by global value "details_textIsSelectable" to values/bools.xml;
 > * Fixed bugs known to me;
 > * Update all localizations;
-> * Even more cleaning of garbage from resources and code;
 > * Optimization and reduction of code volume due to more competent use of components;
+> * Even more cleaning of garbage from resources and code;
 
 > **v4.3.2-nightly-25.09.23 (50)**
 > * Pulled up to nightly 25.09.23;

@@ -91,7 +91,7 @@
         android:id="@+id/accountFragment"
         android:name="com.aurora.store.view.ui.account.AccountFragment"
         android:label="@string/title_account_manager"
-        tools:layout="@layout/fragment_account" >
+        tools:layout="@layout/fragment_account">
         <action
             android:id="@+id/action_accountFragment_to_googleFragment"
             app:destination="@id/googleFragment" />
@@ -138,7 +138,7 @@
         android:id="@+id/downloadFragment"
         android:name="com.aurora.store.view.ui.downloads.DownloadFragment"
         android:label="@string/title_download_manager"
-        tools:layout="@layout/fragment_download" >
+        tools:layout="@layout/fragment_download">
         <action
             android:id="@+id/action_downloadFragment_to_downloadMenuSheet"
             app:destination="@id/downloadMenuSheet" />
@@ -164,9 +164,9 @@
             app:destination="@id/detailsExodusFragment" />
         <argument
             android:name="app"
+            android:defaultValue="@null"
             app:argType="com.aurora.gplayapi.data.models.App"
-            app:nullable="true"
-            android:defaultValue="@null" />
+            app:nullable="true" />
         <action
             android:id="@+id/action_appDetailsFragment_to_manualDownloadSheet"
             app:destination="@id/manualDownloadSheet" />
@@ -180,7 +180,7 @@
     <fragment
         android:id="@+id/categoryBrowseFragment"
         android:name="com.aurora.store.view.ui.commons.CategoryBrowseFragment"
-        tools:layout="@layout/activity_generic_recycler" >
+        tools:layout="@layout/activity_generic_recycler">
         <argument
             android:name="title"
             app:argType="string" />
@@ -194,8 +194,9 @@
     <fragment
         android:id="@+id/editorStreamBrowseFragment"
         android:name="com.aurora.store.view.ui.commons.EditorStreamBrowseFragment"
-        tools:layout="@layout/activity_generic_recycler" >
-        <argument android:name="title"
+        tools:layout="@layout/activity_generic_recycler">
+        <argument
+            android:name="title"
             app:argType="string" />
         <argument
             android:name="browseUrl"
@@ -204,8 +205,9 @@
     <fragment
         android:id="@+id/expandedStreamBrowseFragment"
         android:name="com.aurora.store.view.ui.commons.ExpandedStreamBrowseFragment"
-        tools:layout="@layout/activity_generic_recycler" >
-        <argument android:name="title"
+        tools:layout="@layout/activity_generic_recycler">
+        <argument
+            android:name="title"
             app:argType="string" />
         <argument
             android:name="expandedStreamUrl"
@@ -214,7 +216,7 @@
     <fragment
         android:id="@+id/screenshotFragment"
         android:name="com.aurora.store.view.ui.details.ScreenshotFragment"
-        tools:layout="@layout/fragment_screenshot" >
+        tools:layout="@layout/fragment_screenshot">
         <argument
             android:name="position"
             app:argType="integer" />
@@ -226,7 +228,7 @@
         android:id="@+id/devProfileFragment"
         android:name="com.aurora.store.view.ui.details.DevProfileFragment"
         android:label="fragment_dev_profile"
-        tools:layout="@layout/fragment_dev_profile" >
+        tools:layout="@layout/fragment_dev_profile">
         <argument
             android:name="devId"
             app:argType="string" />
@@ -242,7 +244,7 @@
     <fragment
         android:id="@+id/streamBrowseFragment"
         android:name="com.aurora.store.view.ui.commons.StreamBrowseFragment"
-        tools:layout="@layout/activity_generic_recycler" >
+        tools:layout="@layout/activity_generic_recycler">
         <argument
             android:name="browseUrl"
             app:argType="string" />
@@ -253,7 +255,7 @@
     <fragment
         android:id="@+id/devAppsFragment"
         android:name="com.aurora.store.view.ui.details.DevAppsFragment"
-        tools:layout="@layout/activity_generic_recycler" >
+        tools:layout="@layout/activity_generic_recycler">
         <argument
             android:name="developerName"
             app:argType="string" />
@@ -261,7 +263,7 @@
     <fragment
         android:id="@+id/detailsMoreFragment"
         android:name="com.aurora.store.view.ui.details.DetailsMoreFragment"
-        tools:layout="@layout/fragment_details_more" >
+        tools:layout="@layout/fragment_details_more">
         <argument
             android:name="app"
             app:argType="com.aurora.gplayapi.data.models.App" />
@@ -269,17 +271,18 @@
     <fragment
         android:id="@+id/detailsReviewFragment"
         android:name="com.aurora.store.view.ui.details.DetailsReviewFragment"
-        tools:layout="@layout/fragment_details_review" >
+        tools:layout="@layout/fragment_details_review">
         <argument
             android:name="displayName"
             app:argType="string" />
-        <argument android:name="packageName"
+        <argument
+            android:name="packageName"
             app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/detailsExodusFragment"
         android:name="com.aurora.store.view.ui.details.DetailsExodusFragment"
-        tools:layout="@layout/activity_generic_recycler" >
+        tools:layout="@layout/activity_generic_recycler">
         <argument
             android:name="displayName"
             app:argType="string" />
@@ -290,7 +293,7 @@
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.aurora.store.view.ui.splash.SplashFragment"
-        tools:layout="@layout/fragment_splash" >
+        tools:layout="@layout/fragment_splash">
         <argument
             android:name="packageName"
             android:defaultValue=""
@@ -344,7 +347,7 @@
     <fragment
         android:id="@+id/googleFragment"
         android:name="com.aurora.store.view.ui.account.GoogleFragment"
-        tools:layout="@layout/fragment_google" >
+        tools:layout="@layout/fragment_google">
         <action
             android:id="@+id/action_googleFragment_to_splashFragment"
             app:destination="@id/splashFragment"
@@ -355,13 +358,14 @@
             app:destination="@id/accountFragment"
             app:popUpTo="@id/accountFragment"
             app:popUpToInclusive="true" />
-        <argument android:name="destination"
+        <argument
+            android:name="destination"
             app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/onboardingFragment"
         android:name="com.aurora.store.view.ui.onboarding.OnboardingFragment"
-        tools:layout="@layout/fragment_onboarding" >
+        tools:layout="@layout/fragment_onboarding">
         <action
             android:id="@+id/action_onboardingFragment_to_splashFragment"
             app:destination="@id/splashFragment"
@@ -376,7 +380,7 @@
         android:id="@+id/appMenuSheet"
         android:name="com.aurora.store.view.ui.sheets.AppMenuSheet"
         android:label="AppMenuSheet"
-        tools:layout="@layout/sheet_app_menu" >
+        tools:layout="@layout/sheet_app_menu">
         <argument
             android:name="app"
             app:argType="com.aurora.gplayapi.data.models.App" />
@@ -384,7 +388,7 @@
     <dialog
         android:id="@+id/appPeekDialogSheet"
         android:name="com.aurora.store.view.ui.sheets.AppPeekDialogSheet"
-        android:label="AppPeekDialogSheet" >
+        android:label="AppPeekDialogSheet">
         <argument
             android:name="app"
             app:argType="com.aurora.gplayapi.data.models.App" />

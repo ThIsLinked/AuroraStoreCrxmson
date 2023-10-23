@@ -27,7 +27,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.aurora.gplayapi.data.models.StreamCluster
 import com.aurora.store.R
 import com.aurora.store.databinding.FragmentAppsBinding
-import com.aurora.store.databinding.FragmentUpdatesBinding
 import com.aurora.store.view.custom.recycler.EndlessRecyclerOnScrollListener
 import com.aurora.store.view.epoxy.views.AppProgressViewModel_
 import com.aurora.store.view.epoxy.views.HeaderViewModel_

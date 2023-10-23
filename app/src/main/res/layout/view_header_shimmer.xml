@@ -63,8 +63,8 @@
             android:layout_centerVertical="true"
             android:layout_margin="@dimen/margin_small"
             android:background="?selectableItemBackgroundBorderless"
-            android:padding="@dimen/padding_xsmall"
             android:contentDescription="@string/expand"
+            android:padding="@dimen/padding_xsmall"
             app:srcCompat="@drawable/ic_arrow_right"
             app:tint="?colorShimmer" />
     </RelativeLayout>

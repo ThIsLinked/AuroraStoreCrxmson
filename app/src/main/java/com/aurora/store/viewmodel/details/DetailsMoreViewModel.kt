@@ -24,8 +24,10 @@ class DetailsMoreViewModel : ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val authData: AuthData = AuthProvider.with(context).getAuthData()
-                _dependentApps.emit(AppDetailsHelper(authData)
-                    .getAppByPackageName(app.dependencies.dependentPackages))
+                _dependentApps.emit(
+                    AppDetailsHelper(authData)
+                        .getAppByPackageName(app.dependencies.dependentPackages)
+                )
             } catch (exception: Exception) {
                 Log.e(TAG, "Failed to fetch dependencies", exception)
                 _dependentApps.emit(emptyList())

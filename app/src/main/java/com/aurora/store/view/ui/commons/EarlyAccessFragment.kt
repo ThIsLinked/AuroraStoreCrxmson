@@ -96,13 +96,17 @@ class EarlyAccessFragment : BaseFragment(), GenericCarouselController.Callbacks 
             when (it) {
                 is ViewState.Empty -> {
                 }
+
                 is ViewState.Loading -> {
                 }
+
                 is ViewState.Error -> {
                 }
+
                 is ViewState.Success<*> -> {
                     updateController(it.data as StreamBundle)
                 }
+
                 else -> {
 
                 }

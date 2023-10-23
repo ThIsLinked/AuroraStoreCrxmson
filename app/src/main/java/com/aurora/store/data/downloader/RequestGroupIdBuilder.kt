@@ -17,7 +17,8 @@ class RequestGroupIdBuilder {
             val gson = Gson()
             var groupIDMap = HashMap<Int, RequestGroupIdBuilder.AppIDnVersion>()
             if (data.isNotEmpty()) {
-                val empMapType = object : TypeToken<Map<Int, RequestGroupIdBuilder.AppIDnVersion>?>() {}.type
+                val empMapType =
+                    object : TypeToken<Map<Int, RequestGroupIdBuilder.AppIDnVersion>?>() {}.type
                 groupIDMap = HashMap(gson.fromJson(data, empMapType) ?: HashMap())
             }
             val out = mutableListOf<Int>()
@@ -36,7 +37,8 @@ fun App.getGroupId(context: Context): Int {
     val gson = Gson()
     var groupIDMap = HashMap<Int, RequestGroupIdBuilder.AppIDnVersion>()
     if (data.isNotEmpty()) {
-        val empMapType = object : TypeToken<Map<Int, RequestGroupIdBuilder.AppIDnVersion>?>() {}.type
+        val empMapType =
+            object : TypeToken<Map<Int, RequestGroupIdBuilder.AppIDnVersion>?>() {}.type
         groupIDMap = HashMap(gson.fromJson(data, empMapType) ?: HashMap())
     }
     for (item in groupIDMap.entries) {
@@ -49,6 +51,7 @@ fun App.getGroupId(context: Context): Int {
         randomGroupID = (0 until Int.MAX_VALUE).random()
     }
     groupIDMap[randomGroupID] = RequestGroupIdBuilder.AppIDnVersion(this.id, this.versionCode)
-    Preferences.getPrefs(context).edit().putString(PREFERENCE_UNIQUE_GROUP_IDS, gson.toJson(groupIDMap)).apply()
+    Preferences.getPrefs(context).edit()
+        .putString(PREFERENCE_UNIQUE_GROUP_IDS, gson.toJson(groupIDMap)).apply()
     return randomGroupID
 }

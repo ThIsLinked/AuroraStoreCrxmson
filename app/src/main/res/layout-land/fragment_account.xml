@@ -19,9 +19,9 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account_rootContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/account_rootContainer"
     android:orientation="vertical"
     tools:context=".view.ui.account.AccountFragment">
 
@@ -30,16 +30,16 @@
         layout="@layout/view_toolbar_action" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/account_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/account_container"
         android:baselineAligned="false"
         android:orientation="horizontal"
         android:weightSum="2">
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="0dp"
             android:id="@+id/account_container_2"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -49,8 +49,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clipToPadding="false"
-                android:paddingTop="@dimen/margin_xsmall"
                 android:paddingStart="@dimen/margin_small"
+                android:paddingTop="@dimen/margin_xsmall"
                 android:paddingEnd="@dimen/margin_xsmall"
                 android:paddingBottom="@dimen/margin_small"
                 android:scrollbars="none">
@@ -85,13 +85,13 @@
             </HorizontalScrollView>
 
             <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/account_container_3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@id/chip_layout"
-                android:id="@+id/account_container_3"
+                android:gravity="center"
                 android:orientation="vertical"
-                android:paddingBottom="@dimen/margin_xlarge"
-                android:gravity="center">
+                android:paddingBottom="@dimen/margin_xlarge">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/img_avatar"

@@ -111,7 +111,7 @@ class PurchasedAppsFragment : BaseFragment() {
                     )
                 }
 
-                if (paginatedAppList.hasMore){
+                if (paginatedAppList.hasMore) {
                     add(
                         AppProgressViewModel_()
                             .id("progress")
