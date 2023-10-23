@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><!--
+  ~ Aurora Store
+  ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
+  ~
+  ~  Aurora Store is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 2 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  Aurora Store is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+<resources>
+    <color name="colorAccent_1">@color/material_red_400</color>
+    <color name="colorAccent_10">@color/material_green_400</color>
+    <color name="colorAccent_11">@color/material_light_green_400</color>
+    <color name="colorAccent_12">@color/material_lime_400</color>
+    <color name="colorAccent_13">@color/material_yellow_400</color>
+    <color name="colorAccent_14">@color/material_amber_400</color>
+    <color name="colorAccent_15">@color/material_orange_400</color>
+    <color name="colorAccent_16">@color/material_deep_orange_400</color>
+    <color name="colorAccent_17">@color/material_brown_400</color>
+    <color name="colorAccent_18">@color/material_blue_grey_400</color>
+    <color name="colorAccent_2">@color/material_pink_400</color>
+    <color name="colorAccent_3">@color/material_purple_400</color>
+    <color name="colorAccent_4">@color/material_deep_purple_400</color>
+    <color name="colorAccent_5">@color/material_indigo_400</color>
+    <color name="colorAccent_6">@color/material_blue_400</color>
+    <color name="colorAccent_7">@color/material_light_blue_400</color>
+    <color name="colorAccent_8">@color/material_cyan_400</color>
+    <color name="colorAccent_9">@color/material_teal_400</color>
+</resources>

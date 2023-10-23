@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The content has been edited by the author ThIsLinked / dhwh, inherits licenced GPLv3.0, but prohibits the use of this material for plagiarism purposes.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="36dp"
+    android:viewportWidth="36.0"
+    android:viewportHeight="36.0">
+    <path
+        android:fillColor="#FF2DAAE9"
+        android:pathData="M20.055,7.966V4.5h8.784v19.747h-8.784V20.861h5.158V7.966H20.055z" />
+    <path
+        android:fillColor="#FFE43F64"
+        android:pathData="M15.945,7.966V4.5H7.161v19.747h4.432L15.945,31.5V20.861h-5.158V7.966L15.945,7.966z" />
+</vector>

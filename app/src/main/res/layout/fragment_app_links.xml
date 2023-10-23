@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/onboarding_appsLinks_rootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/onboarding_appsLinks_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="@dimen/margin_normal"
+        android:includeFontPadding="true"
+        android:text="@string/onboarding_appsLinks_title"
+        android:textColor="?colorAccent"
+        android:textSize="@dimen/onboarding_title" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/onboarding_appsLinks_scrollContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/onboarding_appsLinks_listContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/onboarding_appsLinks_playStore_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:background="@drawable/bg_outlined_padded">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/onboarding_appsLinks_playStore_title"
+                    style="@style/AuroraTextStyle.Subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/playStoreButton"
+                    android:text="@string/onboarding_appsLinks_playStore_title"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/onboarding_appsLinks_playStore_summary"
+                    style="@style/AuroraTextStyle.Line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/onboarding_appsLinks_playStore_title"
+                    android:layout_alignStart="@id/onboarding_appsLinks_playStore_title"
+                    android:layout_alignEnd="@id/onboarding_appsLinks_playStore_title"
+                    android:layout_marginTop="@dimen/margin_xsmall"
+                    android:maxLines="5"
+                    android:text="@string/onboarding_appsLinks_playStore_summary" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/playStoreButton"
+                    style="@style/Widget.Material3.Button.TextButton.Dialog.Flush"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:text="@string/action_enable"
+                    android:textColor="?colorAccent" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/onboarding_appsLinks_androidMarket_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:background="@drawable/bg_outlined_padded">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/onboarding_appsLinks_androidMarket_title"
+                    style="@style/AuroraTextStyle.Subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/marketButton"
+                    android:text="@string/onboarding_appsLinks_androidMarket_title"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/onboarding_appsLinks_androidMarket_summary"
+                    style="@style/AuroraTextStyle.Line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/onboarding_appsLinks_androidMarket_title"
+                    android:layout_alignStart="@id/onboarding_appsLinks_androidMarket_title"
+                    android:layout_alignEnd="@id/onboarding_appsLinks_androidMarket_title"
+                    android:layout_marginTop="@dimen/margin_xsmall"
+                    android:maxLines="5"
+                    android:text="@string/onboarding_appsLinks_androidMarket_summary" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/marketButton"
+                    style="@style/Widget.Material3.Button.TextButton.Dialog.Flush"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:text="@string/action_enable"
+                    android:textColor="?colorAccent" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/onboarding_appsLinks_amazonAppStore_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:background="@drawable/bg_outlined_padded">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/onboarding_appsLinks_amazonAppStore_title"
+                    style="@style/AuroraTextStyle.Subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/amazonAppStoreButton"
+                    android:text="@string/onboarding_appsLinks_amazonAppStore_title"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/onboarding_appsLinks_amazonAppStore_summary"
+                    style="@style/AuroraTextStyle.Line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/onboarding_appsLinks_amazonAppStore_title"
+                    android:layout_alignStart="@id/onboarding_appsLinks_amazonAppStore_title"
+                    android:layout_alignEnd="@id/onboarding_appsLinks_amazonAppStore_title"
+                    android:layout_marginTop="@dimen/margin_xsmall"
+                    android:maxLines="5"
+                    android:text="@string/onboarding_appsLinks_amazonAppStore_summary" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/amazonAppStoreButton"
+                    style="@style/Widget.Material3.Button.TextButton.Dialog.Flush"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:text="@string/action_enable"
+                    android:textColor="?colorAccent" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

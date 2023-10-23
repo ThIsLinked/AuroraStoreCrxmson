@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The content has been edited by the author ThIsLinked / dhwh, inherits licenced GPLv3.0, but prohibits the use of this material for plagiarism purposes.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="36dp"
+    android:viewportWidth="36.0"
+    android:viewportHeight="36.0">
+    <path
+        android:fillColor="#FF253B7D"
+        android:pathData="M25.699,10.689C25.764,7.299 22.967,4.5 19.121,4.5h-8.123c-0.383,0 -0.709,0.278 -0.769,0.656L7.043,25.369c-0.06,0.384 0.236,0.731 0.625,0.731h4.727l1.174,-7.443l0,-0.002c0.06,-0.378 0.386,-0.656 0.768,-0.656h3.742c3.766,0 6.962,-2.748 7.546,-6.471c0.043,-0.278 0.068,-0.558 0.074,-0.84C25.699,10.689 25.699,10.689 25.699,10.689z" />
+    <path
+        android:fillColor="#FF459ADB"
+        android:pathData="M28.89,16.928c0.043,-0.278 0.068,-0.558 0.074,-0.84c0,0 0,0 0,0c0.066,-3.39 -2.732,-6.189 -6.577,-6.189h-6.772c-0.383,0 -0.709,0.278 -0.769,0.656L11.658,30.769C11.598,31.153 11.894,31.5 12.283,31.5h4.727l1.174,-7.443l0,-0.002c0.06,-0.378 0.386,-0.656 0.768,-0.656h2.392C25.11,23.399 28.306,20.652 28.89,16.928z" />
+    <path
+        android:fillColor="#FF232D62"
+        android:pathData="M22.386,9.9h-6.772c-0.383,0 -0.709,0.278 -0.769,0.656l-1.276,8.093c0.062,-0.375 0.386,-0.65 0.767,-0.65h3.742c3.766,0 6.962,-2.748 7.546,-6.471c0.043,-0.277 0.068,-0.557 0.074,-0.838C24.742,10.188 23.618,9.9 22.386,9.9z" />
+</vector>

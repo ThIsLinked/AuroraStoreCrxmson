@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Aurora Store
+  ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
+  ~
+  ~  Aurora Store is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 2 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  Aurora Store is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/about_rootContainer"
+    tools:context=".view.ui.about.AboutFragment">
+
+    <include
+        android:id="@+id/layoutToolbarAction"
+        layout="@layout/view_toolbar_action" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/about_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:id="@+id/about_container_2"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/about_logo"
+                android:layout_width="@dimen/icon_size_avatar"
+                android:layout_height="@dimen/icon_size_avatar"
+                android:layout_above="@id/about_label_container"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/ic_logo" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/about_label_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginVertical="@dimen/margin_xsmall"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/about_label_app"
+                    style="@style/TextAppearance.Aurora.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_label_short" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/about_label_crxmson"
+                    style="@style/TextAppearance.Aurora.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/crxmson_ofMarginStartTo_label"
+                    android:text="@string/app_label_crxmson"
+                    android:textColor="@color/crimson" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/about_label_version"
+                style="@style/TextAppearance.Aurora.Line2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/about_label_container"
+                android:layout_centerHorizontal="true"
+                android:text="@string/about_version_full" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/about_label_moddify"
+                style="@style/TextAppearance.Aurora.Line2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/about_label_version"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_xsmall"
+                android:gravity="center_vertical"
+                android:text="@string/about_version_moddify" />
+        </RelativeLayout>
+
+        <com.airbnb.epoxy.EpoxyRecyclerView
+            android:id="@+id/epoxy_recycler"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:paddingStart="@dimen/padding_normal"
+            android:paddingEnd="@dimen/padding_normal"
+            app:itemSpacing="@dimen/margin_small"
+            tools:listitem="@layout/view_link" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

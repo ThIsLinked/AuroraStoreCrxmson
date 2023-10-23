@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Content created by ThIsLinked / dhwh (unless otherwise noted) under licensed GPL v2.0 and is strictly prohibited for purposes of plagiarism.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="36dp"
+    android:viewportWidth="36.0"
+    android:viewportHeight="36.0">
+    <path
+        android:fillColor="@color/ic_4pda_colored"
+        android:pathData="M17.376,4.5L5.152,18.364v8.04h16.283L21.498,31.5h9.35v-27H17.376zM21.329,20.096h-6.855l6.855,-7.647V20.096z" />
+</vector>
