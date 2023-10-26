@@ -71,17 +71,96 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
+
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="text/plain" />
+            </intent-filter><!--
+
+            <nav-graph android:value="@navigation/mobile_navigation" />-->
+        </activity>
+
+        <activity
+            android:name="ru.maximoff.aurora.store.DeepLink"
+            android:exported="true"
+            android:noHistory="true">
+
+            <intent-filter android:autoVerify="@bool/appsLinks_verified">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="play.google.com" />
+                <data android:pathPrefix="/store/apps/details" />
             </intent-filter>
+
+            <intent-filter android:autoVerify="@bool/appsLinks_verified">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="play.google.com" />
+                <data android:pathPrefix="/store/apps/dev" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="@bool/appsLinks_verified">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="market.android.com" />
+                <data android:pathPrefix="/store/apps/details" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="@bool/appsLinks_verified">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="market.android.com" />
+                <data android:pathPrefix="/details" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="@bool/appsLinks_verified">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="/details"
+                    android:scheme="market" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="@bool/appsLinks_verified">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="amzn" />
+                <data android:host="apps" />
+                <data android:pathPrefix="/android" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="@bool/appsLinks_verified">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="www.amazon.com" />
+                <data android:pathPrefix="/gp/mas/dl/android" />
+            </intent-filter>
+
         </activity>
 
         <service android:name=".data.service.NotificationService" />
