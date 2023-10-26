@@ -116,37 +116,36 @@
             android:layout_height="wrap_content"
             android:divider="@drawable/divider"
             android:orientation="vertical"
-            android:paddingStart="@dimen/padding_large"
+            android:paddingHorizontal="@dimen/margin_large"
             android:paddingTop="@dimen/padding_small"
-            android:paddingEnd="@dimen/padding_small"
             android:showDividers="middle">
 
             <com.aurora.store.view.custom.layouts.ActionHeaderLayout
                 android:id="@+id/header_changelog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textIsSelectable="true"
                 app:headerTitle="@string/details_changelog" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txt_changelog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_small"
                 android:background="@drawable/bg_changelog"
-                android:textIsSelectable="true" />
+                android:textIsSelectable="@bool/details_textIsSelectable" />
 
             <com.aurora.store.view.custom.layouts.ActionHeaderLayout
                 android:id="@+id/header_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textIsSelectable="true"
                 app:headerTitle="@string/details_more_about_app" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txt_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textIsSelectable="true" />
+                android:layout_marginTop="@dimen/margin_small"
+                android:textIsSelectable="@bool/details_textIsSelectable" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

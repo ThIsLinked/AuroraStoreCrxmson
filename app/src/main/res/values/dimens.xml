@@ -17,16 +17,20 @@
   ~
   -->
 <resources>
+    <dimen name="preferences_seekbar_paddingVertical">15dp</dimen>
+    <dimen name="preferences_seekbar_value_minWidth">36dp</dimen>
+
     <dimen name="account_avatar">108dp</dimen>
-    <dimen name="account_email">18dsp</dimen>
+    <dimen name="account_email">18sp</dimen>
     <dimen name="account_name">22sp</dimen>
 
     <dimen name="cluster_size">128dp</dimen>
 
     <dimen name="crxmson_ofMarginStartTo_label">5sp</dimen>
 
-    <dimen name="edge_large">24sp</dimen>
-    <dimen name="edge_small">12sp</dimen>
+    <dimen name="edge_infinity">999dp</dimen>
+    <dimen name="edge_large">24dp</dimen>
+    <dimen name="edge_small">12dp</dimen>
 
     <dimen name="elevation_small">3dp</dimen>
 

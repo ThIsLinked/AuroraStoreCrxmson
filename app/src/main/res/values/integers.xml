@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer name="app_versionCode">53</integer>
-    <integer name="app_versionCode_nightly">20231023</integer>
+    <integer name="app_versionCode">20231026</integer>
+    <integer name="app_versionCode_stable">53</integer>
+    <integer name="app_versionCode_nightly">20231026</integer>
+    <integer name="maxLines_general">9</integer>
 </resources>

@@ -16,13 +16,13 @@
   ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
   ~
   -->
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?android:attr/selectableItemBackground"
-    android:gravity="center_vertical"
     android:minHeight="?android:attr/listPreferredItemHeight"
+    android:paddingVertical="@dimen/margin_normal"
     android:paddingStart="?android:attr/listPreferredItemPaddingStart"
     android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
 
@@ -30,17 +30,19 @@
         android:id="@android:id/icon"
         android:layout_width="@dimen/icon_size_default"
         android:layout_height="@dimen/icon_size_default"
-        android:layout_gravity="center"
-        android:layout_marginHorizontal="@dimen/margin_xsmall"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="@dimen/margin_large"
         app:tint="?android:attr/colorAccent"
         app:tintMode="src_in" />
 
-    <RelativeLayout
-        android:layout_width="0dp"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/text_container"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_large"
-        android:layout_marginEnd="@dimen/margin_small"
-        android:layout_weight="1">
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@android:id/widget_frame"
+        android:layout_toEndOf="@android:id/icon"
+        android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@android:id/title"
@@ -49,7 +51,7 @@
             android:layout_height="wrap_content"
             android:ellipsize="marquee"
             android:fadingEdge="horizontal"
-            android:singleLine="true"
+            android:maxLines="@integer/maxLines_general"
             android:textSize="16sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -57,16 +59,18 @@
             style="@style/TextAppearance.Aurora.Line2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@android:id/title"
-            android:layout_alignStart="@android:id/title"
-            android:maxLines="4" />
-    </RelativeLayout>
+            android:layout_marginTop="2dp"
+            android:maxLines="@integer/maxLines_general" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@android:id/widget_frame"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_large"
         android:orientation="vertical" />
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>

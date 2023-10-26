@@ -181,6 +181,7 @@
 
     <!-- Custom Themes -->
     <style name="AppTheme.Light" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:colorControlActivated">#ffff0000</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorPrimary">@color/colorAccent</item>
         <item name="colorPrimaryDark">@color/white</item>

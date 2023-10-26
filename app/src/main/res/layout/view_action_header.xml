@@ -24,7 +24,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -35,20 +35,20 @@
         <View
             android:layout_width="4dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="@dimen/padding_xsmall"
-            android:background="?colorAccent" />
+            android:layout_marginEnd="@dimen/padding_normal"
+            android:background="@drawable/view_header_divider" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/txt_title"
             style="@style/AuroraTextStyle.Subtitle.Alt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/padding_normal"
             android:ellipsize="end"
             android:gravity="center_vertical"
             android:maxLines="1"
             tools:text="Header" />
-    </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img_action"
@@ -63,4 +63,5 @@
         android:visibility="invisible"
         app:srcCompat="@drawable/ic_arrow_right"
         app:tint="?android:textColorPrimary" />
+
 </RelativeLayout>
