@@ -1,4 +1,4 @@
-<img id="logo" align="center" src="Readme.logo.webp"  alt="Aurora Store Crxmson" />
+<img id="logo" align="center" src="README.logo.webp"  alt="Aurora Store Crxmson" />
 
 A moddify/fork the original [Aurora Store source project](https://gitlab.com/AuroraOSS/AuroraStore). Developable for non-commercial purposes for end-personal use.
 
@@ -7,7 +7,7 @@ A moddify/fork the original [Aurora Store source project](https://gitlab.com/Aur
 
 *This project is intended for the CIS territory. There is no localizations for other regions. Except for English USA - it acts as default localization.*
 
-**Current status project:** Waiting for updates <img src="Readme.kitten.webp"  alt=" =^.^= " style="width: 35px;" />
+**Current status project:** Waiting for updates <img src="README.kitten.webp"  alt=" =^.^= " style="width: 35px;" />
 
 ###### @ 2023 [ThIsLinked](https://t.me/thislinked) / [dhwh](https://4pda.to/forum/index.php?showuser=9870529)
 
@@ -72,6 +72,8 @@ exactly as they were supposed to in the specification.
 > </details>
 
 # Screenshots
+
+*Please note that these are early screenshots and may not reflect current releases.*
 
 <details><summary>[click spoiler]</summary>
 <img src="Screenshots/Screenshot_1.webp" alt="Screenshot_1" /><img src="Screenshots/Screenshot_2.webp" alt="Screenshot_2" /><img src="Screenshots/Screenshot_2-amber.webp" alt="Screenshot_2-amber" /><img src="Screenshots/Screenshot_2-indigo.webp" alt="Screenshot_2-indigo" /><img src="Screenshots/Screenshot_2-dark.webp" alt="Screenshot_2-dark" /><img src="Screenshots/Screenshot_2-black.webp" alt="Screenshot_2-black" /><img src="Screenshots/Screenshot_3.webp" alt="Screenshot_3" /><img src="Screenshots/Screenshot_4.webp" alt="Screenshot_4" /><img src="Screenshots/Screenshot_5.webp" alt="Screenshot_5" /><img src="Screenshots/Screenshot_6.webp" alt="Screenshot_6" /><img src="Screenshots/Screenshot_7.webp" alt="Screenshot_7" /><img src="Screenshots/Screenshot_8.webp" alt="Screenshot_8" /><img src="Screenshots/Screenshot_8-listAccents.webp" alt="Screenshot_8-listAccents" /><img src="Screenshots/Screenshot_9.webp" alt="Screenshot_9" />
