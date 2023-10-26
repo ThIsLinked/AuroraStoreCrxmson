@@ -15,6 +15,7 @@ import com.aurora.store.R
 import com.aurora.store.databinding.FragmentAppLinksBinding
 import com.google.android.material.button.MaterialButton
 
+
 class AppLinksFragment : Fragment(R.layout.fragment_app_links) {
 
     private var _binding: FragmentAppLinksBinding? = null
@@ -56,6 +57,18 @@ class AppLinksFragment : Fragment(R.layout.fragment_app_links) {
                     startForResult.launch(intent)
                 }
             }
+        }
+
+        /* Tooltip link to official documentation */
+        val onboardingAppsLinksTooltipLink: MaterialButton = view.findViewById(R.id.onboarding_appsLinks_tooltipLink) // Set ID object
+        // Action
+        onboardingAppsLinksTooltipLink.setOnClickListener {
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("https://developer.android.com/training/app-links/verify-android-applinks")
+                )
+            )
         }
     }
 
