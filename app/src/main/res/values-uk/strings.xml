@@ -23,7 +23,6 @@
     <string name="account_login_using">Увійти за допомогою</string>
     <string name="account_logout">Вийти</string>
 
-    <string name="action_accept">Погодитись</string>
     <string name="action_back">Назад</string>
     <string name="action_blacklist">Чорний список</string>
     <string name="action_blacklist_add">Додати до чорного списку</string>
@@ -33,7 +32,6 @@
     <string name="action_close">Закрити</string>
     <string name="action_copy">Копіювати</string>
     <string name="action_copy_link">Копіювати посилання</string>
-    <string name="action_deny">Відхилити</string>
     <string name="action_disable">Вимкнути</string>
     <string name="action_enable">Увімкнути</string>
     <string name="action_enabled">Увімкнено</string>

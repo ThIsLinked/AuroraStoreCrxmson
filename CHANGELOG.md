@@ -1,5 +1,5 @@
-> **v4.3.5-nightly-23.10.23 (53)**
-> * Pulled up to nightly 23.10.23 (include stable 4.3.5);
+> **v4.3.5-nightly-26.10.23 (53)**
+> * Pulled up to nightly 26.10.23 (include stable 4.3.5);
 > * Complete re-creation of the project. This has improved cleaning, use and convenience;
 > * Redesign of the settings wizard;
 > * In the settings wizard, I added a section «Apps links» for landscape orientation and adapted it;

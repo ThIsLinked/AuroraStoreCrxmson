@@ -58,7 +58,6 @@
     <string name="account_login_using">Log in using</string>
     <string name="account_logout">Log out</string>
 
-    <string name="action_accept">Accept</string>
     <string name="action_back">Back</string>
     <string name="action_blacklist">Blacklist</string>
     <string name="action_blacklist_add">Add to Blacklist</string>
@@ -68,7 +67,6 @@
     <string name="action_close">Close</string>
     <string name="action_copy">Copy</string>
     <string name="action_copy_link">Copy Link</string>
-    <string name="action_deny">Deny</string>
     <string name="action_disable">Disable</string>
     <string name="action_enable">Enable</string>
     <string name="action_enabled">Enabled</string>

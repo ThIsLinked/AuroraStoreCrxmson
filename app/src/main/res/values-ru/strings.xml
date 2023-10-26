@@ -23,7 +23,6 @@
     <string name="account_login_using">Войти с помощью</string>
     <string name="account_logout">Выйти</string>
 
-    <string name="action_accept">Принять</string>
     <string name="action_back">Назад</string>
     <string name="action_blacklist">Черный список</string>
     <string name="action_blacklist_add">Добавить в черный список</string>
@@ -33,7 +32,6 @@
     <string name="action_close">Закрыть</string>
     <string name="action_copy">Скопировать</string>
     <string name="action_copy_link">Скопировать ссылку</string>
-    <string name="action_deny">Отказаться</string>
     <string name="action_disable">Отключить</string>
     <string name="action_enable">Включить</string>
     <string name="action_enabled">Включено</string>

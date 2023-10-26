@@ -42,7 +42,7 @@ android {
         minSdk = 23
         targetSdk = 33
 
-        versionCode = 53
+        versionCode = 23102601
         versionName = "4.3.5"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -133,8 +133,8 @@ dependencies {
     //Lib-SU
     implementation("com.github.topjohnwu.libsu:core:5.0.5")
 
-    //Love <3
-    implementation("com.gitlab.AuroraOSS:gplayapi:3.2.4")
+    //Google Play Store API
+    implementation("com.gitlab.AuroraOSS:gplayapi:3.2.5")
 
     //Browser
     implementation("androidx.browser:browser:1.6.0")
