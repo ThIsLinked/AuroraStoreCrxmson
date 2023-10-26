@@ -7,6 +7,8 @@
 > * Reworking the code in the «Apps links» layout made it possible to implement it more concisely, and also lightened the amount of code overall;
 > * Reworked some decals in the interface;
 > * Expanded the range of text selection on the application page. I was focusing on what the user might need to highlight and copy. Configured by global value "details_textIsSelectable" to values/bools.xml;
+> * Updated title and summary text in settings;
+> * Fully custom layout in settings;
 > * Fixed bugs known to me;
 > * Update all localizations;
 > * Optimization and reduction of code volume due to more competent use of components;
