@@ -78,7 +78,11 @@ class SelfUpdateSheet : BaseBottomSheet() {
     }
 
     private fun inflateData() {
-        B.txtLine2.text = ("${selfUpdate.versionName} (${selfUpdate.versionCode})")
+
+        val newVersionName = selfUpdate.versionName
+        val newVersionCode = selfUpdate.versionCode
+        B.txtLine2.text =
+            getString(R.string.sheet_self_update_newVersion, newVersionName, newVersionCode)
 
         val messages: String = if (selfUpdate.changelog.isEmpty())
             getString(R.string.details_changelog_unavailable)
@@ -86,19 +90,36 @@ class SelfUpdateSheet : BaseBottomSheet() {
             selfUpdate.changelog
 
         B.txtChangelog.text = messages.trim()
-        B.txtChangelog.movementMethod = ScrollingMovementMethod()
+        B.txtChangelog.movementMethod = ScrollingMovementMethod() // Set scrolling
+
     }
 
     private fun attachActions() {
 
+        /* Build on 4PDA */
+        // Action
         B.btnPrimary.setOnClickListener {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/ThIsLinked/AuroraStoreCrxmson/releases")))
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("https://4pda.to/forum/index.php?act=findpost&pid=116441910&anchor=Spoil-116441910-6")
+                )
+            )
         }
 
+        /* Build on GitHub */
+        // Action
         B.btnSecondary.setOnClickListener {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://4pda.to/forum/index.php?act=findpost&pid=116441910&anchor=Spoil-116441910-6")))
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("https://github.com/ThIsLinked/AuroraStoreCrxmson/releases")
+                )
+            )
         }
 
+        /* Don't update */
+        // Action
         B.btnTertiary.setOnClickListener {
             dismissAllowingStateLoss()
         }

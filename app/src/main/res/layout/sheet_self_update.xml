@@ -33,13 +33,7 @@
         android:paddingHorizontal="@dimen/padding_large"
         android:paddingTop="@dimen/padding_large"
         android:paddingBottom="@dimen/margin_small"
-        android:showDividers="middle"
-        app:layout_constrainedHeight="true"
-        app:layout_constrainedWidth="true"
-        app:layout_constraintBottom_toTopOf="@id/sheet_self_update_button_frame"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:showDividers="middle">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -80,7 +74,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_large"
             android:background="@drawable/bg_outlined_padded"
-            android:maxLines="@integer/maxLines_general"
+            android:maxLines="20"
+            android:scrollbars="vertical"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.Aurora.Line2"
             tools:text="Changelog" />
@@ -93,8 +88,19 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingHorizontal="@dimen/margin_large"
-        android:paddingTop="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_normal"
         android:paddingBottom="@dimen/padding_large">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/sheet_self_update_button_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="@integer/maxLines_general"
+            android:scrollbars="vertical"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/padding_small"
+            android:textAppearance="@style/TextAppearance.Aurora.Line2"
+            tools:text="@string/sheet_self_update_build_title" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/sheet_self_update_build_frame"
@@ -110,7 +116,7 @@
                 android:layout_height="@dimen/height_button"
                 android:layout_marginEnd="@dimen/margin_xsmall"
                 android:layout_weight="1"
-                android:text="@string/sheet_self_update_buildGitHub" />
+                android:text="@string/sheet_self_update_build4PDA" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_secondary"
@@ -119,7 +125,7 @@
                 android:layout_height="@dimen/height_button"
                 android:layout_marginStart="@dimen/margin_xsmall"
                 android:layout_weight="1"
-                android:text="@string/sheet_self_update_build4PDA" />
+                android:text="@string/sheet_self_update_buildGitHub" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -128,12 +134,7 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_button"
-            android:text="@string/sheet_self_update_cancel"
-            app:layout_constrainedHeight="true"
-            app:layout_constrainedWidth="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_primary" />
+            android:text="@string/sheet_self_update_cancel" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

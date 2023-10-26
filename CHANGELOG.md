@@ -13,6 +13,7 @@
 > * Update all localizations;
 > * Optimization and reduction of code volume due to more competent use of components;
 > * Even more cleaning of garbage from resources and code;
+> * Reworked the self-update layout and adjusted the receive Internet data to Crxmson;
 
 > **v4.3.2-nightly-25.09.23 (50)**
 > * Pulled up to nightly 25.09.23;

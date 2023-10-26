@@ -329,6 +329,7 @@
 
     <string name="sheet_manual_download_textinputTooltip">Введіть versionCode для завантаження</string>
 
+    <string name="sheet_self_update_build_title">Завантажити з…</string>
     <string name="sheet_self_update_cancel">Не обновлять</string>
 
     <string name="spoof_apply">Переконайтеся, що ви повторно увійшли, щоб застосувати підміну</string>

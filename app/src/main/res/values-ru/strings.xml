@@ -329,6 +329,7 @@
 
     <string name="sheet_manual_download_textinputTooltip">Введите versionCode для загрузки</string>
 
+    <string name="sheet_self_update_build_title">Скачать с…</string>
     <string name="sheet_self_update_cancel">Не обновлять</string>
 
     <string name="spoof_apply">Убедитесь, что перезашли в аккаунт для применения подмены устройства</string>
