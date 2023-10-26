@@ -48,6 +48,7 @@
             android:id="@+id/about_label_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_xlarge"
             android:layout_marginVertical="@dimen/margin_xsmall"
             android:orientation="horizontal">
 
@@ -74,16 +75,18 @@
             style="@style/TextAppearance.Aurora.Line2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/about_version_full" />
+            android:layout_marginHorizontal="@dimen/margin_xlarge"
+            android:text="@string/about_version" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/about_label_moddify"
             style="@style/TextAppearance.Aurora.Line2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_xlarge"
             android:layout_marginTop="@dimen/margin_xsmall"
             android:gravity="center_vertical"
-            android:text="@string/about_version_moddify" />
+            android:text="@string/about_moddify" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
