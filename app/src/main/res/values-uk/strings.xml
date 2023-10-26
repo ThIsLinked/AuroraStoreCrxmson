@@ -86,9 +86,9 @@
     <string name="apps_installed">встановлено</string>
     <string name="apps_purchased">придбано</string>
 
-    <string name="bad_request">Внутрішня помилка! Повторіть спробу трохи згодом</string>
+    <string name="bad_request">Помилка запиту. Спробуйте ще раз чи за деякий час.</string>
 
-    <string name="check_connectivity">Перевірте інтернет-з\'єднання</string>
+    <string name="check_connectivity">Перевірити</string>
 
     <string name="checking_for_updates">Перевірка наявності оновлень</string>
 
@@ -149,10 +149,8 @@
     <string name="download_metadata">Отримання метаданих</string>
     <string name="download_none">Немає завантажень</string>
     <string name="download_pause_all">Призупинити все</string>
-    <string name="download_paused">
-                Пауза • <xliff:g id="completed_downloads">%1$d</xliff:g>/ <xliff:g id="all_downloads">%2$d</xliff:g></string>
-    <string name="download_progress">
-                Завантаження • <xliff:g id="completed_downloads">%1$d</xliff:g>/ <xliff:g id="all_downloads">%2$d</xliff:g>• <xliff:g id="speed">%3$s</xliff:g></string>
+    <string name="download_paused">Пауза • <xliff:g id="completed_downloads">%1$d</xliff:g>/ <xliff:g id="all_downloads">%2$d</xliff:g></string>
+    <string name="download_progress">Завантаження • <xliff:g id="completed_downloads">%1$d</xliff:g>/ <xliff:g id="all_downloads">%2$d</xliff:g>• <xliff:g id="speed">%3$s</xliff:g></string>
     <string name="download_queued">В черзі</string>
     <string name="download_resume_all">Продовжити все</string>
     <string name="download_speed_bytes">%1$d Б/с</string>
@@ -160,8 +158,7 @@
     <string name="download_speed_kb">%1$d Кб/с</string>
     <string name="download_speed_mb">%1$d Мб/с</string>
 
-    <string name="downloading_dep">
-                Завантаження додаткових файлів для <xliff:g id="app">%1$s</xliff:g></string>
+    <string name="downloading_dep">Завантаження додаткових файлів для <xliff:g id="app">%1$s</xliff:g></string>
 
     <string name="error">Сталася помилка!</string>
 
@@ -172,8 +169,7 @@
 
     <string name="expand">Розгорнути</string>
 
-    <string name="failed_generating_session">
-                Не вдалося згенерувати сеанс, помилка <xliff:g id="status_code">%1$d</xliff:g></string>
+    <string name="failed_generating_session">Не вдалося згенерувати сеанс, помилка <xliff:g id="status_code">%1$d</xliff:g></string>
     <string name="failed_to_fetch_report">Не вдалося отримати звіт про приватність</string>
     <string name="failed_to_generate_session">Не вдалося згенерувати сеанс</string>
 
@@ -204,7 +200,7 @@
     <string name="installer_status_success">Успішно встановлено</string>
     <string name="installer_status_user_action">Очікується підтвердження</string>
 
-    <string name="login_rate_limited">Халепа, забагато спроб входу</string>
+    <string name="login_rate_limited">Занадто багато спроб :(</string>
 
     <string name="menu">Меню</string>
     <string name="menu_disclaimer">Відмова від відповідальності</string>
@@ -215,20 +211,16 @@
     <string name="notification_channel_general">Загальне сповіщення</string>
     <string name="notification_channel_updater_service">Служба фонового завантаження застосунків</string>
     <string name="notification_channel_updates">Сповіщення про оновлення</string>
-    <string name="notification_update_available">
-                Доступне <xliff:g id="apps_count">%1$d</xliff:g>оновлення
-    
-    </string>
-    <string name="notification_updates_available">
-                Доступно <xliff:g id="apps_count">%1$d</xliff:g>оновлень
-    
-    </string>
+    <string name="notification_update_available">Доступне <xliff:g id="apps_count">%1$d</xliff:g>оновлення</string>
+    <string name="notification_updates_available">Доступно <xliff:g id="apps_count">%1$d</xliff:g>оновлень</string>
 
     <string name="onboarding_appsLinks_allEnabled">Усі посилання включені</string>
     <string name="onboarding_appsLinks_amazonAppStore_summary">Amazon AppStore - це магазин додатків для Android-сумісних платформ, керований Amazon.</string>
     <string name="onboarding_appsLinks_androidMarket_summary">Домен минулого Android Market. Потрібно переходити за посиланнями.</string>
     <string name="onboarding_appsLinks_playStore_summary">Відомий Google Play Store. У минулому існував Android Market.</string>
     <string name="onboarding_appsLinks_title">Посилання на програми</string>
+    <string name="onboarding_appsLinks_tooltip">На деяких системах через впровадження «Verify links», посилання на домени Play Store можуть бути примусово закріплені за <b>com.android.vending</b>.\n\nЦе ще не означає, що у списку «Відкрити з…» не буде Аврори.</string>
+    <string name="onboarding_appsLinks_tooltipLink"><u>Офіційна документація</u></string>
     <string name="onboarding_permissions_install_summary">Встановлення програм після завантаження</string>
     <string name="onboarding_permissions_install_title">Встановлення</string>
     <string name="onboarding_permissions_notifications_summary">Надсилання повідомлень про різні події</string>
@@ -246,8 +238,8 @@
 
     <string name="permissions_denied">У наданні необхідних дозволів відмовлено. Надайте їх, щоб продовжити дію</string>
 
-    <string name="pref_abandon_session">Примусово очистити сеанси встановлення</string>
-    <string name="pref_abandon_session_desc">Видалення сеансів черги встановлень або відкладених</string>
+    <string name="pref_abandon_session">Очистити сесії</string>
+    <string name="pref_abandon_session_desc">Очистити перервані або очікувані установки сеанси</string>
     <string name="pref_app_download">Завантаження</string>
     <string name="pref_aurora_only">Програми тільки з Аврори</string>
     <string name="pref_aurora_only_desc">Показувати лише встановлені програми з Аврори у розділах «Оновлення» та «Встановлені»</string>
@@ -264,20 +256,18 @@
     <string name="pref_download_directory_error">Вибраний шлях неможливий для запису</string>
     <string name="pref_downloader_active_summary">Найбільша кількість активних завантажень</string>
     <string name="pref_downloader_active_title">Активні завантаження</string>
-    <string name="pref_downloader_external">Зовнішнє сховище</string>
-    <string name="pref_downloader_external_desc">Зовнішнє сховище застосовується для завантажень, експорту тощо.</string>
+    <string name="pref_downloader_external_desc">Використовувати вказаний шлях</string>
     <string name="pref_downloader_path_title">Шлях для завантажень</string>
     <string name="pref_downloader_wifi_title">Завантаження лише через Wi-Fi</string>
-    <string name="pref_filter_fdroid_summary">Вилучає застосунки F-Droid зі списків застосунків</string>
-    <string name="pref_filter_fdroid_title">Фільтрувати застосунки F-Droid</string>
-    <string name="pref_filter_google_summary">Вилучає всі застосунки Google з результатів пошуку та категорій застосунків</string>
-    <string name="pref_filter_google_title">Фільтрувати застосунки Google</string>
-    <string name="pref_filter_search_summary">Фільтри пошуку скидаються за кожного пошуку. Вимкніть, щоб зберегти фільтри пошуку</string>
-    <string name="pref_filter_search_title">Використовувати непостійний фільтр пошуку</string>
+    <string name="pref_filter_fdroid_summary">Ігнорувати програми з F-Droid у розділі «Оновлення» та «Встановлені»</string>
+    <string name="pref_filter_google_summary">Ігнорувати програми від Google у розділі «Оновлення» та «Встановлені»</string>
+    <string name="pref_filter_search_summary">Завжди зберігати налаштування фільтра під час пошуку</string>
+    <string name="pref_filter_search_title">Зберігати фільтр</string>
+    <string name="pref_filter_tooltip">Деякі перемикачі можуть не працювати зараз.</string>
     <string name="pref_insecure_anonymous_summary">Згенерувати сеанс із ідентифікатором GSF</string>
-    <string name="pref_install_auto_summary">Автоматично встановлювати після завантаження</string>
+    <string name="pref_install_auto_summary">Автоматично встановлювати після повного завантаження</string>
     <string name="pref_install_auto_title">Автоматичне встановлення</string>
-    <string name="pref_install_delete_summary">Видаляти файли</string>
+    <string name="pref_install_delete_summary">Видаляти інсталяційні файли після успішного встановлення</string>
     <string name="pref_install_delete_title">Видаляти інсталяційні файли після інсталяції</string>
     <string name="pref_install_mode_native">Системний встановлювач</string>
     <string name="pref_install_mode_session">Сесією</string>
@@ -294,14 +284,14 @@
     <string name="pref_ui_layout">Макет</string>
     <string name="pref_ui_layout_tab">Виберіть типову вкладку</string>
     <string name="pref_ui_no_for_you">Сторінки для вас</string>
-    <string name="pref_ui_no_for_you_desc">Показувати сторінки на головному екрані</string>
-    <string name="pref_ui_similar_apps">Подібні та пов’язані застосунки</string>
-    <string name="pref_ui_similar_apps_desc">Показ подібних і пов\'язаних кластерів на сторінці відомостей про застосунок</string>
+    <string name="pref_ui_no_for_you_desc">Відображати рекомендації на головній</string>
+    <string name="pref_ui_similar_apps">Схожі та пов\'язані</string>
+    <string name="pref_ui_similar_apps_desc">Відображення схожих та пов\'язаних програм на головній</string>
     <string name="pref_ui_theme_black">Чорна</string>
     <string name="pref_ui_theme_dark">Темна</string>
     <string name="pref_ui_theme_dark_x">Темна X</string>
     <string name="pref_ui_theme_light">Світла</string>
-    <string name="pref_ui_theme_system">Визначається системою</string>
+    <string name="pref_ui_theme_system">Системне значення</string>
     <string name="pref_ui_theme_title">Тема</string>
     <string name="pref_ui_title">Зовнішній вигляд</string>
     <string name="pref_updates_check">Автоматична перевірка оновлень</string>
@@ -312,6 +302,7 @@
     <string name="pref_updates_extended_desc">Також шукає нові версії вимкнених застосунків</string>
     <string name="pref_vending_version_default">За замовчуванням (значення з поточного профілю)</string>
     <string name="pref_vending_version_title">Версія Play Store</string>
+    <string name="pref_vending_version_tooltip">На деяких системах через впровадження «Verify links», посилання на домени Play Store можуть бути примусово закріплені за com.android.vending.\n\nЦе ще не означає, що у списку «Відкрити з…» не буде Аврори.</string>
 
     <string name="purchase_failed">Збій завантаження</string>
     <string name="purchase_invalid">Застосунок не придбано</string>
@@ -322,7 +313,7 @@
 
     <string name="rate_limited">На жаль, для цього облікового запису є обмеження!</string>
 
-    <string name="requesting_new_session">Запит нового сеансу...</string>
+    <string name="requesting_new_session">Запит нового сеансу…</string>
 
     <string name="search_hint">Пошук застосунків та іграх</string>
 
@@ -335,8 +326,8 @@
     <string name="session_login">Спочатку авторизуйтесь:</string>
     <string name="session_login_failed_google">Не вдалось увійти через Google</string>
     <string name="session_scrapped">Останній сеанс скасовано</string>
-    <string name="session_verifying">Перевірка сеансу...</string>
-    <string name="session_verifying_google">Перевірка сеансу Google...</string>
+    <string name="session_verifying">Перевірка сеансу…</string>
+    <string name="session_verifying_google">Перевірка сеансу Google…</string>
 
     <string name="sheet_manual_download_textinputTooltip">Введіть versionCode для завантаження</string>
 
@@ -371,7 +362,7 @@
     <string name="title_language">Мова</string>
     <string name="title_library">Бібліотека</string>
     <string name="title_manual_download">Власноручне завантаження</string>
-    <string name="title_no_network">Немає мережі</string>
+    <string name="title_no_network">Не зміг вийти до Інтернету. Обірвався?</string>
     <string name="title_purchase_history">Історія покупок</string>
     <string name="title_search_results">Результати пошуку</string>
     <string name="title_search_suggestion">Пошукова пропозиція</string>
@@ -380,7 +371,7 @@
     <string name="title_updates">Оновлення</string>
 
     <string name="toast_aas_token_failed">Не вдалося створити токен AAS</string>
-    <string name="toast_abandon_sessions">Старі сеанси встановлення очищено</string>
+    <string name="toast_abandon_sessions">Усі сесії були перервані</string>
     <string name="toast_anonymous_restriction">Недоступно для знеособлених облікових записів</string>
     <string name="toast_apk_blacklisted">В чорному списку</string>
     <string name="toast_apk_whitelisted">У білому списку</string>

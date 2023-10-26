@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Aurora Store
   ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
   ~  Copyright (C) 2022, The Calyx Institute
@@ -45,8 +44,8 @@
     <string name="about_topicPost_4pda_summary" translatable="false">@string/about_templateToGoTo</string>
     <string name="about_topic_4pda">Topic on 4PDA</string>
     <string name="about_topic_4pda_summary" translatable="false">@string/about_templateToGoTo</string>
-    <string name="about_version_full" translatable="false">v4.3.5 // Nightly by 23.10.23</string>
-    <string name="about_version_moddify" translatable="false">Moddify 23.10.2023 (by ThIsLinked // dhwh)</string>
+    <string name="about_version" translatable="false">v4.3.5 // Nightly by 26.10.23</string>
+    <string name="about_moddify" translatable="false">Powered moddify 26.10.2023 by ThIsLinked // dhwh</string>
     <string name="about_xda" translatable="false">XDA</string>
     <string name="about_xda_summary">See the Aurora Store XDA thread for discussions or suggestions.</string>
 
@@ -124,15 +123,15 @@
     <string name="app_updater_service_notif_text">Enables background app download</string>
     <string name="app_updater_service_notif_title">Background app download</string>
     <string name="app_versionName" translatable="false">4.3.5</string>
-    <string name="app_versionName_full" translatable="false">4.3.5-nightly-23.10.23 // moddify 23.10.23 (by ThIsLinked // dhwh)</string>
-    <string name="app_versionName_nightly" translatable="false">23.10.2023</string>
+    <string name="app_versionName_full" translatable="false">4.3.5-nightly-26.10.23 // moddify 26.10.23 (by ThIsLinked // dhwh)</string>
+    <string name="app_versionName_nightly" translatable="false">26.10.2023</string>
 
     <string name="apps_installed">installed</string>
     <string name="apps_purchased">purchased</string>
 
-    <string name="bad_request">Internal error! Please retry after sometime</string>
+    <string name="bad_request">The request failed. Try again or after a while.</string>
 
-    <string name="check_connectivity">Check internet connectivity</string>
+    <string name="check_connectivity">Check</string>
 
     <string name="checking_for_updates">Checking for updates</string>
 
@@ -193,10 +192,8 @@
     <string name="download_metadata">Getting metadata</string>
     <string name="download_none">No downloads</string>
     <string name="download_pause_all">Pause all</string>
-    <string name="download_paused">
-                Paused • <xliff:g id="completed_downloads">%1$d</xliff:g>/ <xliff:g id="all_downloads">%2$d</xliff:g></string>
-    <string name="download_progress">
-                Downloading • <xliff:g id="completed_downloads">%1$d</xliff:g>/ <xliff:g id="all_downloads">%2$d</xliff:g>• <xliff:g id="speed">%3$s</xliff:g></string>
+    <string name="download_paused">Paused • <xliff:g id="completed_downloads">%1$d</xliff:g>/ <xliff:g id="all_downloads">%2$d</xliff:g></string>
+    <string name="download_progress">Downloading • <xliff:g id="completed_downloads">%1$d</xliff:g>/ <xliff:g id="all_downloads">%2$d</xliff:g>• <xliff:g id="speed">%3$s</xliff:g></string>
     <string name="download_queued">Queued</string>
     <string name="download_resume_all">Resume all</string>
     <string name="download_speed_bytes">%1$d B/s</string>
@@ -204,21 +201,19 @@
     <string name="download_speed_kb">%1$s Kb/s</string>
     <string name="download_speed_mb">%1$s Mb/s</string>
 
-    <string name="downloading_dep">
-                Downloading additional files for <xliff:g id="app">%1$s</xliff:g></string>
+    <string name="downloading_dep">Downloading additional files for <xliff:g id="app">%1$s</xliff:g></string>
 
     <string name="error">An error occurred!</string>
 
     <string name="exodus_no_tracker">Nothing found in the reports</string>
     <string name="exodus_powered" translatable="false">Powered by Exodus</string>
-    <string name="exodus_progress">Checking...</string>
+    <string name="exodus_progress">Checking…</string>
     <string name="exodus_substring">found in</string>
     <string name="exodus_view_report">View report</string>
 
     <string name="expand">Expand</string>
 
-    <string name="failed_generating_session">
-                Failed to generate session, error <xliff:g id="status_code">%1$d</xliff:g></string>
+    <string name="failed_generating_session">Failed to generate session, error <xliff:g id="status_code">%1$d</xliff:g></string>
     <string name="failed_to_fetch_report">Failed to fetch privacy report</string>
     <string name="failed_to_generate_session">Could not generate session</string>
 
@@ -249,7 +244,7 @@
     <string name="installer_status_success">Successfully installed</string>
     <string name="installer_status_user_action">Waiting for user confirmation</string>
 
-    <string name="login_rate_limited">Oops, You are rate limited</string>
+    <string name="login_rate_limited">Too many attempts :(</string>
 
     <string name="menu">Menu</string>
     <string name="menu_disclaimer">Disclaimer</string>
@@ -260,14 +255,8 @@
     <string name="notification_channel_general">General notification</string>
     <string name="notification_channel_updater_service">App background download service</string>
     <string name="notification_channel_updates">Updates notifications</string>
-    <string name="notification_update_available">
-                Available <xliff:g id="apps_count">%1$d</xliff:g>update
-    
-    </string>
-    <string name="notification_updates_available">
-                Available <xliff:g id="apps_count">%1$d</xliff:g>updates
-    
-    </string>
+    <string name="notification_update_available">Available <xliff:g id="apps_count">%1$d</xliff:g>update</string>
+    <string name="notification_updates_available">Available <xliff:g id="apps_count">%1$d</xliff:g>updates</string>
 
     <string name="onboarding_appsLinks_allEnabled">All links enabled</string>
     <string name="onboarding_appsLinks_amazonAppStore_summary">Amazon AppStore is an app store for Android-compatible platforms operated by Amazon.</string>
@@ -277,6 +266,8 @@
     <string name="onboarding_appsLinks_playStore_summary">Google\'s all-famous Play Store. In the past, there was Android Market.</string>
     <string name="onboarding_appsLinks_playStore_title" translatable="false">play.google.com</string>
     <string name="onboarding_appsLinks_title">Apps links</string>
+    <string name="onboarding_appsLinks_tooltip">On some systems, due to the implementation of «Verify links», links to Play Store domains may be forced to be assigned to <b>com.android.vending</b>.\n\nThis don\'t mean yet that Aurora will not be in the «Open with…» list.</string>
+    <string name="onboarding_appsLinks_tooltipLink">Official documentation</string>
     <string name="onboarding_permissions_install_summary">Installing apps after downloading.</string>
     <string name="onboarding_permissions_install_title">Install</string>
     <string name="onboarding_permissions_notifications_summary">Sending notifications about various events</string>
@@ -294,7 +285,7 @@
 
     <string name="permissions_denied">Required permissions were denied. Please grant them in order to continue the action</string>
 
-    <string name="pref_abandon_session">Force clear installation sessions</string>
+    <string name="pref_abandon_session">Clear sessions</string>
     <string name="pref_abandon_session_desc">Clear abandon or pending installation sessions</string>
     <string name="pref_app_download">Downloads</string>
     <string name="pref_aurora_only">Apps only from Aurora</string>
@@ -313,29 +304,30 @@
     <string name="pref_download_directory_error">Selected path is not writable</string>
     <string name="pref_downloader_active_summary">Maximum number of active downloads</string>
     <string name="pref_downloader_active_title">Active download</string>
-    <string name="pref_downloader_external">User external storage</string>
-    <string name="pref_downloader_external_desc">External storage is used for downloads, exports, etc.</string>
+    <string name="pref_downloader_external" translatable="false">External storage</string>
+    <string name="pref_downloader_external_desc">Use the specified path</string>
     <string name="pref_downloader_path_title">Path for downloads</string>
     <string name="pref_downloader_wifi_title">Download Wi-Fi only</string>
-    <string name="pref_filter_fdroid_summary">Ignore F-Droid apps from Updates and Installed apps</string>
-    <string name="pref_filter_fdroid_title">Filter F-Droid apps</string>
-    <string name="pref_filter_google_summary">Ignore Google apps from Updates and Installed apps</string>
-    <string name="pref_filter_google_title">Filter Google apps</string>
-    <string name="pref_filter_search_summary">Search filters are reset on each search. Turn off to save search filters</string>
-    <string name="pref_filter_search_title">Use non-persistent search filter</string>
+    <string name="pref_filter_fdroid_summary">Ignore apps from F-Droid in the \"Updates\" and \"Installed\" sections</string>
+    <string name="pref_filter_fdroid_title" translatable="false">F-Droid</string>
+    <string name="pref_filter_google_summary">Ignore Google apps in the “Updates” and “Installed” sections</string>
+    <string name="pref_filter_google_title" translatable="false">Google</string>
+    <string name="pref_filter_search_summary">Always save filter settings when searching</string>
+    <string name="pref_filter_search_title">Save filter</string>
+    <string name="pref_filter_tooltip">Some switches may not work at this time.</string>
     <string name="pref_insecure_anonymous_summary">Generate session with GSF ID</string>
     <string name="pref_insecure_anonymous_title" translatable="false">GSF ID</string>
-    <string name="pref_install_auto_summary">Automatically install after download</string>
-    <string name="pref_install_auto_title">Automatically install</string>
-    <string name="pref_install_delete_summary">Delete files</string>
-    <string name="pref_install_delete_title">Delete installation files after installation</string>
+    <string name="pref_install_auto_summary">Automatically install after full download</string>
+    <string name="pref_install_auto_title">Auto install</string>
+    <string name="pref_install_delete_summary">Delete installation files after successful installation</string>
+    <string name="pref_install_delete_title">Delete files</string>
     <string name="pref_install_mode_am" translatable="false">App Manager</string>
     <string name="pref_install_mode_native">Native</string>
     <string name="pref_install_mode_root" translatable="false">Root</string>
     <string name="pref_install_mode_services" translatable="false">Aurora Services</string>
     <string name="pref_install_mode_session">Session</string>
     <string name="pref_install_mode_shizuku" translatable="false">Shizuku</string>
-    <string name="pref_install_mode_summary">Select mode of APK installation</string>
+    <string name="pref_install_mode_summary">Select mode of APK\'s installation</string>
     <string name="pref_install_mode_title">Installation method</string>
     <string name="pref_install_profile_summary">Select the target profile to install apps to. Only works with the root installation method</string>
     <string name="pref_install_profile_title">Installation profiles (Experimental)</string>
@@ -348,15 +340,15 @@
     <string name="pref_ui_layout">Layout</string>
     <string name="pref_ui_layout_tab">Select default tab</string>
     <string name="pref_ui_no_for_you">Recommendation</string>
-    <string name="pref_ui_no_for_you_desc">Display For You Pages on home screen</string>
-    <string name="pref_ui_similar_apps">Similar and related apps</string>
-    <string name="pref_ui_similar_apps_desc">Display similar and related clusters on app details page</string>
+    <string name="pref_ui_no_for_you_desc">Display recommendations on the main page</string>
+    <string name="pref_ui_similar_apps">Similar and related</string>
+    <string name="pref_ui_similar_apps_desc">Display similar and related apps on the main page</string>
     <string name="pref_ui_theme_black">Black</string>
     <string name="pref_ui_theme_dark">Dark</string>
     <string name="pref_ui_theme_dark_x">Dark X</string>
     <string name="pref_ui_theme_darkord" translatable="false">Discord</string>
     <string name="pref_ui_theme_light">Light</string>
-    <string name="pref_ui_theme_system">Follow System</string>
+    <string name="pref_ui_theme_system">System value</string>
     <string name="pref_ui_theme_title">Theme</string>
     <string name="pref_ui_title">Interface, search</string>
     <string name="pref_updates_check">Background auto check updates</string>
@@ -369,6 +361,7 @@
     <string name="pref_vending_version_new" translatable="false">22.0.17-21 [0] [PR] 332555730</string>
     <string name="pref_vending_version_old" translatable="false">7.9.80.Q-all [0] [PR] 159305549</string>
     <string name="pref_vending_version_title">Play Store version</string>
+    <string name="pref_vending_version_tooltip">All items except the default set the value above the value from the profile.\n\nAfter changing the value, you in any case need to re-login to your account and Aurora.</string>
 
     <string name="purchase_failed">Download Failed</string>
     <string name="purchase_invalid">App not purchased</string>
@@ -379,7 +372,7 @@
 
     <string name="rate_limited">Oops, This account is rate limited!</string>
 
-    <string name="requesting_new_session">Requesting new session...</string>
+    <string name="requesting_new_session">Requesting new session…</string>
 
     <string name="search_hint">Search for Apps &amp; Games</string>
 
@@ -392,8 +385,8 @@
     <string name="session_login">Login first:</string>
     <string name="session_login_failed_google">Failed to sign in via Google</string>
     <string name="session_scrapped">Last session scrapped</string>
-    <string name="session_verifying">Verifying session...</string>
-    <string name="session_verifying_google">Verifying Google session...</string>
+    <string name="session_verifying">Verifying session…</string>
+    <string name="session_verifying_google">Verifying Google session…</string>
 
     <string name="sheet_manual_download_textinputTooltip">Enter versionCode to download</string>
 
@@ -429,7 +422,7 @@
     <string name="title_language">Language</string>
     <string name="title_library">Library</string>
     <string name="title_manual_download">Manual download</string>
-    <string name="title_no_network">No network</string>
+    <string name="title_no_network">I couldn\'t access the Internet. Broken?</string>
     <string name="title_purchase_history">Purchase history</string>
     <string name="title_search_results">Search results</string>
     <string name="title_search_suggestion">Search suggestion</string>
@@ -438,7 +431,7 @@
     <string name="title_updates">Updates</string>
 
     <string name="toast_aas_token_failed">Could not generate AAS Token</string>
-    <string name="toast_abandon_sessions">Old installation sessions abandoned</string>
+    <string name="toast_abandon_sessions">All sessions were interrupted</string>
     <string name="toast_anonymous_restriction">Not available on anonymous accounts</string>
     <string name="toast_apk_blacklisted">Blacklisted</string>
     <string name="toast_apk_whitelisted">Whitelisted</string>
