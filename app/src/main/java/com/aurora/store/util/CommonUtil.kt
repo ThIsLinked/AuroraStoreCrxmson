@@ -32,7 +32,7 @@ object CommonUtil {
     private val siPrefixes: Map<Int, String> = hashMapOf(
         Pair(0, ""),
         Pair(1, ""),
-        Pair(3, " B"),
+        Pair(3, " KB"),
         Pair(6, " MB"),
         Pair(9, " GB")
     )
