@@ -20,15 +20,17 @@
 package com.aurora.store.view.ui.sheets
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.aurora.Constants
 import com.aurora.store.R
 import com.aurora.store.data.model.SelfUpdate
-import com.aurora.store.data.service.SelfUpdateService
 import com.aurora.store.databinding.SheetSelfUpdateBinding
+
 
 class SelfUpdateSheet : BaseBottomSheet() {
 
@@ -84,18 +86,23 @@ class SelfUpdateSheet : BaseBottomSheet() {
             selfUpdate.changelog
 
         B.txtChangelog.text = messages.trim()
+        B.txtChangelog.movementMethod = ScrollingMovementMethod()
     }
 
     private fun attachActions() {
+
         B.btnPrimary.setOnClickListener {
-            val intent = Intent(requireContext(), SelfUpdateService::class.java)
-            intent.putExtra(Constants.STRING_EXTRA, gson.toJson(selfUpdate))
-            requireContext().startService(intent)
-            dismissAllowingStateLoss()
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/ThIsLinked/AuroraStoreCrxmson/releases")))
         }
 
         B.btnSecondary.setOnClickListener {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://4pda.to/forum/index.php?act=findpost&pid=116441910&anchor=Spoil-116441910-6")))
+        }
+
+        B.btnTertiary.setOnClickListener {
             dismissAllowingStateLoss()
         }
+
     }
+
 }

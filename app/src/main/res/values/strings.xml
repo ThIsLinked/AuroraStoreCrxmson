@@ -388,6 +388,10 @@
 
     <string name="sheet_manual_download_textinputTooltip">Enter versionCode to download</string>
 
+    <string name="sheet_self_update_build4PDA" translatable="false">4PDA</string>
+    <string name="sheet_self_update_buildGitHub" translatable="false">GitHub</string>
+    <string name="sheet_self_update_cancel">Don\'t update</string>
+
     <string name="spoof_apply">Make sure you re-login to apply the spoof</string>
     <string name="spoof_property" translatable="false"><xliff:g id="manufacturer">%1$s</xliff:g>• API <xliff:g id="api">%2$s</xliff:g></string>
 
