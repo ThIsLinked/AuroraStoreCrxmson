@@ -60,12 +60,14 @@
         android:icon="@drawable/ic_launcher"
         android:killAfterRestore="false"
         android:label="@string/app_label"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:requestLegacyExternalStorage="true"
         android:restoreAnyVersion="true"
         android:restoreNeedsApplication="true"
         android:roundIcon="@drawable/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
         tools:targetApi="tiramisu">
 
         <activity
@@ -95,8 +97,10 @@
 
             <intent-filter android:autoVerify="@bool/appsLinks_verified">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="http" />
                 <data android:scheme="https" />
                 <data android:host="play.google.com" />
@@ -105,8 +109,10 @@
 
             <intent-filter android:autoVerify="@bool/appsLinks_verified">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="http" />
                 <data android:scheme="https" />
                 <data android:host="play.google.com" />
@@ -115,8 +121,10 @@
 
             <intent-filter android:autoVerify="@bool/appsLinks_verified">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="http" />
                 <data android:scheme="https" />
                 <data android:host="market.android.com" />
@@ -125,8 +133,10 @@
 
             <intent-filter android:autoVerify="@bool/appsLinks_verified">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="http" />
                 <data android:scheme="https" />
                 <data android:host="market.android.com" />
@@ -135,8 +145,10 @@
 
             <intent-filter android:autoVerify="@bool/appsLinks_verified">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
                     android:host="/details"
                     android:scheme="market" />
@@ -144,8 +156,10 @@
 
             <intent-filter android:autoVerify="@bool/appsLinks_verified">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="amzn" />
                 <data android:host="apps" />
                 <data android:pathPrefix="/android" />
@@ -153,8 +167,10 @@
 
             <intent-filter android:autoVerify="@bool/appsLinks_verified">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="http" />
                 <data android:scheme="https" />
                 <data android:host="www.amazon.com" />
