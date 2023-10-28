@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Aurora Store
   ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
   ~
@@ -18,7 +16,6 @@
   ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
   ~
   -->
-
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -26,7 +23,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="2"
     tools:context=".view.ui.splash.SplashFragment">
 
     <include
@@ -34,44 +30,41 @@
         layout="@layout/view_toolbar_native" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/splash_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:baselineAligned="false"
         android:orientation="horizontal"
         android:weightSum="2">
 
-        <RelativeLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/splash_container_2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/splash_logo"
                 android:layout_width="@dimen/icon_size_avatar"
                 android:layout_height="@dimen/icon_size_avatar"
-                android:layout_above="@id/splash_label_container"
-                android:layout_centerHorizontal="true"
                 app:srcCompat="@drawable/ic_logo" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/splash_label_container"
+                android:id="@+id/splash_label_container_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginVertical="@dimen/margin_xsmall"
+                android:layout_marginTop="@dimen/padding_small"
                 android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/splash_label_app"
+                    android:id="@+id/txt_title"
                     style="@style/TextAppearance.Aurora.Title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/app_label_short" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/splash_label_crxmson"
+                    android:id="@+id/txt_title_crxmson"
                     style="@style/TextAppearance.Aurora.Title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -81,68 +74,79 @@
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_action"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/padding_xlarge"
+            android:visibility="invisible"
+            tools:visibility="visible">
+
+            <!--<com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_action"
+                style="@style/AuroraTextStyle.Line1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:text="@string/account_login_using"
+                android:textAlignment="center" />-->
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/txt_status"
                 style="@style/TextAppearance.Aurora.Line1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/splash_label_container"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginBottom="@dimen/padding_large"
+                android:maxLines="@integer/maxLines_general"
                 android:textAlignment="center"
-                tools:text="Sign in first" />
+                app:layout_constrainedHeight="true"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toTopOf="@id/btn_frame"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="@string/session_login" />
 
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/layout_action"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:padding="@dimen/padding_large"
-            android:visibility="invisible"
-            tools:visibility="visible">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/txt_action"
-                style="@style/AuroraTextStyle.Line1"
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btn_frame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@id/btn_google"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="@dimen/margin_normal"
-                android:text="@string/account_login_using"
-                android:textAlignment="center" />
+                android:orientation="vertical"
+                app:layout_constrainedHeight="true"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <com.aurora.store.view.custom.layouts.button.StateButton
-                android:id="@+id/btn_google"
-                android:layout_width="@dimen/width_button"
-                android:layout_height="wrap_content"
-                android:layout_above="@id/btn_anonymous"
-                android:layout_centerHorizontal="true"
-                app:btnStateIcon="@drawable/ic_google"
-                app:btnStateText="@string/account_google" />
+                <com.aurora.store.view.custom.layouts.button.StateButton
+                    android:id="@+id/btn_google"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    app:btnStateIcon="@drawable/ic_google"
+                    app:btnStateText="@string/account_google" />
 
-            <com.aurora.store.view.custom.layouts.button.StateButton
-                android:id="@+id/btn_anonymous"
-                android:layout_width="@dimen/width_button"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_centerHorizontal="true"
-                app:btnStateIcon="@drawable/ic_anonymous"
-                app:btnStateText="@string/account_anonymous" />
+                <com.aurora.store.view.custom.layouts.button.StateButton
+                    android:id="@+id/btn_anonymous"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/padding_normal"
+                    app:btnStateIcon="@drawable/ic_anonymous"
+                    app:btnStateText="@string/account_anonymous" />
 
-            <com.aurora.store.view.custom.layouts.button.StateButton
-                android:id="@+id/btn_anonymous_insecure"
-                android:layout_width="@dimen/width_button"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/btn_anonymous"
-                android:layout_centerHorizontal="true"
-                app:btnStateIcon="@drawable/ic_anonymous"
-                app:btnStateText="@string/account_anonymous_insecure" />
+                <com.aurora.store.view.custom.layouts.button.StateButton
+                    android:id="@+id/btn_anonymous_insecure"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="wrap_content"
+                    app:btnStateIcon="@drawable/ic_anonymous"
+                    app:btnStateText="@string/account_anonymous_insecure" />
 
-            <com.google.android.material.textview.MaterialTextView
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!--<com.google.android.material.textview.MaterialTextView
                 android:id="@+id/txt_footer"
                 style="@style/AuroraTextStyle.Line3"
                 android:layout_width="match_parent"
@@ -152,9 +156,9 @@
                 android:layout_marginTop="@dimen/margin_small"
                 android:layout_marginBottom="@dimen/margin_small"
                 android:textAlignment="center"
-                tools:text="@string/app_versionName_full" />
+                tools:text="@string/app_versionName_full" />-->
 
-        </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

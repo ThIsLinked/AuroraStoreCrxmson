@@ -19,7 +19,7 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/account_rootContainer"
+    android:id="@+id/account_rootFrame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -30,16 +30,15 @@
         layout="@layout/view_toolbar_action" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/account_container"
+        android:id="@+id/account_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:baselineAligned="false"
         android:orientation="horizontal"
         android:weightSum="2">
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/account_container_2"
-            android:layout_width="0dp"
+            android:id="@+id/account_frame2"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -49,10 +48,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clipToPadding="false"
-                android:paddingStart="@dimen/margin_small"
-                android:paddingTop="@dimen/margin_xsmall"
-                android:paddingEnd="@dimen/margin_xsmall"
-                android:paddingBottom="@dimen/margin_small"
+                android:paddingHorizontal="@dimen/padding_normal"
+                android:paddingVertical="@dimen/padding_small"
                 android:scrollbars="none">
 
                 <com.google.android.material.chip.ChipGroup
@@ -88,10 +85,8 @@
                 android:id="@+id/account_container_3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/chip_layout"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:paddingBottom="@dimen/margin_xlarge">
+                android:orientation="vertical">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/img_avatar"
@@ -104,8 +99,7 @@
                     style="@style/TextAppearance.Aurora.Title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_small"
-                    android:textAlignment="center"
+                    android:layout_marginTop="@dimen/padding_small"
                     android:textSize="@dimen/account_name"
                     tools:text="@string/app_label" />
 
@@ -114,8 +108,7 @@
                     style="@style/TextAppearance.Aurora.Line1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_small"
-                    android:textAlignment="center"
+                    android:layout_marginTop="@dimen/padding_xsmall"
                     android:textSize="@dimen/account_email"
                     tools:text="auroraoss@gmail.com" />
 
@@ -125,21 +118,19 @@
 
         <ViewFlipper
             android:id="@+id/view_flipper"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <RelativeLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_action"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center_horizontal|center_vertical"
-                android:orientation="vertical"
-                android:padding="@dimen/padding_large"
+                android:padding="@dimen/padding_xlarge"
                 android:visibility="invisible"
                 tools:visibility="visible">
 
-                <com.google.android.material.textview.MaterialTextView
+                <!--<com.google.android.material.textview.MaterialTextView
                     android:id="@+id/txt_action"
                     style="@style/AuroraTextStyle.Line1"
                     android:layout_width="wrap_content"
@@ -147,67 +138,72 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="@dimen/margin_normal"
                     android:text="@string/account_login_using"
-                    android:textAlignment="center" />
-
-                <com.aurora.store.view.custom.layouts.button.StateButton
-                    android:id="@+id/btn_google"
-                    android:layout_width="@dimen/width_button"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/txt_action"
-                    android:layout_centerHorizontal="true"
-                    app:btnStateIcon="@drawable/ic_google"
-                    app:btnStateText="@string/account_google" />
-
-                <com.aurora.store.view.custom.layouts.button.StateButton
-                    android:id="@+id/btn_anonymous"
-                    android:layout_width="@dimen/width_button"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/btn_google"
-                    android:layout_centerHorizontal="true"
-                    app:btnStateIcon="@drawable/ic_anonymous"
-                    app:btnStateText="@string/account_anonymous" />
+                    android:textAlignment="center" />-->
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/txt_status"
                     style="@style/AuroraTextStyle.Line2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="@dimen/margin_small"
-                    android:textAlignment="center"
-                    tools:text="@string/app_versionName_full" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal|center_vertical"
-                android:orientation="vertical"
-                android:padding="@dimen/padding_large"
-                android:visibility="invisible"
-                tools:visibility="visible">
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/txt_logout_action"
-                    style="@style/AuroraTextStyle.Line1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_above="@id/btn_logout"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="@dimen/margin_normal"
-                    android:text="@string/account_logout"
-                    android:textAlignment="center" />
+                    android:layout_marginBottom="@dimen/padding_large"
+                    android:maxLines="@integer/maxLines_general"
+                    android:textAlignment="center"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toTopOf="@id/btn_frame"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="@string/session_login" />
 
-                <com.aurora.store.view.custom.layouts.button.StateButton
-                    android:id="@+id/btn_logout"
-                    android:layout_width="@dimen/width_button"
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/btn_frame"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    app:btnStateIcon="@drawable/ic_logout"
-                    app:btnStateText="@string/action_logout" />
+                    android:orientation="vertical"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-            </RelativeLayout>
+                    <com.aurora.store.view.custom.layouts.button.StateButton
+                        android:id="@+id/btn_google"
+                        android:layout_width="@dimen/width_button"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/padding_xsmall"
+                        app:btnStateIcon="@drawable/ic_google"
+                        app:btnStateText="@string/account_google" />
+
+                    <com.aurora.store.view.custom.layouts.button.StateButton
+                        android:id="@+id/btn_anonymous"
+                        android:layout_width="@dimen/width_button"
+                        android:layout_height="wrap_content"
+                        app:btnStateIcon="@drawable/ic_anonymous"
+                        app:btnStateText="@string/account_anonymous" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--<com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_logout_action"
+                style="@style/AuroraTextStyle.Line1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/btn_logout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:text="@string/account_logout"
+                android:textAlignment="center" />-->
+
+            <com.aurora.store.view.custom.layouts.button.StateButton
+                android:id="@+id/btn_logout"
+                android:layout_width="@dimen/width_button"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:btnStateIcon="@drawable/ic_logout"
+                app:btnStateText="@string/action_logout" />
 
         </ViewFlipper>
 

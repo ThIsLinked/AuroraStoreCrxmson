@@ -19,13 +19,13 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/onboarding_permissions_rootContainer"
+    android:id="@+id/onboarding_permissions_rootFrame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/onboarding_permissions_titleContainer"
+        android:id="@+id/onboarding_permissions_title_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -44,16 +44,79 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <com.airbnb.epoxy.EpoxyRecyclerView
-        android:id="@+id/epoxy_recycler"
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:clipToPadding="false"
-        android:overScrollMode="never"
-        android:padding="@dimen/margin_large"
-        android:scrollbars="none"
-        app:itemSpacing="@dimen/margin_large"
-        tools:listitem="@layout/view_permission" />
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/onboarding_appsLinks_tooltip_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:paddingVertical="@dimen/margin_normal"
+            android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+            android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+            android:visibility="@integer/onboarding_permissions_tooltip_visibility">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/onboarding_appsLinks_tooltip_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_large"
+                app:srcCompat="@drawable/ic_menu_about"
+                app:tint="?android:attr/colorAccent"
+                app:tintMode="src_in" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/onboarding_appsLinks_tooltip"
+                    style="@style/TextAppearance.Aurora.Line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="@integer/maxLines_general"
+                    android:text="@string/onboarding_appsLinks_tooltip"
+                    android:textColorLink="?colorAccent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/onboarding_appsLinks_tooltipLink"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:maxLines="@integer/maxLines_general"
+                    android:text="@string/onboarding_appsLinks_tooltipLink"
+                    android:textColor="?colorAccent"
+                    android:textColorLink="?colorAccent"
+                    android:textSize="8sp"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_open_in_new"
+                    app:iconGravity="start"
+                    app:iconSize="16dp"
+                    tools:ignore="SmallSp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.airbnb.epoxy.EpoxyRecyclerView
+            android:id="@+id/epoxy_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:padding="@dimen/margin_large"
+            android:scrollbars="none"
+            app:itemSpacing="@dimen/margin_large"
+            tools:listitem="@layout/view_permission" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

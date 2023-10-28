@@ -19,13 +19,13 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/onboarding_theme_rootContainer"
+    android:id="@+id/onboarding_theme_rootFrame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/onboarding_theme_titleContainer"
+        android:id="@+id/onboarding_theme_title_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"

@@ -19,7 +19,7 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/about_rootContainer"
+    android:id="@+id/about_rootFrame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -30,34 +30,32 @@
         layout="@layout/view_toolbar_action" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/about_container"
+        android:id="@+id/about_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:weightSum="2">
 
-        <RelativeLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/about_container_2"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_large">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/about_logo"
                 android:layout_width="@dimen/icon_size_avatar"
                 android:layout_height="@dimen/icon_size_avatar"
-                android:layout_above="@id/about_label_container"
-                android:layout_centerHorizontal="true"
                 app:srcCompat="@drawable/ic_logo" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/about_label_container"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginHorizontal="@dimen/margin_xlarge"
-                android:layout_marginVertical="@dimen/margin_xsmall"
+                android:layout_marginTop="@dimen/padding_small"
                 android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -72,7 +70,6 @@
                     style="@style/TextAppearance.Aurora.Title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/crxmson_ofMarginStartTo_label"
                     android:text="@string/app_label_crxmson"
                     android:textColor="@color/crimson" />
 
@@ -83,9 +80,8 @@
                 style="@style/TextAppearance.Aurora.Line2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/about_label_container"
-                android:layout_centerHorizontal="true"
-                android:layout_marginHorizontal="@dimen/margin_xlarge"
+                android:layout_marginTop="@dimen/padding_xsmall"
+                android:maxLines="@integer/maxLines_general"
                 android:text="@string/about_version" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -93,25 +89,21 @@
                 style="@style/TextAppearance.Aurora.Line2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/about_label_version"
-                android:layout_centerHorizontal="true"
-                android:layout_marginHorizontal="@dimen/margin_xlarge"
-                android:layout_marginTop="@dimen/margin_xsmall"
-                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/padding_xsmall"
+                android:maxLines="@integer/maxLines_general"
                 android:text="@string/about_moddify" />
 
-        </RelativeLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <com.airbnb.epoxy.EpoxyRecyclerView
             android:id="@+id/epoxy_recycler"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:clipToPadding="false"
             android:orientation="vertical"
             android:overScrollMode="never"
-            android:paddingStart="@dimen/padding_normal"
-            android:paddingEnd="@dimen/padding_normal"
+            android:padding="@dimen/margin_large"
             app:itemSpacing="@dimen/margin_small"
             tools:listitem="@layout/view_link" />
 
