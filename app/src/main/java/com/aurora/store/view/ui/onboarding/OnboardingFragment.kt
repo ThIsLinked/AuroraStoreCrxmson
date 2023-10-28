@@ -51,6 +51,7 @@ import com.aurora.store.util.Preferences.PREFERENCE_INTRO
 import com.aurora.store.util.Preferences.PREFERENCE_PROXY_ENABLED
 import com.aurora.store.util.Preferences.PREFERENCE_PROXY_INFO
 import com.aurora.store.util.Preferences.PREFERENCE_PROXY_URL
+import com.aurora.store.util.Preferences.PREFERENCE_SELF_UPDATE
 import com.aurora.store.util.Preferences.PREFERENCE_SIMILAR
 import com.aurora.store.util.Preferences.PREFERENCE_THEME_ACCENT
 import com.aurora.store.util.Preferences.PREFERENCE_THEME_TYPE
@@ -160,6 +161,9 @@ class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
     }
 
     private fun loadDefaultPreferences() {
+
+        /* General */
+        save(PREFERENCE_SELF_UPDATE, true)
 
         /* Interface */
         save(PREFERENCE_THEME_TYPE, 0)

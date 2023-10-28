@@ -144,13 +144,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         /* Check self update only for stable release, skip debug & nightlies*/
-        if (BuildConfig.APPLICATION_ID == Constants.APP_ID) viewModel.checkSelfUpdate(this)
-        this.lifecycleScope.launch {
-            viewModel.selfUpdateAvailable.collect {
-                if (it != null) {
-                    showUpdatesSheet(it)
-                } else {
-                    Log.i("No self-update available")
+        //
+        if (Preferences.getBoolean(this, Preferences.PREFERENCE_SELF_UPDATE)) {
+            viewModel.checkSelfUpdate(this)
+            this.lifecycleScope.launch {
+                viewModel.selfUpdateAvailable.collect {
+                    if (it != null) {
+                        showUpdatesSheet(it)
+                    } else {
+                        Log.i("No self-update available")
+                    }
                 }
             }
         }

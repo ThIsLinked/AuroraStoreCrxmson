@@ -279,6 +279,8 @@
     <string name="pref_network_proxy_tooltip">Шаблон: protocol://user:password@host:port</string>
     <string name="pref_network_proxy_url">Адреса proxy</string>
     <string name="pref_network_title">Мережа</string>
+    <string name="pref_self_update_title">Актуальність Crxmson</string>
+    <string name="pref_self_update_summary">Перевіряти наявність оновлень модифікації</string>
     <string name="pref_ui_accent_title">Основний колір</string>
     <string name="pref_ui_layout">Макет</string>
     <string name="pref_ui_layout_tab">Виберіть типову вкладку</string>

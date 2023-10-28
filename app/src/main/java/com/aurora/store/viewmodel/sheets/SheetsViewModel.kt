@@ -28,8 +28,7 @@ class SheetsViewModel : ViewModel() {
                 val purchaseHelper = PurchaseHelper(AuthProvider.with(context).getAuthData())
                 val files = purchaseHelper.purchase(app.packageName, customVersion, app.offerType)
                 if (files.isNotEmpty()) {
-                    EventBus.getDefault()
-                        .post(BusEvent.ManualDownload(app.packageName, customVersion))
+                    EventBus.getDefault().post(BusEvent.ManualDownload(app.packageName, customVersion))
                 }
                 _purchaseStatus.emit(files.isNotEmpty())
             } catch (exception: Exception) {

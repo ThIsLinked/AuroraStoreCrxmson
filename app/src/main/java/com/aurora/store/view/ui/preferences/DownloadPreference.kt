@@ -190,7 +190,7 @@ class DownloadPreference : PreferenceFragmentCompat() {
         }
 
         val abandonPreference: Preference? =
-            findPreference(Preferences.INSTALLATION_ABANDON_SESSION)
+            findPreference(Preferences.PREFERENCE_INSTALLATION_ABANDON_SESSION)
 
         abandonPreference?.let {
             it.onPreferenceClickListener =

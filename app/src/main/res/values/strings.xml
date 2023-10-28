@@ -335,6 +335,8 @@
     <string name="pref_network_proxy_tooltip">Sample: protocol://user:password@host:port</string>
     <string name="pref_network_proxy_url">Proxy address</string>
     <string name="pref_network_title">Network, spoofing</string>
+    <string name="pref_self_update_title">Relevance of the Crxmson</string>
+    <string name="pref_self_update_summary">Checking for moddification updates</string>
     <string name="pref_ui_accent_title">Accent</string>
     <string name="pref_ui_layout">Layout</string>
     <string name="pref_ui_layout_tab">Select default tab</string>
@@ -393,7 +395,7 @@
     <string name="sheet_self_update_buildGitHub" translatable="false">GitHub</string>
     <string name="sheet_self_update_build_title">Download with…</string>
     <string name="sheet_self_update_cancel">Don\'t update</string>
-    <string name="sheet_self_update_newVersion" translatable="false">v%1$s (%2$d)</string>
+    <string name="sheet_self_update_newVersion" translatable="false">v%1$s (%2$d) » v%3$s (%4$d)</string>
 
     <string name="spoof_apply">Make sure you re-login to apply the spoof</string>
     <string name="spoof_property" translatable="false"><xliff:g id="manufacturer">%1$s</xliff:g>• API <xliff:g id="api">%2$s</xliff:g></string>

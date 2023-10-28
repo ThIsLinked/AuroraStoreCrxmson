@@ -22,17 +22,11 @@ package com.aurora.store.data.model
 import com.google.gson.annotations.SerializedName
 
 class SelfUpdate {
-    @SerializedName("version_name")
+    @SerializedName("versionName")
     var versionName: String = String()
 
-    @SerializedName("version_code")
+    @SerializedName("versionCode")
     var versionCode: Int = 0
-
-    @SerializedName("aurora_build")
-    var auroraBuild: String = String()
-
-    @SerializedName("fdroid_build")
-    var fdroidBuild: String = String()
 
     @SerializedName("changelog")
     var changelog: String = String()

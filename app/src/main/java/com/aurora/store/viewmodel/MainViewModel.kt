@@ -8,7 +8,6 @@ import com.aurora.Constants
 import com.aurora.store.BuildConfig
 import com.aurora.store.data.model.SelfUpdate
 import com.aurora.store.data.network.HttpClient
-import com.aurora.store.util.CertUtil
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import kotlinx.coroutines.Dispatchers
@@ -27,23 +26,12 @@ class MainViewModel : ViewModel() {
     fun checkSelfUpdate(context: Context) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                val gson: Gson =
-                    GsonBuilder().excludeFieldsWithModifiers(Modifier.TRANSIENT).create()
-                val response =
-                    HttpClient.getPreferredClient(context).get(Constants.UPDATE_URL, mapOf())
-                val selfUpdate =
-                    gson.fromJson(String(response.responseBytes), SelfUpdate::class.java)
+                val gson: Gson = GsonBuilder().excludeFieldsWithModifiers(Modifier.TRANSIENT).create()
+                val response = HttpClient.getPreferredClient(context).get(Constants.UPDATE_URL, mapOf())
+                val selfUpdate = gson.fromJson(String(response.responseBytes), SelfUpdate::class.java)
 
                 if (selfUpdate.versionCode > BuildConfig.VERSION_CODE) {
-                    if (CertUtil.isFDroidApp(context, BuildConfig.APPLICATION_ID)) {
-                        if (selfUpdate.fdroidBuild.isNotEmpty()) {
-                            _selfUpdateAvailable.emit(selfUpdate)
-                        }
-                    } else if (selfUpdate.auroraBuild.isNotEmpty()) {
-                        _selfUpdateAvailable.emit(selfUpdate)
-                    } else {
-                        _selfUpdateAvailable.emit(null)
-                    }
+                    _selfUpdateAvailable.emit(selfUpdate)
                 } else {
                     _selfUpdateAvailable.emit(null)
                 }

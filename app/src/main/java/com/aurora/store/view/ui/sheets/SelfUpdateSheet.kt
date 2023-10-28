@@ -27,6 +27,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.aurora.Constants
+import com.aurora.store.BuildConfig
 import com.aurora.store.R
 import com.aurora.store.data.model.SelfUpdate
 import com.aurora.store.databinding.SheetSelfUpdateBinding
@@ -78,20 +79,22 @@ class SelfUpdateSheet : BaseBottomSheet() {
     }
 
     private fun inflateData() {
+        val currentVersionName = BuildConfig.VERSION_NAME // Get current versionName as reference
+        val currentVersionCode = BuildConfig.VERSION_CODE // Get current versionCode as reference
+        val newVersionName = selfUpdate.versionName // Get new versionName as reference
+        val newVersionCode = selfUpdate.versionCode // Get new versionName as reference
+        B.txtLine2.text = getString( // Set current and new version
+            R.string.sheet_self_update_newVersion, // Get format layout
+            currentVersionName, // Get current versionName
+            currentVersionCode, // Get current versionCode
+            newVersionName, // Get new versionName
+            newVersionCode // Get new versionCode
+        )
 
-        val newVersionName = selfUpdate.versionName
-        val newVersionCode = selfUpdate.versionCode
-        B.txtLine2.text =
-            getString(R.string.sheet_self_update_newVersion, newVersionName, newVersionCode)
-
-        val messages: String = if (selfUpdate.changelog.isEmpty())
-            getString(R.string.details_changelog_unavailable)
-        else
-            selfUpdate.changelog
-
-        B.txtChangelog.text = messages.trim()
-        B.txtChangelog.movementMethod = ScrollingMovementMethod() // Set scrolling
-
+        val changelogText: String = selfUpdate.changelog.ifEmpty { getString(R.string.details_changelog_unavailable) } // Get changelog text as reference
+        B.txtChangelog.text = changelogText.trim() // Set changelog text with trim parameter
+        B.txtChangelog.movementMethod = ScrollingMovementMethod() // Set scrollability
+        B.txtChangelog.isScrollbarFadingEnabled = false
     }
 
     private fun attachActions() {
