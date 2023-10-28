@@ -15,6 +15,7 @@
 > * Optimization and reduction of code volume due to more competent use of components;
 > * Even more cleaning of garbage from resources and code;
 > * Reworked the self-update layout and adjusted the receive Internet data to Crxmson;
+> * Based on the fact that some users do not want to check for self-updates, I added a switch in the settings. Its turning it on and off respectively turns on and off the verification function;
 
 > **v4.3.2-nightly-25.09.23 (50)**
 > * Pulled up to nightly 25.09.23;
