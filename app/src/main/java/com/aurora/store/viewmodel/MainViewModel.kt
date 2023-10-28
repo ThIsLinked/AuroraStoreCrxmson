@@ -27,9 +27,12 @@ class MainViewModel : ViewModel() {
     fun checkSelfUpdate(context: Context) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                val gson: Gson = GsonBuilder().excludeFieldsWithModifiers(Modifier.TRANSIENT).create()
-                val response = HttpClient.getPreferredClient(context).get(Constants.UPDATE_URL, mapOf())
-                val selfUpdate = gson.fromJson(String(response.responseBytes), SelfUpdate::class.java)
+                val gson: Gson =
+                    GsonBuilder().excludeFieldsWithModifiers(Modifier.TRANSIENT).create()
+                val response =
+                    HttpClient.getPreferredClient(context).get(Constants.UPDATE_URL, mapOf())
+                val selfUpdate =
+                    gson.fromJson(String(response.responseBytes), SelfUpdate::class.java)
 
                 if (selfUpdate.versionCode > BuildConfig.VERSION_CODE) {
                     if (CertUtil.isFDroidApp(context, BuildConfig.APPLICATION_ID)) {
