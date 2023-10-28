@@ -22,12 +22,12 @@ package com.aurora.store.view.custom.layouts.button
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
-import android.widget.RelativeLayout
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.aurora.store.R
 import com.aurora.store.databinding.ViewStateButtonBinding
 
-class StateButton : RelativeLayout {
+class StateButton : ConstraintLayout {
 
     private lateinit var B: ViewStateButtonBinding
 
@@ -76,7 +76,6 @@ class StateButton : RelativeLayout {
         if (isVisible)
             B.progress.visibility = View.VISIBLE
         else
-
             B.progress.visibility = View.INVISIBLE
     }
 
