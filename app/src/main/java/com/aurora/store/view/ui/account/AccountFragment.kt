@@ -212,10 +212,15 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
                 else
                     it.email*/
 
-                if (authData.isAnonymous)
-                    binding.txtEmail.visibility = View.INVISIBLE
-                else
-                    binding.txtEmail.text = it.email
+                /* Displaying email address */
+                if (authData.isAnonymous) { // Condition: Account is anonymous
+                    binding.txtEmail.text =
+                        getString(R.string.account_anonymous_address) // Stub as an address
+                    binding.txtEmail.visibility = View.GONE // Address display to gone
+                } else {
+                    binding.txtEmail.text =
+                        it.email.lowercase() // Display the address that is authorized in the current session
+                }
             }
         } else {
             binding.imgAvatar.load(R.drawable.ic_logo)
