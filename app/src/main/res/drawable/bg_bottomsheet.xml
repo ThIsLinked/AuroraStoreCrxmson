@@ -17,19 +17,12 @@
   ~
   -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item>
-
         <shape android:shape="rectangle">
-
             <corners
-                android:topLeftRadius="@dimen/edge_large"
-                android:topRightRadius="@dimen/edge_large" />
-
+                android:topLeftRadius="@dimen/edge_regular"
+                android:topRightRadius="@dimen/edge_regular" />
             <solid android:color="@color/bg_bottomsheet" />
-
         </shape>
-
     </item>
-
 </layer-list>
