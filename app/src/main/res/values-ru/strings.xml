@@ -299,11 +299,11 @@
     <string name="pref_updates_check_desc">Периодическая автопроверка и уведомление об обновлениях приложений</string>
     <string name="pref_updates_check_frequency">Частота проверки</string>
     <string name="pref_updates_check_frequency_desc">Укажите интервал (в часах)</string>
-    <string name="pref_updates_extended">Расширенное обновление</string>
+    <string name="pref_updates_extended">Проверьте отключенные приложения</string>
     <string name="pref_updates_extended_desc">Проверять наличие обновлений для отключенных приложений</string>
     <string name="pref_vending_version_default">По умолчанию (значение из текущего профиля)</string>
     <string name="pref_vending_version_title">Версия Play Store</string>
-    <string name="pref_vending_version_tooltip">Все пункты кроме по-умолчанию устанавливают значение поверх значения из профиля.\n\nПосле изменения значения, вам в любом случае нужно перезайти в аккаунт и в Аврору.</string>
+    <string name="pref_vending_version_tooltip">Всі пункти, крім за промовчанням, встановлюють значення поверх значення з профілю підміни.</string>
 
     <string name="purchase_failed">Ошибка загрузки</string>
     <string name="purchase_invalid">Приложение не куплено</string>

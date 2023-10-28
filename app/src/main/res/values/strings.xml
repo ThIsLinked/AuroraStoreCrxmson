@@ -362,7 +362,7 @@
     <string name="pref_vending_version_new" translatable="false">22.0.17-21 [0] [PR] 332555730</string>
     <string name="pref_vending_version_old" translatable="false">7.9.80.Q-all [0] [PR] 159305549</string>
     <string name="pref_vending_version_title">Play Store version</string>
-    <string name="pref_vending_version_tooltip">All items except the default set the value above the value from the profile.\n\nAfter changing the value, you in any case need to re-login to your account and Aurora.</string>
+    <string name="pref_vending_version_tooltip">All items except the default set the value above the value from the spoof profile.\n\nAfter changing the value, you in any case need to re-login to your account and Aurora.</string>
 
     <string name="purchase_failed">Download Failed</string>
     <string name="purchase_invalid">App not purchased</string>
