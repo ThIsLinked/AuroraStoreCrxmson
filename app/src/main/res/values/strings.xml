@@ -383,7 +383,7 @@
     <string name="session_enjoy">Need to log into account from the methods listed.</string>
     <string name="session_good">You are logged in</string>
     <string name="session_init">Getting things ready…</string>
-    <string name="session_login">Login first:</string>
+    <string name="session_login">Login first</string>
     <string name="session_login_failed_google">Failed to sign in via Google</string>
     <string name="session_scrapped">Last session scrapped</string>
     <string name="session_verifying">Verifying session…</string>

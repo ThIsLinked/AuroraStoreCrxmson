@@ -324,7 +324,7 @@
     <string name="session_enjoy">Увійдіть і насолоджуйтесь.</string>
     <string name="session_good">Ви увійшли</string>
     <string name="session_init">Приготування…</string>
-    <string name="session_login">Спочатку авторизуйтесь:</string>
+    <string name="session_login">Спочатку авторизуйтесь</string>
     <string name="session_login_failed_google">Не вдалось увійти через Google</string>
     <string name="session_scrapped">Останній сеанс скасовано</string>
     <string name="session_verifying">Перевірка сеансу…</string>
