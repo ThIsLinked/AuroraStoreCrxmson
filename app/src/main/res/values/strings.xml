@@ -44,14 +44,15 @@
     <string name="about_topicPost_4pda_summary" translatable="false">@string/about_templateToGoTo</string>
     <string name="about_topic_4pda">Topic on 4PDA</string>
     <string name="about_topic_4pda_summary" translatable="false">@string/about_templateToGoTo</string>
-    <string name="about_version" translatable="false">v4.3.5 // Nightly by 26.10.23</string>
-    <string name="about_moddify" translatable="false">Powered moddify 26.10.2023 by ThIsLinked // dhwh</string>
+    <string name="about_version" translatable="false">v4.3.5 // Nightly by 28.10.23</string>
+    <string name="about_moddify" translatable="false">Powered moddify 28.10.2023 by ThIsLinked // dhwh</string>
     <string name="about_xda" translatable="false">XDA</string>
     <string name="about_xda_summary">See the Aurora Store XDA thread for discussions or suggestions.</string>
 
     <string name="access_denied_using_vpn">Access denied! Are you using VPN or Tor?</string>
 
     <string name="account_anonymous">Anonymous</string>
+    <string name="account_anonymous_address">anonymous@gmail.com</string>
     <string name="account_anonymous_insecure">Anonymous with GSF</string>
     <string name="account_google" translatable="false">Google</string>
     <string name="account_logged_out">You are logged out</string>
@@ -120,8 +121,8 @@
     <string name="app_list_rating" translatable="false">%1$s • %2$s★ • %3$s</string>
     <string name="app_updater_service_notif_text">Enables background app download</string>
     <string name="app_updater_service_notif_title">Background app download</string>
-    <string name="app_versionName" translatable="false">4.3.5-nightly-26.10.23 // moddify 26.10.23 (by ThIsLinked // dhwh)</string>
-    <string name="app_versionName_nightly" translatable="false">26.10.2023</string>
+    <string name="app_versionName" translatable="false">4.3.5-nightly-28.10.23 // moddify 28.10.23 (by ThIsLinked // dhwh)</string>
+    <string name="app_versionName_nightly" translatable="false">28.10.2023</string>
 
     <string name="apps_installed">installed</string>
     <string name="apps_purchased">purchased</string>
@@ -273,6 +274,7 @@
     <string name="onboarding_permissions_storageAccess_title">Storage access</string>
     <string name="onboarding_permissions_storageManager_summary">Required on devices running Android R and above, in addition to storage access.</string>
     <string name="onboarding_permissions_storageManager_title">Storage manager</string>
+    <string name="onboarding_permissions_tooltip"><b>Important:</b> If permissions is not granted now, the subsequent launch of Aurora may be accompanied by stable crash.\n\nIf this has already happened, must grant all permissions to Aurora.</string>
     <string name="onboarding_title_installer">Installer</string>
     <string name="onboarding_title_permissions">Permissions</string>
     <string name="onboarding_title_theme">Themes</string>

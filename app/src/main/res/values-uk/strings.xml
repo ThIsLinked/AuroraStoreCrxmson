@@ -227,6 +227,7 @@
     <string name="onboarding_permissions_storageAccess_title">Доступ до сховища</string>
     <string name="onboarding_permissions_storageManager_summary">Потрібен на пристроях з ОС Android R і вище, окрім доступу до пам’яті.</string>
     <string name="onboarding_permissions_storageManager_title">Менеджер сховища</string>
+    <string name="onboarding_permissions_tooltip"><b>Важливо:</b> Якщо не надати дозволи зараз, наступний запуск Аврори може супроводжуватися стабільним збіем.\n\nЯкщо це вже сталося, необхідно видати Авроре всі дозволи.</string>
     <string name="onboarding_title_installer">Встановлювач</string>
     <string name="onboarding_title_permissions">Дозволи</string>
     <string name="onboarding_title_theme">Теми</string>
