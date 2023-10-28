@@ -21,10 +21,8 @@ package com.aurora.extensions
 
 import android.app.UiModeManager
 import android.content.Context
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.graphics.ColorUtils
 import androidx.core.view.WindowInsetsControllerCompat
 import com.aurora.store.util.CommonUtil
 import com.aurora.store.util.Preferences
@@ -73,11 +71,7 @@ fun AppCompatActivity.applyThemeAccent() {
 private fun AppCompatActivity.setSystemBarConfiguration(light: Boolean) {
     WindowInsetsControllerCompat(this.window, this.window.decorView.rootView).apply {
         // Status bar color
-        if (isMAndAbove()) {
-            isAppearanceLightStatusBars = light
-        } else {
-            window.statusBarColor = ColorUtils.setAlphaComponent(Color.BLACK, 120)
-        }
+        isAppearanceLightStatusBars = light
 
         // Navigation bar color
         if (isOMR1AndAbove()) {
