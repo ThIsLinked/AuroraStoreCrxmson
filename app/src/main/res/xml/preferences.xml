@@ -25,7 +25,7 @@
         app:layout="@layout/item_preference"
         app:title="@string/pref_ui_title" />
 
-    <Preference
+    <androidx.preference.Preference
         app:icon="@drawable/ic_download_manager"
         app:iconSpaceReserved="false"
         app:key="pref_download"
@@ -38,5 +38,15 @@
         app:key="pref_network"
         app:layout="@layout/item_preference"
         app:title="@string/pref_network_title" />
+
+    <androidx.preference.SwitchPreferenceCompat
+        app:defaultValue="true"
+        app:icon="@drawable/ic_updates"
+        app:iconSpaceReserved="false"
+        app:key="PREFERENCE_SELF_UPDATE"
+        app:layout="@layout/item_preference_switch"
+        app:singleLineTitle="false"
+        app:summary="@string/pref_self_update_summary"
+        app:title="@string/pref_self_update_title" />
 
 </androidx.preference.PreferenceScreen>
