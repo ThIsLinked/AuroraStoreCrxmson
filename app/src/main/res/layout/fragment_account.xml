@@ -99,7 +99,7 @@
                     style="@style/TextAppearance.Aurora.Title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/padding_small"
+                    android:layout_marginTop="@dimen/padding_large"
                     android:textSize="@dimen/account_name"
                     tools:text="@string/app_label" />
 
@@ -108,7 +108,7 @@
                     style="@style/TextAppearance.Aurora.Line1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/padding_xsmall"
+                    android:layout_marginTop="@dimen/padding_small"
                     android:textSize="@dimen/account_email"
                     tools:text="auroraoss@gmail.com" />
 
@@ -130,22 +130,12 @@
                 android:visibility="invisible"
                 tools:visibility="visible">
 
-                <!--<com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/txt_action"
-                    style="@style/AuroraTextStyle.Line1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="@dimen/margin_normal"
-                    android:text="@string/account_login_using"
-                    android:textAlignment="center" />-->
-
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/txt_status"
                     style="@style/AuroraTextStyle.Line2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/padding_large"
+                    android:layout_marginBottom="@dimen/margin_large"
                     android:maxLines="@integer/maxLines_general"
                     android:textAlignment="center"
                     app:layout_constrainedHeight="true"
@@ -171,7 +161,7 @@
                         android:id="@+id/btn_google"
                         android:layout_width="@dimen/width_button"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/padding_xsmall"
+                        android:layout_marginBottom="@dimen/margin_normal"
                         app:btnStateIcon="@drawable/ic_google"
                         app:btnStateText="@string/account_google" />
 
@@ -186,23 +176,11 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!--<com.google.android.material.textview.MaterialTextView
-                android:id="@+id/txt_logout_action"
-                style="@style/AuroraTextStyle.Line1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@id/btn_logout"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="@dimen/margin_normal"
-                android:text="@string/account_logout"
-                android:textAlignment="center" />-->
-
             <com.aurora.store.view.custom.layouts.button.StateButton
                 android:id="@+id/btn_logout"
                 android:layout_width="@dimen/width_button"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:stateListAnimator="@anim/fade_in"
                 app:btnStateIcon="@drawable/ic_logout"
                 app:btnStateText="@string/action_logout" />
 
