@@ -24,6 +24,13 @@
         app:singleLineTitle="false"
         app:title="@string/pref_category_interface">
 
+        <androidx.preference.Preference
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_APP_LANGUAGE"
+            app:layout="@layout/item_preference"
+            app:singleLineTitle="false"
+            app:title="@string/app_language" />
+
         <com.aurora.store.view.custom.preference.AuroraListPreference
             app:defaultValue="0"
             app:entries="@array/pref_themes"
@@ -46,13 +53,6 @@
             app:title="@string/pref_ui_accent_title"
             app:useSimpleSummaryProvider="true" />
 
-        <androidx.preference.Preference
-            app:iconSpaceReserved="false"
-            app:key="PREFERENCE_APP_LANGUAGE"
-            app:layout="@layout/item_preference"
-            app:singleLineTitle="false"
-            app:title="@string/app_language" />
-
         <com.aurora.store.view.custom.preference.AuroraListPreference
             app:defaultValue="0"
             app:entries="@array/pref_default_tab"
@@ -68,7 +68,7 @@
             app:defaultValue="false"
             app:iconSpaceReserved="false"
             app:key="PREFERENCE_FOR_YOU"
-            app:layout="@layout/item_preference"
+            app:layout="@layout/item_preference_switch"
             app:singleLineTitle="false"
             app:summary="@string/pref_ui_no_for_you_desc"
             app:title="@string/pref_ui_no_for_you" />
@@ -77,7 +77,7 @@
             app:defaultValue="false"
             app:iconSpaceReserved="false"
             app:key="PREFERENCE_SIMILAR"
-            app:layout="@layout/item_preference"
+            app:layout="@layout/item_preference_switch"
             app:singleLineTitle="false"
             app:summary="@string/pref_ui_similar_apps_desc"
             app:title="@string/pref_ui_similar_apps" />
@@ -103,7 +103,7 @@
             app:defaultValue="true"
             app:iconSpaceReserved="false"
             app:key="PREFERENCE_FILTER_SEARCH"
-            app:layout="@layout/item_preference"
+            app:layout="@layout/item_preference_switch"
             app:singleLineTitle="false"
             app:summary="@string/pref_filter_search_summary"
             app:title="@string/pref_filter_search_title" />
@@ -112,7 +112,7 @@
             app:defaultValue="false"
             app:iconSpaceReserved="false"
             app:key="PREFERENCE_FILTER_AURORA_ONLY"
-            app:layout="@layout/item_preference"
+            app:layout="@layout/item_preference_switch"
             app:singleLineTitle="false"
             app:summary="@string/pref_aurora_only_desc"
             app:title="@string/pref_aurora_only" />
@@ -121,7 +121,7 @@
             app:defaultValue="false"
             app:iconSpaceReserved="false"
             app:key="PREFERENCE_FILTER_GOOGLE"
-            app:layout="@layout/item_preference"
+            app:layout="@layout/item_preference_switch"
             app:singleLineTitle="false"
             app:summary="@string/pref_filter_google_summary"
             app:title="@string/pref_filter_google_title" />
@@ -130,7 +130,7 @@
             app:defaultValue="true"
             app:iconSpaceReserved="false"
             app:key="PREFERENCE_FILTER_FDROID"
-            app:layout="@layout/item_preference"
+            app:layout="@layout/item_preference_switch"
             app:singleLineTitle="false"
             app:summary="@string/pref_filter_fdroid_summary"
             app:title="@string/pref_filter_fdroid_title" />

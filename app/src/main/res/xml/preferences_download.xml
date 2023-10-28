@@ -30,7 +30,7 @@
             app:disableDependentsState="false"
             app:iconSpaceReserved="false"
             app:key="PREFERENCE_DOWNLOAD_EXTERNAL"
-            app:layout="@layout/item_preference"
+            app:layout="@layout/item_preference_switch"
             app:singleLineTitle="false"
             app:summary="@string/pref_downloader_external_desc"
             app:title="@string/pref_downloader_external" />
@@ -47,7 +47,7 @@
             app:defaultValue="false"
             app:iconSpaceReserved="false"
             app:key="PREFERENCE_DOWNLOAD_WIFI_ONLY"
-            app:layout="@layout/item_preference"
+            app:layout="@layout/item_preference_switch"
             app:singleLineTitle="false"
             app:title="@string/pref_downloader_wifi_title" />
 
@@ -98,7 +98,7 @@
             app:iconSpaceReserved="false"
             app:isPreferenceVisible="false"
             app:key="PREFERENCE_AUTO_INSTALL"
-            app:layout="@layout/item_preference"
+            app:layout="@layout/item_preference_switch"
             app:singleLineTitle="false"
             app:summary="@string/pref_install_auto_summary"
             app:title="@string/pref_install_auto_title" />
@@ -107,14 +107,14 @@
             app:defaultValue="false"
             app:iconSpaceReserved="false"
             app:key="PREFERENCE_AUTO_DELETE"
-            app:layout="@layout/item_preference"
+            app:layout="@layout/item_preference_switch"
             app:singleLineTitle="false"
             app:summary="@string/pref_install_delete_summary"
             app:title="@string/pref_install_delete_title" />
 
         <androidx.preference.Preference
             app:iconSpaceReserved="false"
-            app:key="INSTALLATION_ABANDON_SESSION"
+            app:key="PREFERENCE_INSTALLATION_ABANDON_SESSION"
             app:layout="@layout/item_preference"
             app:singleLineTitle="false"
             app:summary="@string/pref_abandon_session_desc"
@@ -132,7 +132,7 @@
             app:defaultValue="false"
             app:iconSpaceReserved="false"
             app:key="PREFERENCE_UPDATES_EXTENDED"
-            app:layout="@layout/item_preference"
+            app:layout="@layout/item_preference_switch"
             app:singleLineTitle="false"
             app:summary="@string/pref_updates_extended_desc"
             app:title="@string/pref_updates_extended" />
@@ -142,7 +142,7 @@
             app:disableDependentsState="false"
             app:iconSpaceReserved="false"
             app:key="PREFERENCE_UPDATES_CHECK"
-            app:layout="@layout/item_preference"
+            app:layout="@layout/item_preference_switch"
             app:singleLineTitle="false"
             app:summary="@string/pref_updates_check_desc"
             app:title="@string/pref_updates_check" />
