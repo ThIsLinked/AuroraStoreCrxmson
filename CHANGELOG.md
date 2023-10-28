@@ -9,7 +9,7 @@
 > * Fully custom layout in settings;
 > * Updated the titles and summary in the settings, and also added some tooltips there;
 > * Expanded the range of text selection on the application page. I was focusing on what the user might need to highlight and copy. Configured by global value is «details_textIsSelectable» to `values\bools.xml`;
-> * Added the `android:autoVerify` attr for all deep links. This may help in directing links to Aurora on Android 12 and above. Configured by global value is «appsLinks_verified» in `values\bools.xml`.
+> * Added attr `android:autoVerify` for all deep links. This may help in directing links to Aurora on Android 12 and above. Configured by global value is «appsLinks_verified» in `values\bools.xml`.
 > * Fixed bugs known to me;
 > * Update all localizations;
 > * Optimization and reduction of code volume due to more competent use of components;
