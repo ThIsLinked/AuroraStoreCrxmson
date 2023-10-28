@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="account_avatar">192dp</dimen>
+    <dimen name="account_email">20sp</dimen>
+    <dimen name="account_name">26sp</dimen>
+</resources>
