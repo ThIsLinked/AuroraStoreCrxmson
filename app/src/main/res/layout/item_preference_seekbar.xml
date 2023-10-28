@@ -18,31 +18,27 @@
   -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?android:attr/selectableItemBackground"
     android:minHeight="?android:attr/listPreferredItemHeight"
-    android:paddingVertical="@dimen/margin_normal"
-    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
+    android:padding="?android:attr/listPreferredItemPaddingStart">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/icon_frame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/margin_large"
         app:layout_constrainedHeight="true"
         app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="RtlSymmetry">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@android:id/icon"
             android:layout_width="@dimen/icon_size_default"
             android:layout_height="@dimen/icon_size_default"
+            android:layout_marginEnd="?android:attr/listPreferredItemPaddingEnd"
             app:tint="?android:attr/colorAccent"
             app:tintMode="src_in" />
 
@@ -75,7 +71,7 @@
             style="@style/TextAppearance.Aurora.Line2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="@dimen/padding_xxsmall"
             android:maxLines="@integer/maxLines_general" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -90,8 +86,8 @@
         app:layout_constrainedHeight="true"
         app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/icon_frame"
+        app:layout_constraintEnd_toEndOf="@id/text_container"
+        app:layout_constraintStart_toStartOf="@id/text_container"
         app:layout_constraintTop_toBottomOf="@id/text_container">
 
         <androidx.appcompat.widget.AppCompatSeekBar
