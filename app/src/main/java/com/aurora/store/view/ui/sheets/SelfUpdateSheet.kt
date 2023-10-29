@@ -79,7 +79,7 @@ class SelfUpdateSheet : BaseBottomSheet() {
     }
 
     private fun inflateData() {
-        val currentVersionName = BuildConfig.VERSION_NAME // Get current versionName as reference
+        val currentVersionName = getString(R.string.app_versionName_stable) // Get current versionName as reference
         val currentVersionCode = BuildConfig.VERSION_CODE // Get current versionCode as reference
         val newVersionName = selfUpdate.versionName // Get new versionName as reference
         val newVersionCode = selfUpdate.versionCode // Get new versionName as reference

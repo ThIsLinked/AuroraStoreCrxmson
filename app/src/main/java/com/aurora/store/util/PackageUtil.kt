@@ -195,6 +195,8 @@ object PackageUtil {
                     listOf(
                         "com.aurora.store",
                         "com.aurora.store.nightly",
+                        "io.thislinked.mod.aurora.store",
+                        "io.dhwh.mod.aurora.store",
                         "com.aurora.services"
                     ).contains(packageInstaller)
                 }

@@ -123,6 +123,7 @@
     <string name="app_updater_service_notif_title">Background app download</string>
     <string name="app_versionName" translatable="false">4.3.5-nightly-29.10.23 // moddify 29.10.23 (by ThIsLinked // dhwh)</string>
     <string name="app_versionName_nightly" translatable="false">29.10.2023</string>
+    <string name="app_versionName_stable" translatable="false">4.3.5</string>
 
     <string name="apps_installed">installed</string>
     <string name="apps_purchased">purchased</string>
