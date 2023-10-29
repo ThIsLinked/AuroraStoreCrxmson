@@ -12,12 +12,19 @@ A moddify/fork the original [Aurora Store source project](https://gitlab.com/Aur
 ###### @ 2023 [ThIsLinked](https://t.me/thislinked) / [dhwh](https://4pda.to/forum/index.php?showuser=9870529)
 
 # Main changes from original
+
 > **Note:**
 ```
 This changelog may have fewer items than what actually appears in the latest builds.
 This happens because I may forget to update it or otherwise edit it.
 Always check for changes in the real binary build.
 ```
+```
+Android Studio mangles the code of some resources at compiling time.
+Use the source code only for research or custom variants. The apk's,
+published by me, do not have such a defect, since I corrected them from
+such a misunderstanding. Use them in case of pure use – they look
+exactly as they were supposed to in the specification.
 ```
 
 * Some interface edits and improvements + changed default color to Crimson, v31 and above – system dynamic color.;
