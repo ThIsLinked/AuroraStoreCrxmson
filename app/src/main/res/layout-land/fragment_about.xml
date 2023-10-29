@@ -37,7 +37,7 @@
         android:weightSum="2">
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/about_container_2"
+            android:id="@+id/about_frame2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -52,7 +52,7 @@
                 app:srcCompat="@drawable/ic_logo" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/about_label_container"
+                android:id="@+id/about_label_frame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/padding_small"
@@ -70,7 +70,7 @@
                     style="@style/TextAppearance.Aurora.Title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/crxmson_MarginStartOfEndTo_label"
+                    android:layout_marginStart="@dimen/crxmson_marginStart_OfEndTo_label"
                     android:text="@string/app_label_crxmson"
                     android:textColor="@color/crimson" />
 

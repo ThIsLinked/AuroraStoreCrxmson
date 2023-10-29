@@ -82,7 +82,7 @@
             </HorizontalScrollView>
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/account_container_3"
+                android:id="@+id/account_frame3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
