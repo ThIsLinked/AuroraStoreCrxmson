@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer name="app_versionCode">23102701</integer>
+    <integer name="app_versionCode">23102901</integer>
     <integer name="app_versionCode_stable">53</integer>
-    <integer name="app_versionCode_nightly">20231027</integer>
+    <integer name="app_versionCode_nightly">20231029</integer>
     <integer name="maxLines_general">9</integer>
     <integer name="onboarding_permissions_tooltip_visibility">2</integer>
 </resources>
