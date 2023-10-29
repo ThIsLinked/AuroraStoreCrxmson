@@ -26,7 +26,7 @@
 
     <dimen name="cluster_size">128dp</dimen>
 
-    <dimen name="crxmson_MarginStartOfEndTo_label">5sp</dimen>
+    <dimen name="crxmson_marginStart_OfEndTo_label">5sp</dimen>
 
     <dimen name="edge_infinity">9999dp</dimen>
     <dimen name="edge_regular">24dp</dimen>
