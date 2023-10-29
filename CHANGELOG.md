@@ -1,5 +1,5 @@
-> **v4.3.5-nightly-28.10.23 (53)**
-> * Pulled up to nightly 28.10.23 (include stable 4.3.5);
+> **v4.3.5-nightly-29.10.23 (53)**
+> * Pulled up to nightly 29.10.23 (include stable 4.3.5);
 > * Complete re-creation of the project. This has improved cleaning, use and convenience;
 > * Redesign of the settings wizard;
 > * In the settings wizard, added a section «Apps links» for landscape orientation and adapted it;
@@ -16,6 +16,7 @@
 > * Even more cleaning of garbage from resources and code;
 > * Reworked the self-update layout and adjusted the receive Internet data to Crxmson;
 > * Based on the fact that some users do not want to check for self-updates, I added a switch in the settings. Its turning it on and off respectively turns on and off the verification function;
+> * Technical: Anonymous account on the author's clone does not work, stable error 502. He will not be in this update.
 
 > **v4.3.2-nightly-25.09.23 (50)**
 > * Pulled up to nightly 25.09.23;
