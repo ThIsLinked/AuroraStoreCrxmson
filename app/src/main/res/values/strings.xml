@@ -45,7 +45,7 @@
     <string name="about_topic_4pda">Topic on 4PDA</string>
     <string name="about_topic_4pda_summary" translatable="false">@string/about_templateToGoTo</string>
     <string name="about_version" translatable="false">v4.3.5 // Nightly by 29.10.23</string>
-    <string name="about_moddify" translatable="false">Powered moddify 29.10.2023 by ThIsLinked // dhwh</string>
+    <string name="about_moddify" translatable="false">Powered moddify 29.10.2023\nby ThIsLinked // dhwh</string>
     <string name="about_xda" translatable="false">XDA</string>
     <string name="about_xda_summary">See the Aurora Store XDA thread for discussions or suggestions.</string>
 

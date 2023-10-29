@@ -78,7 +78,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/about_label_version"
-                style="@style/TextAppearance.Aurora.Line2"
+                style="@style/TextAppearance.Aurora.Line1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/padding_xsmall"
@@ -92,7 +92,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/padding_xsmall"
                 android:maxLines="@integer/maxLines_general"
-                android:text="@string/about_moddify" />
+                android:text="Powered moddify 29.10.2023\nby ThIsLinked // dhwh"
+                android:textAlignment="center"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
