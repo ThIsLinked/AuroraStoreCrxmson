@@ -27,7 +27,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.aurora.Constants
-import com.aurora.store.BuildConfig
 import com.aurora.store.R
 import com.aurora.store.data.model.SelfUpdate
 import com.aurora.store.databinding.SheetSelfUpdateBinding
@@ -79,22 +78,22 @@ class SelfUpdateSheet : BaseBottomSheet() {
     }
 
     private fun inflateData() {
-        val currentVersionName = getString(R.string.app_versionName_stable) // Get current versionName as reference
-        val currentVersionCode = BuildConfig.VERSION_CODE // Get current versionCode as reference
-        val newVersionName = selfUpdate.versionName // Get new versionName as reference
-        val newVersionCode = selfUpdate.versionCode // Get new versionName as reference
+        val currentVersionName : String = resources.getString(R.string.app_versionName_stable) // Get current versionName as reference
+        val currentVersionCode : Int = resources.getInteger(R.integer.app_versionCode) // Get current versionCode as reference
+        val newVersionName : String = selfUpdate.versionName // Get new versionName as reference
+        val newVersionCode : Int = selfUpdate.versionCode // Get new versionName as reference
         B.txtLine2.text = getString( // Set current and new version
             R.string.sheet_self_update_newVersion, // Get format layout
             currentVersionName, // Get current versionName
             currentVersionCode, // Get current versionCode
             newVersionName, // Get new versionName
             newVersionCode // Get new versionCode
-        )
+        ) // Set sample for a text
 
         val changelogText: String = selfUpdate.changelog.ifEmpty { getString(R.string.details_changelog_unavailable) } // Get changelog text as reference
         B.txtChangelog.text = changelogText.trim() // Set changelog text with trim parameter
         B.txtChangelog.movementMethod = ScrollingMovementMethod() // Set scrollability
-        B.txtChangelog.isScrollbarFadingEnabled = false
+        B.txtChangelog.isScrollbarFadingEnabled = false // Disable fade scroll
     }
 
     private fun attachActions() {
