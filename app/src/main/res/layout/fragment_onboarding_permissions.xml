@@ -35,7 +35,7 @@
         android:textColor="?colorAccent"
         android:textSize="@dimen/onboarding_title" />
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <!--<androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/onboarding_appsLinks_tooltip_frame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>-->
 
     <com.airbnb.epoxy.EpoxyRecyclerView
         android:id="@+id/epoxy_recycler"

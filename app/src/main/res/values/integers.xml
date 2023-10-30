@@ -4,5 +4,5 @@
     <integer name="app_versionCode_stable">53</integer>
     <integer name="app_versionCode_nightly">20231029</integer>
     <integer name="maxLines_general">9</integer>
-    <integer name="onboarding_permissions_tooltip_visibility">2</integer>
+    <!--<integer name="onboarding_permissions_tooltip_visibility">2</integer>-->
 </resources>

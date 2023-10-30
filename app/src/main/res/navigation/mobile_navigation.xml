@@ -98,7 +98,7 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.aurora.store.view.ui.preferences.SettingsFragment"
+        android:name="com.aurora.store.view.ui.preferences.Preferences"
         android:label="@string/title_settings"
         tools:layout="@layout/fragment_setting" />
     <fragment
