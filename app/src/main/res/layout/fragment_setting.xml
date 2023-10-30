@@ -23,7 +23,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.ui.preferences.SettingsFragment">
+    tools:context=".view.ui.preferences.Preferences">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
