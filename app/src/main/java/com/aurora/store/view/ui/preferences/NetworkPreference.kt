@@ -42,9 +42,7 @@ class NetworkPreference : PreferenceFragmentCompat() {
         setPreferencesFromResource(R.xml.preferences_network, rootKey)
 
         val proxyUrl = Preferences.getString(requireContext(), Preferences.PREFERENCE_PROXY_URL, "")
-        val proxyInfo =
-            Preferences.getString(requireContext(), Preferences.PREFERENCE_PROXY_INFO, "{}")
-
+        val proxyInfo = Preferences.getString(requireContext(), Preferences.PREFERENCE_PROXY_INFO, "{}")
         val preferenceProxyUrl: Preference? = findPreference(Preferences.PREFERENCE_PROXY_URL)
         preferenceProxyUrl?.summary = proxyUrl
 
@@ -53,7 +51,6 @@ class NetworkPreference : PreferenceFragmentCompat() {
                 Preference.OnPreferenceChangeListener { preference, newValue ->
                     val newProxyUrl = newValue.toString()
                     val newProxyInfo = CommonUtil.parseProxyUrl(newProxyUrl)
-
                     if (newProxyInfo == null) {
                         runOnUiThread {
                             requireContext().toast(getString(R.string.toast_proxy_invalid))
@@ -62,22 +59,12 @@ class NetworkPreference : PreferenceFragmentCompat() {
                     } else {
                         runAsync {
                             kotlin.runCatching {
-                                val result = HttpClient
-                                    .getPreferredClient(requireContext())
-                                    .setProxy(newProxyInfo)
-                                    .get(
-                                        Constants.ANDROID_CONNECTIVITY_URL,
-                                        mapOf()
-                                    )
-
+                                val result = HttpClient.getPreferredClient(requireContext()).setProxy(newProxyInfo).get(Constants.ANDROID_CONNECTIVITY_URL, mapOf())
                                 runOnUiThread {
                                     if (result.code == 204) {
                                         requireContext().toast(getString(R.string.toast_proxy_success))
                                         save(Preferences.PREFERENCE_PROXY_URL, newProxyUrl)
-                                        save(
-                                            Preferences.PREFERENCE_PROXY_INFO,
-                                            Gson().toJson(newProxyInfo)
-                                        )
+                                        save(Preferences.PREFERENCE_PROXY_INFO, Gson().toJson(newProxyInfo))
 
                                         preference.summary = newProxyUrl
                                     } else {
@@ -88,21 +75,16 @@ class NetworkPreference : PreferenceFragmentCompat() {
                                 runOnUiThread {
                                     requireContext().toast(getText(R.string.toast_proxy_failed))
                                     save(Preferences.PREFERENCE_PROXY_URL, proxyUrl)
-                                    save(
-                                        Preferences.PREFERENCE_PROXY_INFO,
-                                        proxyInfo
-                                    )
+                                    save( Preferences.PREFERENCE_PROXY_INFO, proxyInfo)
                                 }
                             }
                         }
-
                         true
                     }
                 }
         }
 
-        val insecureAnonymous: Preference? =
-            findPreference(Preferences.PREFERENCE_INSECURE_ANONYMOUS)
+        val insecureAnonymous: Preference? = findPreference(Preferences.PREFERENCE_INSECURE_ANONYMOUS)
 
         insecureAnonymous?.let {
             it.onPreferenceClickListener =
@@ -114,8 +96,7 @@ class NetworkPreference : PreferenceFragmentCompat() {
                 }
         }
 
-        val vendingVersion: Preference? =
-            findPreference(Preferences.PREFERENCE_VENDING_VERSION)
+        val vendingVersion: Preference? = findPreference(Preferences.PREFERENCE_VENDING_VERSION)
 
         vendingVersion?.let {
             it.setOnPreferenceChangeListener { _, newValue ->

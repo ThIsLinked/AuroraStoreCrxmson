@@ -16,7 +16,6 @@
   ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
   ~
   -->
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -47,6 +46,7 @@
                 app:iconPadding="@dimen/padding_large"
                 app:iconTint="@color/white"
                 tools:text="Install" />
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -58,7 +58,8 @@
                 android:layout_width="@dimen/icon_size_small"
                 android:layout_height="@dimen/icon_size_small"
                 android:layout_centerInParent="true"
-                tools:indicatorColor="@color/colorAccent" />
+                tools:indicatorColor="?colorAccent" />
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -72,10 +73,9 @@
                 android:layout_centerInParent="true"
                 app:srcCompat="@drawable/ic_check"
                 app:tint="@color/white" />
+
         </RelativeLayout>
+
     </ViewFlipper>
+
 </RelativeLayout>
-
-
-
-
