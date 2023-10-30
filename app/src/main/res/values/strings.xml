@@ -275,7 +275,7 @@
     <string name="onboarding_permissions_storageAccess_title">Storage access</string>
     <string name="onboarding_permissions_storageManager_summary">Required on devices running Android R and above, in addition to storage access.</string>
     <string name="onboarding_permissions_storageManager_title">Storage manager</string>
-    <string name="onboarding_permissions_tooltip"><b>Important:</b> If permissions is not granted now, the subsequent launch of Aurora may be accompanied by stable crash.\n\nIf this has already happened, must grant all permissions to Aurora.</string>
+    <!--<string name="onboarding_permissions_tooltip"><b>Important:</b> If permissions is not granted now, the subsequent launch of Aurora may be accompanied by stable crash.\n\nIf this has already happened, must grant all permissions to Aurora.</string>-->
     <string name="onboarding_title_installer">Installer</string>
     <string name="onboarding_title_permissions">Permissions</string>
     <string name="onboarding_title_theme">Themes</string>
@@ -304,8 +304,8 @@
     <string name="pref_download_directory_error">Selected path is not writable</string>
     <string name="pref_downloader_active_summary">Maximum number of active downloads</string>
     <string name="pref_downloader_active_title">Active download</string>
-    <string name="pref_downloader_external" translatable="false">External storage</string>
-    <string name="pref_downloader_external_desc">Use the specified path</string>
+    <string name="pref_downloader_external">External storage</string>
+    <string name="pref_downloader_external_desc">Specify your own storage path</string>
     <string name="pref_downloader_path_title">Path for downloads</string>
     <string name="pref_downloader_wifi_title">Download Wi-Fi only</string>
     <string name="pref_filter_fdroid_summary">Ignore apps from F-Droid in the \"Updates\" and \"Installed\" sections</string>
@@ -363,7 +363,7 @@
     <string name="pref_vending_version_new" translatable="false">22.0.17-21 [0] [PR] 332555730</string>
     <string name="pref_vending_version_old" translatable="false">7.9.80.Q-all [0] [PR] 159305549</string>
     <string name="pref_vending_version_title">Play Store version</string>
-    <string name="pref_vending_version_tooltip">All items except the default set the value above the value from the spoof profile.\n\nAfter changing the value, you in any case need to re-login to your account and Aurora.</string>
+    <string name="pref_vending_version_tooltip">All values except default set the value above the value from the substitution profile.\n\nAfter the change, you will in any case need to re-login to your account and Aurora.</string>
 
     <string name="purchase_failed">Download Failed</string>
     <string name="purchase_invalid">App not purchased</string>
@@ -461,25 +461,26 @@
     <string name="toast_rated_success">Rated, it may take a while to show</string>
     <string name="toast_spoof_applied">Device spoof applied.</string>
 
-    <string name="ui_accent_0">Crimson</string>
-    <string name="ui_accent_1" translatable="false">Red</string>
-    <string name="ui_accent_10" translatable="false">Green</string>
-    <string name="ui_accent_11" translatable="false">Light Green</string>
-    <string name="ui_accent_12" translatable="false">Lime</string>
-    <string name="ui_accent_13" translatable="false">Yellow</string>
-    <string name="ui_accent_14" translatable="false">Amber</string>
-    <string name="ui_accent_15" translatable="false">Orange</string>
-    <string name="ui_accent_16" translatable="false">Deep Orange</string>
-    <string name="ui_accent_17" translatable="false">Brown</string>
-    <string name="ui_accent_18" translatable="false">Blue Grey</string>
-    <string name="ui_accent_2" translatable="false">Pink</string>
-    <string name="ui_accent_3" translatable="false">Purple</string>
-    <string name="ui_accent_4" translatable="false">Deep Purple</string>
-    <string name="ui_accent_5" translatable="false">Indigo</string>
-    <string name="ui_accent_6" translatable="false">Blue</string>
-    <string name="ui_accent_7" translatable="false">Light Blue</string>
-    <string name="ui_accent_8" translatable="false">Cyan</string>
-    <string name="ui_accent_9" translatable="false">Teal</string>
+    <string name="ui_accent_systemValue">Crimson</string>
+    <string name="ui_accent_1" translatable="false">Crimson</string>
+    <string name="ui_accent_2" translatable="false">Red</string>
+    <string name="ui_accent_3" translatable="false">Pink</string>
+    <string name="ui_accent_4" translatable="false">Purple</string>
+    <string name="ui_accent_5" translatable="false">Deep Purple</string>
+    <string name="ui_accent_6" translatable="false">Indigo</string>
+    <string name="ui_accent_7" translatable="false">Blue</string>
+    <string name="ui_accent_8" translatable="false">Light Blue</string>
+    <string name="ui_accent_9" translatable="false">Cyan</string>
+    <string name="ui_accent_10" translatable="false">Teal</string>
+    <string name="ui_accent_11" translatable="false">Green</string>
+    <string name="ui_accent_12" translatable="false">Light Green</string>
+    <string name="ui_accent_13" translatable="false">Lime</string>
+    <string name="ui_accent_14" translatable="false">Yellow</string>
+    <string name="ui_accent_15" translatable="false">Amber</string>
+    <string name="ui_accent_16" translatable="false">Orange</string>
+    <string name="ui_accent_17" translatable="false">Deep Orange</string>
+    <string name="ui_accent_18" translatable="false">Brown</string>
+    <string name="ui_accent_19" translatable="false">Blue Grey</string>
 
     <string name="unit_byte">B</string>
     <string name="unit_byte_short" translatable="false">@string/unit_byte</string>

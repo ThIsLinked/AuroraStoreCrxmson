@@ -227,7 +227,7 @@
     <string name="onboarding_permissions_storageAccess_title">Доступ до сховища</string>
     <string name="onboarding_permissions_storageManager_summary">Потрібен на пристроях з ОС Android R і вище, окрім доступу до пам’яті.</string>
     <string name="onboarding_permissions_storageManager_title">Менеджер сховища</string>
-    <string name="onboarding_permissions_tooltip"><b>Важливо:</b> Якщо не надати дозволи зараз, наступний запуск Аврори може супроводжуватися стабільним збіем.\n\nЯкщо це вже сталося, необхідно видати Авроре всі дозволи.</string>
+    <!--<string name="onboarding_permissions_tooltip"><b>Важливо:</b> Якщо не надати дозволи зараз, наступний запуск Аврори може супроводжуватися стабільним збіем.\n\nЯкщо це вже сталося, необхідно видати Авроре всі дозволи.</string>-->
     <string name="onboarding_title_installer">Встановлювач</string>
     <string name="onboarding_title_permissions">Дозволи</string>
     <string name="onboarding_title_theme">Теми</string>
@@ -255,7 +255,8 @@
     <string name="pref_download_directory_error">Вибраний шлях неможливий для запису</string>
     <string name="pref_downloader_active_summary">Найбільша кількість активних завантажень</string>
     <string name="pref_downloader_active_title">Активні завантаження</string>
-    <string name="pref_downloader_external_desc">Використовувати вказаний шлях</string>
+    <string name="pref_downloader_external">Зовнішнє сховище</string>
+    <string name="pref_downloader_external_desc">Вказати свій шлях до сховища</string>
     <string name="pref_downloader_path_title">Шлях для завантажень</string>
     <string name="pref_downloader_wifi_title">Завантаження лише через Wi-Fi</string>
     <string name="pref_filter_fdroid_summary">Ігнорувати програми з F-Droid у розділі «Оновлення» та «Встановлені»</string>
@@ -303,7 +304,7 @@
     <string name="pref_updates_extended_desc">Перевіряти наявність оновлень для вимкнених програм</string>
     <string name="pref_vending_version_default">За замовчуванням (значення з поточного профілю)</string>
     <string name="pref_vending_version_title">Версія Play Store</string>
-    <string name="pref_vending_version_tooltip">На деяких системах через впровадження «Verify links», посилання на домени Play Store можуть бути примусово закріплені за com.android.vending.\n\nЦе ще не означає, що у списку «Відкрити з…» не буде Аврори.</string>
+    <string name="pref_vending_version_tooltip">Усі значення, крім за промовчанням, встановлюють значення повіх значення з профілю заміни.\n\nПісля зміни вам у будь-якому випадку необхідно заново увійти до свого облікового запису та Аврору.</string>
 
     <string name="purchase_failed">Збій завантаження</string>
     <string name="purchase_invalid">Застосунок не придбано</string>

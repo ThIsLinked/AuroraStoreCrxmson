@@ -227,7 +227,7 @@
     <string name="onboarding_permissions_storageAccess_title">Доступ к хранилищу</string>
     <string name="onboarding_permissions_storageManager_summary">Требуется на устройствах под управлением Android R и более поздних версий, а также для доступа к хранилищу.</string>
     <string name="onboarding_permissions_storageManager_title">Менеджер хранилища</string>
-    <string name="onboarding_permissions_tooltip"><b>Важно:</b> Если не предоставить разрешения сейчас, последующий запуск Авроры может сопровождаться стабильным "падением".\n\nЕсли это уже произошло, необходимо выдать Авроре все разрешения.</string>
+    <!--<string name="onboarding_permissions_tooltip"><b>Важно:</b> Если не предоставить разрешения сейчас, последующий запуск Авроры может сопровождаться стабильным "падением".\n\nЕсли это уже произошло, необходимо выдать Авроре все разрешения.</string>-->
     <string name="onboarding_title_installer">Установщик</string>
     <string name="onboarding_title_permissions">Разрешения</string>
     <string name="onboarding_title_theme">Темы</string>
@@ -255,7 +255,8 @@
     <string name="pref_download_directory_error">Выбранный путь недоступен для записи</string>
     <string name="pref_downloader_active_summary">Максимальное количество активных загрузок</string>
     <string name="pref_downloader_active_title">Активные загрузки</string>
-    <string name="pref_downloader_external_desc">Использовать указанный путь</string>
+    <string name="pref_downloader_external">Внешнее хранилище</string>
+    <string name="pref_downloader_external_desc">Указать собственный путь к хранилищу</string>
     <string name="pref_downloader_path_title">Путь для загрузок</string>
     <string name="pref_downloader_wifi_title">Загрузка только через Wi-Fi</string>
     <string name="pref_filter_fdroid_summary">Игнорировать приложения из F-Droid в разделе «Обновления» и «Установленные»</string>
@@ -303,7 +304,7 @@
     <string name="pref_updates_extended_desc">Проверять наличие обновлений для отключенных приложений</string>
     <string name="pref_vending_version_default">По умолчанию (значение из текущего профиля)</string>
     <string name="pref_vending_version_title">Версия Play Store</string>
-    <string name="pref_vending_version_tooltip">Всі пункти, крім за промовчанням, встановлюють значення поверх значення з профілю підміни.</string>
+    <string name="pref_vending_version_tooltip">Все значения, кроме по умолчанию, устанавливают значение повех значения из профиля подмены.\n\nПосле изменения вам в любом случае необходимо заново войти в свой аккаунт и Аврору.</string>
 
     <string name="purchase_failed">Ошибка загрузки</string>
     <string name="purchase_invalid">Приложение не куплено</string>
