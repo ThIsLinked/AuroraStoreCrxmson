@@ -28,6 +28,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import com.aurora.extensions.isQAndAbove
+import com.aurora.extensions.isSAndAbove
 import com.aurora.store.R
 import com.aurora.store.data.work.UpdateWorker
 import com.aurora.store.databinding.FragmentOnboardingBinding
@@ -167,14 +168,16 @@ class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
         save(PREFERENCE_SELF_UPDATE, true)
 
         /* Interface */
-        save(
-            PREFERENCE_THEME_TYPE, if (isQAndAbove()) { // Condition: Android Q and above
-                0 // The answer is positive – action: Set value is 0 (inherit system theme value)
-            } else {
-                1 // The answer is negative – action: Set value is 1 (Light theme)
-            }
-        )
-        save(PREFERENCE_THEME_ACCENT, 0)
+        save(PREFERENCE_THEME_TYPE, if (isQAndAbove()) { // Condition: Android Q and above
+            0 // The answer is positive – action: Set value is 0 (inherit system theme value)
+        } else {
+            1 // The answer is negative – action: Set value is 1 (Light theme)
+        })
+        save(PREFERENCE_THEME_ACCENT, if (isSAndAbove()) { // Condition: Android S and above
+            0 // The answer is positive – action: Set value is 0 (system dynamic color value)
+        } else {
+            1 // The answer is negative – action: Set value is 1 (Crxmson color value)
+        })
         save(PREFERENCE_DEFAULT_SELECTED_TAB, 0)
         save(PREFERENCE_FOR_YOU, false)
         save(PREFERENCE_SIMILAR, false)
