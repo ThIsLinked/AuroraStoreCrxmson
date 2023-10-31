@@ -31,6 +31,17 @@
             app:singleLineTitle="false"
             app:title="@string/app_language" />
 
+        <androidx.preference.Preference app:layout="@layout/divider" />
+
+        <androidx.preference.Preference
+            app:icon="@drawable/ic_menu_about"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_THEME_TOOLTIP"
+            app:layout="@layout/item_preference_tooltip"
+            app:persistent="false"
+            app:singleLineTitle="false"
+            app:summary="@string/pref_ui_theme_tooltip" />
+
         <com.aurora.store.view.custom.preference.AuroraListPreference
             app:defaultValue="0"
             app:entries="@array/pref_themes"
@@ -52,6 +63,8 @@
             app:singleLineTitle="false"
             app:title="@string/pref_ui_accent_title"
             app:useSimpleSummaryProvider="true" />
+
+        <androidx.preference.Preference app:layout="@layout/divider" />
 
         <com.aurora.store.view.custom.preference.AuroraListPreference
             app:defaultValue="0"
