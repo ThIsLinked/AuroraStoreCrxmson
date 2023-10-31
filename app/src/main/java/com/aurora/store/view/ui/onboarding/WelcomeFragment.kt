@@ -64,7 +64,8 @@ class WelcomeFragment : BaseFragment(R.layout.fragment_onboarding_welcome) {
     }
 
     private fun loadDashFromAssets(): List<Dash> {
-        val inputStream = requireContext().assets.open("dash.json")
+        // val inputStream = requireContext().assets.open("dash.json") // Connect from assets directory
+        val inputStream = requireContext().resources.openRawResource(R.raw.dash) // Connect from resources
         val bytes = ByteArray(inputStream.available())
         inputStream.read(bytes)
         inputStream.close()

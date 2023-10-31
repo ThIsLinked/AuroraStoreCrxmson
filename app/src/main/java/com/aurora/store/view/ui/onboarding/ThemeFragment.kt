@@ -29,7 +29,7 @@ import com.aurora.store.util.Preferences
 import com.aurora.store.util.Preferences.PREFERENCE_THEME_ACCENT
 import com.aurora.store.util.Preferences.PREFERENCE_THEME_TYPE
 import com.aurora.store.util.save
-import com.aurora.store.view.epoxy.views.ThemeViewModel_
+import com.aurora.store.view.epoxy.views.preference.ThemeViewModel_
 import com.aurora.store.view.ui.commons.BaseFragment
 import com.google.gson.reflect.TypeToken
 import java.nio.charset.StandardCharsets
@@ -82,7 +82,8 @@ class ThemeFragment : BaseFragment(R.layout.fragment_onboarding_theme) {
     }
 
     private fun loadThemesFromAssets(context: Context): List<Theme> {
-        val inputStream = context.assets.open("themes.json")
+        // val inputStream = context.assets.open("themes.json") // Connect from assets directory
+        val inputStream = context.resources.openRawResource(R.raw.themes) // Connect from resources
         val bytes = ByteArray(inputStream.available())
         inputStream.read(bytes)
         inputStream.close()

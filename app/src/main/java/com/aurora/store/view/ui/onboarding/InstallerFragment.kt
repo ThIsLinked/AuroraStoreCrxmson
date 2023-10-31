@@ -55,11 +55,11 @@ class InstallerFragment : BaseFragment(R.layout.fragment_onboarding_installer) {
 
     private var shizukuAlive = false
     private val shizukuAliveListener = Shizuku.OnBinderReceivedListener {
-        Log.d("ShizukuInstaller Alive!")
+        Log.d("ShizukuInstaller available.")
         shizukuAlive = true
     }
     private val shizukuDeadListener = Shizuku.OnBinderDeadListener {
-        Log.d("ShizukuInstaller Dead!")
+        Log.d("ShizukuInstaller unavailable.")
         shizukuAlive = false
     }
 
@@ -198,7 +198,8 @@ class InstallerFragment : BaseFragment(R.layout.fragment_onboarding_installer) {
     }
 
     private fun loadInstallersFromAssets(): List<Installer> {
-        val inputStream = requireContext().assets.open("installers.json")
+        // val inputStream = requireContext().assets.open("installers.json") // Connect from assets directory
+        val inputStream = requireContext().resources.openRawResource(R.raw.installers) // Connect from resources
         val bytes = ByteArray(inputStream.available())
         inputStream.read(bytes)
         inputStream.close()

@@ -20,6 +20,7 @@
 package com.aurora.store.data.providers
 
 import android.content.Context
+import com.aurora.store.R
 import com.aurora.store.data.SingletonHolder
 import org.json.JSONArray
 import org.json.JSONObject
@@ -48,7 +49,8 @@ class ExodusDataProvider private constructor(val context: Context) {
     }
 
     private fun loadLocalTrackers(): JSONObject {
-        val inputStream = context.assets.open("exodus_trackers.json")
+        // val inputStream = context.assets.open("exodus_trackers.json") // Connect from assets directory
+        val inputStream = context.resources.openRawResource(R.raw.exodus_trackers) // Connect from resources
         val bytes = ByteArray(inputStream.available())
         inputStream.read(bytes)
         inputStream.close()
