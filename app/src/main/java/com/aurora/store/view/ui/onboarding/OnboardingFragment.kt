@@ -27,6 +27,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
+import com.aurora.extensions.isQAndAbove
 import com.aurora.store.R
 import com.aurora.store.data.work.UpdateWorker
 import com.aurora.store.databinding.FragmentOnboardingBinding
@@ -74,8 +75,8 @@ class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
         override fun createFragment(position: Int): Fragment {
             when (position) {
                 0 -> return WelcomeFragment()
-                1 -> return InstallerFragment()
-                2 -> return ThemeFragment()
+                1 -> return ThemeFragment()
+                2 -> return InstallerFragment()
                 3 -> return AppLinksFragment()
                 4 -> return PermissionsFragment()
             }
@@ -166,7 +167,13 @@ class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
         save(PREFERENCE_SELF_UPDATE, true)
 
         /* Interface */
-        save(PREFERENCE_THEME_TYPE, 0)
+        save(
+            PREFERENCE_THEME_TYPE, if (isQAndAbove()) { // Condition: Android Q and above
+                0 // The answer is positive – action: Set value is 0 (inherit system theme value)
+            } else {
+                1 // The answer is negative – action: Set value is 1 (Light theme)
+            }
+        )
         save(PREFERENCE_THEME_ACCENT, 0)
         save(PREFERENCE_DEFAULT_SELECTED_TAB, 0)
         save(PREFERENCE_FOR_YOU, false)
