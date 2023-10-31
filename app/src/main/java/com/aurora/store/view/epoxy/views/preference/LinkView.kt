@@ -21,7 +21,7 @@ package com.aurora.store.view.epoxy.views.preference
 
 import android.content.Context
 import android.util.AttributeSet
-import android.widget.RelativeLayout
+import androidx.constraintlayout.widget.ConstraintLayout
 import coil.load
 import com.airbnb.epoxy.CallbackProp
 import com.airbnb.epoxy.ModelProp
@@ -37,20 +37,20 @@ import com.aurora.store.view.epoxy.views.BaseView
     autoLayout = ModelView.Size.MATCH_WIDTH_WRAP_HEIGHT,
     baseModelClass = BaseView::class
 )
-class LinkView : RelativeLayout {
+class LinkView : ConstraintLayout {
 
     private lateinit var B: ViewLinkBinding
 
-    constructor(context: Context?) : super(context) {
+    constructor(context: Context?) : super(context!!) {
         init(context)
     }
 
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs) {
+    constructor(context: Context?, attrs: AttributeSet?) : super(context!!, attrs) {
         init(context)
     }
 
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(
-        context,
+        context!!,
         attrs,
         defStyleAttr
     ) {
