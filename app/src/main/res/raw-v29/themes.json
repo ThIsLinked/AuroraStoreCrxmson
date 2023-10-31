@@ -1,0 +1,32 @@
+[
+    {
+        "id": "0",
+        "subtitle": "Follow system value theme.",
+        "title": "System value"
+    },
+    {
+        "id": "1",
+        "subtitle": "Regular light theme.",
+        "title": "Light"
+    },
+    {
+        "id": "2",
+        "subtitle": "Regular dark theme.",
+        "title": "Dark"
+    },
+    {
+        "id": "3",
+        "subtitle": "Black theme. AMOLED will be pleased.",
+        "title": "Pitch Black"
+    },
+    {
+        "id": "4",
+        "subtitle": "Variant of dark theme.",
+        "title": "Dark-X"
+    },
+    {
+        "id": "5",
+        "subtitle": "Hello fro, Discord.",
+        "title": "Darkord"
+    }
+]

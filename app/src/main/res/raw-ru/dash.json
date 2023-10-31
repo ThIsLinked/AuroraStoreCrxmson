@@ -1,0 +1,37 @@
+[
+    {
+        "icon": "ic_faq",
+        "id": "0",
+        "subtitle": "Есть вопросы? Узнайте ответы.",
+        "title": "F.A.Q",
+        "url": "https://gitlab.com/AuroraOSS/AuroraStore/-/wikis/Frequently%20Asked%20Questions"
+    },
+    {
+        "icon": "ic_code",
+        "id": "1",
+        "subtitle": "Узнайте, что внутри.",
+        "title": "Исходный код",
+        "url": "https://gitlab.com/AuroraOSS/AuroraStore/"
+    },
+    {
+        "icon": "ic_license",
+        "id": "2",
+        "subtitle": "GNU GPL v3.0.",
+        "title": "Лицензия",
+        "url": "https://gitlab.com/AuroraOSS/AuroraStore/-/blob/master/LICENSE"
+    },
+    {
+        "icon": "ic_privacy",
+        "id": "3",
+        "subtitle": "Узнайте, как Aurora Store использует ваши данные.",
+        "title": "Политика конфиденциальности",
+        "url": "https://gitlab.com/AuroraOSS/AuroraStore/-/blob/master/POLICY.md"
+    },
+    {
+        "icon": "ic_disclaimer",
+        "id": "4",
+        "subtitle": "Подотчетность и ответственность.",
+        "title": "Disclaimer",
+        "url": "https://gitlab.com/AuroraOSS/AuroraStore/-/blob/master/DISCLAIMER.md"
+    }
+]

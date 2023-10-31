@@ -1,0 +1,37 @@
+[
+    {
+        "icon": "ic_faq",
+        "id": "0",
+        "subtitle": "Є питання? Дізнайтесь відповіді.",
+        "title": "F.A.Q",
+        "url": "https://gitlab.com/AuroraOSS/AuroraStore/-/wikis/Frequently%20Asked%20Questions"
+    },
+    {
+        "icon": "ic_code",
+        "id": "1",
+        "subtitle": "Дізнайтесь, що всередині.",
+        "title": "Початковий код",
+        "url": "https://gitlab.com/AuroraOSS/AuroraStore/"
+    },
+    {
+        "icon": "ic_license",
+        "id": "2",
+        "subtitle": "GNU GPL v3.0.",
+        "title": "Ліцензія",
+        "url": "https://gitlab.com/AuroraOSS/AuroraStore/-/blob/master/LICENSE"
+    },
+    {
+        "icon": "ic_privacy",
+        "id": "3",
+        "subtitle": "Дізнайтеся, як Aurora Store використовує ваші дані.",
+        "title": "Політика конфіденційності",
+        "url": "https://gitlab.com/AuroraOSS/AuroraStore/-/blob/master/POLICY.md"
+    },
+    {
+        "icon": "ic_disclaimer",
+        "id": "4",
+        "subtitle": "Підзвітність та відповідальність.",
+        "title": "Disclaimer",
+        "url": "https://gitlab.com/AuroraOSS/AuroraStore/-/blob/master/DISCLAIMER.md"
+    }
+]
