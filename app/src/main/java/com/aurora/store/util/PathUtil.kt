@@ -61,12 +61,10 @@ object PathUtil {
     }
 
     fun getExternalPath(context: Context): String {
-        val defaultDir =
-            java.io.File("${Environment.getExternalStorageDirectory().absolutePath}/Download/AuroraStore")
-
-        if (!defaultDir.exists())
+        val defaultDir = java.io.File("${Environment.getExternalStorageDirectory().absolutePath}/Download/AuroraStore")
+        if (!defaultDir.exists()) {
             defaultDir.mkdirs()
-
+        }
         return Preferences.getString(
             context,
             Preferences.PREFERENCE_DOWNLOAD_DIRECTORY,

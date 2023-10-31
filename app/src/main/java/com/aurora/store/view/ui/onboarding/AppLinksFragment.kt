@@ -60,7 +60,8 @@ class AppLinksFragment : Fragment(R.layout.fragment_app_links) {
         }
 
         /* Tooltip link to official documentation */
-        val onboardingAppsLinksTooltipLink: MaterialButton = view.findViewById(R.id.onboarding_appsLinks_tooltipLink) // Set ID object
+        val onboardingAppsLinksTooltipLink: MaterialButton =
+            view.findViewById(R.id.onboarding_appsLinks_tooltipLink) // Set ID object
         // Action
         onboardingAppsLinksTooltipLink.setOnClickListener {
             startActivity(

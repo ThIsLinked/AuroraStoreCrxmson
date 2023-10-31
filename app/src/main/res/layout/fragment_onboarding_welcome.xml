@@ -44,6 +44,6 @@
         android:padding="@dimen/margin_large"
         android:scrollbars="none"
         app:itemSpacing="@dimen/margin_large"
-        tools:listitem="@layout/view_theme" />
+        tools:listitem="@layout/view_dash" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
