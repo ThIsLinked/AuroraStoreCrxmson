@@ -16,20 +16,24 @@
   ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
   ~
   -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_outlined_padded"
-    android:orientation="horizontal"
     android:padding="@dimen/margin_large">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/text_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_toStartOf="@id/radiobutton"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/radiobutton_frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/line1"
@@ -43,21 +47,30 @@
             style="@style/AuroraTextStyle.Line1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/line1"
-            android:layout_alignStart="@id/line1"
-            android:layout_alignEnd="@id/line1"
-            android:layout_marginTop="@dimen/margin_xxsmall"
+            android:layout_marginTop="@dimen/margin_xsmall"
             android:maxLines="@integer/maxLines_general" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <com.google.android.material.radiobutton.MaterialRadioButton
-        android:id="@+id/radiobutton"
-        android:layout_width="@dimen/icon_size_category"
-        android:layout_height="@dimen/icon_size_category"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="@dimen/margin_normal"
-        android:gravity="center" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/radiobutton_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/padding_large"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry">
 
-</RelativeLayout>
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radiobutton"
+            android:layout_width="@dimen/icon_size_category"
+            android:layout_height="@dimen/icon_size_category"
+            android:gravity="center" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

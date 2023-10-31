@@ -16,47 +16,71 @@
   ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
   ~
   -->
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_outlined_padded">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/img_icon"
-        android:layout_width="@dimen/icon_size_category"
-        android:layout_height="@dimen/icon_size_category" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/img_icon_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/padding_large"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/line1"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_icon"
+            android:layout_width="@dimen/icon_size_category"
+            android:layout_height="@dimen/icon_size_category" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/text_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/img_icon"
-        android:layout_marginStart="@dimen/margin_small"
-        android:layout_toEndOf="@+id/img_icon"
-        android:singleLine="true"
-        android:textAppearance="@style/TextAppearance.Aurora.Line1" />
+        android:orientation="vertical"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_icon_frame"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/line2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/line1"
-        android:layout_alignStart="@id/line1"
-        android:layout_toEndOf="@+id/img_icon"
-        android:maxLines="2"
-        android:textAppearance="@style/TextAppearance.Aurora.Line2" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.Aurora.Line1" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/line3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/line2"
-        android:layout_alignStart="@id/line1"
-        android:layout_toEndOf="@+id/img_icon"
-        android:maxLines="2"
-        android:textAppearance="@style/TextAppearance.Aurora.Line3"
-        android:textColor="?colorAccent"
-        android:textIsSelectable="true"
-        android:visibility="gone" />
-</RelativeLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.Aurora.Line2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.Aurora.Line3"
+            android:textColor="?colorAccent"
+            android:textIsSelectable="true"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

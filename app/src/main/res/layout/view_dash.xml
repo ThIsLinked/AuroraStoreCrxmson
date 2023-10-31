@@ -16,36 +16,61 @@
   ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
   ~
   -->
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_outlined_padded"
-    android:orientation="horizontal">
+    android:padding="@dimen/padding_large">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/img"
-        android:layout_width="@dimen/icon_size_default"
-        android:layout_height="@dimen/icon_size_default"
-        android:layout_centerVertical="true"
-        app:tint="?colorAccent" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/img_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/padding_large"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/line1"
-        style="@style/AuroraTextStyle.Subtitle"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img"
+            android:layout_width="@dimen/icon_size_default"
+            android:layout_height="@dimen/icon_size_default"
+            app:tint="?colorAccent" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/text_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_normal"
-        android:layout_toEndOf="@id/img" />
+        android:orientation="vertical"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_frame"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/line2"
-        style="@style/AuroraTextStyle.Line1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/line1"
-        android:layout_alignStart="@id/line1"
-        android:layout_alignEnd="@id/line1"
-        android:layout_marginTop="@dimen/margin_xxsmall" />
-</RelativeLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/line1"
+            style="@style/AuroraTextStyle.Subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/line2"
+            style="@style/AuroraTextStyle.Line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xsmall" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
