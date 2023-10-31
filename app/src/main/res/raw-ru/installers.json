@@ -1,0 +1,43 @@
+[
+    {
+        "description": "Самый обычный установщик.",
+        "id": "0",
+        "subtitle": "Обычный установщик.",
+        "title": "Сессия",
+        "url": "https://developer.android.com/reference/android/content/pm/PackageInstaller.Session"
+    },
+    {
+        "description": "Назначает Play Store (com.android.vending) в качестве источника установки для приложений. Не поддерживает Android App Bundle (splits).",
+        "id": "1",
+        "subtitle": "Старая версия установщика.",
+        "title": "Native",
+        "url": "https://developer.android.com/reference/android/content/Intent#setDataAndType"
+    },
+    {
+        "description": "Требует ROOT-доступ.",
+        "id": "2",
+        "subtitle": "Позволяет устанавливать в фоновом режиме без запроса на установку.",
+        "title": "ROOT"
+    },
+    {
+        "description": "Требуется Aurora Services (com.aurora.services), установленное как системное привилегированное приложение (priv-app).",
+        "id": "3",
+        "subtitle": "Те же преимущества, что и у ROOT-установщика.",
+        "title": "Aurora Service",
+        "url": "https://gitlab.com/AuroraOSS/AuroraServices"
+    },
+    {
+        "description": "Требуется App Manager (io.github.muntashirakon.AppManager). App Manager нужен доступ к ADB или ROOT, если оптимизация MIUI включена.",
+        "id": "4",
+        "subtitle": "Отправляет установочные файлы в App Manager для установки от его имени.",
+        "title": "App Manager",
+        "url": "https://github.com/MuntashirAkon/AppManager"
+    },
+    {
+        "id": "5",
+        "title": "Shizuku",
+        "subtitle": "Использует полномочия Shizuku.",
+        "description": "Требуется Shizuku в активном состоянии. Поддержка Android 8 и выше.",
+        "url": "https://github.com/RikkaApps/Shizuku"
+    }
+]
