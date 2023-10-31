@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="filterDownloadsLabels">
+        <item>@string/action_filter_all</item>
+        <item>&gt;100</item>
+        <item>&gt;200</item>
+        <item>&gt;500</item>
+        <item>&gt;1 тис.</item>
+        <item>&gt;2 тис.</item>
+        <item>&gt;5 тис.</item>
+        <item>&gt;10 тис.</item>
+        <item>&gt;20 тис.</item>
+        <item>&gt;50 тис.</item>
+        <item>&gt;100 тис.</item>
+        <item>&gt;200 тис.</item>
+        <item>&gt;500 тис.</item>
+        <item>&gt;1 млн</item>
+        <item>&gt;2 млн</item>
+        <item>&gt;5 млн</item>
+        <item>&gt;10 млн</item>
+        <item>&gt;20 млн</item>
+        <item>&gt;50 млн</item>
+        <item>&gt;100 млн</item>
+        <item>&gt;200 млн</item>
+        <item>&gt;500 млн</item>
+    </string-array>
+    <string-array name="link_urls">
+        <item>https://github.com/ThIsLinked/AuroraStoreCrxmson</item>
+        <item>https://4pda.to/forum/index.php?showtopic=887569&amp;view=findpost&amp;p=116441910</item>
+        <item>https://4pda.to/forum/index.php?showtopic=887569</item>
+        <item>bc1qu7cy9fepjj309y4r2x3rymve7mw4ff39c8cpe0</item>
+        <item>qpqus3qdlz8guf476vwz0fjl8s34fseukcmrl6eknl</item>
+        <item>0x6977446933EC8b5964D921f7377950992337B1C6</item>
+        <item>upi://pay?pa=whyorean@dbs&amp;pn=whyorean&amp;tn=AuroraOSS</item>
+        <item>https://paypal.me/AuroraDev</item>
+        <item>https://liberapay.com/on/gitlab/whyorean/ </item>
+        <item>https://gitlab.com/AuroraOSS/AuroraStore</item>
+        <item>https://forum.xda-developers.com/android/apps-games/galaxy-playstore-alternative-t3739733</item>
+        <item>https://t.me/AuroraSupport</item>
+        <item>https://f-droid.org/uk/packages/com.aurora.store/</item>
+    </string-array>
+</resources>
