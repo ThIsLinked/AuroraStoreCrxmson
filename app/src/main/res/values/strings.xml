@@ -254,8 +254,8 @@
     <string name="notification_channel_general">General notification</string>
     <string name="notification_channel_updater_service">App background download service</string>
     <string name="notification_channel_updates">Updates notifications</string>
-    <string name="notification_update_available">Available <xliff:g id="apps_count">%1$d</xliff:g>update</string>
-    <string name="notification_updates_available">Available <xliff:g id="apps_count">%1$d</xliff:g>updates</string>
+    <string name="notification_update_available">Available <xliff:g id="apps_count">%1$d</xliff:g> update</string>
+    <string name="notification_updates_available">Available <xliff:g id="apps_count">%1$d</xliff:g> updates</string>
 
     <string name="onboarding_appsLinks_allEnabled">All links enabled</string>
     <string name="onboarding_appsLinks_amazonAppStore_summary">Amazon AppStore is an app store for Android-compatible platforms operated by Amazon.</string>
@@ -462,25 +462,26 @@
     <string name="toast_rated_success">Rated, it may take a while to show</string>
     <string name="toast_spoof_applied">Device spoof applied.</string>
 
-    <string name="ui_accent_0">Crimson</string>
-    <string name="ui_accent_1" translatable="false">Red</string>
-    <string name="ui_accent_10" translatable="false">Green</string>
-    <string name="ui_accent_11" translatable="false">Light Green</string>
-    <string name="ui_accent_12" translatable="false">Lime</string>
-    <string name="ui_accent_13" translatable="false">Yellow</string>
-    <string name="ui_accent_14" translatable="false">Amber</string>
-    <string name="ui_accent_15" translatable="false">Orange</string>
-    <string name="ui_accent_16" translatable="false">Deep Orange</string>
-    <string name="ui_accent_17" translatable="false">Brown</string>
-    <string name="ui_accent_18" translatable="false">Blue Grey</string>
-    <string name="ui_accent_2" translatable="false">Pink</string>
-    <string name="ui_accent_3" translatable="false">Purple</string>
-    <string name="ui_accent_4" translatable="false">Deep Purple</string>
-    <string name="ui_accent_5" translatable="false">Indigo</string>
-    <string name="ui_accent_6" translatable="false">Blue</string>
-    <string name="ui_accent_7" translatable="false">Light Blue</string>
-    <string name="ui_accent_8" translatable="false">Cyan</string>
-    <string name="ui_accent_9" translatable="false">Teal</string>
+    <string name="ui_accent_systemValue">[TEST]</string>
+    <string name="ui_accent_1" translatable="false">Crimson</string>
+    <string name="ui_accent_2" translatable="false">Red</string>
+    <string name="ui_accent_3" translatable="false">Pink</string>
+    <string name="ui_accent_4" translatable="false">Purple</string>
+    <string name="ui_accent_5" translatable="false">Deep Purple</string>
+    <string name="ui_accent_6" translatable="false">Indigo</string>
+    <string name="ui_accent_7" translatable="false">Blue</string>
+    <string name="ui_accent_8" translatable="false">Light Blue</string>
+    <string name="ui_accent_9" translatable="false">Cyan</string>
+    <string name="ui_accent_10" translatable="false">Teal</string>
+    <string name="ui_accent_11" translatable="false">Green</string>
+    <string name="ui_accent_12" translatable="false">Light Green</string>
+    <string name="ui_accent_13" translatable="false">Lime</string>
+    <string name="ui_accent_14" translatable="false">Yellow</string>
+    <string name="ui_accent_15" translatable="false">Amber</string>
+    <string name="ui_accent_16" translatable="false">Orange</string>
+    <string name="ui_accent_17" translatable="false">Deep Orange</string>
+    <string name="ui_accent_18" translatable="false">Brown</string>
+    <string name="ui_accent_19" translatable="false">Blue Grey</string>
 
     <string name="unit_byte">B</string>
     <string name="unit_byte_short" translatable="false">@string/unit_byte</string>

@@ -209,8 +209,8 @@
     <string name="notification_channel_general">Общее уведомление</string>
     <string name="notification_channel_updater_service">Служба фоновой загрузки приложений</string>
     <string name="notification_channel_updates">Уведомления об обновлениях</string>
-    <string name="notification_update_available">Доступно <xliff:g id="apps_count">%1$d</xliff:g>обновление</string>
-    <string name="notification_updates_available">Доступно <xliff:g id="apps_count">%1$d</xliff:g>обновлений</string>
+    <string name="notification_update_available">Доступно <xliff:g id="apps_count">%1$d</xliff:g> обновление</string>
+    <string name="notification_updates_available">Доступно <xliff:g id="apps_count">%1$d</xliff:g> обновлений</string>
 
     <string name="onboarding_appsLinks_allEnabled">Все ссылки включены</string>
     <string name="onboarding_appsLinks_amazonAppStore_summary">Amazon AppStore — это магазин приложений для Android-совместимых платформ, управляемый Amazon.</string>
