@@ -199,7 +199,6 @@
     </string-array>
 
     <string-array name="pref_accent" translatable="false">
-        <item>@string/ui_accent_0</item>
         <item>@string/ui_accent_1</item>
         <item>@string/ui_accent_2</item>
         <item>@string/ui_accent_3</item>
@@ -239,7 +238,6 @@
         <item>16</item>
         <item>17</item>
         <item>18</item>
-        <item>19</item>
     </string-array>
     <string-array name="pref_default_tab" translatable="false">
         <item>@string/title_apps</item>
