@@ -295,7 +295,7 @@
     <string name="pref_ui_theme_light">Светлая</string>
     <string name="pref_ui_theme_system">Системное значение</string>
     <string name="pref_ui_theme_title">Тема</string>
-    <string name="pref_ui_theme_tooltip">Після зміни теми вам можливо буде потрібно переобрати акцент.</string>
+    <string name="pref_ui_theme_tooltip">После смены темы вам может потребоваться повторно выбрать акцент.</string>
     <string name="pref_ui_title">Внешний вид</string>
     <string name="pref_updates_check">Автоматическая проверка обновлений</string>
     <string name="pref_updates_check_desc">Периодическая автопроверка и уведомление об обновлениях приложений</string>
