@@ -1,6 +1,6 @@
 > **v4.3.5-nightly-04.11.23 (53)**
 > * Pulled up to nightly 04.11.23;
-> * Moved the lists that were in the first setup wizard to resources. This allowed them to be translated. The First Time Setup Wizard is now fully localized;
+> * Moved the lists that were in the first setup wizard to resources. This allowed them to be translated. The first setup wizard is now fully localized;
 > * Added a condition for the list of topics. On Android 10 and higher, the inherit system theme value (light and dark) will be available. On Android 9 and below, the item will be hidden, and the default item will be «Light»;
 > * Added a condition for the list of accents. On Android 12 and higher, the inherit system accent value (dynamic color) will be available. On Android 11 and below, the item will be hidden, and the default item will be «Crimson»;
 > * Added «Royal Blue» to the list of accents;
