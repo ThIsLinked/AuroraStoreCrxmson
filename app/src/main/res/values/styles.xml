@@ -18,14 +18,54 @@
   -->
 <resources>
 
-    <style name="Accent_0">
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorPrimary">@color/colorPrimary</item>
+    <style name="Accent_systemValue">
+        <item name="colorAccent">@color/colorAccent_systemValue</item>
+        <item name="colorPrimary">@color/colorPrimary_systemValue</item>
     </style>
 
     <style name="Accent_1">
         <item name="colorAccent">@color/colorAccent_1</item>
         <item name="colorPrimary">@color/colorPrimary_1</item>
+    </style>
+
+    <style name="Accent_2">
+        <item name="colorAccent">@color/colorAccent_2</item>
+        <item name="colorPrimary">@color/colorPrimary_2</item>
+    </style>
+
+    <style name="Accent_3">
+        <item name="colorAccent">@color/colorAccent_3</item>
+        <item name="colorPrimary">@color/colorPrimary_3</item>
+    </style>
+
+    <style name="Accent_4">
+        <item name="colorAccent">@color/colorAccent_4</item>
+        <item name="colorPrimary">@color/colorPrimary_4</item>
+    </style>
+
+    <style name="Accent_5">
+        <item name="colorAccent">@color/colorAccent_5</item>
+        <item name="colorPrimary">@color/colorPrimary_5</item>
+    </style>
+
+    <style name="Accent_6">
+        <item name="colorAccent">@color/colorAccent_6</item>
+        <item name="colorPrimary">@color/colorPrimary_6</item>
+    </style>
+
+    <style name="Accent_7">
+        <item name="colorAccent">@color/colorAccent_7</item>
+        <item name="colorPrimary">@color/colorPrimary_7</item>
+    </style>
+
+    <style name="Accent_8">
+        <item name="colorAccent">@color/colorAccent_8</item>
+        <item name="colorPrimary">@color/colorPrimary_8</item>
+    </style>
+
+    <style name="Accent_9">
+        <item name="colorAccent">@color/colorAccent_9</item>
+        <item name="colorPrimary">@color/colorPrimary_9</item>
     </style>
 
     <style name="Accent_10">
@@ -73,44 +113,9 @@
         <item name="colorPrimary">@color/colorPrimary_18</item>
     </style>
 
-    <style name="Accent_2">
-        <item name="colorAccent">@color/colorAccent_2</item>
-        <item name="colorPrimary">@color/colorPrimary_2</item>
-    </style>
-
-    <style name="Accent_3">
-        <item name="colorAccent">@color/colorAccent_3</item>
-        <item name="colorPrimary">@color/colorPrimary_3</item>
-    </style>
-
-    <style name="Accent_4">
-        <item name="colorAccent">@color/colorAccent_4</item>
-        <item name="colorPrimary">@color/colorPrimary_4</item>
-    </style>
-
-    <style name="Accent_5">
-        <item name="colorAccent">@color/colorAccent_5</item>
-        <item name="colorPrimary">@color/colorPrimary_5</item>
-    </style>
-
-    <style name="Accent_6">
-        <item name="colorAccent">@color/colorAccent_6</item>
-        <item name="colorPrimary">@color/colorPrimary_6</item>
-    </style>
-
-    <style name="Accent_7">
-        <item name="colorAccent">@color/colorAccent_7</item>
-        <item name="colorPrimary">@color/colorPrimary_7</item>
-    </style>
-
-    <style name="Accent_8">
-        <item name="colorAccent">@color/colorAccent_8</item>
-        <item name="colorPrimary">@color/colorPrimary_8</item>
-    </style>
-
-    <style name="Accent_9">
-        <item name="colorAccent">@color/colorAccent_9</item>
-        <item name="colorPrimary">@color/colorPrimary_9</item>
+    <style name="Accent_19">
+        <item name="colorAccent">@color/colorAccent_19</item>
+        <item name="colorPrimary">@color/colorPrimary_19</item>
     </style>
 
     <style name="AppTheme" parent="BaseTheme">
@@ -132,15 +137,15 @@
 
     <style name="AppTheme.Dark" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorDarkPrimaryDark</item>
-        <item name="colorBackgroundFloating">@color/colorDarkBackground</item>
+        <item name="colorBackgroundFloating">@color/colorDarkWindowBackground</item>
         <item name="android:windowBackground">@color/colorDarkWindowBackground</item>
-        <item name="android:colorBackground">@color/colorDarkBackground</item>
-        <item name="colorOnPrimary">@color/colorDarkBackground</item>
-        <item name="colorPrimaryContainer">@color/colorDarkBackground</item>
-        <item name="android:statusBarColor">@color/colorDarkBackground</item>
-        <item name="android:navigationBarColor">@color/colorDarkBackground</item>
+        <item name="android:colorBackground">@color/colorDarkWindowBackground</item>
+        <item name="colorOnPrimary">@color/colorDarkWindowBackground</item>
+        <item name="colorPrimaryContainer">@color/colorDarkWindowBackground</item>
+        <item name="android:statusBarColor">@color/colorDarkWindowBackground</item>
+        <item name="android:navigationBarColor">@color/colorDarkWindowBackground</item>
         <item name="scrim">@color/colorScrim</item>
         <item name="scrimAccent">@color/colorScrimAccent</item>
         <item name="scrimAlt">@color/colorScrimAlt</item>
@@ -153,26 +158,26 @@
 
     <style name="AppTheme.DarkX" parent="AppTheme.Dark">
         <item name="colorPrimaryDark">@color/colorDarkXPrimaryDark</item>
-        <item name="colorBackgroundFloating">@color/colorDarkXBackground</item>
+        <item name="colorBackgroundFloating">@color/colorDarkXWindowBackground</item>
         <item name="android:windowBackground">@color/colorDarkXWindowBackground</item>
-        <item name="android:colorBackground">@color/colorDarkXBackground</item>
-        <item name="colorOnPrimary">@color/colorDarkXBackground</item>
-        <item name="colorPrimaryContainer">@color/colorDarkXBackground</item>
-        <item name="android:statusBarColor">@color/colorDarkXBackground</item>
-        <item name="android:navigationBarColor">@color/colorDarkXBackground</item>
+        <item name="android:colorBackground">@color/colorDarkXWindowBackground</item>
+        <item name="colorOnPrimary">@color/colorDarkXWindowBackground</item>
+        <item name="colorPrimaryContainer">@color/colorDarkXWindowBackground</item>
+        <item name="android:statusBarColor">@color/colorDarkXWindowBackground</item>
+        <item name="android:navigationBarColor">@color/colorDarkXWindowBackground</item>
         <item name="colorShimmer">@color/colorShimmerDarkX</item>
         <item name="colorStroke">@color/colorStrokeDarkX</item>
     </style>
 
     <style name="AppTheme.Darkord" parent="AppTheme.Dark">
         <item name="colorPrimaryDark">@color/colorDarkordPrimaryDark</item>
-        <item name="colorBackgroundFloating">@color/colorDarkordBackground</item>
+        <item name="colorBackgroundFloating">@color/colorDarkXWindowBackground</item>
         <item name="android:windowBackground">@color/colorDarkordWindowBackground</item>
-        <item name="android:colorBackground">@color/colorDarkordBackground</item>
-        <item name="colorOnPrimary">@color/colorDarkordBackground</item>
-        <item name="colorPrimaryContainer">@color/colorDarkordBackground</item>
-        <item name="android:statusBarColor">@color/colorDarkordBackground</item>
-        <item name="android:navigationBarColor">@color/colorDarkordBackground</item>
+        <item name="android:colorBackground">@color/colorDarkXWindowBackground</item>
+        <item name="colorOnPrimary">@color/colorDarkXWindowBackground</item>
+        <item name="colorPrimaryContainer">@color/colorDarkXWindowBackground</item>
+        <item name="android:statusBarColor">@color/colorDarkXWindowBackground</item>
+        <item name="android:navigationBarColor">@color/colorDarkXWindowBackground</item>
         <item name="colorShimmer">@color/colorShimmerDarkord</item>
         <item name="colorStroke">@color/colorStrokeDarkord</item>
     </style>

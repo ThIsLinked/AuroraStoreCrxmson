@@ -20,6 +20,8 @@
 package com.aurora.store.util
 
 import android.content.Context
+import com.aurora.extensions.isQAndAbove
+import com.aurora.extensions.isSAndAbove
 import com.aurora.store.R
 import com.aurora.store.data.model.ProxyInfo
 import java.text.DecimalFormat
@@ -160,13 +162,29 @@ object CommonUtil {
             3 -> R.style.AppTheme_Black
             4 -> R.style.AppTheme_DarkX
             5 -> R.style.AppTheme_Darkord
-            else -> R.style.AppTheme
+            else -> if (isQAndAbove()) {
+                R.style.AppTheme
+            } else {
+                R.style.AppTheme_Light
+            }
         }
     }
 
     fun getAccentStyleById(accentId: Int): Int {
         return when (accentId) {
-            0 -> R.style.Accent_0
+            /*
+                Please, if you know how to make it work without this condition, write to me.
+                I couldn't find a more reasonable solution than this.
+            */
+
+            // Start condition
+            0 -> if (isSAndAbove()) {
+                R.style.Accent_systemValue
+            } else {
+                R.style.Accent_1
+            }
+            // End condition
+
             1 -> R.style.Accent_1
             2 -> R.style.Accent_2
             3 -> R.style.Accent_3
@@ -185,7 +203,12 @@ object CommonUtil {
             16 -> R.style.Accent_16
             17 -> R.style.Accent_17
             18 -> R.style.Accent_18
-            else -> R.style.Accent_0
+            19 -> R.style.Accent_19
+            else -> if (isSAndAbove()) {
+                R.style.Accent_systemValue
+            } else {
+                R.style.Accent_1
+            }
         }
     }
 

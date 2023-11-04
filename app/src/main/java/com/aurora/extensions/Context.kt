@@ -156,7 +156,7 @@ fun Context.getStyledAttributeColor(id: Int): Int {
 
 fun Context.accentColor(): Int {
     val color = when (Preferences.getInteger(this, Preferences.PREFERENCE_THEME_ACCENT)) {
-        0 -> R.color.colorAccent
+        0 -> R.color.colorAccent_systemValue
         1 -> R.color.colorAccent_1
         2 -> R.color.colorAccent_2
         3 -> R.color.colorAccent_3
@@ -175,7 +175,12 @@ fun Context.accentColor(): Int {
         16 -> R.color.colorAccent_16
         17 -> R.color.colorAccent_17
         18 -> R.color.colorAccent_18
-        else -> R.color.colorAccent
+        19 -> R.color.colorAccent_19
+        else -> if (isSAndAbove()) {
+            R.color.colorAccent_systemValue
+        } else {
+            R.color.colorAccent_1
+        }
     }
     return ContextCompat.getColor(this, color)
 }
