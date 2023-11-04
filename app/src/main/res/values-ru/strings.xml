@@ -153,8 +153,8 @@
     <string name="download_resume_all">Продолжить все</string>
     <string name="download_speed_bytes">%1$d Б/с</string>
     <string name="download_speed_estimating">Оценка</string>
-    <string name="download_speed_kb">%1$d Кб/с</string>
-    <string name="download_speed_mb">%1$d Мб/с</string>
+    <string name="download_speed_kb">%1$s Кб/с</string>
+    <string name="download_speed_mb">%1$s Мб/с</string>
 
     <string name="downloading_dep">Скачивание дополнительных файлов для <xliff:g id="app">%1$s</xliff:g></string>
 
@@ -398,6 +398,8 @@
     <string name="toast_rated_failed">Не удалось поставить оценку</string>
     <string name="toast_rated_success">Оценка принята</string>
     <string name="toast_spoof_applied">Подмена устройства успешно применена.</string>
+
+    <string name="ui_accent_systemValue">Системное значение</string>
 
     <string name="unit_byte">Б</string>
     <string name="unit_byte_speed">Б/с</string>

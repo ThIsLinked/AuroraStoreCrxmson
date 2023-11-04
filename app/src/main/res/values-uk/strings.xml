@@ -153,8 +153,8 @@
     <string name="download_resume_all">Продовжити все</string>
     <string name="download_speed_bytes">%1$d Б/с</string>
     <string name="download_speed_estimating">Оцінюється</string>
-    <string name="download_speed_kb">%1$d Кб/с</string>
-    <string name="download_speed_mb">%1$d Мб/с</string>
+    <string name="download_speed_kb">%1$s Кб/с</string>
+    <string name="download_speed_mb">%1$s Мб/с</string>
 
     <string name="downloading_dep">Завантаження додаткових файлів для <xliff:g id="app">%1$s</xliff:g></string>
 
@@ -398,6 +398,8 @@
     <string name="toast_rated_failed">Не вдалося надіслати оцінку</string>
     <string name="toast_rated_success">Оцінено</string>
     <string name="toast_spoof_applied">Підміну пристрою застосовано.</string>
+
+    <string name="ui_accent_systemValue">Системне значення</string>
 
     <string name="unit_byte">Б</string>
     <string name="unit_byte_speed">Б/с</string>
