@@ -15,7 +15,6 @@ import androidx.core.os.bundleOf
 import androidx.navigation.NavDeepLinkBuilder
 import com.aurora.Constants
 import com.aurora.extensions.getStyledAttributeColor
-import com.aurora.extensions.isMAndAbove
 import com.aurora.gplayapi.data.models.App
 import com.aurora.store.MainActivity
 import com.aurora.store.R
@@ -208,27 +207,21 @@ object NotificationUtil {
     private fun getPauseIntent(context: Context, groupId: Int): PendingIntent {
         val intent = Intent(context, DownloadPauseReceiver::class.java)
         intent.putExtra(Constants.FETCH_GROUP_ID, groupId)
-        val flags = if (isMAndAbove())
-            PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE
-        else PendingIntent.FLAG_CANCEL_CURRENT
+        val flags = PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE
         return PendingIntent.getBroadcast(context, groupId, intent, flags)
     }
 
     private fun getResumeIntent(context: Context, groupId: Int): PendingIntent {
         val intent = Intent(context, DownloadResumeReceiver::class.java)
         intent.putExtra(Constants.FETCH_GROUP_ID, groupId)
-        val flags = if (isMAndAbove())
-            PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE
-        else PendingIntent.FLAG_CANCEL_CURRENT
+        val flags = PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE
         return PendingIntent.getBroadcast(context, groupId, intent, flags)
     }
 
     private fun getCancelIntent(context: Context, groupId: Int): PendingIntent {
         val intent = Intent(context, DownloadCancelReceiver::class.java)
         intent.putExtra(Constants.FETCH_GROUP_ID, groupId)
-        val flags = if (isMAndAbove())
-            PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE
-        else PendingIntent.FLAG_CANCEL_CURRENT
+        val flags = PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE
         return PendingIntent.getBroadcast(context, groupId, intent, flags)
     }
 
@@ -252,9 +245,7 @@ object NotificationUtil {
     private fun getInstallIntent(context: Context, packageName: String): PendingIntent {
         val intent = Intent(context, InstallReceiver::class.java)
         intent.putExtra(Constants.STRING_EXTRA, packageName)
-        val flags = if (isMAndAbove())
-            PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE
-        else PendingIntent.FLAG_CANCEL_CURRENT
+        val flags = PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE
         return PendingIntent.getBroadcast(
             context,
             packageName.hashCode(),
