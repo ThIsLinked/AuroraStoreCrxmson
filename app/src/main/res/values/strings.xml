@@ -52,7 +52,7 @@
     <string name="access_denied_using_vpn">Access denied! Are you using VPN or Tor?</string>
 
     <string name="account_anonymous">Anonymous</string>
-    <string name="account_anonymous_address">anonymous@gmail.com</string>
+    <string name="account_anonymous_address" translatable="false">anonymous@gmail.com</string>
     <string name="account_anonymous_insecure">Anonymous with GSF</string>
     <string name="account_google" translatable="false">Google</string>
     <string name="account_logged_out">You are logged out</string>
