@@ -5,11 +5,11 @@ import android.content.Intent
 import android.os.*
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
+import androidx.core.app.ServiceCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleService
 import androidx.lifecycle.MutableLiveData
 import com.aurora.Constants
-import com.aurora.extensions.isNAndAbove
 import com.aurora.extensions.isOAndAbove
 import com.aurora.extensions.stackTraceToString
 import com.aurora.gplayapi.data.models.App
@@ -49,24 +49,27 @@ import kotlin.concurrent.timerTask
 class UpdateService : LifecycleService() {
 
     lateinit var fetch: Fetch
+
     lateinit var downloadManager: DownloadManager
+
     private lateinit var fetchListener: FetchGroupListener
+
     private var fetchActiveDownloadObserver = object : FetchObserver<Boolean> {
         override fun onChanged(data: Boolean, reason: Reason) {
             if (!data && isEmptyInstalling() && fetchListeners.isEmpty() && appMetadataListeners.isEmpty()) {
                 Handler(Looper.getMainLooper()).postDelayed({
                     if (isEmptyInstalling() && fetchListeners.isEmpty() && appMetadataListeners.isEmpty()) {
-                        if (isNAndAbove()) {
-                            stopForeground(STOP_FOREGROUND_REMOVE)
-                        } else {
-                            stopForeground(true)
-                        }
+                        ServiceCompat.stopForeground(
+                            this@UpdateService,
+                            ServiceCompat.STOP_FOREGROUND_REMOVE
+                        )
                         stopSelf()
                     }
                 }, 5 * 1000)
             }
         }
     }
+
     private var hasActiveDownloadObserver = false
 
     private val fetchListeners: ArrayList<FetchGroupListener> = ArrayList()
@@ -637,11 +640,10 @@ class UpdateService : LifecycleService() {
                 fetch.hasActiveDownloads(true) { hasActiveDownloads ->
                     if (!hasActiveDownloads && isEmptyInstalling() && fetchListeners.isEmpty() && appMetadataListeners.isEmpty()) {
                         Handler(Looper.getMainLooper()).post {
-                            if (isNAndAbove()) {
-                                stopForeground(STOP_FOREGROUND_REMOVE)
-                            } else {
-                                stopForeground(true)
-                            }
+                            ServiceCompat.stopForeground(
+                                this@UpdateService,
+                                ServiceCompat.STOP_FOREGROUND_REMOVE
+                            )
                             stopSelf()
                         }
                     }
