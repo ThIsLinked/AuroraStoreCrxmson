@@ -44,8 +44,8 @@
     <string name="about_topicPost_4pda_summary" translatable="false">@string/about_templateToGoTo</string>
     <string name="about_topic_4pda">Topic on 4PDA</string>
     <string name="about_topic_4pda_summary" translatable="false">@string/about_templateToGoTo</string>
-    <string name="about_version" translatable="false">v4.3.5 // Nightly by 29.10.23</string>
-    <string name="about_moddify" translatable="false">Powered moddify 29.10.2023\nby ThIsLinked // dhwh</string>
+    <string name="about_version" translatable="false">v4.3.5 // Nightly by 04.11.23</string>
+    <string name="about_moddify" translatable="false">Powered moddify 04.11.2023\nby ThIsLinked // dhwh</string>
     <string name="about_xda" translatable="false">XDA</string>
     <string name="about_xda_summary">See the Aurora Store XDA thread for discussions or suggestions.</string>
 
@@ -121,8 +121,8 @@
     <string name="app_list_rating" translatable="false">%1$s • %2$s★ • %3$s</string>
     <string name="app_updater_service_notif_text">Enables background app download</string>
     <string name="app_updater_service_notif_title">Background app download</string>
-    <string name="app_versionName" translatable="false">4.3.5-nightly-29.10.23 // moddify 29.10.23 (by ThIsLinked // dhwh)</string>
-    <string name="app_versionName_nightly" translatable="false">29.10.2023</string>
+    <string name="app_versionName" translatable="false">4.3.5-nightly-04.11.23 // moddify 04.11.23 (by ThIsLinked // dhwh)</string>
+    <string name="app_versionName_nightly" translatable="false">04.11.2023</string>
     <string name="app_versionName_stable" translatable="false">4.3.5</string>
 
     <string name="apps_installed">installed</string>
