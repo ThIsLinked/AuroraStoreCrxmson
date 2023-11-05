@@ -27,18 +27,19 @@ such a misunderstanding. Use them in case of pure use – they look
 exactly as they were supposed to in the specification.
 ```
 
-* Some interface edits and improvements + changed default color to Crimson, v31 and above – system dynamic color.;
+* Some interface edits and improvements + changed default color to Crimson, v31 and above – system dynamic color;
 * The list colors for accent is taken from the [Material Design palette](https://m2.material.io/design/color/the-color-system.html#color-theme-creation);
 * On the application page, some elements are now available for highlighting with the cursor (so that the text can be copied to the clipboard);
 * Redesigned and/or rearranged sections and items in settings;
-* Restoring full functionality of [Deep Links](https://developer.android.com/training/app-links/deep-linking) (fix [#7082](https://4pda.to/forum/index.php?showtopic=887569&view=findpost&p=124420039));
+* Restoring full functionality of [Deep Links](https://developer.android.com/training/app-links/deep-linking) (edit [#7082](https://4pda.to/forum/index.php?showtopic=887569&view=findpost&p=124420039));
 * Added Play Store version selection in settings ([merge !193](https://gitlab.com/AuroraOSS/AuroraStore/-/merge_requests/193)). ***It still requires account reauthorization***;
 * Added mono-profiles: xxhdpi, API 27, all languages and architectures - ARMv7, ARM64-v8, x86 and x64. *The original source of the original configuration – [#2896](https://4pda.to/forum/index.php?showtopic=887569&view=findpost&p=106493433);*
 * Redesigned icons in about + transferred array from Smali to ARSC;
 * Redesigned launcher icon: VectorDrawable rendering only, API 26 and above – adaptive, API 33 and above – monochrome (optiomal);
 * Redesigned banner for Android TV;
-* Changed the background interval check for apps updates - from 30 hours to 24 hours;
-* Removed automatic update of Aurora itself;
+* Self-update redirected to Crxmson repository. You will receive notifications if I post an update;
+* Integrated network configuration to establish cleartext traffic.  This will allow you to use firewalls such as AdGuard on Aurora;
+* There are many other changes that I can't categorize. Follow my changelogs to stay updated on changes in everything repository's...
 
 > ### Only in apk's published by me:
 > * Removal of obfuscation and/or minification;
