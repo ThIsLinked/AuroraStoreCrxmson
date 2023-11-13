@@ -56,6 +56,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
 
@@ -108,11 +109,11 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2")
 
     //Arch Navigation
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.4")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.4")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
 
     //Coil
-    implementation("io.coil-kt:coil:2.4.0")
+    implementation("io.coil-kt:coil:2.5.0")
 
     //Shimmer
     implementation("com.facebook.shimmer:shimmer:0.5.0")
@@ -122,7 +123,7 @@ dependencies {
     ksp("com.airbnb.android:epoxy-processor:5.1.3")
 
     //HTTP Clients
-    implementation("com.squareup.okhttp3:okhttp:4.11.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
 
     //Fetch - Downloader
     implementation("androidx.tonyodev.fetch2:xfetch2:3.1.6")
@@ -141,7 +142,7 @@ dependencies {
 
     //Shizuku
     compileOnly("dev.rikka.hidden:stub:4.3.1")
-    implementation("dev.rikka.tools.refine:runtime:4.3.1")
+    implementation("dev.rikka.tools.refine:runtime:4.4.0")
     implementation("dev.rikka.shizuku:api:13.1.5")
     implementation("dev.rikka.shizuku:provider:13.1.5")
 
