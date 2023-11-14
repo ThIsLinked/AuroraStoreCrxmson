@@ -1,13 +1,16 @@
 package com.aurora.store.view.ui.onboarding
 
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.content.pm.verify.domain.DomainVerificationManager
 import android.content.pm.verify.domain.DomainVerificationUserState
 import android.net.Uri
 import android.os.Bundle
+import android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS
 import android.provider.Settings.ACTION_APP_OPEN_BY_DEFAULT_SETTINGS
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.fragment.app.Fragment
 import com.aurora.extensions.isSAndAbove
 import com.aurora.extensions.toast
@@ -36,6 +39,8 @@ class AppLinksFragment : Fragment(R.layout.fragment_app_links) {
             updateButtonState()
         }
 
+    private val playStorePackageName: String = "com.android.vending"
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentAppLinksBinding.bind(view)
@@ -59,11 +64,19 @@ class AppLinksFragment : Fragment(R.layout.fragment_app_links) {
             }
         }
 
+        /* Tooltips frame */
+        val onboardingAppsLinksTooltips: LinearLayoutCompat =
+            view.findViewById(R.id.onboarding_appsLinks_tooltips) // Set ID object
+        if (!playStoreIsInstalled()) { // Condition: The answer is negative
+            onboardingAppsLinksTooltips.visibility = View.GONE // Action: Hide tooltips layout
+            onboardingAppsLinksTooltips.isFocusable = false // Action: Hide tooltips layout
+        }
+
         /* Tooltip link to official documentation */
-        val onboardingAppsLinksTooltipLink: MaterialButton =
-            view.findViewById(R.id.onboarding_appsLinks_tooltipLink) // Set ID object
+        val onboardingAppsLinksTooltipButton: MaterialButton =
+            view.findViewById(R.id.onboarding_appsLinks_tooltip_button) // Set ID object
         // Action
-        onboardingAppsLinksTooltipLink.setOnClickListener {
+        onboardingAppsLinksTooltipButton.setOnClickListener {
             startActivity(
                 Intent(
                     Intent.ACTION_VIEW,
@@ -71,6 +84,16 @@ class AppLinksFragment : Fragment(R.layout.fragment_app_links) {
                 )
             )
         }
+
+        /* Failures tooltip */
+        val onboardingAppsLinksTooltipFailuresButton: MaterialButton =
+            view.findViewById(R.id.onboarding_appsLinks_tooltipFailures_button) // Set ID object
+        onboardingAppsLinksTooltipFailuresButton.setOnClickListener {
+            startActivity(Intent(ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                data = Uri.fromParts("package", playStorePackageName, null)
+            })
+        }
+
     }
 
     override fun onDestroyView() {
@@ -111,6 +134,15 @@ class AppLinksFragment : Fragment(R.layout.fragment_app_links) {
             domainMap?.values?.first() == DomainVerificationUserState.DOMAIN_STATE_SELECTED
         } else {
             true
+        }
+    }
+
+    private fun playStoreIsInstalled(): Boolean {
+        return try {
+            requireContext().packageManager.getPackageInfo(playStorePackageName, 0)
+            true
+        } catch (e: PackageManager.NameNotFoundException) {
+            false
         }
     }
 

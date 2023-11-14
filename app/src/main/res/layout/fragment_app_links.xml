@@ -32,53 +32,114 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/onboarding_appsLinks_tooltip_frame"
+                android:id="@+id/onboarding_appsLinks_tooltips"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground"
-                android:gravity="center_vertical"
-                android:minHeight="?android:attr/listPreferredItemHeight"
-                android:paddingVertical="@dimen/margin_normal"
-                android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-                android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/onboarding_appsLinks_tooltip_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/margin_large"
-                    app:srcCompat="@drawable/ic_menu_about"
-                    app:tint="?android:attr/colorAccent"
-                    app:tintMode="src_in" />
+                android:orientation="vertical">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/onboarding_appsLinks_tooltip_frame"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:minHeight="?android:attr/listPreferredItemHeight"
+                    android:paddingVertical="@dimen/margin_normal"
+                    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+                    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/onboarding_appsLinks_tooltip"
-                        style="@style/TextAppearance.Aurora.Line2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:maxLines="@integer/maxLines_general"
-                        android:text="@string/onboarding_appsLinks_tooltip"
-                        android:textColorLink="?colorAccent" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/onboarding_appsLinks_tooltipLink"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/onboarding_appsLinks_tooltip_icon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_small"
-                        android:maxLines="@integer/maxLines_general"
-                        android:text="@string/onboarding_appsLinks_tooltipLink"
-                        android:textColor="?colorAccent"
-                        android:textSize="8sp"
-                        app:icon="@drawable/ic_open_in_new"
-                        app:iconGravity="start"
-                        app:iconSize="16dp"
-                        tools:ignore="SmallSp" />
+                        android:layout_marginHorizontal="@dimen/margin_large"
+                        app:srcCompat="@drawable/ic_menu_about"
+                        app:tint="?android:attr/colorAccent"
+                        app:tintMode="src_in" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/onboarding_appsLinks_tooltip"
+                            style="@style/TextAppearance.Aurora.Line2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="@integer/maxLines_general"
+                            android:text="@string/onboarding_appsLinks_tooltip"
+                            android:textColorLink="?colorAccent" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/onboarding_appsLinks_tooltip_button"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:maxLines="@integer/maxLines_general"
+                            android:text="@string/onboarding_appsLinks_tooltip_button"
+                            android:textColor="?colorAccent"
+                            android:textSize="8sp"
+                            app:icon="@drawable/ic_open_in_new"
+                            app:iconGravity="start"
+                            app:iconSize="16dp"
+                            tools:ignore="SmallSp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/onboarding_appsLinks_tooltipFailures_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:minHeight="?android:attr/listPreferredItemHeight"
+                    android:paddingVertical="@dimen/margin_normal"
+                    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+                    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/onboarding_appsLinks_tooltipFailures_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin_large"
+                        app:srcCompat="@drawable/ic_error_outline"
+                        app:tint="?colorError"
+                        app:tintMode="src_in" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/onboarding_appsLinks_tooltipFailures"
+                            style="@style/TextAppearance.Aurora.Line2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="@integer/maxLines_general"
+                            android:text="@string/onboarding_appsLinks_tooltipFailures" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/onboarding_appsLinks_tooltipFailures_button"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:maxLines="@integer/maxLines_general"
+                            android:text="@string/onboarding_appsLinks_tooltipFailures_button"
+                            android:textColor="?colorError"
+                            android:textSize="8sp"
+                            app:icon="@drawable/ic_open_in_new"
+                            app:iconGravity="start"
+                            app:iconSize="16dp"
+                            app:iconTint="?colorError"
+                            tools:ignore="SmallSp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
