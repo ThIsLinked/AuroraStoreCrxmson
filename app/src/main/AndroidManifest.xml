@@ -98,7 +98,7 @@
             android:exported="true"
             android:noHistory="true">
 
-            <!-- Play Store app -->
+            <!-- App in Play Store -->
             <intent-filter android:autoVerify="@bool/appsLinks_verified">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -111,7 +111,7 @@
                 <data android:pathPrefix="/store/apps/details" />
             </intent-filter>
 
-            <!-- Play Store developer -->
+            <!-- Dev in Play Store -->
             <intent-filter android:autoVerify="@bool/appsLinks_verified">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -124,7 +124,19 @@
                 <data android:pathPrefix="/store/apps/dev" />
             </intent-filter>
 
-            <!-- Android Market app -->
+            <!-- App in Android Market (protocol) -->
+            <intent-filter android:autoVerify="@bool/appsLinks_verified">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="/details"
+                    android:scheme="market" />
+            </intent-filter>
+
+            <!-- App in Android Market -->
             <intent-filter android:autoVerify="@bool/appsLinks_verified">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -137,7 +149,7 @@
                 <data android:pathPrefix="/store/apps/details" />
             </intent-filter>
 
-            <!-- Android Market app -->
+            <!-- App in Android Market -->
             <intent-filter android:autoVerify="@bool/appsLinks_verified">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -150,19 +162,7 @@
                 <data android:pathPrefix="/details" />
             </intent-filter>
 
-            <!-- Android Market app (protocol) -->
-            <intent-filter android:autoVerify="@bool/appsLinks_verified">
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="/details"
-                    android:scheme="market" />
-            </intent-filter>
-
-            <!-- Amazon AppStore app (protocol) -->
+            <!-- App in Amazon AppStore (protocol) -->
             <intent-filter android:autoVerify="@bool/appsLinks_verified">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -174,7 +174,7 @@
                 <data android:pathPrefix="/android" />
             </intent-filter>
 
-            <!-- Amazon AppStore app -->
+            <!-- App in Amazon AppStore -->
             <intent-filter android:autoVerify="@bool/appsLinks_verified">
                 <action android:name="android.intent.action.VIEW" />
 
