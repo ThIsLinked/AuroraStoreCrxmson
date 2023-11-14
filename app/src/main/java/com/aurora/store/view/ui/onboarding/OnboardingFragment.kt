@@ -50,6 +50,7 @@ import com.aurora.store.util.Preferences.PREFERENCE_FOR_YOU
 import com.aurora.store.util.Preferences.PREFERENCE_INSECURE_ANONYMOUS
 import com.aurora.store.util.Preferences.PREFERENCE_INSTALLER_ID
 import com.aurora.store.util.Preferences.PREFERENCE_INTRO
+import com.aurora.store.util.Preferences.PREFERENCE_LANGUAGE
 import com.aurora.store.util.Preferences.PREFERENCE_PROXY_ENABLED
 import com.aurora.store.util.Preferences.PREFERENCE_PROXY_INFO
 import com.aurora.store.util.Preferences.PREFERENCE_PROXY_URL
@@ -168,16 +169,21 @@ class OnboardingFragment : Fragment(R.layout.fragment_onboarding) {
         save(PREFERENCE_SELF_UPDATE, true)
 
         /* Interface */
-        save(PREFERENCE_THEME_TYPE, if (isQAndAbove()) { // Condition: Android Q and above
-            0 // The answer is positive – action: Set value is 0 (inherit system theme value)
-        } else {
-            1 // The answer is negative – action: Set value is 1 (Light theme)
-        })
-        save(PREFERENCE_THEME_ACCENT, if (isSAndAbove()) { // Condition: Android S and above
-            0 // The answer is positive – action: Set value is 0 (system dynamic color value)
-        } else {
-            1 // The answer is negative – action: Set value is 1 (Crxmson color value)
-        })
+        save(PREFERENCE_LANGUAGE, 0)
+        save(
+            PREFERENCE_THEME_TYPE, if (isQAndAbove()) { // Condition: Android Q and above
+                0 // The answer is positive – action: Set value is 0 (inherit system theme value)
+            } else {
+                1 // The answer is negative – action: Set value is 1 (Light theme)
+            }
+        )
+        save(
+            PREFERENCE_THEME_ACCENT, if (isSAndAbove()) { // Condition: Android S and above
+                0 // The answer is positive – action: Set value is 0 (system dynamic color value)
+            } else {
+                1 // The answer is negative – action: Set value is 1 (Crxmson color value)
+            }
+        )
         save(PREFERENCE_DEFAULT_SELECTED_TAB, 0)
         save(PREFERENCE_FOR_YOU, false)
         save(PREFERENCE_SIMILAR, false)

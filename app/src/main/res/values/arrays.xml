@@ -265,6 +265,26 @@
         <item>4</item>
         <item>5</item>
     </string-array>
+
+    <string-array name="pref_lang" translatable="false">
+        <item>@string/pref_lang_systemValue</item>
+        <item>English</item>
+        <item>Русский</item>
+        <item>Український</item>
+    </string-array>
+    <string-array name="pref_lang_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pref_lang_names" translatable="false">
+        <item>systemValue</item>
+        <item>en</item>
+        <item>ru</item>
+        <item>uk</item>
+    </string-array>
+
     <string-array name="pref_themes" translatable="false" tools:ignore="InconsistentArrays">
         <item>@string/pref_ui_theme_light</item>
         <item>@string/pref_ui_theme_dark</item>

@@ -24,12 +24,26 @@
         app:singleLineTitle="false"
         app:title="@string/pref_category_interface">
 
-        <androidx.preference.Preference
+        <!--
+            Original implementation of language change
+        -->
+        <!--<androidx.preference.Preference
             app:iconSpaceReserved="false"
             app:key="PREFERENCE_APP_LANGUAGE"
             app:layout="@layout/item_preference"
             app:singleLineTitle="false"
-            app:title="@string/app_language" />
+            app:title="@string/app_language" />-->
+
+        <com.aurora.store.view.custom.preference.AuroraListPreference
+            app:defaultValue="0"
+            app:entries="@array/pref_lang"
+            app:entryValues="@array/pref_lang_values"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_LANGUAGE"
+            app:layout="@layout/item_preference"
+            app:singleLineTitle="false"
+            app:title="@string/pref_lang_title"
+            app:useSimpleSummaryProvider="true" />
 
         <androidx.preference.Preference app:layout="@layout/divider" />
 
@@ -39,6 +53,7 @@
             app:key="PREFERENCE_THEME_TOOLTIP"
             app:layout="@layout/item_preference_tooltip"
             app:persistent="false"
+            app:selectable="false"
             app:singleLineTitle="false"
             app:summary="@string/pref_ui_theme_tooltip" />
 
@@ -109,6 +124,7 @@
             app:key="PREFERENCE_FILTER_TOOLTIP"
             app:layout="@layout/item_preference_tooltip"
             app:persistent="false"
+            app:selectable="false"
             app:singleLineTitle="false"
             app:summary="@string/pref_filter_tooltip" />
 

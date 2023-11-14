@@ -21,9 +21,12 @@
 package com.aurora.store
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.ColorStateList
+import android.content.res.Configuration
+import android.content.res.Resources
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
@@ -45,6 +48,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.preference.PreferenceManager
 import com.aurora.Constants
 import com.aurora.extensions.accentColor
 import com.aurora.extensions.applyThemeAccent
@@ -62,7 +66,7 @@ import com.aurora.store.view.ui.sheets.SelfUpdateSheet
 import com.aurora.store.viewmodel.MainViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.coroutines.launch
-
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
@@ -85,6 +89,7 @@ class MainActivity : AppCompatActivity() {
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        loadLanguage(this)
         applyThemeAccent()
         super.onCreate(savedInstanceState)
 
@@ -208,6 +213,55 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /*
+        This code snippet was originally created in Java by Maximoff and converted by me and Android Studio into Kotlin. Reserved copyright by Maximoff from plagiarism.
+    */
+    //
+    // Start snippet
+    //
+    private fun loadLanguage(context: Context) {
+        val currentValue =
+            PreferenceManager.getDefaultSharedPreferences(context).getInt("PREFERENCE_LANGUAGE", 0)
+        val listNames = arrayOf(
+            "systemValue",
+            "en",
+            "ru",
+            "uk"
+        )
+        val locale = when (val language = listNames[currentValue]) {
+            "systemValue" -> {
+                if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N) {
+                    Resources.getSystem().configuration.locales.get(0)
+                } else {
+                    Resources.getSystem().configuration.locale
+                }
+            }
+
+            "en" -> {
+                Locale.ROOT
+            }
+
+            else -> {
+                Locale(language)
+            }
+        }
+        Locale.setDefault(locale)
+        val configuration: Configuration
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N) {
+            configuration = Configuration(context.resources.configuration)
+            configuration.setLocale(locale)
+            configuration.setLayoutDirection(locale)
+        } else {
+            configuration = context.resources.configuration
+            configuration.locale = locale
+            configuration.setLayoutDirection(locale)
+        }
+        context.resources.updateConfiguration(configuration, context.resources.displayMetrics)
+    }
+    //
+    // End snippet
+    //
+
     private fun hideTopLevelOnlyViews() {
         B.searchFab.visibility = View.GONE
         B.navView.visibility = View.GONE
@@ -261,4 +315,5 @@ class MainActivity : AppCompatActivity() {
     private fun isIntroDone(): Boolean {
         return Preferences.getBoolean(this@MainActivity, Preferences.PREFERENCE_INTRO)
     }
+
 }
