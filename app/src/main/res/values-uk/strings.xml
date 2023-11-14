@@ -209,16 +209,18 @@
     <string name="notification_channel_general">Загальне сповіщення</string>
     <string name="notification_channel_updater_service">Служба фонового завантаження застосунків</string>
     <string name="notification_channel_updates">Сповіщення про оновлення</string>
-    <string name="notification_update_available">Доступне <xliff:g id="apps_count">%1$d</xliff:g> оновлення</string>
-    <string name="notification_updates_available">Доступно <xliff:g id="apps_count">%1$d</xliff:g> оновлень</string>
+    <string name="notification_update_available">Доступне <xliff:g id="apps_count">%1$d</xliff:g>оновлення</string>
+    <string name="notification_updates_available">Доступно <xliff:g id="apps_count">%1$d</xliff:g>оновлень</string>
 
     <string name="onboarding_appsLinks_allEnabled">Усі посилання включені</string>
     <string name="onboarding_appsLinks_amazonAppStore_summary">Amazon AppStore - це магазин додатків для Android-сумісних платформ, керований Amazon.</string>
     <string name="onboarding_appsLinks_androidMarket_summary">Домен минулого Android Market. Потрібно переходити за посиланнями.</string>
     <string name="onboarding_appsLinks_playStore_summary">Відомий Google Play Store. У минулому існував Android Market.</string>
     <string name="onboarding_appsLinks_title">Посилання на програми</string>
-    <string name="onboarding_appsLinks_tooltip">На деяких системах через впровадження «Verify links», посилання на домени Play Store можуть бути примусово закріплені за <b>com.android.vending</b>.\n\nЦе ще не означає, що у списку «Відкрити з…» не буде Аврори.</string>
-    <string name="onboarding_appsLinks_tooltipLink"><u>Офіційна документація</u></string>
+    <string name="onboarding_appsLinks_tooltip">На деяких системах через впровадження «Verify links», посилання на домени Play Store можуть бути примусово закріплені за <b>com.android.vending</b>. Це може перешкоджати додаванню Аврори у діалог «Відкрити з…».</string>
+    <string name="onboarding_appsLinks_tooltipFailures">Якщо у вас це спостерігається, вам потрібно заборонити Play Store відкривати будь-які посилання. Після цього спробуйте ще раз вибрати пункти.</string>
+    <string name="onboarding_appsLinks_tooltipFailures_button">Перейти до налаштувань</string>
+    <string name="onboarding_appsLinks_tooltip_button">Офіційна документація</string>
     <string name="onboarding_permissions_install_summary">Встановлення програм після завантаження</string>
     <string name="onboarding_permissions_install_title">Встановлення</string>
     <string name="onboarding_permissions_notifications_summary">Надсилання повідомлень про різні події</string>
@@ -239,7 +241,7 @@
 
     <string name="pref_abandon_session">Очистити сесії</string>
     <string name="pref_abandon_session_desc">Очистити перервані або очікувані установки сеанси</string>
-    <string name="pref_app_download">Завантаження</string>
+    <string name="pref_app_download">Завантаження, встановлення, оновлення</string>
     <string name="pref_aurora_only">Програми тільки з Аврори</string>
     <string name="pref_aurora_only_desc">Показувати лише встановлені програми з Аврори у розділах «Оновлення» та «Встановлені»</string>
     <string name="pref_category_downloads">Завантаження</string>
@@ -275,13 +277,15 @@
     <string name="pref_install_mode_title">Спосіб встановлення</string>
     <string name="pref_install_profile_summary">Вибір профілю для встановлення застосунків, працює лише з кореневим методом встановлення</string>
     <string name="pref_install_profile_title">Профілі встановлення (Експериментально)</string>
+    <string name="pref_lang_systemValue">@string/sample_systemValue</string>
+    <string name="pref_lang_title">Мова</string>
     <string name="pref_network_proxy_enable_summary">Дозволити всьому трафіку транспортуватися через проксі</string>
     <string name="pref_network_proxy_enable_title">Увімкнути proxy</string>
     <string name="pref_network_proxy_tooltip">Шаблон: protocol://user:password@host:port</string>
     <string name="pref_network_proxy_url">Адреса proxy</string>
-    <string name="pref_network_title">Мережа</string>
-    <string name="pref_self_update_title">Актуальність Crxmson</string>
+    <string name="pref_network_title">Мережа, підміна</string>
     <string name="pref_self_update_summary">Перевіряти наявність оновлень модифікації</string>
+    <string name="pref_self_update_title">Актуальність Crxmson</string>
     <string name="pref_ui_accent_title">Основний колір</string>
     <string name="pref_ui_layout">Макет</string>
     <string name="pref_ui_layout_tab">Виберіть типову вкладку</string>
@@ -293,10 +297,10 @@
     <string name="pref_ui_theme_dark">Темна</string>
     <string name="pref_ui_theme_dark_x">Темна X</string>
     <string name="pref_ui_theme_light">Світла</string>
-    <string name="pref_ui_theme_system">Системне значення</string>
+    <string name="pref_ui_theme_system">@string/sample_systemValue</string>
     <string name="pref_ui_theme_title">Тема</string>
     <string name="pref_ui_theme_tooltip">Після зміни теми вам може знадобитися повторно вибрати акцент.</string>
-    <string name="pref_ui_title">Зовнішній вигляд</string>
+    <string name="pref_ui_title">Інтерфейс, пошук</string>
     <string name="pref_updates_check">Автоматична перевірка оновлень</string>
     <string name="pref_updates_check_desc">Періодична автоматична перевірка та сповіщення про нові оновлення застосунку</string>
     <string name="pref_updates_check_frequency">Частота перевірки</string>
@@ -318,6 +322,8 @@
 
     <string name="requesting_new_session">Запит нового сеансу…</string>
 
+    <string name="sample_systemValue">Системне значення</string>
+
     <string name="search_hint">Пошук застосунків та іграх</string>
 
     <string name="server_maintenance">Сервер вимкнено для технічного обслуговування</string>
@@ -333,7 +339,6 @@
     <string name="session_verifying_google">Перевірка сеансу Google…</string>
 
     <string name="sheet_manual_download_textinputTooltip">Введіть versionCode для завантаження</string>
-
     <string name="sheet_self_update_build_title">Завантажити з…</string>
     <string name="sheet_self_update_cancel">Не оновлювати</string>
 
@@ -399,7 +404,7 @@
     <string name="toast_rated_success">Оцінено</string>
     <string name="toast_spoof_applied">Підміну пристрою застосовано.</string>
 
-    <string name="ui_accent_systemValue">Системне значення</string>
+    <string name="ui_accent_systemValue">@string/sample_systemValue</string>
 
     <string name="unit_byte">Б</string>
     <string name="unit_byte_speed">Б/с</string>

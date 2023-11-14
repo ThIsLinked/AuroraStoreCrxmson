@@ -35,6 +35,7 @@
     <string name="about_gitlab_summary">Get the Aurora Store source code from Aurora OSS on GitLab.</string>
     <string name="about_libera" translatable="false">Liberapay</string>
     <string name="about_libera_summary">Become a patron on Liberapay</string>
+    <string name="about_moddify" translatable="false">Powered moddify 04.11.2023\nby ThIsLinked // dhwh</string>
     <string name="about_paypal" translatable="false">PayPal</string>
     <string name="about_paypal_summary">Donate via PayPal</string>
     <string name="about_telegram" translatable="false">Telegram</string>
@@ -45,7 +46,6 @@
     <string name="about_topic_4pda">Topic on 4PDA</string>
     <string name="about_topic_4pda_summary" translatable="false">@string/about_templateToGoTo</string>
     <string name="about_version" translatable="false">v4.3.5 // Nightly by 04.11.23</string>
-    <string name="about_moddify" translatable="false">Powered moddify 04.11.2023\nby ThIsLinked // dhwh</string>
     <string name="about_xda" translatable="false">XDA</string>
     <string name="about_xda_summary">See the Aurora Store XDA thread for discussions or suggestions.</string>
 
@@ -254,8 +254,8 @@
     <string name="notification_channel_general">General notification</string>
     <string name="notification_channel_updater_service">App background download service</string>
     <string name="notification_channel_updates">Updates notifications</string>
-    <string name="notification_update_available">Available <xliff:g id="apps_count">%1$d</xliff:g> update</string>
-    <string name="notification_updates_available">Available <xliff:g id="apps_count">%1$d</xliff:g> updates</string>
+    <string name="notification_update_available">Available <xliff:g id="apps_count">%1$d</xliff:g>update</string>
+    <string name="notification_updates_available">Available <xliff:g id="apps_count">%1$d</xliff:g>updates</string>
 
     <string name="onboarding_appsLinks_allEnabled">All links enabled</string>
     <string name="onboarding_appsLinks_amazonAppStore_summary">Amazon AppStore is an app store for Android-compatible platforms operated by Amazon.</string>
@@ -265,8 +265,10 @@
     <string name="onboarding_appsLinks_playStore_summary">Google\'s all-famous Play Store. In the past, there was Android Market.</string>
     <string name="onboarding_appsLinks_playStore_title" translatable="false">play.google.com</string>
     <string name="onboarding_appsLinks_title">Apps links</string>
-    <string name="onboarding_appsLinks_tooltip">On some systems, due to the implementation of «Verify links», links to Play Store domains may be forced to be assigned to <b>com.android.vending</b>.\n\nThis don\'t mean yet that Aurora will not be in the «Open with…» list.</string>
-    <string name="onboarding_appsLinks_tooltipLink">Official documentation</string>
+    <string name="onboarding_appsLinks_tooltip">On some systems, due to the implementation of «Verify links», links to Play Store domains may be forced to be assigned to <b>com.android.vending</b>. This may prevent Aurora from being added to the «Open with…» dialog.</string>
+    <string name="onboarding_appsLinks_tooltipFailures">If you experience this, you need to prevent the Play Store from opening any links. After that, try selecting the items again.</string>
+    <string name="onboarding_appsLinks_tooltipFailures_button">Go to settings</string>
+    <string name="onboarding_appsLinks_tooltip_button">Official documentation</string>
     <string name="onboarding_permissions_install_summary">Installing apps after downloading.</string>
     <string name="onboarding_permissions_install_title">Install</string>
     <string name="onboarding_permissions_notifications_summary">Sending notifications about various events</string>
@@ -287,7 +289,7 @@
 
     <string name="pref_abandon_session">Clear sessions</string>
     <string name="pref_abandon_session_desc">Clear abandon or pending installation sessions</string>
-    <string name="pref_app_download">Downloads</string>
+    <string name="pref_app_download">Downloads, installation, updates</string>
     <string name="pref_aurora_only">Apps only from Aurora</string>
     <string name="pref_aurora_only_desc">Show only installed applications from Aurora in the “Updates” and “Installed” sections</string>
     <string name="pref_category_downloads">Downloads</string>
@@ -331,13 +333,15 @@
     <string name="pref_install_mode_title">Installation method</string>
     <string name="pref_install_profile_summary">Select the target profile to install apps to. Only works with the root installation method</string>
     <string name="pref_install_profile_title">Installation profiles (Experimental)</string>
+    <string name="pref_lang_systemValue">@string/sample_systemValue</string>
+    <string name="pref_lang_title">Language</string>
     <string name="pref_network_proxy_enable_summary">Allow all traffic to be transported through a proxy</string>
     <string name="pref_network_proxy_enable_title">Enable proxy</string>
     <string name="pref_network_proxy_tooltip">Sample: protocol://user:password@host:port</string>
     <string name="pref_network_proxy_url">Proxy address</string>
-    <string name="pref_network_title">Network, spoofing</string>
-    <string name="pref_self_update_title">Relevance of the Crxmson</string>
+    <string name="pref_network_title">Network, spoof</string>
     <string name="pref_self_update_summary">Checking for moddification updates</string>
+    <string name="pref_self_update_title">Relevance of the Crxmson</string>
     <string name="pref_ui_accent_title">Accent</string>
     <string name="pref_ui_layout">Layout</string>
     <string name="pref_ui_layout_tab">Select default tab</string>
@@ -350,7 +354,7 @@
     <string name="pref_ui_theme_dark_x">Dark X</string>
     <string name="pref_ui_theme_darkord" translatable="false">Discord</string>
     <string name="pref_ui_theme_light">Light</string>
-    <string name="pref_ui_theme_system">System value</string>
+    <string name="pref_ui_theme_system">@string/sample_systemValue</string>
     <string name="pref_ui_theme_title">Theme</string>
     <string name="pref_ui_theme_tooltip">After changing the theme, you may need to re-select your accent.</string>
     <string name="pref_ui_title">Interface, search</string>
@@ -377,6 +381,8 @@
 
     <string name="requesting_new_session">Requesting new session…</string>
 
+    <string name="sample_systemValue">System value</string>
+
     <string name="search_hint">Search for Apps &amp; Games</string>
 
     <string name="server_maintenance">Server down for maintenance</string>
@@ -392,7 +398,6 @@
     <string name="session_verifying_google">Verifying Google session…</string>
 
     <string name="sheet_manual_download_textinputTooltip">Enter versionCode to download</string>
-
     <string name="sheet_self_update_build4PDA" translatable="false">4PDA</string>
     <string name="sheet_self_update_buildGitHub" translatable="false">GitHub</string>
     <string name="sheet_self_update_build_title">Download with…</string>
@@ -462,16 +467,7 @@
     <string name="toast_rated_success">Rated, it may take a while to show</string>
     <string name="toast_spoof_applied">Device spoof applied.</string>
 
-    <string name="ui_accent_systemValue">System value</string>
     <string name="ui_accent_1" translatable="false">Crimson</string>
-    <string name="ui_accent_2" translatable="false">Royal Blue</string>
-    <string name="ui_accent_3" translatable="false">Red</string>
-    <string name="ui_accent_4" translatable="false">Pink</string>
-    <string name="ui_accent_5" translatable="false">Purple</string>
-    <string name="ui_accent_6" translatable="false">Deep Purple</string>
-    <string name="ui_accent_7" translatable="false">Indigo</string>
-    <string name="ui_accent_8" translatable="false">Blue</string>
-    <string name="ui_accent_9" translatable="false">Light Blue</string>
     <string name="ui_accent_10" translatable="false">Cyan</string>
     <string name="ui_accent_11" translatable="false">Teal</string>
     <string name="ui_accent_12" translatable="false">Green</string>
@@ -482,7 +478,16 @@
     <string name="ui_accent_17" translatable="false">Orange</string>
     <string name="ui_accent_18" translatable="false">Deep Orange</string>
     <string name="ui_accent_19" translatable="false">Brown</string>
+    <string name="ui_accent_2" translatable="false">Royal Blue</string>
     <string name="ui_accent_20" translatable="false">Blue Grey</string>
+    <string name="ui_accent_3" translatable="false">Red</string>
+    <string name="ui_accent_4" translatable="false">Pink</string>
+    <string name="ui_accent_5" translatable="false">Purple</string>
+    <string name="ui_accent_6" translatable="false">Deep Purple</string>
+    <string name="ui_accent_7" translatable="false">Indigo</string>
+    <string name="ui_accent_8" translatable="false">Blue</string>
+    <string name="ui_accent_9" translatable="false">Light Blue</string>
+    <string name="ui_accent_systemValue">@string/sample_systemValue</string>
 
     <string name="unit_byte">B</string>
     <string name="unit_byte_short" translatable="false">@string/unit_byte</string>
