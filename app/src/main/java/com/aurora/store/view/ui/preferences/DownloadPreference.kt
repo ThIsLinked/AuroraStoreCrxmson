@@ -53,7 +53,7 @@ import com.aurora.store.util.Preferences
 import com.aurora.store.util.Preferences.PREFERENCE_UPDATES_CHECK
 import com.aurora.store.util.isExternalStorageAccessible
 import com.aurora.store.util.save
-import com.aurora.store.view.custom.preference.AuroraListPreference
+import com.aurora.store.view.custom.preference.ListPreference
 import com.topjohnwu.superuser.Shell
 import rikka.shizuku.Shizuku
 
@@ -203,7 +203,7 @@ class DownloadPreference : PreferenceFragmentCompat() {
                 }
         }
 
-        val installerPreference: AuroraListPreference? =
+        val installerPreference: ListPreference? =
             findPreference(Preferences.PREFERENCE_INSTALLER_ID)
 
         installerPreference?.let {
