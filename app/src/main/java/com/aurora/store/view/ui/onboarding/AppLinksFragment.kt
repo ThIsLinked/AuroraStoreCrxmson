@@ -70,13 +70,14 @@ class AppLinksFragment : Fragment(R.layout.fragment_app_links) {
         if (!playStoreIsInstalled()) { // Condition: The answer is negative
             onboardingAppsLinksTooltips.visibility = View.GONE // Action: Hide tooltips layout
             onboardingAppsLinksTooltips.isFocusable = false // Action: Hide tooltips layout
+            onboardingAppsLinksTooltips.isClickable = false // Action: Make the element unclickable.
         }
 
         /* Tooltip link to official documentation */
-        val onboardingAppsLinksTooltipButton: MaterialButton =
-            view.findViewById(R.id.onboarding_appsLinks_tooltip_button) // Set ID object
+        val onboardingAppsLinksTooltipButtonDocumentation: MaterialButton =
+            view.findViewById(R.id.onboarding_appsLinks_tooltip_buttonDocumentation) // Set ID object
         // Action
-        onboardingAppsLinksTooltipButton.setOnClickListener {
+        onboardingAppsLinksTooltipButtonDocumentation.setOnClickListener {
             startActivity(
                 Intent(
                     Intent.ACTION_VIEW,
@@ -86,9 +87,9 @@ class AppLinksFragment : Fragment(R.layout.fragment_app_links) {
         }
 
         /* Failures tooltip */
-        val onboardingAppsLinksTooltipFailuresButton: MaterialButton =
-            view.findViewById(R.id.onboarding_appsLinks_tooltipFailures_button) // Set ID object
-        onboardingAppsLinksTooltipFailuresButton.setOnClickListener {
+        val onboardingAppsLinksTooltipButtonSettings: MaterialButton =
+            view.findViewById(R.id.onboarding_appsLinks_tooltip_buttonSettings) // Set ID object
+        onboardingAppsLinksTooltipButtonSettings.setOnClickListener {
             startActivity(Intent(ACTION_APPLICATION_DETAILS_SETTINGS).apply {
                 data = Uri.fromParts("package", playStorePackageName, null)
             })
