@@ -34,7 +34,7 @@
             app:singleLineTitle="false"
             app:title="@string/app_language" />-->
 
-        <com.aurora.store.view.custom.preference.AuroraListPreference
+        <com.aurora.store.view.custom.preference.ListPreference
             app:defaultValue="0"
             app:entries="@array/pref_lang"
             app:entryValues="@array/pref_lang_values"
@@ -57,7 +57,7 @@
             app:singleLineTitle="false"
             app:summary="@string/pref_ui_theme_tooltip" />
 
-        <com.aurora.store.view.custom.preference.AuroraListPreference
+        <com.aurora.store.view.custom.preference.ListPreference
             app:defaultValue="0"
             app:entries="@array/pref_themes"
             app:entryValues="@array/pref_themes_values"
@@ -68,7 +68,7 @@
             app:title="@string/pref_ui_theme_title"
             app:useSimpleSummaryProvider="true" />
 
-        <com.aurora.store.view.custom.preference.AuroraListPreference
+        <com.aurora.store.view.custom.preference.ListPreference
             app:defaultValue="0"
             app:entries="@array/pref_accent"
             app:entryValues="@array/pref_accent_values"
@@ -81,7 +81,7 @@
 
         <androidx.preference.Preference app:layout="@layout/divider" />
 
-        <com.aurora.store.view.custom.preference.AuroraListPreference
+        <com.aurora.store.view.custom.preference.ListPreference
             app:defaultValue="0"
             app:entries="@array/pref_default_tab"
             app:entryValues="@array/pref_default_tab_values"

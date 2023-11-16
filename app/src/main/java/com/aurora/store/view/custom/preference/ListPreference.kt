@@ -23,7 +23,7 @@ import android.content.Context
 import android.util.AttributeSet
 import androidx.preference.ListPreference
 
-class AuroraListPreference : ListPreference {
+class ListPreference : ListPreference {
 
     constructor(context: Context) : super(context)
 
@@ -47,6 +47,10 @@ class AuroraListPreference : ListPreference {
     }
 
     override fun persistString(value: String?): Boolean {
-        return if (value != null) persistInt(Integer.valueOf(value)) else false
+        return if (value != null) {
+            persistInt(Integer.valueOf(value))
+        } else {
+            false
+        }
     }
 }

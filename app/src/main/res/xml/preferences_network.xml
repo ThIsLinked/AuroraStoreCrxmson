@@ -53,7 +53,7 @@
             app:singleLineTitle="false"
             app:summary="@string/pref_vending_version_tooltip" />
 
-        <com.aurora.store.view.custom.preference.AuroraListPreference
+        <com.aurora.store.view.custom.preference.ListPreference
             app:defaultValue="0"
             app:entries="@array/pref_vending_version_name"
             app:entryValues="@array/pref_vending_version_value"
