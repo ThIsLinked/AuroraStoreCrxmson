@@ -265,10 +265,9 @@
     <string name="onboarding_appsLinks_playStore_summary">Google\'s all-famous Play Store. In the past, there was Android Market.</string>
     <string name="onboarding_appsLinks_playStore_title" translatable="false">play.google.com</string>
     <string name="onboarding_appsLinks_title">Apps links</string>
-    <string name="onboarding_appsLinks_tooltip">On some systems, due to the implementation of «Verify links», links to Play Store domains may be forced to be assigned to <b>com.android.vending</b>. This may prevent Aurora from being added to the «Open with…» dialog.</string>
-    <string name="onboarding_appsLinks_tooltipFailures">If you experience this, you need to prevent the Play Store from opening any links. After that, try selecting the items again.</string>
-    <string name="onboarding_appsLinks_tooltipFailures_button">Go to settings</string>
-    <string name="onboarding_appsLinks_tooltip_button">Official documentation</string>
+    <string name="onboarding_appsLinks_tooltip">On some systems, due to the implementation of «Verify links», links to Play Store domains may be forced to be assigned to <b>com.android.vending</b>. This may prevent Aurora from being added to the «Open with…» dialog.\n\nIf you experience this, you need to disable opening any links in the Play Store system settings. After that, try selecting the items again.</string>
+    <string name="onboarding_appsLinks_tooltip_buttonDocumentation">Official documentation</string>
+    <string name="onboarding_appsLinks_tooltip_buttonSettings">Go to settings</string>
     <string name="onboarding_permissions_install_summary">Installing apps after downloading.</string>
     <string name="onboarding_permissions_install_title">Install</string>
     <string name="onboarding_permissions_notifications_summary">Sending notifications about various events</string>

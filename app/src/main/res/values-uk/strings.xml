@@ -217,10 +217,9 @@
     <string name="onboarding_appsLinks_androidMarket_summary">Домен минулого Android Market. Потрібно переходити за посиланнями.</string>
     <string name="onboarding_appsLinks_playStore_summary">Відомий Google Play Store. У минулому існував Android Market.</string>
     <string name="onboarding_appsLinks_title">Посилання на програми</string>
-    <string name="onboarding_appsLinks_tooltip">На деяких системах через впровадження «Verify links», посилання на домени Play Store можуть бути примусово закріплені за <b>com.android.vending</b>. Це може перешкоджати додаванню Аврори у діалог «Відкрити з…».</string>
-    <string name="onboarding_appsLinks_tooltipFailures">Якщо у вас це спостерігається, вам потрібно заборонити Play Store відкривати будь-які посилання. Після цього спробуйте ще раз вибрати пункти.</string>
-    <string name="onboarding_appsLinks_tooltipFailures_button">Перейти до налаштувань</string>
-    <string name="onboarding_appsLinks_tooltip_button">Офіційна документація</string>
+    <string name="onboarding_appsLinks_tooltip">На деяких системах через впровадження «Verify links», посилання на домени Play Store можуть бути примусово закріплені за <b>com.android.vending</b>. Це може перешкоджати додаванню Аврори у діалог «Відкрити з…».\n\nЯкщо у вас це спостерігається, вам потрібно заборонити у системних налаштуваннях Play Store відкривати будь-які посилання. Після цього спробуйте ще раз вибрати пункти.</string>
+    <string name="onboarding_appsLinks_tooltip_buttonDocumentation">Офіційна документація</string>
+    <string name="onboarding_appsLinks_tooltip_buttonSettings">Перейти до налаштувань</string>
     <string name="onboarding_permissions_install_summary">Встановлення програм після завантаження</string>
     <string name="onboarding_permissions_install_title">Встановлення</string>
     <string name="onboarding_permissions_notifications_summary">Надсилання повідомлень про різні події</string>
