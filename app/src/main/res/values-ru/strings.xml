@@ -81,7 +81,7 @@
     <string name="app_updater_service_notif_text">Позволяет загружать приложения в фоновом режиме</string>
     <string name="app_updater_service_notif_title">Фоновая загрузка приложений</string>
 
-    <string name="apps_installed">установлено</string>
+    <string name="apps_installed">%1$d установлено</string>
     <string name="apps_purchased">куплено</string>
 
     <string name="bad_request">Ошибка запроса. Попробуйте ещё раз или через некоторое время.</string>
@@ -120,7 +120,7 @@
     <string name="details_no_updates">Нет доступных обновлений</string>
     <string name="details_paid">Платное</string>
     <string name="details_permission">Разрешение</string>
-    <string name="details_permissions_count">найдено</string>
+    <string name="details_permissions_count">%1$d найдено</string>
     <string name="details_privacy">Конфиденциальность</string>
     <string name="details_ratings">Рейтинг и отзывы</string>
     <string name="details_ratings_title_hint">Заголовок</string>

@@ -125,7 +125,7 @@
     <string name="app_versionName_nightly" translatable="false">04.11.2023</string>
     <string name="app_versionName_stable" translatable="false">4.3.5</string>
 
-    <string name="apps_installed">installed</string>
+    <string name="apps_installed">%1$d installed</string>
     <string name="apps_purchased">purchased</string>
 
     <string name="bad_request">The request failed. Try again or after a while.</string>
@@ -164,7 +164,7 @@
     <string name="details_no_updates">No updates available</string>
     <string name="details_paid">Paid</string>
     <string name="details_permission">Permissions</string>
-    <string name="details_permissions_count">found</string>
+    <string name="details_permissions_count">%1$d found</string>
     <string name="details_privacy">Privacy</string>
     <string name="details_ratings">Rating and reviews</string>
     <string name="details_ratings_title_hint">Title</string>

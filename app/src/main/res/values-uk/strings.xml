@@ -81,7 +81,7 @@
     <string name="app_updater_service_notif_text">Вмикає фонове завантаження застосунків</string>
     <string name="app_updater_service_notif_title">Фонове завантаження застосунку</string>
 
-    <string name="apps_installed">встановлено</string>
+    <string name="apps_installed">%1$d встановлено</string>
     <string name="apps_purchased">придбано</string>
 
     <string name="bad_request">Помилка запиту. Спробуйте ще раз чи за деякий час.</string>
@@ -120,7 +120,7 @@
     <string name="details_no_updates">Немає оновлень</string>
     <string name="details_paid">Платний</string>
     <string name="details_permission">Дозволи</string>
-    <string name="details_permissions_count">знайдено</string>
+    <string name="details_permissions_count">%1$d знайдено</string>
     <string name="details_privacy">Приватність</string>
     <string name="details_ratings">Оцінки та відгуки</string>
     <string name="details_ratings_title_hint">Заголовок</string>
