@@ -1210,7 +1210,7 @@ class AppDetailsFragment : BaseFragment(R.layout.fragment_details) {
                 )
             }
         }
-        B.txtPermissionCount.text = ("${app.permissions.size} permissions")
+        B.txtPermissionCount.text = getString(R.string.details_permissions_count, app.permissions.size)
     }
 
     private fun updateBetaActions(B: LayoutDetailsBetaBinding, isSubscribed: Boolean) {
