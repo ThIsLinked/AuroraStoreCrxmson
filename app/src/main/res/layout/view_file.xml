@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_small"
-        android:maxLines="1"
+        android:maxLines="@integer/maxLines_general"
         android:textAlignment="viewStart"
         android:textAppearance="@style/TextAppearance.Aurora.Line1"
         android:textIsSelectable="@bool/details_textIsSelectable"
@@ -40,7 +40,8 @@
         android:layout_below="@id/line1"
         android:layout_alignStart="@id/line1"
         android:layout_alignEnd="@id/line1"
-        android:maxLines="1"
+        android:layout_marginTop="@dimen/margin_xsmall"
+        android:maxLines="@integer/maxLines_general"
         android:textAlignment="viewStart"
         android:textAppearance="@style/TextAppearance.Aurora.Line2"
         tools:text="File Size" />
