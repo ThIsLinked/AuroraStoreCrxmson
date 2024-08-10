@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Aurora Store
   ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
   ~  Copyright (C) 2022, The Calyx Institute
@@ -20,7 +20,6 @@
   -->
 <resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="blacklist_line3">%1$s (%2$s)</string>
-
     <string name="about_4pda_post_summary">Modification post on 4PDA</string>
     <string name="about_4pda_post_title">Post on 4PDA</string>
     <string name="about_4pda_topic_summary">Discussion of Aurora on 4PDA</string>
@@ -35,8 +34,8 @@
     <string name="about_label_start" translatable="false">@string/app_label_short</string>
     <string name="about_moddify" translatable="false">Powered moddify by ThIsLinked aka Roser // dhwh</string>
     <string name="about_telegram_summary">Join the Aurora Support group for discussions or suggestions.</string>
-    <string name="about_telegram_title" translatable="false">Telegram</string>
-    <string name="about_version" translatable="false">v4.5.1 (60) // Nightly by 10.08.24</string>
+    <string name="about_telegram_title" translatable="false">@string/sample_telegramLabel</string>
+    <string name="about_version" translatable="false">v4.5.1 (60) // Nightly by 11.08.24</string>
     <string name="access_denied_using_vpn">Access denied. Do you use VPN or other spoofing tools?</string>
     <string name="account_anonymous">Anonymous</string>
     <string name="account_anonymous_email" translatable="false">anonymous@gmail.com</string>
@@ -423,7 +422,7 @@
     <string name="tab_top_grossing">Top grossing</string>
     <string name="tab_top_paid">Top paid</string>
     <string name="tab_trending">Trending</string>
-    <string name="telegramCrxmsonDialog_button" translatable="false">Telegram</string>
+    <string name="telegramCrxmsonDialog_button" translatable="false">@string/sample_telegramLabel</string>
     <string name="telegramCrxmsonDialog_summary">Visit the Aurora Crxmson Federation on Telegram for up-to-date updates, help, and to follow other internal projects.\n\n<i>Click the button to make this dialog window no longer appear. A link to this Telegram in case of loss can be found in the «About» window.</i></string>
     <string name="telegramCrxmsonDialog_title" translatable="false">@string/title_telegramCrxmsonDialog</string>
     <string name="terminatedworkingaurora_dialogNegativeButton">No</string>
@@ -516,4 +515,5 @@
     <string name="update_available" tools:ignore="PluralsCandidate">%1$d available</string>
     <string name="verifying_new_session">New session verification…</string>
     <string name="version" translatable="false">v<xliff:g id="version_name">%1$s</xliff:g>(<xliff:g id="version_code">%2$d</xliff:g>)</string>
+    <string name="sample_telegramLabel" translatable="false">Telegram</string>
 </resources>
