@@ -112,11 +112,9 @@ class MoreDialogFragment : DialogFragment() {
                         )
                     ) {
                         AppBar(
-                            backgroundColor = primaryColor,
                             onBackgroundColor = onPrimaryColor
                         )
                         AccountHeader(
-                            backgroundColor = secondaryColor,
                             onBackgroundColor = onSecondaryColor
                         )
                         Column(
@@ -151,7 +149,7 @@ class MoreDialogFragment : DialogFragment() {
     }
 
     @Composable
-    fun AppBar(backgroundColor: Color = Color.Transparent, onBackgroundColor: Color) {
+    fun AppBar(onBackgroundColor: Color) {
         Box(contentAlignment = Alignment.CenterEnd) {
             Text(
                 modifier = Modifier.fillMaxWidth(),
@@ -171,7 +169,7 @@ class MoreDialogFragment : DialogFragment() {
     }
 
     @Composable
-    private fun AccountHeader(backgroundColor: Color, onBackgroundColor: Color = Color.White) {
+    private fun AccountHeader(onBackgroundColor: Color = Color.White) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()

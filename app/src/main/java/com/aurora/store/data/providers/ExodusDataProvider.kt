@@ -20,6 +20,7 @@
 package com.aurora.store.data.providers
 
 import android.content.Context
+import com.aurora.store.R
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -27,10 +28,9 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import org.json.JSONArray
 import org.json.JSONObject
+import java.io.InputStream
 import java.nio.charset.StandardCharsets
 import javax.inject.Singleton
-import com.aurora.store.R
-import java.io.InputStream
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -40,11 +40,11 @@ object ExodusDataProvider {
     @Singleton
     fun providesLocalTrackersInfo(@ApplicationContext context: Context): JSONObject {
         val inputStream: InputStream = context.resources.openRawResource(R.raw.exodus_trackers)
-        val bytes: ByteArray = ByteArray(inputStream.available())
+        val bytes = ByteArray(inputStream.available())
         inputStream.read(bytes)
         inputStream.close()
 
-        val jsonArray: JSONArray = JSONArray(String(bytes, StandardCharsets.UTF_8))
+        val jsonArray = JSONArray(String(bytes, StandardCharsets.UTF_8))
         return jsonArray.getJSONObject(0)
     }
 

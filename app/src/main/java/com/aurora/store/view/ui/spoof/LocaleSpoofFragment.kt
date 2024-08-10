@@ -34,7 +34,7 @@ import java.util.Locale
 @AndroidEntryPoint
 class LocaleSpoofFragment : BaseFragment<FragmentGenericRecyclerBinding>() {
 
-    private val TAG = LocaleSpoofFragment::class.java.simpleName
+    private val tag = LocaleSpoofFragment::class.java.simpleName
     private lateinit var spoofProvider: SpoofProvider
     private lateinit var locale: Locale
 
@@ -60,7 +60,7 @@ class LocaleSpoofFragment : BaseFragment<FragmentGenericRecyclerBinding>() {
         try {
             updateController(fetchAvailableLocales())
         } catch (exception: Exception) {
-            Log.e(TAG, "Could not get available locales", exception)
+            Log.e(tag, "Could not get available locales", exception)
         }
     }
 

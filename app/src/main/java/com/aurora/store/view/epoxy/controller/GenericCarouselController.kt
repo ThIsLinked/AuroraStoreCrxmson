@@ -19,7 +19,6 @@
 
 package com.aurora.store.view.epoxy.controller
 
-import android.content.res.Resources
 import com.airbnb.epoxy.TypedEpoxyController
 import com.aurora.gplayapi.data.models.App
 import com.aurora.gplayapi.data.models.StreamBundle
@@ -39,6 +38,7 @@ open class GenericCarouselController(private val callbacks: Callbacks) :
         fun onHeaderClicked(streamCluster: StreamCluster)
         fun onClusterScrolled(streamCluster: StreamCluster)
         fun onAppClick(app: App)
+        @Suppress("EmptyMethod")
         fun onAppLongClick(app: App)
     }
 

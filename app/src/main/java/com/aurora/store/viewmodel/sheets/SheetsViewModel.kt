@@ -25,7 +25,7 @@ class SheetsViewModel @Inject constructor(
     private val authProvider: AuthProvider
 ) : ViewModel() {
 
-    private val TAG = SheetsViewModel::class.java.simpleName
+    private val tag = SheetsViewModel::class.java.simpleName
 
     private val _purchaseStatus = MutableSharedFlow<Boolean>()
     val purchaseStatus = _purchaseStatus.asSharedFlow()
@@ -43,7 +43,7 @@ class SheetsViewModel @Inject constructor(
                 _purchaseStatus.emit(files.isNotEmpty())
             } catch (exception: Exception) {
                 _purchaseStatus.emit(false)
-                Log.e(TAG, "Failed to find version: $customVersion", exception)
+                Log.e(tag, "Failed to find version: $customVersion", exception)
             }
         }
     }

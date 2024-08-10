@@ -28,13 +28,10 @@ import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import com.aurora.Constants
-import com.aurora.extensions.isIgnoringBatteryOptimizations
 import com.aurora.extensions.isQAndAbove
 import com.aurora.extensions.isSAndAbove
 import com.aurora.store.R
-import com.aurora.store.data.work.UpdateWorker
 import com.aurora.store.databinding.FragmentOnboardingBinding
-import com.aurora.store.util.CertUtil
 import com.aurora.store.util.PackageUtil
 import com.aurora.store.util.PathUtil
 import com.aurora.store.util.Preferences
@@ -50,10 +47,10 @@ import com.aurora.store.util.Preferences.PREFERENCE_FILTER_GOOGLE
 import com.aurora.store.util.Preferences.PREFERENCE_FOR_YOU
 import com.aurora.store.util.Preferences.PREFERENCE_INSTALLER_ID
 import com.aurora.store.util.Preferences.PREFERENCE_INTRO
-import com.aurora.store.util.Preferences.PREFERENCE_SIMILAR
-import com.aurora.store.util.Preferences.PREFERENCE_THEME_ACCENT
 import com.aurora.store.util.Preferences.PREFERENCE_LANGUAGE
 import com.aurora.store.util.Preferences.PREFERENCE_PROXY_ENABLED
+import com.aurora.store.util.Preferences.PREFERENCE_SIMILAR
+import com.aurora.store.util.Preferences.PREFERENCE_THEME_ACCENT
 import com.aurora.store.util.Preferences.PREFERENCE_THEME_TYPE
 import com.aurora.store.util.Preferences.PREFERENCE_UPDATES_AUTO
 import com.aurora.store.util.Preferences.PREFERENCE_UPDATES_CHECK_INTERVAL

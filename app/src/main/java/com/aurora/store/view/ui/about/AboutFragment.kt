@@ -26,10 +26,8 @@ import androidx.appcompat.widget.Toolbar
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
 import com.aurora.extensions.browse
 import com.aurora.extensions.copyToClipBoard
-import com.aurora.store.BuildConfig
 import com.aurora.store.R
 import com.aurora.store.data.model.Link
 import com.aurora.store.databinding.FragmentAboutBinding

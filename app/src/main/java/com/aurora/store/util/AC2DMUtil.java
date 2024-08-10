@@ -29,7 +29,7 @@ public enum AC2DMUtil {
     ;
 
     public static Map<String, String> parseResponse(final String response) {
-        final Map<String, String> keyValueMap = new HashMap<String, String>();
+        final Map<String, String> keyValueMap = new HashMap<>();
         final StringTokenizer st = new StringTokenizer(response, "\n\r");
         while (st.hasMoreTokens()) {
             final String[] keyValue = st.nextToken().split("=", 2);

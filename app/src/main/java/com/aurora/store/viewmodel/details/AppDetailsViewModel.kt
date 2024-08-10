@@ -35,7 +35,7 @@ import com.aurora.gplayapi.data.models.datasafety.Report as DataSafetyReport
 class AppDetailsViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
     private val downloadWorkerUtil: DownloadWorkerUtil,
-    private val authProvider: AuthProvider,
+    authProvider: AuthProvider,
     private val favouriteDao: FavouriteDao
 ) : ViewModel() {
 
@@ -72,7 +72,7 @@ class AppDetailsViewModel @Inject constructor(
     private val _testingProgramStatus = MutableSharedFlow<TestingProgramStatus?>()
     val testingProgramStatus = _testingProgramStatus.asSharedFlow()
 
-    private val _favourite = MutableStateFlow<Boolean>(false)
+    private val _favourite = MutableStateFlow(false)
     val favourite = _favourite.asStateFlow()
 
     val downloadsList get() = downloadWorkerUtil.downloadsList

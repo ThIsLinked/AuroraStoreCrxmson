@@ -212,36 +212,6 @@ class ServiceInstaller @Inject constructor(
         }
     }
 
-    private fun handleCallbackUninstall(packageName: String, returnCode: Int, extra: String?) {
-        Log.i("Services Callback : $packageName $returnCode $extra")
-
-        try {
-            when (returnCode) {
-                PackageInstaller.STATUS_SUCCESS -> {
-                    AuroraApp.events.send(
-                        InstallerEvent.Uninstalled(packageName).apply {
-                            this.extra = context.getString(R.string.action_uninstall_success)
-                        }
-                    )
-                }
-
-                else -> {
-                    val error = AppInstaller.getErrorString(
-                        context,
-                        returnCode
-                    )
-
-                    postError(packageName, error, extra)
-                }
-            }
-            if (::serviceConnection.isInitialized) {
-                context.unbindService(serviceConnection)
-            }
-        } catch (th: Throwable) {
-            th.printStackTrace()
-        }
-    }
-
     internal fun handleCallback(packageName: String, returnCode: Int, extra: String?) {
         Log.i("Services Callback : $packageName $returnCode $extra")
 

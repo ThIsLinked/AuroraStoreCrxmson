@@ -91,6 +91,7 @@ object EglExtensionProvider {
             }
             egl10.eglTerminate(display)
             val sorted: List<String> = ArrayList(glExtensions)
+            @Suppress("JavaCollectionsStaticMethodOnImmutableList")
             Collections.sort(sorted)
             return sorted
         }

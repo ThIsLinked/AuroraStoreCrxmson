@@ -28,12 +28,11 @@ object Constants {
     const val URL_TOS: String = "https://play.google.com/about/play-terms/"
     const val URL_LICENSE: String = "https://gitlab.com/AuroraOSS/AuroraStore/blob/master/LICENSE"
     const val URL_DISCLAIMER: String = "https://gitlab.com/AuroraOSS/AuroraStore/blob/master/DISCLAIMER.md"
-    const val URL_POLICY: String = "https://gitlab.com/AuroraOSS/AuroraStore/-/blob/master/POLICY.md"
 
     const val EXODUS_SUBMIT_PAGE: String = "https://reports.exodus-privacy.eu.org/analysis/submit/#"
     const val EXODUS_REPORT_URL: String = "https://reports.exodus-privacy.eu.org/reports/"
     const val SHARE_URL: String = "https://play.google.com/store/apps/details?id="
-    const val UPDATE_URL: String = "https://gitlab.com/AuroraOSS/AuroraStore/raw/master/updates.json"
+    const val UPDATE_URL = "https://gitlab.com/AuroraOSS/AuroraStore/raw/master/updates.json"
 
     const val NOTIFICATION_CHANNEL_ALERT: String = "NOTIFICATION_CHANNEL_ALERT"
     const val NOTIFICATION_CHANNEL_GENERAL: String = "NOTIFICATION_CHANNEL_GENERAL"
@@ -46,7 +45,6 @@ object Constants {
 
     //ACCOUNTS
     const val ACCOUNT_SIGNED_IN: String = "ACCOUNT_SIGNED_IN"
-    const val ACCOUNT_SIGNED_TIMESTAMP: String = "ACCOUNT_SIGNED_TIMESTAMP"
     const val ACCOUNT_TYPE: String = "ACCOUNT_TYPE"
     const val ACCOUNT_EMAIL_PLAIN: String = "ACCOUNT_EMAIL_PLAIN"
     const val ACCOUNT_AAS_PLAIN: String = "ACCOUNT_AAS_PLAIN"
@@ -55,4 +53,5 @@ object Constants {
     const val TOP_CHART_TYPE: String = "TOP_CHART_TYPE"
     const val TOP_CHART_CATEGORY: String = "TOP_CHART_CATEGORY"
     const val TELEGRAM_CRXMSON_LINK: String = "https://t.me/AuroraCrxmson"
+
 }

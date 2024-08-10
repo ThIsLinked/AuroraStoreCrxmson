@@ -28,7 +28,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.aurora.store.MobileNavigationDirections
 import com.aurora.store.R
-import com.aurora.store.TerminatedWorkingAurora
 import com.aurora.store.data.providers.AuthProvider
 import com.aurora.store.databinding.FragmentAppsGamesBinding
 import com.aurora.store.util.Preferences
@@ -78,7 +77,6 @@ class AppsContainerFragment : BaseFragment<FragmentAppsGamesBinding>() {
         binding.pager.adapter = ViewPagerAdapter(
             childFragmentManager,
             viewLifecycleOwner.lifecycle,
-            !authProvider.isAnonymous,
             isForYouEnabled
         )
 
@@ -115,7 +113,6 @@ class AppsContainerFragment : BaseFragment<FragmentAppsGamesBinding>() {
     internal class ViewPagerAdapter(
         fragment: FragmentManager,
         lifecycle: Lifecycle,
-        private val isGoogleAccount: Boolean,
         private val isForYouEnabled: Boolean
     ) :
         FragmentStateAdapter(fragment, lifecycle) {

@@ -19,10 +19,10 @@ import javax.inject.Inject
 @HiltViewModel
 class DetailsMoreViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
-    private val authProvider: AuthProvider
+    authProvider: AuthProvider
 ) : ViewModel() {
 
-    private val TAG = DetailsMoreViewModel::class.java.simpleName
+    private val tag = DetailsMoreViewModel::class.java.simpleName
 
     private val appDetailsHelper = AppDetailsHelper(authProvider.authData!!)
         .using(HttpClient.getPreferredClient(context))
@@ -40,7 +40,7 @@ class DetailsMoreViewModel @Inject constructor(
 
                 _dependentApps.emit(dependantApps)
             } catch (exception: Exception) {
-                Log.e(TAG, "Failed to fetch dependencies", exception)
+                Log.e(tag, "Failed to fetch dependencies", exception)
                 dependantAppsStash[app.packageName] = emptyList()
                 _dependentApps.emit(emptyList())
             }

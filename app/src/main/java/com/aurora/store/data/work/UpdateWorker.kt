@@ -49,7 +49,7 @@ class UpdateWorker @AssistedInject constructor(
 
     companion object {
         private const val TAG = "UpdateWorker"
-        const val UPDATE_WORKER = "UPDATE_WORKER"
+        private const val UPDATE_WORKER = "UPDATE_WORKER"
 
         /**
          * Cancels the automated updates check
@@ -138,7 +138,7 @@ class UpdateWorker @AssistedInject constructor(
                         Log.i(TAG, "Found updates, notifying!")
                         notifyManager.notify(
                             notificationID,
-                            NotificationUtil.getUpdateNotification(appContext, updatesList)
+                            NotificationUtil.getUpdateNotification(appContext)
                         )
                     } else {
                         if (appContext.isIgnoringBatteryOptimizations()) {
@@ -157,7 +157,7 @@ class UpdateWorker @AssistedInject constructor(
                                 Log.i(TAG, "Found apps that cannot be auto-updated, notifying!")
                                 notifyManager.notify(
                                     notificationID,
-                                    NotificationUtil.getUpdateNotification(appContext, list)
+                                    NotificationUtil.getUpdateNotification(appContext)
                                 )
                             }
                         } else {
@@ -165,7 +165,7 @@ class UpdateWorker @AssistedInject constructor(
                             Log.i(TAG, "Found updates, but battery optimizations are enabled!")
                             notifyManager.notify(
                                 notificationID,
-                                NotificationUtil.getUpdateNotification(appContext, updatesList)
+                                NotificationUtil.getUpdateNotification(appContext)
                             )
                             appContext.save(PREFERENCE_UPDATES_AUTO, 1)
                         }

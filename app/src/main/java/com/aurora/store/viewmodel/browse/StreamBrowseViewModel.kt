@@ -28,7 +28,6 @@ import com.aurora.gplayapi.data.models.StreamCluster
 import com.aurora.gplayapi.helpers.contracts.StreamContract
 import com.aurora.gplayapi.helpers.web.WebStreamHelper
 import com.aurora.store.data.network.HttpClient
-import com.aurora.store.data.providers.AuthProvider
 import com.aurora.store.util.Log
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -40,8 +39,7 @@ import javax.inject.Inject
 @HiltViewModel
 @SuppressLint("StaticFieldLeak") // false positive, see https://github.com/google/dagger/issues/3253
 class StreamBrowseViewModel @Inject constructor(
-    @ApplicationContext private val context: Context,
-    private val authProvider: AuthProvider
+    @ApplicationContext private val context: Context
 ) : ViewModel() {
 
     private val streamHelper: StreamContract = WebStreamHelper()

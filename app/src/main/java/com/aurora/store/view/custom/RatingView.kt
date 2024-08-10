@@ -21,7 +21,6 @@ package com.aurora.store.view.custom
 
 import android.content.Context
 import android.util.AttributeSet
-import android.widget.RelativeLayout
 import androidx.appcompat.widget.LinearLayoutCompat
 import com.aurora.store.R
 import com.aurora.store.databinding.ViewRatingBinding

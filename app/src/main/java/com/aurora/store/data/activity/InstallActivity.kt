@@ -14,7 +14,7 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class InstallActivity : AppCompatActivity() {
 
-    private val TAG = InstallActivity::class.java.simpleName
+    private val tag = InstallActivity::class.java.simpleName
 
     @Inject
     lateinit var sessionInstaller: SessionInstaller
@@ -39,7 +39,7 @@ class InstallActivity : AppCompatActivity() {
 
                 override fun onFinished(sessionId: Int, success: Boolean) {
                     if (sessionInstaller.currentSessionId == sessionId) {
-                        Log.i(TAG, "Install finished with status code: $success")
+                        Log.i(tag, "Install finished with status code: $success")
                         finish()
                     }
                 }
@@ -47,7 +47,7 @@ class InstallActivity : AppCompatActivity() {
             packageManager.packageInstaller.registerSessionCallback(sessionCallback)
             install(download)
         } else {
-            Log.e(TAG, "InstallActivity triggered without a valid download, bailing out!")
+            Log.e(tag, "InstallActivity triggered without a valid download, bailing out!")
             finish()
         }
     }
@@ -61,7 +61,7 @@ class InstallActivity : AppCompatActivity() {
         try {
             sessionInstaller.install(download)
         } catch (exception: Exception) {
-            Log.e(TAG, "Failed to install $packageName")
+            Log.e(tag, "Failed to install $packageName")
             finish()
         }
     }

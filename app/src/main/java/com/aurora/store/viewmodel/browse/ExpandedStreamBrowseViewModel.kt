@@ -40,7 +40,7 @@ import javax.inject.Inject
 @SuppressLint("StaticFieldLeak") // false positive, see https://github.com/google/dagger/issues/3253
 class ExpandedStreamBrowseViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
-    private val authProvider: AuthProvider
+    authProvider: AuthProvider
 ) : ViewModel() {
 
     private val streamHelper: ExpandedBrowseHelper = ExpandedBrowseHelper(authProvider.authData!!)
@@ -58,7 +58,6 @@ class ExpandedStreamBrowseViewModel @Inject constructor(
                         streamCluster =
                             streamHelper.getExpandedBrowseClusters(browseResponse.browseTab.listUrl)
                         liveData.postValue(streamCluster)
-                    } else {
                     }
                 } catch (_: Exception) {
                 }
@@ -85,7 +84,7 @@ class ExpandedStreamBrowseViewModel @Inject constructor(
                     if (!streamCluster.hasNext()) {
                         Log.i("End of Bundle")
                     }
-                } catch (e: Exception) {
+                } catch (_: Exception) {
                 }
             }
         }

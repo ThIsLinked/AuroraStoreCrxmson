@@ -20,7 +20,6 @@
 package com.aurora.store.view.ui.updates
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -46,8 +45,6 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
-import kotlin.system.exitProcess
-import com.aurora.store.util.Log as AuroraLog
 
 @AndroidEntryPoint
 class UpdatesFragment : BaseFragment<FragmentUpdatesBinding>() {

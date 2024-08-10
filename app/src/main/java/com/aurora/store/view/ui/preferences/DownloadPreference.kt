@@ -35,7 +35,6 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.fragment.findNavController
 import androidx.preference.EditTextPreference
-import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SeekBarPreference
@@ -87,6 +86,7 @@ class DownloadPreference : PreferenceFragmentCompat() {
 
         startForPermissions = registerForActivityResult(ActivityResultContracts.RequestPermission()) {
             if (it) {
+                @Suppress("KotlinConstantConditions")
                 notifyPermissionState(it)
             } else {
                 downloadExternalPreference?.isChecked = false

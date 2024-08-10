@@ -33,7 +33,7 @@ import kotlinx.coroutines.flow.launchIn
 
 class NetworkProvider(context: Context) {
 
-    private val TAG = NetworkProvider::class.java.simpleName
+    private val tag = NetworkProvider::class.java.simpleName
 
     private val _networkStatus = MutableStateFlow(NetworkStatus.AVAILABLE)
     val networkStatus = _networkStatus.asStateFlow()
@@ -49,13 +49,13 @@ class NetworkProvider(context: Context) {
             object : ConnectivityManager.NetworkCallback() {
                 override fun onAvailable(network: Network) {
                     super.onAvailable(network)
-                    Log.d(TAG, "Network available!")
+                    Log.d(tag, "Network available!")
                     _networkStatus.value = NetworkStatus.AVAILABLE
                 }
 
                 override fun onLost(network: Network) {
                     super.onLost(network)
-                    Log.d(TAG, "Network unavailable!")
+                    Log.d(tag, "Network unavailable!")
                     _networkStatus.value = NetworkStatus.LOST
                 }
             })

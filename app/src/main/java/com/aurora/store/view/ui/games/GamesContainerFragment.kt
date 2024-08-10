@@ -77,7 +77,6 @@ class GamesContainerFragment : BaseFragment<FragmentAppsGamesBinding>() {
         binding.pager.adapter = ViewPagerAdapter(
             childFragmentManager,
             viewLifecycleOwner.lifecycle,
-            !authProvider.isAnonymous,
             isForYouEnabled
         )
 
@@ -113,7 +112,6 @@ class GamesContainerFragment : BaseFragment<FragmentAppsGamesBinding>() {
     internal class ViewPagerAdapter(
         fragment: FragmentManager,
         lifecycle: Lifecycle,
-        private val isGoogleAccount: Boolean,
         private val isForYouEnabled: Boolean
     ) :
         FragmentStateAdapter(fragment, lifecycle) {

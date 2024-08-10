@@ -100,4 +100,5 @@ class ManualDownloadSheet : BaseDialogSheet<SheetManualDownloadBinding>() {
             dismissAllowingStateLoss()
         }
     }
+
 }

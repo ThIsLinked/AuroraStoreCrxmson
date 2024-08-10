@@ -40,7 +40,7 @@ import javax.inject.Inject
 @SuppressLint("StaticFieldLeak") // false positive, see https://github.com/google/dagger/issues/3253
 class ReviewViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
-    private val authProvider: AuthProvider
+    authProvider: AuthProvider
 ) : ViewModel() {
 
     private var reviewsHelper: ReviewsHelper = ReviewsHelper(authProvider.authData!!).using(HttpClient.getPreferredClient(context))

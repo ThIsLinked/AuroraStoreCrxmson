@@ -40,8 +40,8 @@ import com.aurora.store.databinding.FragmentOnboardingPermissionsBinding
 import com.aurora.store.view.epoxy.views.preference.PermissionViewModel_
 import com.aurora.store.view.ui.commons.BaseFragment
 import com.google.android.material.button.MaterialButton
-import dagger.hilt.android.AndroidEntryPoint
 import com.google.android.material.card.MaterialCardView
+import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class PermissionsFragment : BaseFragment<FragmentOnboardingPermissionsBinding>() {

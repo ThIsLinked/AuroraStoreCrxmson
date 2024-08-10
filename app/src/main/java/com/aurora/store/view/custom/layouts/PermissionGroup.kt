@@ -135,7 +135,7 @@ class PermissionGroup @JvmOverloads constructor(
 
         prefixes
             .map { "$it.permission." }
-            .forEach {
+            .forEach { it ->
                 if (label.startsWith(it)) {
                     return it.replace(it, "")
                         .replace("_", " ")

@@ -4,7 +4,6 @@ import android.content.Context
 import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.aurora.Constants
 import com.aurora.gplayapi.data.models.App
 import com.aurora.gplayapi.data.models.File
 import com.aurora.store.data.room.download.SharedLib
@@ -53,10 +52,6 @@ data class Update(
                 app.dependencies.dependentLibraries.map { SharedLib.fromApp(it) }
             )
         }
-    }
-
-    fun isSelfUpdate(): Boolean {
-        return packageName == Constants.APP_ID
     }
 
     fun isInstalled(context: Context): Boolean {

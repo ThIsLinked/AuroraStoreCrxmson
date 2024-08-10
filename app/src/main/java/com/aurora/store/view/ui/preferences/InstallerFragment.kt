@@ -122,6 +122,7 @@ class InstallerFragment : BaseFragment<FragmentInstallerBinding>() {
                 if (isMIUI() && !isMiuiOptimizationDisabled()) {
                     findNavController().navigate(R.id.deviceMiuiSheet)
                 }
+                @Suppress("KotlinConstantConditions")
                 this.installerId = installerId
                 save(PREFERENCE_INSTALLER_ID, installerId)
             }

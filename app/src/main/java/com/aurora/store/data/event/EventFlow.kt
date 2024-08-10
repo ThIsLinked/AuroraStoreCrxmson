@@ -8,7 +8,7 @@ import javax.inject.Singleton
 @Singleton
 class EventFlow {
 
-    private val TAG = EventFlow::class.java.simpleName
+    private val tag = EventFlow::class.java.simpleName
 
     private val _busEvent = MutableSharedFlow<BusEvent>(extraBufferCapacity = 1)
     val busEvent = _busEvent.asSharedFlow()
@@ -24,7 +24,7 @@ class EventFlow {
             is InstallerEvent -> _installerEvent.tryEmit(event)
             is BusEvent -> _busEvent.tryEmit(event)
             is AuthEvent -> _authEvent.tryEmit(event)
-            else -> Log.e(TAG, "Got an unhandled event")
+            else -> Log.e(tag, "Got an unhandled event")
         }
     }
 }

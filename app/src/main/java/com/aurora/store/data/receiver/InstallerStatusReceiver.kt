@@ -45,7 +45,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class InstallerStatusReceiver : BroadcastReceiver() {
 
-    private val TAG = InstallerStatusReceiver::class.java.simpleName
+    private val tag = InstallerStatusReceiver::class.java.simpleName
 
     override fun onReceive(context: Context?, intent: Intent?) {
         if (context != null && intent?.action == ACTION_INSTALL_STATUS) {
@@ -106,7 +106,7 @@ class InstallerStatusReceiver : BroadcastReceiver() {
             try {
                 runOnUiThread { context.startActivity(it) }
             } catch (exception: Exception) {
-                Log.e(TAG, "Failed to trigger installation!", exception)
+                Log.e(tag, "Failed to trigger installation!", exception)
             }
         }
     }

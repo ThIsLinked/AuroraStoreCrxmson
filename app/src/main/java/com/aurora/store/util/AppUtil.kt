@@ -32,16 +32,23 @@ class AppUtil @Inject constructor(
     private val blacklistProvider: BlacklistProvider,
     @ApplicationContext private val context: Context
 ) {
-
     private val tag : String = AppUtil::class.java.simpleName
-    private val release : String = "release"
-
-    private val isExtendedUpdateEnabled get() = Preferences.getBoolean(
-        context, Preferences.PREFERENCE_UPDATES_EXTENDED
-    )
+    private val isExtendedUpdateEnabled get() = Preferences.getBoolean(context, Preferences.PREFERENCE_UPDATES_EXTENDED)
     val updates = updateDao.updates()
-        .map { list -> list.filter { it.isInstalled(context) } }
-        .map { list -> if (!isExtendedUpdateEnabled) list.filter { it.hasValidCert } else list }
+        .map { list ->
+            list.filter {
+                it.isInstalled(context)
+            }
+        }
+        .map { list ->
+            if (!isExtendedUpdateEnabled) {
+                list.filter {
+                    it.hasValidCert
+                }
+            } else {
+                list
+            }
+        }
         .stateIn(AuroraApp.scope, SharingStarted.WhileSubscribed(), null)
 
     suspend fun checkUpdates(tmpAuthData: AuthData? = null): List<Update> {
@@ -56,12 +63,19 @@ class AppUtil @Inject constructor(
             }
         }.toMutableList()
 
-        getSelfUpdate(context, gson)?.let { appUpdatesList.add(it) }
-
-        return appUpdatesList.map { Update.fromApp(context, it) }.also {
-            // Cache the updates into the database
-            updateDao.insertUpdates(it)
+        if (canSelfUpdate(context)) {
+            getSelfUpdate(context, gson)?.let {
+                appUpdatesList.add(it)
+            }
         }
+
+        return appUpdatesList
+            .map {
+                Update.fromApp(context, it)
+            }.also {
+                // Cache the updates into the database
+                updateDao.insertUpdates(it)
+            }
     }
 
     suspend fun deleteUpdate(packageName: String) {
@@ -77,21 +91,44 @@ class AppUtil @Inject constructor(
                 .using(HttpClient.getPreferredClient(context))
 
             (packageInfoMap ?: PackageUtil.getPackageInfoMap(context)).keys.let { packages ->
-                val filtersPackages = packages.filter { !blacklistProvider.isBlacklisted(it) }
+                val filtersPackages = packages.filter {
+                    !blacklistProvider.isBlacklisted(it)
+                }
 
                 appDetailsHelper.getAppByPackageName(filtersPackages)
-                    .filter { it.displayName.isNotEmpty() }
-                    .map { it.isInstalled = true; it }
+                    .filter {
+                        it.displayName.isNotEmpty()
+                    }
+                    .map {
+                        it.isInstalled = true; it
+                    }
             }
         }
+    }
+
+    private fun canSelfUpdate(context: Context): Boolean {
+        return !CertUtil.isFDroidApp(context, BuildConfig.APPLICATION_ID) && !CertUtil.isAppGalleryApp(context, BuildConfig.APPLICATION_ID)
     }
 
     private suspend fun getSelfUpdate(context: Context, gson: Gson): App? {
         return withContext(Dispatchers.IO) {
             try {
-                val selfUpdate = gson.fromJson(String(HttpClient.getPreferredClient(context).get(Constants.UPDATE_URL, mapOf()).responseBytes), SelfUpdate::class.java)
+                val response =
+                    HttpClient.getPreferredClient(context).get(Constants.UPDATE_URL, mapOf())
+                val selfUpdate =
+                    gson.fromJson(String(response.responseBytes), SelfUpdate::class.java)
+
                 if (selfUpdate.versionCode > BuildConfig.VERSION_CODE) {
-                    return@withContext SelfUpdate.toApp(selfUpdate, context)
+                    if (CertUtil.isFDroidApp(context, BuildConfig.APPLICATION_ID)) {
+                        if (selfUpdate.fdroidBuild.isNotEmpty()) {
+                            return@withContext SelfUpdate.toApp(selfUpdate, context)
+                        }
+                    } else if (selfUpdate.auroraBuild.isNotEmpty()) {
+                        return@withContext SelfUpdate.toApp(selfUpdate, context)
+                    } else {
+                        Log.e(tag, "Update file is missing!")
+                        return@withContext null
+                    }
                 }
             } catch (exception: Exception) {
                 Log.e(tag, "Failed to check self-updates", exception)
@@ -102,4 +139,5 @@ class AppUtil @Inject constructor(
             return@withContext null
         }
     }
+
 }

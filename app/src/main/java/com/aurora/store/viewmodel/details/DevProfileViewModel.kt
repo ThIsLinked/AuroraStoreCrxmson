@@ -45,7 +45,7 @@ import javax.inject.Inject
 @SuppressLint("StaticFieldLeak") // false positive, see https://github.com/google/dagger/issues/3253
 class DevProfileViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
-    private val authProvider: AuthProvider
+    authProvider: AuthProvider
 ) : ViewModel() {
 
     private var appDetailsHelper = AppDetailsHelper(authProvider.authData!!)

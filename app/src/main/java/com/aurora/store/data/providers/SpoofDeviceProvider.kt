@@ -37,7 +37,7 @@ import javax.inject.Singleton
 @Singleton
 class SpoofDeviceProvider @Inject constructor(@ApplicationContext val context: Context) {
 
-    private val SUFFIX = ".properties"
+    private val suffix = ".properties"
 
     val availableDevice: List<Properties>
         get() {
@@ -137,7 +137,7 @@ class SpoofDeviceProvider @Inject constructor(@ApplicationContext val context: C
         }
 
     private fun filenameValid(filename: String): Boolean {
-        return filename.endsWith(SUFFIX)
+        return filename.endsWith(suffix)
     }
 
 }

@@ -22,10 +22,8 @@ package com.aurora.store.view.ui.all
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.findNavController
 import com.aurora.gplayapi.data.models.App
 import com.aurora.store.AuroraApp
 import com.aurora.store.R

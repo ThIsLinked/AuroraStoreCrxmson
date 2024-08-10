@@ -42,9 +42,9 @@ import javax.inject.Inject
 @SuppressLint("StaticFieldLeak") // false positive, see https://github.com/google/dagger/issues/3253
 class CategoryViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
-    private val authProvider: AuthProvider
+    authProvider: AuthProvider
 ) : ViewModel() {
-    private val TAG = CategoryViewModel::class.java.simpleName
+    private val tag = CategoryViewModel::class.java.simpleName
 
     private val categoryHelper: CategoryHelper = CategoryHelper(authProvider.authData!!)
         .using(HttpClient.getPreferredClient(context))
@@ -73,7 +73,7 @@ class CategoryViewModel @Inject constructor(
                 stash[type] = contract().getAllCategories(type)
                 liveData.postValue(ViewState.Success(stash))
             } catch (exception: Exception) {
-                Log.e(TAG, "Failed fetching list of categories", exception)
+                Log.e(tag, "Failed fetching list of categories", exception)
             }
         }
     }

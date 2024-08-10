@@ -63,7 +63,7 @@ class AuthViewModel @Inject constructor(
     private val gson: Gson
 ) : ViewModel() {
 
-    private val TAG = AuthViewModel::class.java.simpleName
+    private val tag = AuthViewModel::class.java.simpleName
 
     val liveData: MutableLiveData<AuthState> = MutableLiveData()
 
@@ -95,7 +95,7 @@ class AuthViewModel @Inject constructor(
                 liveData.postValue(
                     AuthState.Failed(context.getString(R.string.failed_to_generate_session))
                 )
-                Log.e(TAG, "Failed to generate Session", exception)
+                Log.e(tag, "Failed to generate Session", exception)
             }
         }
     }
@@ -128,7 +128,7 @@ class AuthViewModel @Inject constructor(
                 }
             } catch (exception: Exception) {
                 liveData.postValue(AuthState.Failed(exception.message.toString()))
-                Log.e(TAG, "Failed to generate Session", exception)
+                Log.e(tag, "Failed to generate Session", exception)
             }
         }
     }
@@ -152,7 +152,7 @@ class AuthViewModel @Inject constructor(
                     AuroraApp.events.send(AuthEvent.GoogleLogin(false, "", ""))
                 }
             } catch (exception: Exception) {
-                Log.e(TAG, "Failed to build AuthData", exception)
+                Log.e(tag, "Failed to build AuthData", exception)
                 AuroraApp.events.send(AuthEvent.GoogleLogin(false, "", ""))
             }
         }

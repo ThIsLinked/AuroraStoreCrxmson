@@ -36,10 +36,10 @@ class BlacklistProvider @Inject constructor(
     @ApplicationContext val context: Context,
 ) {
 
-    private val PREFERENCE_BLACKLIST = "PREFERENCE_BLACKLIST"
+    private val preferenceBlacklist = "PREFERENCE_BLACKLIST"
 
     var blacklist: MutableSet<String>
-        set(value) = Preferences.putString(context, PREFERENCE_BLACKLIST, gson.toJson(value))
+        set(value) = Preferences.putString(context, preferenceBlacklist, gson.toJson(value))
         get() {
             return try {
                 val refMethod = Context::class.java.getDeclaredMethod(
@@ -54,8 +54,8 @@ class BlacklistProvider @Inject constructor(
                 ) as SharedPreferences
 
                 val rawBlacklist = PreferenceManager.getDefaultSharedPreferences(context).getString(
-                    PREFERENCE_BLACKLIST,
-                    refSharedPreferences.getString(PREFERENCE_BLACKLIST, "")
+                    preferenceBlacklist,
+                    refSharedPreferences.getString(preferenceBlacklist, "")
                 )
 
                 if (rawBlacklist!!.isEmpty())

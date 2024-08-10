@@ -36,7 +36,7 @@ import javax.inject.Inject
 @HiltViewModel
 class InstalledViewModel @Inject constructor(private val appUtil: AppUtil) : ViewModel() {
 
-    private val TAG = InstalledViewModel::class.java.simpleName
+    private val tag = InstalledViewModel::class.java.simpleName
 
     private val _installedApps = MutableStateFlow<List<App>?>(null)
     val installedApps = _installedApps.asStateFlow()
@@ -53,7 +53,7 @@ class InstalledViewModel @Inject constructor(private val appUtil: AppUtil) : Vie
                 val apps = appUtil.getFilteredInstalledApps()
                 _installedApps.emit(apps.sortedBy { it.displayName.lowercase(Locale.getDefault()) })
             } catch (exception: Exception) {
-                Log.e(TAG, "Failed to get installed apps", exception)
+                Log.e(tag, "Failed to get installed apps", exception)
             }
         }
     }

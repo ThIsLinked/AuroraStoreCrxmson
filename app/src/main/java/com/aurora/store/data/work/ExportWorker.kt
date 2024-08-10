@@ -89,7 +89,7 @@ class ExportWorker @AssistedInject constructor(
     }
 
     private lateinit var notificationManager: NotificationManager
-    private val NOTIFICATION_ID = 500
+    private val notificationId = 500
 
     override suspend fun doWork(): Result {
         val isDownload = inputData.getBoolean(IS_DOWNLOAD, false)
@@ -125,7 +125,7 @@ class ExportWorker @AssistedInject constructor(
 
     private fun notifyStatus(packageName: String, uri: Uri, success: Boolean = true) {
         notificationManager.notify(
-            NOTIFICATION_ID,
+            notificationId,
             NotificationUtil.getExportStatusNotification(
                 appContext,
                 packageName,

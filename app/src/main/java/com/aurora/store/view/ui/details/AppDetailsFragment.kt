@@ -20,20 +20,16 @@
 
 package com.aurora.store.view.ui.details
 
-import android.annotation.SuppressLint
 import android.content.ActivityNotFoundException
 import android.content.Intent
-import android.graphics.Paint
 import android.graphics.Typeface
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
 import android.text.SpannableString
 import android.text.style.StyleSpan
-import android.view.MenuItem
 import android.view.View
 import android.widget.LinearLayout
-import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.core.content.ContextCompat
@@ -81,7 +77,6 @@ import com.aurora.store.util.CommonUtil
 import com.aurora.store.util.PackageUtil
 import com.aurora.store.util.PathUtil
 import com.aurora.store.util.Preferences
-import com.aurora.store.util.ShortcutManagerUtil
 import com.aurora.store.view.custom.RatingView
 import com.aurora.store.view.epoxy.controller.DetailsCarouselController
 import com.aurora.store.view.epoxy.controller.GenericCarouselController

@@ -83,20 +83,8 @@ object Preferences {
         getPrefs(context).edit { putInt(key, value) }
     }
 
-    fun putFloat(context: Context, key: String, value: Float) {
-        getPrefs(context).edit { putFloat(key, value) }
-    }
-
-    fun putLong(context: Context, key: String, value: Long) {
-        getPrefs(context).edit { putLong(key, value) }
-    }
-
     fun putBoolean(context: Context, key: String, value: Boolean) {
         getPrefs(context).edit { putBoolean(key, value) }
-    }
-
-    fun putBooleanNow(context: Context, key: String, value: Boolean) {
-        getPrefs(context).edit(true) { putBoolean(key, value) }
     }
 
     fun getString(context: Context, key: String, default: String = ""): String {
@@ -113,14 +101,6 @@ object Preferences {
 
     fun getInteger(context: Context, key: String, default: Int = 0): Int {
         return getPrefs(context).getInt(key, default)
-    }
-
-    fun getFloat(context: Context, key: String): Float {
-        return getPrefs(context).getFloat(key, 0.0f)
-    }
-
-    fun getLong(context: Context, key: String): Long {
-        return getPrefs(context).getLong(key, 0L)
     }
 
     fun getBoolean(context: Context, key: String, default: Boolean = false): Boolean {

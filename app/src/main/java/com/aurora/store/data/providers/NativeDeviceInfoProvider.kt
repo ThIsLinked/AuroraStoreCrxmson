@@ -120,7 +120,7 @@ class NativeDeviceInfoProvider(context: Context) : ContextWrapper(context) {
                     featureStringList.add(feature.name)
                 }
             }
-        } catch (e: Exception) {
+        } catch (_: Exception) {
 
         }
         return featureStringList
@@ -146,7 +146,7 @@ class NativeDeviceInfoProvider(context: Context) : ContextWrapper(context) {
             if (systemSharedLibraryNames != null) {
                 libraries.addAll(listOf(*systemSharedLibraryNames))
             }
-        } catch (e: Exception) {
+        } catch (_: Exception) {
 
         }
         return libraries

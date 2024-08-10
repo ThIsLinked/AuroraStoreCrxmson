@@ -21,8 +21,6 @@ package com.aurora.store.data.installer
 
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
-import android.os.Build
 import com.aurora.extensions.runOnUiThread
 import com.aurora.store.R
 import com.aurora.store.data.model.InstallerInfo

@@ -29,6 +29,5 @@ enum class State {
     QUEUED,
     PROGRESS,
     COMPLETE,
-    CANCELED,
     INSTALLING,
 }

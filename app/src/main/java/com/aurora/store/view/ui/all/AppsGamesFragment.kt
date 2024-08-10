@@ -22,7 +22,6 @@ package com.aurora.store.view.ui.all
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.widget.Toolbar
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
@@ -53,7 +52,7 @@ class AppsGamesFragment : BaseFragment<FragmentGenericWithPagerBinding>() {
         // ViewPager
         binding.pager.apply {
             isUserInputEnabled = false
-            adapter = ViewPagerAdapter(childFragmentManager, lifecycle, authProvider.isAnonymous)
+            adapter = ViewPagerAdapter(childFragmentManager, lifecycle)
         }
 
         TabLayoutMediator(
@@ -70,8 +69,7 @@ class AppsGamesFragment : BaseFragment<FragmentGenericWithPagerBinding>() {
 
     internal class ViewPagerAdapter(
         fragment: FragmentManager,
-        lifecycle: Lifecycle,
-        private val isAnonymous: Boolean
+        lifecycle: Lifecycle
     ) :
         FragmentStateAdapter(fragment, lifecycle) {
         override fun createFragment(position: Int): Fragment {

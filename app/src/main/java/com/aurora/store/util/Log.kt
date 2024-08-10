@@ -19,11 +19,7 @@
 
 package com.aurora.store.util
 
-import android.content.Context
 import android.util.Log
-import java.io.File
-import java.io.FileWriter
-import java.io.IOException
 
 object Log {
 
@@ -65,13 +61,4 @@ object Log {
         Log.i("GeneralStatusTheApp", "Aurora's work was terminated at the user's request!") // Sending notification a terminated to Logcat.
     }
 
-    fun writeToFile(context: Context, obj: Any) {
-        try {
-            val out = FileWriter(File(context.filesDir, "AuroraLogs.txt"))
-            out.write(obj.toString())
-            out.close()
-        } catch (e: IOException) {
-            e(e.message)
-        }
-    }
 }

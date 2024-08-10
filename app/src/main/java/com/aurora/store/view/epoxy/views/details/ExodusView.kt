@@ -24,7 +24,6 @@ import android.util.AttributeSet
 import com.airbnb.epoxy.CallbackProp
 import com.airbnb.epoxy.ModelProp
 import com.airbnb.epoxy.ModelView
-import com.airbnb.epoxy.OnViewRecycled
 import com.aurora.store.data.model.ExodusTracker
 import com.aurora.store.databinding.ViewExodusBinding
 import com.aurora.store.view.epoxy.views.BaseModel
@@ -50,9 +49,5 @@ class ExodusView @JvmOverloads constructor(
     @CallbackProp
     fun click(onClickListener: OnClickListener?) {
         binding.root.setOnClickListener(onClickListener)
-    }
-
-    @OnViewRecycled
-    fun clear() {
     }
 }
