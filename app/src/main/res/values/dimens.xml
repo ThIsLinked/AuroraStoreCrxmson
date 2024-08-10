@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><!--
+  ~ Aurora Store
+  ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
+  ~
+  ~  Aurora Store is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 2 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  Aurora Store is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+<resources>
+    <dimen name="account_avatar">108dp</dimen>
+    <dimen name="account_email">18sp</dimen>
+    <dimen name="account_name">24sp</dimen>
+    <item format="float" name="background_translucent05" type="dimen">0.05</item>
+    <item format="float" name="background_translucent10" type="dimen">0.1</item>
+    <item format="float" name="background_translucent25" type="dimen">0.25</item>
+    <dimen name="cluster_size">128dp</dimen>
+    <item format="float" name="colorScrimAccent_opacity" type="dimen">0.27</item>
+    <dimen name="crimson_marginStart_toEndOf_label">5sp</dimen>
+    <dimen name="edge_infinity">9999dp</dimen>
+    <dimen name="edge_regular">24dp</dimen>
+    <dimen name="edge_small">12dp</dimen>
+    <dimen name="elevation_small">3dp</dimen>
+    <dimen name="height_bottom_adj">100dp</dimen>
+    <dimen name="height_bottomsheet_button">52dp</dimen>
+    <dimen name="height_button">56dp</dimen>
+    <dimen name="height_chip">52dp</dimen>
+    <dimen name="height_header">36dp</dimen>
+    <dimen name="height_nav_header">148dp</dimen>
+    <dimen name="height_peek">64dp</dimen>
+    <dimen name="icon_size">64dp</dimen>
+    <dimen name="icon_size_avatar">108dp</dimen>
+    <dimen name="icon_size_category">32dp</dimen>
+    <dimen name="icon_size_cluster">80dp</dimen>
+    <item name="icon_size_dash" type="dimen">@dimen/icon_size_link</item>
+    <dimen name="icon_size_default">24dp</dimen>
+    <dimen name="icon_size_infoDev">32dp</dimen>
+    <dimen name="icon_size_large">72dp</dimen>
+    <dimen name="icon_size_link">28dp</dimen>
+    <dimen name="icon_size_medium">56dp</dimen>
+    <dimen name="icon_size_moreBadge">32dp</dimen>
+    <dimen name="icon_size_small">48dp</dimen>
+    <dimen name="icon_size_spoof">32dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="margin_medium">10dp</dimen>
+    <dimen name="margin_normal">12dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_xlarge">32dp</dimen>
+    <dimen name="margin_xsmall">4dp</dimen>
+    <dimen name="margin_xxlarge">56dp</dimen>
+    <dimen name="margin_xxsmall">2dp</dimen>
+    <dimen name="onboarding_permission_appslinks_tip_button">8sp</dimen>
+    <dimen name="onboarding_permission_appslinks_tip_buttonIcon">16dp</dimen>
+    <dimen name="onboarding_title">30sp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_medium">10dp</dimen>
+    <dimen name="padding_normal">12dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_xlarge">32dp</dimen>
+    <dimen name="padding_xsmall">4dp</dimen>
+    <dimen name="padding_xxlarge">56dp</dimen>
+    <dimen name="padding_xxsmall">2dp</dimen>
+    <dimen name="padding_xxxlarge">72dp</dimen>
+    <dimen name="preferences_seekbar_paddingVertical">15dp</dimen>
+    <dimen name="preferences_seekbar_value_minWidth">36dp</dimen>
+    <dimen name="radius_large">16dp</dimen>
+    <dimen name="radius_medium">10dp</dimen>
+    <dimen name="radius_normal">12dp</dimen>
+    <dimen name="radius_small">8dp</dimen>
+    <dimen name="screenshot_height">192dp</dimen>
+    <dimen name="screenshot_height_mini">120dp</dimen>
+    <dimen name="screenshot_width">108dp</dimen>
+    <dimen name="screenshot_width_mini">68dp</dimen>
+    <item format="float" name="sheet_divider" type="dimen">0.5</item>
+    <dimen name="width_button">200dp</dimen>
+</resources>

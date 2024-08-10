@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="?android:listPreferredItemPaddingStart"
+    android:orientation="vertical">
+
+    <com.aurora.store.view.custom.layouts.ActionHeaderLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerSubtitle="@string/details_data_safety_subtitle"
+        app:headerTitle="@string/details_data_safety_title" />
+
+    <com.aurora.store.view.custom.layouts.DevInfoLayout
+        android:id="@+id/data_collect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="?android:listPreferredItemPaddingStart"
+        android:layout_marginStart="@dimen/margin_small"
+        tools:txtSubtitle="Personal info, Financial info and 3 others"
+        tools:txtTitle="This app may collect these data types" />
+
+    <com.aurora.store.view.custom.layouts.DevInfoLayout
+        android:id="@+id/data_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        app:imgIcon="@drawable/ic_share"
+        tools:txtSubtitle="Learn more about how developers declare sharing"
+        tools:txtTitle="No data shared with third parties" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

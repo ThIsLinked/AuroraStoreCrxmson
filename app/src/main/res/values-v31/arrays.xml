@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Aurora Store
+  ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
+  ~  Copyright (C) 2023, grrfe <grrfe@420blaze.it>
+  ~
+  ~  Aurora Store is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 2 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  Aurora Store is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string-array name="pref_accent" tools:ignore="InconsistentArrays">
+        <item>@string/ui_accent_0</item>
+        <item>@string/ui_accent_1</item>
+        <item>@string/ui_accent_2</item>
+        <item>@string/ui_accent_3</item>
+        <item>@string/ui_accent_4</item>
+        <item>@string/ui_accent_5</item>
+        <item>@string/ui_accent_6</item>
+        <item>@string/ui_accent_7</item>
+        <item>@string/ui_accent_8</item>
+        <item>@string/ui_accent_9</item>
+        <item>@string/ui_accent_10</item>
+        <item>@string/ui_accent_11</item>
+        <item>@string/ui_accent_12</item>
+        <item>@string/ui_accent_13</item>
+        <item>@string/ui_accent_14</item>
+        <item>@string/ui_accent_15</item>
+        <item>@string/ui_accent_16</item>
+        <item>@string/ui_accent_17</item>
+        <item>@string/ui_accent_18</item>
+        <item>@string/ui_accent_19</item>
+        <item>@string/ui_accent_20</item>
+    </string-array>
+    <string-array name="pref_accent_values" tools:ignore="InconsistentArrays">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+</resources>

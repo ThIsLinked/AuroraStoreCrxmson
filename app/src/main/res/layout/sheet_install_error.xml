@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Aurora Store
+  ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
+  ~
+  ~  Aurora Store is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 2 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  Aurora Store is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="?android:listPreferredItemPaddingStart">
+
+    <include layout="@layout/sheet_divider" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_icon"
+            android:layout_width="@dimen/icon_size_category"
+            android:layout_height="@dimen/icon_size_category"
+            tools:src="@drawable/ic_logo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:ellipsize="end"
+            android:maxLines="@integer/maxLines_general"
+            android:text="@string/title_installer"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.Aurora.SubTitle" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?android:listPreferredItemPaddingStart"
+        android:ellipsize="end"
+        android:maxLines="@integer/maxLines_general"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.Aurora.Line1"
+        tools:text="Title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_line2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_xsmall"
+        android:ellipsize="end"
+        android:maxLines="@integer/maxLines_general"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.Aurora.Line2"
+        android:textColor="@color/colorAccent03"
+        tools:text="Error" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_line3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="@integer/maxLines_general"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.Aurora.Line2"
+        tools:text="Extra" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?android:listPreferredItemPaddingStart"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_secondary"
+            style="@style/Widget.Material3.Button.TextButton.Dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_button"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_weight="50"
+            android:text="@string/action_copy" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_primary"
+            style="@style/Widget.Material3.Button.TextButton.Dialog.Flush"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_button"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_weight="50"
+            android:text="@string/action_ok" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

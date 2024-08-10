@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    The content has been edited by the author ThIsLinked / dhwh, inherits licenced GPLv3.0, but prohibits the use of this material for plagiarism purposes.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0">
+    <path
+        android:fillColor="@android:color/black"
+        android:pathData="M12 3C8.6849995 3 6 5.6849999 6 9h3c0 -1.6500006 1.3499994 -3 3 -3s3 1.3499994 3 3c0 3 -4.5 2.625 -4.5 7.5h3c0 -3.375 4.5 -3.75 4.5 -7.5C18 5.6849999 15.3150005 3 12 3z M10.5 18H13.5V21H10.5V18Z" />
+</vector>

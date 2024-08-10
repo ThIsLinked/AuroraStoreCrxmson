@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    The content has been edited by the author ThIsLinked / dhwh, inherits licenced GPLv3.0, but prohibits the use of this material for plagiarism purposes.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108.0"
+    android:viewportHeight="108.0">
+    <path
+        android:fillColor="@color/ic_logo_foreground"
+        android:pathData="M54.33,19.12c-0,0 -0,0 -0,0c-1.67,0 -3.24,0.82 -4.2,2.18L43.05,31.41c-1.2,-0.22 -2.4,-0.34 -3.56,-0.34c-8.09,0 -15.33,4.93 -18.35,12.37h-2.64c-1.57,0 -3.02,0.72 -3.97,1.96c-0.95,1.25 -1.26,2.83 -0.84,4.35l9.01,32.85c1.01,3.7 4.4,6.28 8.23,6.28h46.16c3.83,0 7.22,-2.58 8.23,-6.28l9.01,-32.85c0.42,-1.51 0.11,-3.1 -0.84,-4.35c-0.95,-1.25 -2.4,-1.96 -3.97,-1.96h-5.53c-0.33,-3.68 -3.44,-6.58 -7.2,-6.58h-7.35L58.53,21.3C57.57,19.94 56,19.12 54.33,19.12L54.33,19.12zM52.42,35.9l1.9,-2.72l2.57,3.68h-3.45C53.12,36.53 52.78,36.21 52.42,35.9L52.42,35.9z" />
+    <path
+        android:fillColor="@color/ic_logo_foreground_2"
+        android:pathData="M74.07,46.02L57.34,22.13c-1.17,-1.67 -3.46,-2.07 -5.13,-0.9c-1.67,1.17 -2.07,3.46 -0.9,5.13L65.08,46.02H74.07z" />
+    <path
+        android:fillColor="@color/ic_logo_foreground_3"
+        android:fillType="evenOdd"
+        android:pathData="M51.11,48.19v-9.89h25.67c3.2,0 5.79,2.59 5.79,5.79v4.1H51.11z" />
+    <path
+        android:fillColor="@color/ic_logo_foreground_4"
+        android:pathData="M49.06,40.56l2.96,-2.98l8.49,8.49l-2.96,2.96L49.06,40.56z" />
+    <path
+        android:fillColor="@color/ic_logo_foreground_5"
+        android:pathData="M39.49,32.52c-10.15,0 -18.37,8.22 -18.37,18.37h36.74C57.86,40.74 49.63,32.52 39.49,32.52z" />
+    <path
+        android:fillColor="@color/ic_logo_foreground_6"
+        android:pathData="M56.44,21.23c-1.67,-1.17 -3.96,-0.76 -5.13,0.9L34.58,46.02h8.99l13.77,-19.67C58.51,24.69 58.1,22.39 56.44,21.23z" />
+    <path
+        android:fillColor="@color/ic_logo_foreground_7"
+        android:pathData="M43.57,46.02l1.07,-1.52l-8.99,0l-1.07,1.52z" />
+    <path
+        android:fillColor="@color/ic_logo_foreground_8"
+        android:pathData="M89.51,44.89H18.49c-2.34,0 -4.04,2.23 -3.42,4.48c0,0 6.82,24.88 9.01,32.85c0.84,3.08 3.64,5.21 6.84,5.21h46.16c3.19,0 5.99,-2.13 6.84,-5.21c2.19,-7.97 9.01,-32.85 9.01,-32.85C93.54,47.11 91.85,44.89 89.51,44.89z" />
+    <path
+        android:fillColor="@color/ic_logo_foreground_9"
+        android:pathData="M43.15,78.96c-0.58,0 -1.16,-0.15 -1.7,-0.46c-1.63,-0.94 -2.18,-3.02 -1.24,-4.64l10.85,-18.79c0.94,-1.63 3.02,-2.18 4.64,-1.24c1.63,0.94 2.18,3.02 1.24,4.64L46.09,77.26C45.46,78.35 44.32,78.96 43.15,78.96z" />
+    <path
+        android:fillColor="@color/ic_logo_foreground_10"
+        android:pathData="M64.85,78.96H43.15c-1.88,0 -3.4,-1.52 -3.4,-3.4s1.52,-3.4 3.4,-3.4h21.7c1.88,0 3.4,1.52 3.4,3.4S66.73,78.96 64.85,78.96z" />
+    <path
+        android:fillColor="@color/ic_logo_foreground_11"
+        android:pathData="M64.85,78.96c-1.17,0 -2.32,-0.61 -2.95,-1.7L51.06,58.46c-0.94,-1.63 -0.38,-3.7 1.24,-4.64c1.63,-0.94 3.7,-0.38 4.64,1.24l10.85,18.79c0.94,1.63 0.38,3.7 -1.24,4.64C66.01,78.81 65.43,78.96 64.85,78.96z" />
+</vector>

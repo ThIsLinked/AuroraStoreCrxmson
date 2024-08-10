@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.divider.MaterialDivider xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/margin_xxsmall"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/margin_normal"
+    app:dividerColor="?colorAccent" />

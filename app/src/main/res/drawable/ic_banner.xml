@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    The content has been edited by the author ThIsLinked / dhwh, inherits licenced GPLv3.0, but prohibits the use of this material for plagiarism purposes.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320.0dip"
+    android:height="180.0dip"
+    android:viewportWidth="320.0"
+    android:viewportHeight="180.0">
+    <path
+        android:name="Background"
+        android:fillColor="@color/ic_banner_background"
+        android:pathData="M0,0h320v180h-320z" />
+    <group android:name="Foreground">
+        <path
+            android:fillColor="@color/ic_banner_foreground_2"
+            android:pathData="M183.12,80.83l-19.28,-27.53c-1.35,-1.92 -3.98,-2.38 -5.9,-1.05c-1.92,1.35 -2.38,3.98 -1.05,5.92l15.86,22.66C172.76,80.83 183.12,80.83 183.12,80.83z" />
+        <path
+            android:fillColor="@color/ic_banner_foreground_3"
+            android:fillType="evenOdd"
+            android:pathData="M156.66,83.33V71.93h29.58c3.68,0 6.67,2.98 6.67,6.67v4.72H156.66V83.33z" />
+        <path
+            android:fillColor="@color/ic_banner_foreground_4"
+            android:pathData="M154.29,74.53l3.42,-3.43l9.78,9.78l-3.42,3.4l-9.78,-9.77V74.53z" />
+        <path
+            android:fillColor="@color/ic_banner_foreground_5"
+            android:pathData="M143.28,65.26c-11.68,0 -21.16,9.48 -21.16,21.16h42.33C164.44,74.75 154.96,65.26 143.28,65.26z" />
+        <path
+            android:fillColor="@color/ic_banner_foreground_6"
+            android:pathData="M162.81,52.25c-1.92,-1.35 -4.57,-0.88 -5.9,1.05l-19.28,27.53h10.36l15.86,-22.66C165.21,56.25 164.74,53.6 162.81,52.25z" />
+        <path
+            android:fillColor="@color/ic_banner_foreground_7"
+            android:pathData="M147.98,80.83l1.23,-1.77l-10.36,0l-1.23,1.77z" />
+        <path
+            android:fillColor="@color/ic_banner_foreground_8"
+            android:pathData="M200.9,79.51h-81.82c-2.7,0 -4.65,2.57 -3.93,5.17c0,0 7.87,28.66 10.38,37.84c0.97,3.55 4.2,6 7.88,6h53.17c3.68,0 6.9,-2.47 7.88,-6c2.52,-9.18 10.38,-37.84 10.38,-37.84c0.72,-2.6 -1.25,-5.17 -3.93,-5.17H200.9z" />
+        <path
+            android:fillColor="@color/ic_banner_foreground_9"
+            android:pathData="M147.49,118.77c-0.67,0 -1.33,-0.17 -1.95,-0.53c-1.87,-1.08 -2.52,-3.48 -1.43,-5.35l12.5,-21.65c1.08,-1.88 3.48,-2.52 5.35,-1.43c1.87,1.08 2.52,3.48 1.43,5.35l-12.5,21.65C150.16,118.06 148.84,118.77 147.49,118.77z" />
+        <path
+            android:fillColor="@color/ic_banner_foreground_10"
+            android:pathData="M172.49,118.76h-25c-2.17,0 -3.92,-1.75 -3.92,-3.92c0,-2.17 1.75,-3.92 3.92,-3.92h25c2.17,0 3.92,1.75 3.92,3.92C176.41,117.01 174.66,118.76 172.49,118.76z" />
+        <path
+            android:fillColor="@color/ic_banner_foreground_11"
+            android:pathData="M172.49,118.77c-1.35,0 -2.67,-0.7 -3.4,-1.97l-12.5,-21.65c-1.08,-1.87 -0.43,-4.27 1.43,-5.35c1.88,-1.08 4.27,-0.43 5.35,1.43l12.5,21.65c1.08,1.87 0.43,4.27 -1.43,5.35C173.82,118.59 173.16,118.77 172.49,118.77z" />
+    </group>
+</vector>

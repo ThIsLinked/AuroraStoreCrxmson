@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><!--
+  ~ Aurora Store
+  ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
+  ~  Copyright (C) 2023, grrfe <grrfe@420blaze.it>
+  ~
+  ~  Aurora Store is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 2 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  Aurora Store is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <array name="auto_size_text_sizes">
+        <item>12sp</item>
+        <item>13sp</item>
+        <item>14sp</item>
+        <item>15sp</item>
+        <item>16sp</item>
+        <item>17sp</item>
+        <item>18sp</item>
+        <item>19sp</item>
+        <item>20sp</item>
+    </array>
+    <array name="auto_size_text_sizes_large">
+        <item>24sp</item>
+        <item>25sp</item>
+        <item>26sp</item>
+        <item>27sp</item>
+        <item>28sp</item>
+        <item>29sp</item>
+        <item>30sp</item>
+        <item>31sp</item>
+        <item>32sp</item>
+        <item>33sp</item>
+        <item>34sp</item>
+        <item>35sp</item>
+        <item>36sp</item>
+        <item>37sp</item>
+        <item>38sp</item>
+        <item>39sp</item>
+        <item>40sp</item>
+        <item>41sp</item>
+        <item>42sp</item>
+        <item>43sp</item>
+        <item>44sp</item>
+        <item>45sp</item>
+        <item>46sp</item>
+        <item>47sp</item>
+        <item>48sp</item>
+    </array>
+    <array name="com_google_android_gms_fonts_certs">
+        <item>@array/com_google_android_gms_fonts_certs_dev</item>
+        <item>@array/com_google_android_gms_fonts_certs_prod</item>
+    </array>
+    <string-array name="com_google_android_gms_fonts_certs_dev" tools:ignore="Typos">
+        <item>
+            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPWW+wPPKQmsHxajtWjmQwWfna8mZuSeJS48LIgAZlKkpFeVyxW0qMBujb8X8ETrWy550NaFtI6t9+u7hZeTfHwqNvacKhp1RbE6dBRGWynwMVX8XW8N1+UjFaq6GCJukT4qmpN2afb8sCjUigq0GuMwYXrFVee74bQgLHWGJwPmvmLHC69EH6kWr22ijx4OKXlSIx2xT1AsSHee70w5iDBiK4aph27yH3TxkXy9V89TDdexAcKk/cVHYNnDBapcavl7y0RiQ4biu8ymM8Ga/nmzhRKya6G0cGw8CAQOjgfwwgfkwHQYDVR0OBBYEFI0cxb6VTEM8YYY6FbBMvAPyT+CyMIHJBgNVHSMEgcEwgb6AFI0cxb6VTEM8YYY6FbBMvAPyT+CyoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JMrSu1xuTKEBahWRbqHsXclaXjoBADb0kkjVEJu/Lh5hgYZnOjvlba8Ld7HCKePCVePoTJBdI4fvugnL8TsgK05aIskyY0hKI9L8KfqfGTl1lzOv2KoWD0KWwtAWPoGChZxmQ+nBli+gwYMzM1vAkP+aayLe0a1EQimlOalO762r0GXO0ks+UeXde2Z4e+8S/pf7pITEI/tP+MxJTALw9QUWEv9lKTk+jkbqxbsh8nfBUapfKqYn0eidpwq2AzVp3juYl7//fKnaPhJD9gs=
+        </item>
+    </string-array>
+    <string-array name="com_google_android_gms_fonts_certs_prod" tools:ignore="Typos">
+        <item>
+            MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCNMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0I9Y4sypEwPpt1TTcvZApxsdyxMJZ2JORland2qSGT2y5b+3JKkedxiLDmpHpDsz2WCbdxgxRczfey5YZnTJ4VZbH0xqWVW/8lGmPav5xVwnIiJS6HXk+BVKZF+JcWjAsb/GEuq/eFdpuzSqeYTcfi6idkyugwfYwXFU1+5fZKUaRKYCwkkFQVfcAs1fXA5V+++FGfvjJ/CxURaSxaBvGdGDhfXE28LWuT9ozCl5xw4Yq5OGazvV24mZVSoOO0yZ31j7kYvtwYK6NeADwbSxDdJEqO4k//0zOHKrUiGYXtqw/A0LFFtqoZKFjnkCAQOjgdkwgdYwHQYDVR0OBBYEFMd9jMIhF1Ylmn/Tgt9r45jk14alMIGmBgNVHSMEgZ4wgZuAFMd9jMIhF1Ylmn/Tgt9r45jk14aloXikdjB0MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLR29vZ2xlIEluYy4xEDAOBgNVBAsTB0FuZHJvaWQxEDAOBgNVBAMTB0FuZHJvaWSCCQDC4IdGZEowjTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBAUAA4IBAQBt0lLO74UwLDYKqs6Tm8/yzKkEu116FmH4rkaymUIE0P9KaMftGlMexFlaYjzmB2OxZyl6euNXEsQH8gjwyxCUKRJNexBiGcCEyj6z+a1fuHHvkiaai+KL8W1EyNmgjmyy8AW7P+LLlkR+ho5zEHatRbM/YAnqGcFh5iZBqpknHf1SKMXFh4dd239FJ1jWYfbMDMy3NS5CTMQ2XFI1MvcyUTdZPErjQfTbQe3aDQsQcafEQPD+nqActifKZ0Np0IS9L9kR/wbNvyz6ENwPiTrjV2KRkEjH78ZMcUQXg0L3BYHJ3lc69Vs5Ddf9uUGGMYldX3WfMBEmh/9iFBDAaTCK
+        </item>
+    </string-array>
+    <string-array name="filterDownloadsLabels" translatable="false">
+        <item>@string/action_filter_all</item>
+        <item> 100 + </item>
+        <item> 1K + </item>
+        <item> 10K + </item>
+        <item> 50K + </item>
+        <item> 100K + </item>
+        <item> 1M + </item>
+        <item> 10M + </item>
+        <item> 50M + </item>
+        <item> 100M + </item>
+    </string-array>
+    <string-array name="filterDownloadsValues" translatable="false">
+        <item>0</item>
+        <item>100</item>
+        <item>1000</item>
+        <item>10000</item>
+        <item>50000</item>
+        <item>100000</item>
+        <item>1000000</item>
+        <item>10000000</item>
+        <item>50000000</item>
+        <item>100000000</item>
+    </string-array>
+    <string-array name="filterRatingLabels" translatable="false">
+        <item>@string/action_filter_all</item>
+        <item> 1★ + </item>
+        <item> 2★ + </item>
+        <item> 3★ + </item>
+        <item> 4★ + </item>
+        <item> 4.5★ + </item>
+        <item> 4.7★ + </item>
+    </string-array>
+    <string-array name="filterRatingValues" translatable="false">
+        <item>0</item>
+        <item>1.0</item>
+        <item>2.0</item>
+        <item>3.0</item>
+        <item>4.0</item>
+        <item>4.5</item>
+        <item>4.7</item>
+    </string-array>
+    <string-array name="link_icons">
+        <item>@drawable/ic_telegram</item>
+        <item>@drawable/ic_github</item>
+        <item>@drawable/ic_build</item>
+        <item>@drawable/ic_4pda</item>
+    </string-array>
+    <string-array name="link_subtitle">
+        <item>@string/about_telegram_summary</item>
+        <item>@string/about_github_summary</item>
+        <item>@string/about_4pda_post_summary</item>
+        <item>@string/about_4pda_topic_summary</item>
+    </string-array>
+    <string-array name="link_titles">
+        <item>@string/about_telegram_title</item>
+        <item>@string/about_github_title</item>
+        <item>@string/about_4pda_post_title</item>
+        <item>@string/about_4pda_topic_title</item>
+    </string-array>
+    <string-array name="link_urls">
+        <item>https://t.me/AuroraCrxmson</item>
+        <item>https://github.com/ThIsLinked/AuroraStoreCrxmson</item>
+        <item>https://4pda.to/forum/index.php?showtopic=887569&amp;view=findpost&amp;p=116441910</item>
+        <item>https://4pda.to/forum/index.php?showtopic=887569</item>
+    </string-array>
+    <string-array name="pref_accent" tools:ignore="InconsistentArrays">
+        <item>@string/ui_accent_1</item>
+        <item>@string/ui_accent_2</item>
+        <item>@string/ui_accent_3</item>
+        <item>@string/ui_accent_4</item>
+        <item>@string/ui_accent_5</item>
+        <item>@string/ui_accent_6</item>
+        <item>@string/ui_accent_7</item>
+        <item>@string/ui_accent_8</item>
+        <item>@string/ui_accent_9</item>
+        <item>@string/ui_accent_10</item>
+        <item>@string/ui_accent_11</item>
+        <item>@string/ui_accent_12</item>
+        <item>@string/ui_accent_13</item>
+        <item>@string/ui_accent_14</item>
+        <item>@string/ui_accent_15</item>
+        <item>@string/ui_accent_16</item>
+        <item>@string/ui_accent_17</item>
+        <item>@string/ui_accent_18</item>
+        <item>@string/ui_accent_19</item>
+        <item>@string/ui_accent_20</item>
+    </string-array>
+    <string-array name="pref_accent_values" tools:ignore="InconsistentArrays">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="pref_default_tab">
+        <item>@string/title_apps</item>
+        <item>@string/title_games</item>
+        <item>@string/title_updates</item>
+    </string-array>
+    <string-array name="pref_default_tab_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="pref_lang" translatable="false">
+        <item>@string/pref_ui_lang_systemValue</item>
+        <item>English</item>
+        <item>Русский</item>
+        <item>Український</item>
+    </string-array>
+    <string-array name="pref_lang_names" translatable="false">
+        <item>systemValue</item>
+        <item>en</item>
+        <item>ru</item>
+        <item>uk</item>
+    </string-array>
+    <string-array name="pref_lang_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pref_themes">
+        <item>@string/pref_ui_theme_system</item>
+        <item>@string/pref_ui_theme_light</item>
+        <item>@string/pref_ui_theme_dark</item>
+        <item>@string/pref_ui_theme_black</item>
+        <item>@string/pref_ui_theme_dark_x</item>
+        <item>@string/pref_ui_theme_darkord</item>
+    </string-array>
+    <string-array name="pref_themes_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="pref_updates_auto">
+        <item>@string/pref_updates_auto_off</item>
+        <item>@string/pref_updates_auto_notify</item>
+        <item>@string/pref_updates_auto_install</item>
+    </string-array>
+    <string-array name="pref_updates_auto_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="pref_vending_version" translatable="false">
+        <item>@string/pref_vending_version_device</item>
+        <item>7.9.80.Q-all [0] [PR] 159305549</item>
+        <item>22.0.17-21 [0] [PR] 332555730</item>
+    </string-array>
+    <string-array name="pref_vending_version_codes" translatable="false">
+        <item>-1</item>
+        <item>80798000</item>
+        <item>82201710</item>
+    </string-array>
+    <string-array name="pref_vending_version_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

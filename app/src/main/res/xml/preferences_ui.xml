@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Aurora Store
+  ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
+  ~
+  ~  Aurora Store is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 2 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  Aurora Store is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.preference.PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:layout="@layout/item_preference_category"
+        app:singleLineTitle="false"
+        app:title="@string/pref_category_interface">
+
+        <com.aurora.store.view.custom.preference.AuroraListPreference
+            app:defaultValue="0"
+            app:entries="@array/pref_lang"
+            app:entryValues="@array/pref_lang_values"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_LANGUAGE"
+            app:layout="@layout/item_preference"
+            app:singleLineTitle="false"
+            app:title="@string/pref_ui_lang_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <com.aurora.store.view.custom.preference.AuroraListPreference
+            app:defaultValue="0"
+            app:entries="@array/pref_themes"
+            app:entryValues="@array/pref_themes_values"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_THEME_TYPE"
+            app:layout="@layout/item_preference"
+            app:singleLineTitle="false"
+            app:title="@string/pref_ui_theme_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <com.aurora.store.view.custom.preference.AuroraListPreference
+            app:defaultValue="1"
+            app:entries="@array/pref_accent"
+            app:entryValues="@array/pref_accent_values"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_THEME_ACCENT"
+            app:layout="@layout/item_preference"
+            app:singleLineTitle="false"
+            app:title="@string/pref_ui_accent_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <com.aurora.store.view.custom.preference.AuroraListPreference
+            app:defaultValue="0"
+            app:entries="@array/pref_default_tab"
+            app:entryValues="@array/pref_default_tab_values"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_DEFAULT_SELECTED_TAB"
+            app:layout="@layout/item_preference"
+            app:singleLineTitle="false"
+            app:title="@string/pref_ui_layout_tab"
+            app:useSimpleSummaryProvider="true" />
+
+        <androidx.preference.SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_FOR_YOU"
+            app:layout="@layout/item_preference_switch"
+            app:singleLineTitle="false"
+            app:summary="@string/pref_ui_no_for_you_desc"
+            app:title="@string/pref_ui_no_for_you" />
+
+        <androidx.preference.SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_SIMILAR"
+            app:layout="@layout/item_preference_switch"
+            app:singleLineTitle="false"
+            app:summary="@string/pref_ui_similar_apps_desc"
+            app:title="@string/pref_ui_similar_apps" />
+
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:layout="@layout/item_preference_category"
+        app:singleLineTitle="false"
+        app:title="@string/pref_category_filters">
+
+        <androidx.preference.Preference
+            app:icon="@drawable/ic_menu_about"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_FILTER_TIP"
+            app:layout="@layout/item_preference_tip_arrow"
+            app:persistent="false"
+            app:selectable="true"
+            app:singleLineTitle="false"
+            app:summary="@string/pref_filters_tip" />
+
+        <androidx.preference.SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_FILTER_AURORA_ONLY"
+            app:layout="@layout/item_preference_switch"
+            app:singleLineTitle="false"
+            app:summary="@string/pref_aurora_only_desc"
+            app:title="@string/pref_aurora_only" />
+
+        <androidx.preference.SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_FILTER_GOOGLE"
+            app:layout="@layout/item_preference_switch"
+            app:singleLineTitle="false"
+            app:summary="@string/pref_filter_google_summary"
+            app:title="@string/pref_filter_google_title" />
+
+        <androidx.preference.SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_FILTER_FDROID"
+            app:layout="@layout/item_preference_switch"
+            app:singleLineTitle="false"
+            app:summary="@string/pref_filter_fdroid_summary"
+            app:title="@string/pref_filter_fdroid_title" />
+
+    </androidx.preference.PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

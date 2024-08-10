@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    Content created by ThIsLinked / dhwh (unless otherwise noted) under licensed GPL v2.0 and is strictly prohibited for purposes of plagiarism.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="36dp"
+    android:viewportWidth="36.0"
+    android:viewportHeight="36.0">
+    <path
+        android:fillColor="@android:color/black"
+        android:pathData="M31.087,26.584l-11.152,-11.152c1.142,-2.874 0.553,-6.264 -1.769,-8.597c-2.825,-2.825 -7.222,-3.083 -10.353,-0.798l4.716,4.728l-1.744,1.732L6.082,7.794c-2.284,3.12 -2.026,7.529 0.798,10.341c2.284,2.284 5.613,2.886 8.462,1.818l11.189,11.189c0.479,0.479 1.253,0.479 1.732,0l2.825,-2.825C31.578,27.849 31.578,27.076 31.087,26.584zM27.403,28.549L15.784,16.931c-0.749,0.553 -1.584,0.884 -2.456,1.007c-1.67,0.246 -3.427,-0.258 -4.704,-1.535c-1.167,-1.154 -1.707,-2.702 -1.621,-4.225l3.795,3.795l5.207,-5.207L12.21,6.971c1.523,-0.086 3.058,0.454 4.225,1.609c1.326,1.326 1.83,3.156 1.523,4.863c-0.147,0.872 -0.516,1.683 -1.081,2.407L28.483,27.456L27.403,28.549z" />
+</vector>

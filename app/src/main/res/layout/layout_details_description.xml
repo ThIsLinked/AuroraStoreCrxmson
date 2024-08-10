@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Aurora Store
+  ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
+  ~
+  ~  Aurora Store is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 2 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  Aurora Store is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="true"
+    android:clipToPadding="true">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <HorizontalScrollView
+            android:id="@+id/layout_extras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="ifContentScrolls"
+            android:scrollbars="none">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/padding_normal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/padding_small"
+                    android:gravity="center_vertical"
+                    android:textAppearance="@style/TextAppearance.Aurora.Line1"
+                    app:drawableStartCompat="@drawable/ic_star"
+                    app:drawableTint="?colorAccent"
+                    tools:text="3.5" />
+
+                <include layout="@layout/layout_details_divider" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_installs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/padding_small"
+                    android:gravity="center_vertical"
+                    android:textAppearance="@style/TextAppearance.Aurora.Line1"
+                    app:drawableStartCompat="@drawable/ic_download_manager"
+                    app:drawableTint="?colorAccent"
+                    tools:text="2500" />
+
+                <include layout="@layout/layout_details_divider" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/padding_small"
+                    android:gravity="center_vertical"
+                    android:textAppearance="@style/TextAppearance.Aurora.Line1"
+                    app:drawableTint="?colorAccent"
+                    tools:text="25 MB" />
+
+                <include layout="@layout/layout_details_divider" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_sdk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/padding_small"
+                    android:gravity="center_vertical"
+                    android:textAppearance="@style/TextAppearance.Aurora.Line1"
+                    app:drawableTint="?colorAccent"
+                    tools:text="Android 7+" />
+
+                <include layout="@layout/layout_details_divider" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_updated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/padding_small"
+                    android:gravity="center_vertical"
+                    android:textAppearance="@style/TextAppearance.Aurora.Line1"
+                    app:drawableTint="?colorAccent"
+                    tools:text="Jan 21 2020" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:orientation="vertical">
+
+            <com.aurora.store.view.custom.layouts.ActionHeaderLayout
+                android:id="@+id/header_changelog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:headerTitle="@string/details_changelog" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Material3.CardView.Filled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="?android:listPreferredItemPaddingStart"
+                android:backgroundTint="@color/changelog_card_background"
+                app:contentPadding="@dimen/padding_normal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_changelog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textIsSelectable="true" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.aurora.store.view.custom.layouts.ActionHeaderLayout
+                android:id="@+id/header_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:headerTitle="@string/details_more_about_app" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?android:listPreferredItemPaddingStart"
+                android:textIsSelectable="true" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.airbnb.epoxy.EpoxyRecyclerView
+            android:id="@+id/epoxy_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?android:listPreferredItemPaddingStart"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_small"
+            app:itemSpacing="@dimen/margin_small"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/view_screenshot" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>

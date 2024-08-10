@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Aurora Store
+  ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
+  ~
+  ~  Aurora Store is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 2 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  Aurora Store is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.preference.Preference
+        app:iconSpaceReserved="false"
+        app:key="PREFERENCE_DISPENSER_URLS"
+        app:layout="@layout/item_preference"
+        app:summary="@string/pref_dispenser_summary"
+        app:title="@string/pref_dispenser_title" />
+
+    <androidx.preference.PreferenceCategory
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:iconSpaceReserved="false"
+        app:layout="@layout/item_preference_category"
+        app:singleLineTitle="false"
+        app:title="@string/pref_category_spoof">
+
+        <androidx.preference.Preference
+            app:icon="@drawable/ic_menu_about"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_VENDING_VERSION_TIP"
+            app:layout="@layout/item_preference_tip"
+            app:persistent="false"
+            app:selectable="false"
+            app:singleLineTitle="false"
+            app:summary="@string/pref_vending_version_tip" />
+
+        <com.aurora.store.view.custom.preference.AuroraListPreference
+            app:defaultValue="0"
+            app:entries="@array/pref_vending_version"
+            app:entryValues="@array/pref_vending_version_values"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_VENDING_VERSION"
+            app:layout="@layout/item_preference"
+            app:title="@string/pref_vending_version_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:iconSpaceReserved="false"
+        app:key="PREFERENCE_CATEGORY_PROXY"
+        app:layout="@layout/item_preference_category"
+        app:singleLineTitle="false"
+        app:title="@string/pref_category_proxy">
+
+        <androidx.preference.Preference
+            app:icon="@drawable/ic_menu_about"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_PROXY_ENABLED_TIP"
+            app:layout="@layout/item_preference_tip"
+            app:persistent="false"
+            app:selectable="false"
+            app:singleLineTitle="false"
+            app:summary="@string/pref_network_proxy_tip" />
+
+        <androidx.preference.SwitchPreferenceCompat
+            app:disableDependentsState="false"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_PROXY_ENABLED"
+            app:layout="@layout/item_preference_switch"
+            app:summary="@string/pref_network_proxy_enable_desc"
+            app:title="@string/pref_network_proxy_enable" />
+
+        <androidx.preference.Preference
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_PROXY_CURRENT_URL"
+            app:layout="@layout/item_preference"
+            app:selectable="false"
+            app:singleLineTitle="false"
+            app:summary=""
+            app:title="@string/pref_network_current_proxy_title" />
+
+    </androidx.preference.PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

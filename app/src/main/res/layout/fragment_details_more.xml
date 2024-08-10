@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Aurora Store
+  ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
+  ~
+  ~  Aurora Store is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 2 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  Aurora Store is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.ui.details.DetailsMoreFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_arrow_back" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="?android:listPreferredItemPaddingStart">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_description_title"
+                    style="@style/AuroraTextStyle.Subtitle.Alt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details_description" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="?android:listPreferredItemPaddingStart"
+                    android:autoLink="all"
+                    android:textAppearance="@style/TextAppearance.Aurora.Line2"
+                    android:textIsSelectable="true"
+                    tools:text="@string/app_label" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_dependencies_title"
+                    style="@style/AuroraTextStyle.Subtitle.Alt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details_dependencies" />
+
+                <com.airbnb.epoxy.EpoxyRecyclerView
+                    android:id="@+id/recycler_dependency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="?android:listPreferredItemPaddingStart"
+                    android:clipToPadding="true"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    android:overScrollMode="ifContentScrolls"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/view_app_dependent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/recycler_dependency_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="?android:listPreferredItemPaddingStart"
+                    android:text="@string/details_no_dependencies"
+                    android:textAppearance="@style/TextAppearance.Aurora.Line2"
+                    android:textStyle="italic"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_files_title"
+                    style="@style/AuroraTextStyle.Subtitle.Alt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details_files" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.airbnb.epoxy.EpoxyRecyclerView
+                android:id="@+id/recycler_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?android:listPreferredItemPaddingStart"
+                android:layout_marginBottom="@dimen/margin_xxlarge"
+                android:clipToPadding="true"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="ifContentScrolls"
+                app:itemSpacing="?android:listPreferredItemPaddingStart"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/view_file" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

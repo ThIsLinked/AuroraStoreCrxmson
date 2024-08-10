@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><!--
+  ~ Aurora Store
+  ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
+  ~
+  ~  Aurora Store is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 2 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  Aurora Store is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+<resources>
+    <declare-styleable name="ActionButton">
+        <attr format="string" name="btnActionText" />
+        <attr format="string" name="btnActionTextColor" />
+        <attr format="string" name="btnActionIcon" />
+    </declare-styleable>
+    <declare-styleable name="ActionHeaderLayout">
+        <attr format="string" name="headerTitle" />
+        <attr format="string" name="headerSubtitle" />
+    </declare-styleable>
+    <declare-styleable name="AuroraProgressView">
+        <attr format="dimension" name="minWidth" />
+        <attr format="dimension" name="maxWidth" />
+        <attr format="dimension" name="minHeight" />
+        <attr format="dimension" name="maxHeight" />
+        <attr format="string" name="indicatorName" />
+        <attr format="color" name="indicatorColor" />
+    </declare-styleable>
+    <declare-styleable name="AuroraTheme">
+        <attr format="color" name="scrim" />
+        <attr format="color" name="scrimAccent" />
+        <attr format="color" name="scrimAlt" />
+        <attr format="color" name="scrimBlack" />
+        <attr format="color" name="colorStroke" />
+        <attr format="color" name="colorShimmer" />
+    </declare-styleable>
+    <declare-styleable name="DevInfoLayout">
+        <attr format="string" name="txtTitle" />
+        <attr format="string" name="txtSubtitle" />
+        <attr format="reference" name="imgIcon" />
+    </declare-styleable>
+    <declare-styleable name="StateButton">
+        <attr format="string" name="btnStateText" />
+        <attr format="reference" name="btnStateIcon" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Aurora Store
+  ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
+  ~
+  ~  Aurora Store is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 2 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  Aurora Store is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.preference.PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:layout="@layout/item_preference_category"
+        app:singleLineTitle="false"
+        app:title="@string/pref_category_downloads">
+
+        <androidx.preference.SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:disableDependentsState="false"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_DOWNLOAD_EXTERNAL"
+            app:layout="@layout/item_preference_switch"
+            app:singleLineTitle="false"
+            app:summary="@string/pref_downloader_external_desc"
+            app:title="@string/pref_downloader_external" />
+
+        <androidx.preference.EditTextPreference
+            app:dependency="PREFERENCE_DOWNLOAD_EXTERNAL"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_DOWNLOAD_DIRECTORY"
+            app:layout="@layout/item_preference"
+            app:singleLineTitle="false"
+            app:summary=""
+            app:title="@string/pref_downloader_path_title" />
+
+        <androidx.preference.SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_AUTO_DELETE"
+            app:layout="@layout/item_preference_switch"
+            app:singleLineTitle="false"
+            app:summary="@string/pref_install_delete_summary"
+            app:title="@string/pref_install_delete_title" />
+
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:layout="@layout/item_preference_category"
+        app:singleLineTitle="false"
+        app:title="@string/pref_category_install">
+
+        <androidx.preference.Preference
+            app:defaultValue="0"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_INSTALLER_ID"
+            app:layout="@layout/item_preference"
+            app:singleLineTitle="false"
+            app:summary="@string/pref_install_mode_summary"
+            app:title="@string/pref_install_mode_title" />
+
+        <androidx.preference.Preference
+            app:iconSpaceReserved="false"
+            app:key="INSTALLATION_ABANDON_SESSION"
+            app:layout="@layout/item_preference"
+            app:singleLineTitle="false"
+            app:summary="@string/pref_abandon_session_desc"
+            app:title="@string/pref_abandon_session" />
+
+        <androidx.preference.Preference
+            app:iconSpaceReserved="false"
+            app:isPreferenceVisible="false"
+            app:key="PREFERENCE_INSTALLATION_DEVICE_OWNER"
+            app:layout="@layout/item_preference"
+            app:singleLineTitle="false"
+            app:summary="@string/pref_clear_device_owner_summary"
+            app:title="@string/pref_clear_device_owner_title" />
+
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:layout="@layout/item_preference_category"
+        app:singleLineTitle="false"
+        app:title="@string/pref_category_updates">
+
+        <com.aurora.store.view.custom.preference.AuroraListPreference
+            app:defaultValue="0"
+            app:entries="@array/pref_updates_auto"
+            app:entryValues="@array/pref_updates_auto_values"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_UPDATES_AUTO"
+            app:layout="@layout/item_preference"
+            app:singleLineTitle="false"
+            app:summary="@string/pref_updates_auto_desc"
+            app:title="@string/pref_updates_auto"
+            app:useSimpleSummaryProvider="true" />
+
+        <androidx.preference.SeekBarPreference
+            android:max="48"
+            app:adjustable="true"
+            app:defaultValue="24"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_UPDATES_CHECK_INTERVAL"
+            app:layout="@layout/item_preference_seekbar"
+            app:min="1"
+            app:showSeekBarValue="true"
+            app:singleLineTitle="false"
+            app:summary="@string/pref_updates_check_frequency_desc"
+            app:title="@string/pref_updates_check_frequency" />
+
+        <androidx.preference.SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:iconSpaceReserved="false"
+            app:key="PREFERENCE_UPDATES_EXTENDED"
+            app:layout="@layout/item_preference_switch"
+            app:singleLineTitle="false"
+            app:summary="@string/pref_updates_incompatible_desc"
+            app:title="@string/pref_updates_incompatible" />
+
+    </androidx.preference.PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

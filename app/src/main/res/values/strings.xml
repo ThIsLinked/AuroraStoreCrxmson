@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><!--
+  ~ Aurora Store
+  ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
+  ~  Copyright (C) 2022, The Calyx Institute
+  ~  Copyright (C) 2023, grrfe <grrfe@420blaze.it>
+  ~
+  ~  Aurora Store is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 2 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  Aurora Store is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="blacklist_line3">%1$s (%2$s)</string>
+
+    <string name="about_4pda_post_summary">Modification post on 4PDA</string>
+    <string name="about_4pda_post_title">Post on 4PDA</string>
+    <string name="about_4pda_topic_summary">Discussion of Aurora on 4PDA</string>
+    <string name="about_4pda_topic_title">Topic on 4PDA</string>
+    <string name="about_aurora_store_subtitle">Learn more about Aurora Store</string>
+    <string name="about_aurora_store_summary">Aurora Store enables you to search and download apps from the official Google Play store. You can check app descriptions, screenshots, updates, other users\' comments, and download the APK directly from Google Play to your device. To use Aurora Store, you need to have a Google Play account, and log in to your Google Play account when you first open and configure Aurora Store.\n\nUnlike a traditional app store, Aurora Store does not own, license or distribute any apps. All the apps, app descriptions, screenshots and other content in Aurora Store are directly accessed, downloaded and/or displayed from Google Play. Aurora Store works exactly like a door or a browser, allowing you to log in to your Google Play account and find the apps from Google Play.\n\nPlease note that Aurora Store does not have any approval, sponsorship or authorization from Google, Google Play, any apps downloaded through Aurora Store or any app developers; neither does Aurora Store have any affiliation, cooperation or connection with them.</string>
+    <string name="about_aurora_store_title">About Aurora Store</string>
+    <string name="about_desc">A client that allows you to download applications from the Play Store.</string>
+    <string name="about_github_summary">Modification source code.</string>
+    <string name="about_github_title" translatable="false">GitHub</string>
+    <string name="about_label_end" translatable="false">@string/app_label_crimson</string>
+    <string name="about_label_start" translatable="false">@string/app_label_short</string>
+    <string name="about_moddify" translatable="false">Powered moddify by ThIsLinked aka Roser // dhwh</string>
+    <string name="about_telegram_summary">Join the Aurora Support group for discussions or suggestions.</string>
+    <string name="about_telegram_title" translatable="false">Telegram</string>
+    <string name="about_version" translatable="false">v4.5.1 (60) // Nightly by 10.08.24</string>
+    <string name="access_denied_using_vpn">Access denied. Do you use VPN or other spoofing tools?</string>
+    <string name="account_anonymous">Anonymous</string>
+    <string name="account_anonymous_email" translatable="false">anonymous@gmail.com</string>
+    <string name="account_google">Google</string>
+    <string name="account_login_using">Log in using</string>
+    <string name="account_logout">Log out from Aurora</string>
+    <string name="action_back">Back</string>
+    <string name="action_blacklist">Blacklist</string>
+    <string name="action_blacklist_add">Add to Blacklist</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_check">Check</string>
+    <string name="action_clear">Clear</string>
+    <string name="action_close">Close</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_copy_link">Copy Link</string>
+    <string name="action_disable">Disable</string>
+    <string name="action_enable">Enable</string>
+    <string name="action_enabled">Enabled</string>
+    <string name="action_export">Export</string>
+    <string name="action_favourite">Favourite</string>
+    <string name="action_filter">Filters</string>
+    <string name="action_filter_all">All</string>
+    <string name="action_filter_apply">Apply</string>
+    <string name="action_filter_apps_with_ads">Apps with ads</string>
+    <string name="action_filter_downloads">Downloads</string>
+    <string name="action_filter_gsf_dependent_apps">GSF dependent</string>
+    <string name="action_filter_misc">Misc</string>
+    <string name="action_filter_paid_apps">Paid</string>
+    <string name="action_filter_rating">Ratings</string>
+    <string name="action_finish">Finish</string>
+    <string name="action_get_local_apk">Save App bundle</string>
+    <string name="action_grant">Grant</string>
+    <string name="action_granted">Granted</string>
+    <string name="action_ignore">Ignore</string>
+    <string name="action_ignore_version">Ignore version</string>
+    <string name="action_import">Import</string>
+    <string name="action_info">App Info</string>
+    <string name="action_install">Install</string>
+    <string name="action_installations">Installations</string>
+    <string name="action_installing">Installing</string>
+    <string name="action_join">Join</string>
+    <string name="action_later">Later</string>
+    <string name="action_leave">Leave</string>
+    <string name="action_logout">Log out</string>
+    <string name="action_logout_confirmation_message">Are you sure you want to log out?</string>
+    <string name="action_logout_confirmation_title">Log out?</string>
+    <string name="action_manage">Manage</string>
+    <string name="action_next">Next</string>
+    <string name="action_ok">Okay</string>
+    <string name="action_open">Open</string>
+    <string name="action_pause">Pause</string>
+    <string name="action_pending">Pending</string>
+    <string name="action_post">Post</string>
+    <string name="action_request_analysis">Request new analysis</string>
+    <string name="action_restart">Restart</string>
+    <string name="action_resume">Resume</string>
+    <string name="action_search">Search</string>
+    <string name="action_share">Share</string>
+    <string name="action_uninstall">Uninstall</string>
+    <string name="action_uninstall_confirmation">Do you want to uninstall this app ?</string>
+    <string name="action_uninstall_success">Successfully uninstalled</string>
+    <string name="action_update">Update</string>
+    <string name="action_update_all">Update all</string>
+    <string name="action_whitelist">Whitelist</string>
+    <string name="action_wishlist_add">Add to wishlist</string>
+    <string name="add">Add</string>
+    <string name="add_dispenser_error">Invalid URL</string>
+    <string name="add_dispenser_hint">Dispenser URL</string>
+    <string name="add_dispenser_summary">Add a token dispenser to Aurora Store. Token dispensers provide account credentials to Aurora Store for logging in anonymously.</string>
+    <string name="add_dispenser_title">Add dispenser</string>
+    <string name="am_installer_desc">App Manager is required. And root or ADB permissions if MUIU optimization is enabled.</string>
+    <string name="am_installer_subtitle">Installs using a third-party installer.</string>
+    <string name="amazon_appstore_desc">Amazon Appstore is an app store for Android-compatible platforms operated by Amazon.</string>
+    <string name="android_market_desc">Android Market was an online store offering software applications designed for Android devices, retired in 2017.</string>
+    <string name="app_label" translatable="false">Aurora Store Crxmson</string>
+    <string name="app_label_crimson" translatable="false">Crxmson</string>
+    <string name="app_label_launcher" translatable="false">Aurora Store</string>
+    <string name="app_label_short" translatable="false">@string/app_label_launcher</string>
+    <string name="app_language">App Language</string>
+    <string name="app_link_amazon_appstore" translatable="false">www.amazon.com</string>
+    <string name="app_link_android_market" translatable="false">market.android.com</string>
+    <string name="app_link_enabled">App link enabled!</string>
+    <string name="app_link_play_store" translatable="false">play.google.com</string>
+    <string name="app_list_rating" translatable="false">%1$s • %2$s★ • %3$s</string>
+    <string name="app_updater_service_notif_text">Enables background app download</string>
+    <string name="app_updater_service_notif_title">Background app download</string>
+    <string name="app_view_rating" translatable="false">%1$s • %2$s★</string>
+    <string name="bad_request">Failed to request a session.<i>Try again</i> or try again later.</string>
+    <string name="categoryapps_notFound">Nothing was found for this category…</string>
+    <string name="check_connectivity">Check internet connectivity</string>
+    <string name="check_updates">Check for updates</string>
+    <string name="details_appinfo_line3" translatable="false">%1$s (%2$d)</string>
+    <string name="details_appinfo_line3_update" translatable="false">%1$s ➔ %2$s (%3$d)</string>
+    <string name="details_beta">Beta program</string>
+    <string name="details_beta_available">Join beta program ?</string>
+    <string name="details_beta_delay">Enrollment may take some time, you can check status later.</string>
+    <string name="details_beta_description">You will see new features and bugs before the public does. Give your feedback to developers to help them improve.</string>
+    <string name="details_beta_subscribed">You\'re a beta tester</string>
+    <string name="details_changelog">Changelog</string>
+    <string name="details_changelog_unavailable">Changelog not provided</string>
+    <string name="details_contains_ads">Contains Ads</string>
+    <string name="details_data_safety_subtitle">Data privacy and security practices declared by developer.</string>
+    <string name="details_data_safety_title">Data safety</string>
+    <string name="details_dependencies">Dependencies</string>
+    <string name="details_description">Description</string>
+    <string name="details_dev_address">Address</string>
+    <string name="details_dev_details">Developer contact</string>
+    <string name="details_dev_email">Email</string>
+    <string name="details_dev_profile">Developer profile</string>
+    <string name="details_dev_website">Website</string>
+    <string name="details_files">Files</string>
+    <string name="details_free">Free</string>
+    <string name="details_gsf_dependent">Requires GSF</string>
+    <string name="details_info">Information</string>
+    <string name="details_more">More</string>
+    <string name="details_more_about_app">More about app</string>
+    <string name="details_no_ads">No ads</string>
+    <string name="details_no_app_match">No app match found</string>
+    <string name="details_no_apps_on_sale">No apps found on sale</string>
+    <string name="details_no_dependencies">No dependencies</string>
+    <string name="details_no_favourites">No favourite apps found</string>
+    <string name="details_no_permission">No permissions</string>
+    <string name="details_no_updates">No updates available</string>
+    <string name="details_paid">Paid</string>
+    <string name="details_permission">Permission</string>
+    <string name="details_permission_count" tools:ignore="PluralsCandidate">%1$d identified.</string>
+    <string name="details_privacy">Privacy</string>
+    <string name="details_ratings">Rating and reviews</string>
+    <string name="details_ratings_title_hint">Review title</string>
+    <string name="details_targetSdk" translatable="false">target SDK %1$d</string>
+    <string name="details_think_this_app">What do you think about this app?</string>
+    <string name="device_doze_description">Please, disable battery optimizations to allow background operations.</string>
+    <string name="device_doze_extra">Optionally you can choose to keep the optimizations enabled, but then you won\'t be able to take benefit of background downloads and automated updates, so choice is yours.</string>
+    <string name="device_doze_subtitle">Aurora Store can not install download or update apps in background due to battery optimizations.</string>
+    <string name="device_doze_title">Battery optimizations detected!</string>
+    <string name="device_miui_description">Please, disable MIUI optimizations to allow installations, otherwise you can choose Root or Services installer.</string>
+    <string name="device_miui_extra">Optionally you can choose Native installer, but then you can not install bundled (split) APKs, so choice is yours.</string>
+    <string name="device_miui_subtitle">Session installer can not install apps due to MIUI Optimizations.</string>
+    <string name="device_miui_title">MIUI detected!</string>
+    <string name="dialog_desc_native_split">You can not install bundled(split) apps via Native Installer. Change your installer to Session, Services or Root.</string>
+    <string name="dialog_title_self_update">New update available</string>
+    <string name="disclaimer_subtitle">Accountability and responsibility</string>
+    <string name="download_cancel_all">Cancel all</string>
+    <string name="download_canceled">Cancelled</string>
+    <string name="download_clear_finished">Clear finished</string>
+    <string name="download_completed">Download completed</string>
+    <string name="download_eta_calculating">Calculating</string>
+    <string name="download_eta_hrs">%1$dh %2$dm %3$ds left</string>
+    <string name="download_eta_min">%1$dm %2$ds left</string>
+    <string name="download_eta_sec">%1$ds left</string>
+    <string name="download_failed">Download failed</string>
+    <string name="download_force_clear_all">Force clear all</string>
+    <string name="download_metadata">Getting metadata</string>
+    <string name="download_none">No downloads</string>
+    <string name="download_pause_all">Pause all</string>
+    <string name="download_paused">Paused • <xliff:g id="completed_downloads">%1$d</xliff:g>/ <xliff:g id="all_downloads">%2$d</xliff:g></string>
+    <string name="download_progress">Downloading • <xliff:g id="completed_downloads">%1$d</xliff:g>/ <xliff:g id="all_downloads">%2$d</xliff:g>• <xliff:g id="speed">%3$s</xliff:g></string>
+    <string name="download_queued">Queued</string>
+    <string name="download_resume_all">Resume all</string>
+    <string name="download_speed_bytes" translatable="false">%1$d B/s</string>
+    <string name="download_speed_estimating">Estimating</string>
+    <string name="download_speed_kb" translatable="false">%1$s KB/s</string>
+    <string name="download_speed_mb" translatable="false">%1$s MB/s</string>
+    <string name="downloading_dep">Downloading additional files for <xliff:g id="app">%1$s</xliff:g></string>
+    <string name="error">An error occurred!</string>
+    <string name="exodus_no_tracker">Contains nothing known from the last report.</string>
+    <string name="exodus_powered">Powered by Exodus Privacy</string>
+    <string name="exodus_progress">Checking for trackers…</string>
+    <string name="exodus_substring" tools:ignore="PluralsCandidate">%1$d detected in v%2$s</string>
+    <string name="exodus_substring_onlyone">@string/exodus_substring</string>
+    <string name="exodus_view_report">View report</string>
+    <string name="expand">Expand</string>
+    <string name="export_app_summary_fail">Failed to exported app bundle</string>
+    <string name="export_app_summary_success">Successfully exported app bundle</string>
+    <string name="failed_apk_export">Failed to export APKs</string>
+    <string name="failed_app_link">Unsupported, please try associating links manually</string>
+    <string name="failed_generating_session">Failed to generate session, error code: <xliff:g id="status_code">%1$d</xliff:g></string>
+    <string name="failed_to_fetch_report">Failed to fetch privacy report</string>
+    <string name="failed_to_generate_session">Failed to create a session.</string>
+    <string name="faqs_subtitle">Have questions? Find out the answers</string>
+    <string name="faqs_title" translatable="false">FAQs</string>
+    <string name="filter_review_all">All</string>
+    <string name="filter_review_critical">Critical</string>
+    <string name="filter_review_five">Five</string>
+    <string name="filter_review_four">Four</string>
+    <string name="filter_review_one">One</string>
+    <string name="filter_review_positive">Positive</string>
+    <string name="filter_review_three">Three</string>
+    <string name="filter_review_two">Two</string>
+    <string name="force_restart_summary">Aurora needs to be restarted to apply the newly changed settings.</string>
+    <string name="force_restart_title">Restart Aurora</string>
+    <string name="google_play_store_desc">Google Play, also known as the Google Play Store and formerly Android Market.</string>
+    <string name="ic_launcher_foreground" translatable="false">M67.88,48.49L56.31,31.97c-0.81,-1.15 -2.39,-1.43 -3.54,-0.63c-1.15,0.81 -1.43,2.39 -0.63,3.55l9.52,13.6H67.88z</string>
+    <string name="ic_launcher_foreground_10" translatable="false">M61.5,71.26c-0.81,0 -1.6,-0.42 -2.04,-1.18l-7.5,-12.99c-0.65,-1.12 -0.26,-2.56 0.86,-3.21c1.13,-0.65 2.56,-0.26 3.21,0.86l7.5,12.99c0.65,1.12 0.26,2.56 -0.86,3.21C62.31,71.16 61.9,71.26 61.5,71.26z</string>
+    <string name="ic_launcher_foreground_2" translatable="false">M52,49.99v-6.84H69.75c2.21,0 4,1.79 4,4v2.83H52z</string>
+    <string name="ic_launcher_foreground_3" translatable="false">M50.58,44.71l2.05,-2.06l5.87,5.87l-2.05,2.04L50.58,44.71z</string>
+    <string name="ic_launcher_foreground_4" translatable="false">M43.97,39.15c-7.01,0 -12.7,5.69 -12.7,12.7h25.4C56.67,44.84 50.98,39.15 43.97,39.15z</string>
+    <string name="ic_launcher_foreground_5" translatable="false">M55.69,31.34c-1.15,-0.81 -2.74,-0.53 -3.54,0.63l-11.57,16.52h6.22l9.52,-13.6C57.12,33.74 56.84,32.15 55.69,31.34z</string>
+    <string name="ic_launcher_foreground_6" translatable="false">M46.79,48.49l0.74,-1.05l-6.22,0l-0.74,1.05z</string>
+    <string name="ic_launcher_foreground_7" translatable="false">M78.55,47.7H29.45c-1.62,0 -2.79,1.54 -2.36,3.1c0,0 4.72,17.2 6.23,22.71c0.58,2.13 2.52,3.6 4.73,3.6H69.96c2.21,0 4.14,-1.48 4.73,-3.6c1.51,-5.51 6.23,-22.71 6.23,-22.71C81.34,49.24 80.17,47.7 78.55,47.7z</string>
+    <string name="ic_launcher_foreground_8" translatable="false">M46.5,71.26c-0.4,0 -0.8,-0.1 -1.17,-0.32c-1.12,-0.65 -1.51,-2.09 -0.86,-3.21l7.5,-12.99c0.65,-1.13 2.09,-1.51 3.21,-0.86c1.12,0.65 1.51,2.09 0.86,3.21l-7.5,12.99C48.1,70.84 47.31,71.26 46.5,71.26z</string>
+    <string name="ic_launcher_foreground_9" translatable="false">M61.5,71.26H46.5c-1.3,0 -2.35,-1.05 -2.35,-2.35c0,-1.3 1.05,-2.35 2.35,-2.35h15c1.3,0 2.35,1.05 2.35,2.35C63.85,70.2 62.8,71.26 61.5,71.26z</string>
+    <string name="insecure_anonymous_apply">Make sure you re-login and restart app to apply changes.</string>
+    <string name="installer_am_unavailable">Install App Manager or change the installer.</string>
+    <string name="installer_root_unavailable">No root access. Grant it or change the installer.</string>
+    <string name="installer_service_available">Aurora services is available and ready to install.</string>
+    <string name="installer_service_misconfigured">Set up Aurora services and grant all permissions first.</string>
+    <string name="installer_service_unavailable">Install Aurora services 1.0.9 or above, or change the installer.</string>
+    <string name="installer_shizuku_unavailable">Shizuku is not installed or set up properly.</string>
+    <string name="installer_status_failure">Installer failed</string>
+    <string name="installer_status_failure_blocked">Installation was blocked</string>
+    <string name="installer_status_failure_conflict">Conflicting package exists</string>
+    <string name="installer_status_failure_incompatible">Incompatible app</string>
+    <string name="installer_status_failure_invalid">Invalid or corrupted APK</string>
+    <string name="installer_status_failure_session">Could not create session</string>
+    <string name="installer_status_failure_storage">Insufficient memory space</string>
+    <string name="installer_status_success">Successfully installed</string>
+    <string name="installer_status_user_action">Waiting for user confirmation</string>
+    <string name="layout_details_install_progressPercent" translatable="false">0%</string>
+    <string name="layout_details_install_progressPercent_dynamic" translatable="false">%1$d</string>
+    <string name="license_subtitle" translatable="false">The GNU General Public License v3.0</string>
+    <string name="login_rate_limited">Too many tries. Try again or try again later.</string>
+    <string name="manage_account">Manage your account</string>
+    <string name="manual_download_hint">Enter version code you wish to download</string>
+    <string name="menu">Menu</string>
+    <string name="menu_disclaimer">Disclaimer</string>
+    <string name="menu_license">License</string>
+    <string name="menu_terms">Terms of service</string>
+    <string name="myapps_installed" tools:ignore="PluralsCandidate">%1$d installed</string>
+    <string name="native_installer_desc">Allows you to install an application on behalf of the Play Store package.</string>
+    <string name="native_installer_subtitle">Intent based installer. Does not support splits apk.</string>
+    <string name="no_dispensers_available">No dispensers available</string>
+    <string name="notification_channel_alert">Quick notification</string>
+    <string name="notification_channel_general">General notification</string>
+    <string name="notification_channel_updater_service">App background download service</string>
+    <string name="notification_channel_updates">Updates notifications</string>
+    <string name="notification_updates_available_summary" tools:ignore="PluralsCandidate">%1$d available</string>
+    <string name="notification_updates_available_title">Updates available</string>
+    <string name="onboarding_permission_apps_links_desc">Allow Aurora Store to open supported links</string>
+    <string name="onboarding_permission_apps_links_title">Apps links</string>
+    <string name="onboarding_permission_appslinks_tip_buttonDocumentation">Official documentation</string>
+    <string name="onboarding_permission_appslinks_tip_buttonSettings">Go to settings</string>
+    <string name="onboarding_permission_appslinks_tip_desc">On some systems, due to the implementation of "Verify links", especially its extension on Android 12 and above, links to Play Store domains may be forced to <b>com.android.vending</b>. This may prevent Aurora from being added to the «Open with…» dialog.\n\nIf you are experiencing this, you need to disallow the Play Store from opening any links in your system settings. After that, try selecting the items again.</string>
+    <string name="onboarding_permission_appslinks_tip_title">Read more about «Verify Links»</string>
+    <string name="onboarding_permission_doze">Background work</string>
+    <string name="onboarding_permission_doze_desc">Allows Aurora to download and update applications in the background.</string>
+    <string name="onboarding_permission_esa">Storage access</string>
+    <string name="onboarding_permission_esa_desc">Downloading apk and other things, exporting and importing profiles into storage.</string>
+    <string name="onboarding_permission_esm">Storage manager</string>
+    <string name="onboarding_permission_esm_desc">Required on devices running Android R and above, in addition to storage access.</string>
+    <string name="onboarding_permission_installer">Install</string>
+    <string name="onboarding_permission_installer_desc">Installing apps after downloading.</string>
+    <string name="onboarding_permission_notifications">Notifications</string>
+    <string name="onboarding_permission_notifications_desc">Will notify you of various events.</string>
+    <string name="onboarding_permission_select">Aurora Store requires following permissions</string>
+    <string name="onboarding_title_installer">Installer</string>
+    <string name="onboarding_title_permissions">Permissions</string>
+    <string name="onboarding_title_welcome">Welcome</string>
+    <string name="onboarding_welcome_select">How you doing?</string>
+    <string name="permissions_denied">Required permissions were denied. Please grant them in order to continue the action</string>
+    <string name="pref_abandon_session">Force clear installation sessions</string>
+    <string name="pref_abandon_session_desc">Clear abandon or pending installation sessions</string>
+    <string name="pref_app_download">Downloads</string>
+    <string name="pref_aurora_only">Aurora Store apps only</string>
+    <string name="pref_aurora_only_desc">Show only Aurora Store installed apps in Updates and Installed apps</string>
+    <string name="pref_category_downloads">Downloads</string>
+    <string name="pref_category_filters">Filters</string>
+    <string name="pref_category_install">Install</string>
+    <string name="pref_category_interface">Interface</string>
+    <string name="pref_category_proxy" translatable="false">Proxy</string>
+    <string name="pref_category_spoof">Spoof</string>
+    <string name="pref_category_updates">Updates</string>
+    <string name="pref_clear_device_owner_desc">This will revoke session installer\'s permission to silently install app. Proceed with clearing device ownership?</string>
+    <string name="pref_clear_device_owner_summary">Removes Aurora Store as the device owner app</string>
+    <string name="pref_clear_device_owner_title">Clear device owner</string>
+    <string name="pref_common_extra">Extras</string>
+    <string name="pref_dialog_to_apply_restart">This setting will be applied after you restart the app</string>
+    <string name="pref_dispenser_summary">View and manage token dispensers for anonymous logins</string>
+    <string name="pref_dispenser_title">Manage dispensers</string>
+    <string name="pref_download_directory_error">Selected path is not writable</string>
+    <string name="pref_downloader_external">External storage</string>
+    <string name="pref_downloader_external_desc">Download files to external storage</string>
+    <string name="pref_downloader_path_title">Path</string>
+    <string name="pref_downloader_wifi_title">Download using WiFi only</string>
+    <string name="pref_filter_fdroid_summary">Ignore F-Droid apps from Updates and Installed apps</string>
+    <string name="pref_filter_fdroid_title">Filter F-Droid apps</string>
+    <string name="pref_filter_google_summary">Ignore Google apps from Updates and Installed apps</string>
+    <string name="pref_filter_google_title">Filter Google apps</string>
+    <string name="pref_filters_tip">Click on this tip to find out which filter the packages belong to.</string>
+    <string name="pref_filters_tip_dialogSummary"><b>From Aurora Store:</b>\n<i>— com.aurora.store</i>\n<i>— com.aurora.store.debug</i>\n<i>— com.aurora.store.nightly</i>\n<i>— com.aurora.services</i>\n\n<b>From Google:</b>\n<i>— com.chrome.beta</i>\n<i>— com.chrome.canary</i>\n<i>— com.chrome.dev</i>\n<i>— com.android.chrome</i>\n\n<i>— As well as those with the \"<b>com.google</b>\" fragment in the package name.</i>\n\n<b>From F-Droid:</b>\n<i>— org.fdroid.basic</i>\n<i>— org.fdroid.fdroid</i>\n<i>— org.fdroid.fdroid.privileged</i>\n\n<i>— As well as those that have the F-Droid signature at the apk level.</i></string>
+    <string name="pref_filters_tip_dialogTitle">Difference between filters</string>
+    <string name="pref_install_delete_summary">Downloaded APKs will be deleted immediately after installation</string>
+    <string name="pref_install_delete_title">Delete APK post-install</string>
+    <string name="pref_install_mode_am" translatable="false">App Manager</string>
+    <string name="pref_install_mode_native">Native (Deprecated)</string>
+    <string name="pref_install_mode_root" translatable="false">Root</string>
+    <string name="pref_install_mode_services">Aurora Services (Deprecated)</string>
+    <string name="pref_install_mode_session">Session</string>
+    <string name="pref_install_mode_shizuku" translatable="false">Shizuku/Sui</string>
+    <string name="pref_install_mode_summary">Select mode of APK installation</string>
+    <string name="pref_install_mode_title">Installation method</string>
+    <string name="pref_network_current_proxy_summary">(not specified)</string>
+    <string name="pref_network_current_proxy_title">Current address</string>
+    <string name="pref_network_proxy_enable" translatable="false">@string/pref_category_proxy</string>
+    <string name="pref_network_proxy_enable_desc">Allow the app traffic to be transported through the specified proxy</string>
+    <string name="pref_network_proxy_tip">Sample: protocol://user:password@host:port</string>
+    <string name="pref_network_proxy_title" translatable="false">@string/pref_category_proxy</string>
+    <string name="pref_network_proxy_url">Proxy URL</string>
+    <string name="pref_network_proxy_url_message">Enter a valid proxy URL to pass all data through the proxy.</string>
+    <string name="pref_network_title">Networking</string>
+    <string name="pref_ui_accent_title">Accent</string>
+    <string name="pref_ui_lang_systemValue" translatable="false">@string/sample_systemValue</string>
+    <string name="pref_ui_lang_title">Language</string>
+    <string name="pref_ui_lang_toast">Restart Aurora if the changes are not fully applied.</string>
+    <string name="pref_ui_layout">Layout</string>
+    <string name="pref_ui_layout_tab">Select default tab</string>
+    <string name="pref_ui_no_for_you">For You Pages</string>
+    <string name="pref_ui_no_for_you_desc">Display For You Pages on home screen</string>
+    <string name="pref_ui_similar_apps">Similar and related apps</string>
+    <string name="pref_ui_similar_apps_desc">Display similar and related clusters on app details page</string>
+    <string name="pref_ui_theme_black">Black</string>
+    <string name="pref_ui_theme_dark">Dark</string>
+    <string name="pref_ui_theme_dark_x">Dark X</string>
+    <string name="pref_ui_theme_darkord">Discord</string>
+    <string name="pref_ui_theme_light">Light</string>
+    <string name="pref_ui_theme_system" translatable="false">@string/sample_systemValue</string>
+    <string name="pref_ui_theme_title">Theme</string>
+    <string name="pref_ui_title">Customization</string>
+    <string name="pref_updates_auto">Auto-update apps</string>
+    <string name="pref_updates_auto_desc">Configure auto-updates behaviour</string>
+    <string name="pref_updates_auto_install">Check &amp; install available updates automatically</string>
+    <string name="pref_updates_auto_notify">Check &amp; notify for available updates</string>
+    <string name="pref_updates_auto_off">Do not auto-update apps</string>
+    <string name="pref_updates_check_frequency">Automatic updates frequency</string>
+    <string name="pref_updates_check_frequency_desc">Configure intervals for auto and self updates, in hour.</string>
+    <string name="pref_updates_incompatible">Incompatible updates</string>
+    <string name="pref_updates_incompatible_desc">Show updates for incompatible or disabled apps that may fail to install</string>
+    <string name="pref_vending_version_device">Default (from device config)</string>
+    <string name="pref_vending_version_tip">All values other than the default are set over the value from the spoof profile (even if the native device is specified).\n\nAfter changing this parameter, you need anyway to reauthorize your account and restart to Aurora.</string>
+    <string name="pref_vending_version_title">Play Store version</string>
+    <string name="privacy_policy_subtitle">Learn how Aurora Store uses your data</string>
+    <string name="privacy_policy_title">Privacy policy</string>
+    <string name="purchase_failed">Download Failed</string>
+    <string name="purchase_invalid">App not purchased</string>
+    <string name="purchase_no_file">Could not get files</string>
+    <string name="purchase_not_found">App not found</string>
+    <string name="purchase_session_expired">Session expired, re-login to obtain new session.</string>
+    <string name="purchase_unsupported">App not supported</string>
+    <string name="rate_limited">Oops, This account is rate limited!</string>
+    <string name="remove">Remove</string>
+    <string name="remove_dispenser_summary">Are you sure you want to remove this dispenser?</string>
+    <string name="remove_dispenser_title">Remove dispenser</string>
+    <string name="requesting_new_session">Requesting a new session…</string>
+    <string name="root_installer_desc">Root permission required.</string>
+    <string name="root_installer_subtitle">Shell based installer. Allows installation without user confirmation.</string>
+    <string name="sample_systemValue">System value</string>
+    <string name="search_hint">Search for Apps &amp; Games</string>
+    <string name="server_maintenance">The server is currently under maintenance.</string>
+    <string name="server_unreachable">The server is unavailable.</string>
+    <string name="services_installer_desc">Requires Aurora Services.</string>
+    <string name="services_installer_subtitle">Allows installation without user confirmation.</string>
+    <string name="session_enjoy">Log in and enjoy.</string>
+    <string name="session_good">Woah! All good.</string>
+    <string name="session_init">Preparing…</string>
+    <string name="session_installer_desc">Recommended.</string>
+    <string name="session_installer_subtitle">Allows you to install splits apk.</string>
+    <string name="session_login">Waiting for authorization…</string>
+    <string name="session_scrapped">Last session scrapped.</string>
+    <string name="session_verifying">Session verification check…</string>
+    <string name="sheet_manual_download_line3" translatable="false">%1$s (%2$d)</string>
+    <string name="sheet_manual_download_versionCode_hint" translatable="false">%1$d</string>
+    <string name="sheet_manual_download_versionCode_preset" translatable="false">%1$d</string>
+    <string name="shizuku_installer_desc">Requires Shizuku or Sui, needs to be setup and permission granted</string>
+    <string name="shizuku_installer_subtitle">Has the advantages of all other installers.</string>
+    <string name="source_code_subtitle">Find out what\'s inside</string>
+    <string name="source_code_title">Source code</string>
+    <string name="spoof_apply">Make sure you re-login to apply the spoof</string>
+    <string name="spoof_property"><xliff:g id="manufacturer">%1$s</xliff:g>• API <xliff:g id="api">%2$s</xliff:g></string>
+    <string name="tab_categories">Categories</string>
+    <string name="tab_editor_choice">Editor\'s choice</string>
+    <string name="tab_for_you">For you</string>
+    <string name="tab_top_charts">Top charts</string>
+    <string name="tab_top_free">Top free</string>
+    <string name="tab_top_grossing">Top grossing</string>
+    <string name="tab_top_paid">Top paid</string>
+    <string name="tab_trending">Trending</string>
+    <string name="telegramCrxmsonDialog_button" translatable="false">Telegram</string>
+    <string name="telegramCrxmsonDialog_summary">Visit the Aurora Crxmson Federation on Telegram for up-to-date updates, help, and to follow other internal projects.\n\n<i>Click the button to make this dialog window no longer appear. A link to this Telegram in case of loss can be found in the «About» window.</i></string>
+    <string name="telegramCrxmsonDialog_title" translatable="false">@string/title_telegramCrxmsonDialog</string>
+    <string name="terminatedworkingaurora_dialogNegativeButton">No</string>
+    <string name="terminatedworkingaurora_dialogPositiveButton">You can\'t imagine…</string>
+    <string name="terminatedworkingaurora_dialogSummary">You\'re going to interrupt Aurora\'s work. Is this for real?</string>
+    <string name="terminatedworkingaurora_dialogTitle" translatable="false">@string/title_exit</string>
+    <string name="title_about">About</string>
+    <string name="title_account_manager">Accounts</string>
+    <string name="title_advanced">Advanced</string>
+    <string name="title_app_settings">System settings</string>
+    <string name="title_apps">Apps</string>
+    <string name="title_apps_games">My apps &amp; games</string>
+    <string name="title_apps_library">Apps in library</string>
+    <string name="title_apps_sale">Apps on sale</string>
+    <string name="title_apps_sale_provider">Provider - bestappsales.com</string>
+    <string name="title_blacklist_manager">Blacklist manager</string>
+    <string name="title_device">Device</string>
+    <string name="title_download_manager">Downloads</string>
+    <string name="title_exit">Exit</string>
+    <string name="title_favourites_manager">Favourite Apps</string>
+    <string name="title_filters_tip" translatable="false">@string/pref_filters_tip_dialogTitle</string>
+    <string name="title_games">Games</string>
+    <string name="title_installation">Installation</string>
+    <string name="title_installed">Installed</string>
+    <string name="title_installer">App installer</string>
+    <string name="title_language">Language</string>
+    <string name="title_library">Library</string>
+    <string name="title_manual_download">Manual download</string>
+    <string name="title_more">More</string>
+    <string name="title_no_network">No connection.</string>
+    <string name="title_open_external">Open externally</string>
+    <string name="title_purchase_history">Purchase history</string>
+    <string name="title_search_results">Search results</string>
+    <string name="title_search_suggestion">Search suggestion</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_spoof_manager">Spoof manager</string>
+    <string name="title_telegramCrxmsonDialog">Crxmson Federation</string>
+    <string name="title_terminatedworkingaurora">Terminated working Aurora</string>
+    <string name="title_updates">Updates</string>
+    <string name="toast_aas_token_failed">Could not generate AAS Token</string>
+    <string name="toast_abandon_sessions">Old installation sessions abandoned</string>
+    <string name="toast_anonymous_restriction">Not available on anonymous accounts</string>
+    <string name="toast_apk_blacklisted">Blacklisted</string>
+    <string name="toast_apk_whitelisted">Whitelisted</string>
+    <string name="toast_app_unavailable">App not available for your device</string>
+    <string name="toast_clipboard_copied">Copied to clipboard</string>
+    <string name="toast_developer_setting_failed">Turn on developer settings from the device settings to open them.</string>
+    <string name="toast_export_failed">Could not export device config</string>
+    <string name="toast_export_success">Device config exported</string>
+    <string name="toast_fav_export_failed">Failed to export favourites!</string>
+    <string name="toast_fav_export_success">Favourites exported!</string>
+    <string name="toast_fav_import_failed">Failed to import favourites!</string>
+    <string name="toast_fav_import_success">Favourites imported!</string>
+    <string name="toast_import_failed">Could not import device config</string>
+    <string name="toast_import_success">Device config imported</string>
+    <string name="toast_manual_available">Congrats, requested version code is available, downloading now.</string>
+    <string name="toast_manual_unavailable">The version code you are requesting is unavailable.</string>
+    <string name="toast_page_unavailable">Browse page unavailable</string>
+    <string name="toast_permission_esm_caution">You may have to re-grant the permission due to bug in SAF.</string>
+    <string name="toast_permission_granted">Permission granted</string>
+    <string name="toast_permission_installer_required">You need to grant installer permission first.</string>
+    <string name="toast_proxy_failed">Failed to set proxy</string>
+    <string name="toast_proxy_invalid">Invalid proxy URL, check format!</string>
+    <string name="toast_proxy_success">Proxy set successfully</string>
+    <string name="toast_purchase_blocked">App purchases not available on Anonymous accounts.</string>
+    <string name="toast_rated_failed">Could not submit rating</string>
+    <string name="toast_rated_success">Rated, it may take a while to show</string>
+    <string name="toast_spoof_applied">Device spoof applied.</string>
+    <string name="ui_accent_0" translatable="false">@string/sample_systemValue</string>
+    <string name="ui_accent_1" translatable="false">Crimson</string>
+    <string name="ui_accent_10" translatable="false">Cyan</string>
+    <string name="ui_accent_11" translatable="false">Teal</string>
+    <string name="ui_accent_12" translatable="false">Green</string>
+    <string name="ui_accent_13" translatable="false">Light Green</string>
+    <string name="ui_accent_14" translatable="false">Lime</string>
+    <string name="ui_accent_15" translatable="false">Yellow</string>
+    <string name="ui_accent_16" translatable="false">Amber</string>
+    <string name="ui_accent_17" translatable="false">Orange</string>
+    <string name="ui_accent_18" translatable="false">Deep Orange</string>
+    <string name="ui_accent_19" translatable="false">Brown</string>
+    <string name="ui_accent_2" translatable="false">Royal Blue</string>
+    <string name="ui_accent_20" translatable="false">Blue Grey</string>
+    <string name="ui_accent_3" translatable="false">Red</string>
+    <string name="ui_accent_4" translatable="false">Pink</string>
+    <string name="ui_accent_5" translatable="false">Purple</string>
+    <string name="ui_accent_6" translatable="false">Deep Purple</string>
+    <string name="ui_accent_7" translatable="false">Indigo</string>
+    <string name="ui_accent_8" translatable="false">Blue</string>
+    <string name="ui_accent_9" translatable="false">Light Blue</string>
+    <string name="update_available" tools:ignore="PluralsCandidate">%1$d available</string>
+    <string name="verifying_new_session">New session verification…</string>
+    <string name="version" translatable="false">v<xliff:g id="version_name">%1$s</xliff:g>(<xliff:g id="version_code">%2$d</xliff:g>)</string>
+</resources>

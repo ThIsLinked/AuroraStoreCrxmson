@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Aurora Store
+  ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
+  ~
+  ~  Aurora Store is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 2 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  Aurora Store is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.ui.onboarding.PermissionsFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="@dimen/margin_normal"
+        android:includeFontPadding="true"
+        android:text="@string/onboarding_title_permissions"
+        android:textColor="?colorAccent"
+        android:textSize="@dimen/onboarding_title" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/onboarding_permission_appslinks_tip_frame"
+        style="@style/Widget.Material3.CardView.Filled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="?android:listPreferredItemPaddingStart"
+        android:backgroundTint="@color/onboarding_permissions_verifylinks_card_background">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/onboarding_permission_appslinks_tip_titleIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="?android:listPreferredItemPaddingStart"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_menu_about"
+                    app:tint="?android:attr/colorAccent"
+                    app:tintMode="src_in" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextAppearance.Aurora.Line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="?android:listPreferredItemPaddingStart"
+                    android:maxLines="@integer/maxLines_general"
+                    android:text="@string/onboarding_permission_appslinks_tip_title"
+                    android:textColorLink="?colorAccent"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/onboarding_permission_appslinks_tip_titleButton"
+                    app:layout_constraintStart_toEndOf="@id/onboarding_permission_appslinks_tip_titleIcon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/onboarding_permission_appslinks_tip_titleButton"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_xsmall"
+                    android:contentDescription="@string/details_changelog"
+                    app:icon="@drawable/ic_arrow_down"
+                    app:iconTint="?colorControlNormal"
+                    app:layout_constrainedHeight="true"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/onboarding_permission_appslinks_tip_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="?android:listPreferredItemPaddingStart"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:overScrollMode="ifContentScrolls"
+                android:scrollbars="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextAppearance.Aurora.Line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="@integer/maxLines_general"
+                        android:text="@string/onboarding_permission_appslinks_tip_desc"
+                        android:textColorLink="?colorAccent" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/onboarding_permission_appslinks_tip_buttonDocumentation"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_small"
+                            android:layout_weight="50"
+                            android:ellipsize="end"
+                            android:maxLines="@integer/maxLines_general"
+                            android:text="@string/onboarding_permission_appslinks_tip_buttonDocumentation"
+                            android:textSize="@dimen/onboarding_permission_appslinks_tip_button"
+                            android:textStyle="bold"
+                            app:icon="@drawable/ic_open_external"
+                            app:iconGravity="start"
+                            app:iconSize="@dimen/onboarding_permission_appslinks_tip_buttonIcon" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/onboarding_permission_appslinks_tip_buttonSettings"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_small"
+                            android:layout_weight="50"
+                            android:ellipsize="end"
+                            android:maxLines="@integer/maxLines_general"
+                            android:text="@string/onboarding_permission_appslinks_tip_buttonSettings"
+                            android:textSize="@dimen/onboarding_permission_appslinks_tip_button"
+                            android:textStyle="bold"
+                            app:icon="@drawable/ic_playstore_outlined"
+                            app:iconGravity="start"
+                            app:iconSize="@dimen/onboarding_permission_appslinks_tip_buttonIcon" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/epoxy_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:overScrollMode="ifContentScrolls"
+        android:padding="?android:attr/listPreferredItemPaddingStart"
+        app:itemSpacing="?android:attr/listPreferredItemPaddingStart"
+        tools:listitem="@layout/view_permission" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

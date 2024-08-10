@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    The content has been edited by the author ThIsLinked / dhwh, inherits licenced GPLv3.0, but prohibits the use of this material for plagiarism purposes.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108.0"
+    android:viewportHeight="108.0">
+    <path
+        android:fillColor="@color/ic_launcher_foreground_2"
+        android:pathData="M64.27,49.92l-8.56,-12.22c-0.6,-0.85 -1.77,-1.06 -2.62,-0.46c-0.85,0.6 -1.06,1.77 -0.46,2.62l7.05,10.06H64.27z" />
+    <path
+        android:fillColor="@color/ic_launcher_foreground_3"
+        android:fillType="evenOdd"
+        android:pathData="M52.52,51.03v-5.06h13.13c1.64,0 2.96,1.33 2.96,2.96v2.1H52.52z" />
+    <path
+        android:fillColor="@color/ic_launcher_foreground_4"
+        android:pathData="M51.47,47.12l1.51,-1.52l4.34,4.34l-1.51,1.51L51.47,47.12z" />
+    <path
+        android:fillColor="@color/ic_launcher_foreground_5"
+        android:pathData="M46.57,43.01c-5.19,0 -9.4,4.21 -9.4,9.4h18.8C55.97,47.22 51.76,43.01 46.57,43.01z" />
+    <path
+        android:fillColor="@color/ic_launcher_foreground_6"
+        android:pathData="M55.25,37.23c-0.85,-0.6 -2.03,-0.39 -2.62,0.46l-8.56,12.22h4.6l7.05,-10.06C56.31,39.01 56.1,37.83 55.25,37.23z" />
+    <path
+        android:fillColor="@color/ic_launcher_foreground_7"
+        android:pathData="M48.66,49.92l0.55,-0.78l-4.6,0l-0.55,0.78z" />
+    <path
+        android:fillColor="@color/ic_launcher_foreground_8"
+        android:pathData="M72.17,49.34H35.83c-1.2,0 -2.07,1.14 -1.75,2.29c0,0 3.49,12.73 4.61,16.81c0.43,1.58 1.86,2.67 3.5,2.67h23.61c1.63,0 3.07,-1.09 3.5,-2.67c1.12,-4.08 4.61,-16.81 4.61,-16.81C74.23,50.48 73.36,49.34 72.17,49.34z" />
+    <path
+        android:fillColor="@color/ic_launcher_foreground_9"
+        android:pathData="M48.45,66.77c-0.3,0 -0.59,-0.08 -0.87,-0.23c-0.83,-0.48 -1.12,-1.54 -0.64,-2.38l5.55,-9.61c0.48,-0.83 1.54,-1.12 2.38,-0.64c0.83,0.48 1.12,1.54 0.64,2.38l-5.55,9.61C49.63,66.46 49.05,66.77 48.45,66.77z" />
+    <path
+        android:fillColor="@color/ic_launcher_foreground_10"
+        android:pathData="M59.55,66.77H48.45c-0.96,0 -1.74,-0.78 -1.74,-1.74s0.78,-1.74 1.74,-1.74h11.1c0.96,0 1.74,0.78 1.74,1.74S60.51,66.77 59.55,66.77z" />
+    <path
+        android:fillColor="@color/ic_launcher_foreground_11"
+        android:pathData="M59.55,66.77c-0.6,0 -1.19,-0.31 -1.51,-0.87l-5.55,-9.61c-0.48,-0.83 -0.2,-1.9 0.64,-2.38c0.83,-0.48 1.9,-0.2 2.38,0.64l5.55,9.61c0.48,0.83 0.2,1.9 -0.64,2.38C60.15,66.7 59.85,66.77 59.55,66.77z" />
+</vector>

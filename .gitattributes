@@ -1,0 +1,2 @@
+gradle\wrapper\gradle-*-bin.zip filter=lfs diff=lfs merge=lfs -text
+gradle-*-bin.zip filter=lfs diff=lfs merge=lfs -text

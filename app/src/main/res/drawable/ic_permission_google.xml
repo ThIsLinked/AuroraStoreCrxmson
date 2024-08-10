@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    The content has been edited by the author ThIsLinked / dhwh, inherits licenced GPLv3.0, but prohibits the use of this material for plagiarism purposes.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0">
+    <path
+        android:fillColor="@android:color/black"
+        android:pathData="M20.821146,10.2085371c-0.7775879,0-8.821146,0-8.821146,0v3.5829258h5.0166626 C16.2799683,15.8534546,14.3151445,17.3317471,12,17.3317471c-2.9446411,0-5.3317466-2.3871059-5.3317466-5.3317471 S9.0553589,6.6682534,12,6.6682534c1.0702925,0,2.0647993,0.3184409,2.8999224,0.8613081 c1.0021362-0.7723999,2.0043135-1.5447593,3.0064497-2.3171592C16.3255215,3.8356121,14.2609663,3,12,3 c-4.9705606,0-9,4.0294394-9,9s4.0294394,9,9,9s9-4.0294399,9-9C21,11.3865156,20.9381104,10.7875366,20.821146,10.2085371z" />
+</vector>

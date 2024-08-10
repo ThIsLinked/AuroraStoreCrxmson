@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent02">@color/material_lightRoyalBlue</color>
+    <color name="colorAccent03">@color/material_red_300</color>
+    <color name="colorAccent04">@color/material_pink_300</color>
+    <color name="colorAccent05">@color/material_purple_300</color>
+    <color name="colorAccent06">@color/material_deep_orange_300</color>
+    <color name="colorAccent07">@color/material_indigo_300</color>
+    <color name="colorAccent08">@color/material_blue_300</color>
+    <color name="colorAccent09">@color/material_light_blue_300</color>
+    <color name="colorAccent10">@color/material_cyan_300</color>
+    <color name="colorAccent11">@color/material_teal_300</color>
+    <color name="colorAccent12">@color/material_green_300</color>
+    <color name="colorAccent13">@color/material_light_green_300</color>
+    <color name="colorAccent14">@color/material_lime_300</color>
+    <color name="colorAccent15">@color/material_yellow_300</color>
+    <color name="colorAccent16">@color/material_amber_300</color>
+    <color name="colorAccent17">@color/material_orange_300</color>
+    <color name="colorAccent18">@color/material_deep_orange_300</color>
+    <color name="colorAccent19">@color/material_brown_300</color>
+    <color name="colorAccent20">@color/material_blue_grey_300</color>
+    <color name="telegramCrxmsonDialog_titleIcon">@color/material_blue_300</color>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    The content has been edited by the author ThIsLinked / dhwh, inherits licenced GPLv3.0, but prohibits the use of this material for plagiarism purposes.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108.0dip"
+    android:height="108.0dip"
+    android:viewportWidth="108.0"
+    android:viewportHeight="108.0">
+    <path
+        android:name="Background"
+        android:fillColor="@color/ic_launcher_background"
+        android:pathData="M78.3,102.6H29.7c-13.42,0 -24.3,-10.88 -24.3,-24.3V29.7c0,-13.42 10.88,-24.3 24.3,-24.3h48.6c13.42,0 24.3,10.88 24.3,24.3v48.6C102.6,91.72 91.72,102.6 78.3,102.6z" />
+    <group android:name="Foreground">
+        <path
+            android:fillColor="@color/ic_launcher_foreground_2"
+            android:pathData="@string/ic_launcher_foreground" />
+        <path
+            android:fillColor="@color/ic_launcher_foreground_3"
+            android:fillType="evenOdd"
+            android:pathData="@string/ic_launcher_foreground_2" />
+        <path
+            android:fillColor="@color/ic_launcher_foreground_4"
+            android:pathData="@string/ic_launcher_foreground_3" />
+        <path
+            android:fillColor="@color/ic_launcher_foreground_5"
+            android:pathData="@string/ic_launcher_foreground_4" />
+        <path
+            android:fillColor="@color/ic_launcher_foreground_6"
+            android:pathData="@string/ic_launcher_foreground_5" />
+        <path
+            android:fillColor="@color/ic_launcher_foreground_7"
+            android:pathData="@string/ic_launcher_foreground_6" />
+        <path
+            android:fillColor="@color/ic_launcher_foreground_8"
+            android:pathData="@string/ic_launcher_foreground_7" />
+        <path
+            android:fillColor="@color/ic_launcher_foreground_9"
+            android:pathData="@string/ic_launcher_foreground_8" />
+        <path
+            android:fillColor="@color/ic_launcher_foreground_10"
+            android:pathData="@string/ic_launcher_foreground_9" />
+        <path
+            android:fillColor="@color/ic_launcher_foreground_11"
+            android:pathData="@string/ic_launcher_foreground_10" />
+    </group>
+</vector>

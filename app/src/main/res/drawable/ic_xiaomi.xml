@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    The content has been edited by the author ThIsLinked / dhwh, inherits licenced GPLv3.0, but prohibits the use of this material for plagiarism purposes.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item android:id="@+id/layer_background">
+        <shape android:shape="oval">
+            <solid android:color="@color/material_deep_orange_500" />
+        </shape>
+    </item>
+
+    <item android:id="@+id/layer_foreground">
+        <vector
+            android:width="36dp"
+            android:height="36dp"
+            android:viewportWidth="36.0"
+            android:viewportHeight="36.0">
+            <path
+                android:fillColor="#FFFFFFFF"
+                android:pathData="M16.4705963,24.0248833h-2.0052986c-0.2529831,0-0.4580669-0.2050838-0.4580669-0.4580669v-6.1312504 c0-0.2529831,0.2050838-0.4580669,0.4580669-0.4580669h2.0052986c0.2529831,0,0.4580669,0.2050838,0.4580669,0.4580669v6.1312504 C16.9286633,23.8197994,16.7235794,24.0248833,16.4705963,24.0248833z M21.4781132,24.0243111h-1.8888969 c-0.2529831,0-0.4580669-0.2050838-0.4580669-0.4580669v-7.0338078c0-0.967761-0.7845249-1.7522869-1.7522869-1.7522869h-5.2308521 c-0.1897373,0-0.3435497,0.1538124-0.3435497,0.3435497v8.4425449c0,0.2529831-0.2050838,0.4580669-0.4580669,0.4580669H9.4580669 C9.2050838,24.0243111,9,23.8192272,9,23.5662441V12.4331837c0-0.2529831,0.2050838-0.458066,0.4580669-0.458066h7.9202232 c2.517252,0,4.5578899,2.0406361,4.5578899,4.557889v7.0332375C21.9361801,23.8192272,21.7310963,24.0243111,21.4781132,24.0243111z M26.5419331,24.0242462h-2.0052986c-0.2529831,0-0.4580669-0.2050819-0.4580669-0.458065V12.4331837 c0-0.2529831,0.2050838-0.458066,0.4580669-0.458066h2.0052986C26.7949162,11.9751177,27,12.1802006,27,12.4331837v11.1329975 C27,23.8191643,26.7949162,24.0242462,26.5419331,24.0242462z"
+                tools:ignore="VectorPath" />
+        </vector>
+    </item>
+
+</layer-list>
