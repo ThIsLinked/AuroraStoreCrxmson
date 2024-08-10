@@ -5,24 +5,24 @@
     android:layout_marginVertical="?android:listPreferredItemPaddingStart"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:weightSum="3">
+    android:weightSum="100">
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="30"
         android:background="@android:color/transparent" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="4dp"
-        android:layout_weight="1"
+        android:layout_weight="40"
         android:background="@drawable/sheet_divider" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="30"
         android:background="@android:color/transparent" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
