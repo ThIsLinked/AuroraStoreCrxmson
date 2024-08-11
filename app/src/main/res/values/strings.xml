@@ -259,7 +259,7 @@
     <string name="license_subtitle" translatable="false">The GNU General Public License v3.0</string>
     <string name="login_rate_limited">Too many tries. Try again or try again later.</string>
     <string name="manage_account">Manage your account</string>
-    <string name="manual_download_hint">Enter version code you wish to download</string>
+    <string name="manual_download_hint">Enter version code you wish to download…</string>
     <string name="menu">Menu</string>
     <string name="menu_disclaimer">Disclaimer</string>
     <string name="menu_license">License</string>

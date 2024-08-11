@@ -118,7 +118,13 @@ object PackageUtil {
         return if (intent == null) {
             null
         } else {
-            intent.addCategory(if (isTv(context)) Intent.CATEGORY_LEANBACK_LAUNCHER else Intent.CATEGORY_LAUNCHER)
+            intent.addCategory(
+                if (isTv(context)) {
+                    Intent.CATEGORY_LEANBACK_LAUNCHER
+                } else {
+                    Intent.CATEGORY_LAUNCHER
+                }
+            )
             intent
         }
     }

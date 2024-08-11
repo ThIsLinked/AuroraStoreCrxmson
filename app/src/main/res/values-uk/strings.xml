@@ -337,7 +337,7 @@
     <string name="services_installer_desc">Потрібно Aurora Services.</string>
     <string name="am_installer_subtitle">Встановлює за допомогою стороннього інсталятора.</string>
     <string name="am_installer_desc">Потрібно App Manager. А також право root або ADB, якщо включена оптимізація MUIU.</string>
-    <string name="manual_download_hint">Введіть код версії, яку потрібно завантажити</string>
+    <string name="manual_download_hint">Введіть код версії, яку потрібно завантажити…</string>
     <string name="faqs_subtitle">Є питання? Знайдіть відповіді</string>
     <string name="source_code_subtitle">Дізнайтеся, що всередині</string>
     <string name="disclaimer_subtitle">Підзвітність і відповідальність</string>

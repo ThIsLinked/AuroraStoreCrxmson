@@ -203,7 +203,7 @@
     <string name="installer_status_user_action">Ожидание подтверждения пользователя</string>
     <string name="login_rate_limited">Слишком много попыток. Попытайтесь ещё раз или попробуйте позже.</string>
     <string name="manage_account">Управление аккаунтом</string>
-    <string name="manual_download_hint">Введите код версии, которую необходимо загрузить</string>
+    <string name="manual_download_hint">Введите код версии, которую необходимо загрузить…</string>
     <string name="menu">Меню</string>
     <string name="menu_disclaimer">Отказ от ответственности</string>
     <string name="menu_license">Лицензия</string>
