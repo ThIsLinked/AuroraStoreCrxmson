@@ -88,11 +88,6 @@ class OnboardingFragment : BaseFragment<FragmentOnboardingBinding>() {
         if (!isDefaultPrefLoaded) {
             save(PREFERENCE_DEFAULT, true)
             loadDefaultPreferences()
-
-            // No onboarding for TV, proceed with defaults
-            if (PackageUtil.isTv(view.context)) {
-                finishOnboarding()
-            }
         }
 
         // ViewPager2

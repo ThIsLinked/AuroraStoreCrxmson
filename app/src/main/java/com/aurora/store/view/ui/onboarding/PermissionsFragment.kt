@@ -30,13 +30,13 @@ import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import com.aurora.extensions.isRAndAbove
-import com.aurora.extensions.isSAndAbove
 import com.aurora.extensions.isTAndAbove
 import com.aurora.store.PermissionType
 import com.aurora.store.R
 import com.aurora.store.data.model.Permission
 import com.aurora.store.data.providers.PermissionProvider
 import com.aurora.store.databinding.FragmentOnboardingPermissionsBinding
+import com.aurora.store.util.PackageUtil
 import com.aurora.store.view.epoxy.views.preference.PermissionViewModel_
 import com.aurora.store.view.ui.commons.BaseFragment
 import com.google.android.material.button.MaterialButton
@@ -59,7 +59,7 @@ class PermissionsFragment : BaseFragment<FragmentOnboardingPermissionsBinding>()
 
         val playStorePackageName = "com.android.vending"
 
-        fun playStoreIsInstalled() : Boolean {
+        fun playStoreIsInstalled(): Boolean {
             return try {
                 requireContext().packageManager.getPackageInfo(playStorePackageName, 0)
                 true
@@ -74,39 +74,55 @@ class PermissionsFragment : BaseFragment<FragmentOnboardingPermissionsBinding>()
 
             // Condition: Links to Play Store domains have been confirmed for Aurora.
             if (permissionProvider.isGranted(permissionType = PermissionType.APP_LINKS)) {
-                view.findViewById<MaterialCardView>(R.id.onboarding_permission_appslinks_tip_frame).visibility = View.GONE // Hide the layout.
-                Log.i("OnboardingAppsLinks", "All links have been confirmed, the tip was hidden.") // Sending a notification about confirmed links in Logcat.
+                view.findViewById<MaterialCardView>(R.id.onboarding_permission_appslinks_tip_frame).visibility =
+                    View.GONE // Hide the layout.
+                Log.i(
+                    "OnboardingAppsLinks",
+                    "All links have been confirmed, the tip was hidden."
+                ) // Sending a notification about confirmed links in Logcat.
             } else {
                 val tipTitleButton = binding.onboardingPermissionAppslinksTipTitleButton
                 val tipDesc = binding.onboardingPermissionAppslinksTipDesc
 
                 tipTitleButton.setOnClickListener {
                     if (!tipDesc.isVisible) {
-                        tipTitleButton.icon = context?.let { it1 -> ContextCompat.getDrawable(it1, R.drawable.ic_arrow_up)
+                        tipTitleButton.icon = context?.let { it1 ->
+                            ContextCompat.getDrawable(it1, R.drawable.ic_arrow_up)
                         }
                         tipDesc.visibility = View.VISIBLE
                     } else {
-                        tipTitleButton.icon = context?.let { it1 -> ContextCompat.getDrawable(it1, R.drawable.ic_arrow_down )
+                        tipTitleButton.icon = context?.let { it1 ->
+                            ContextCompat.getDrawable(it1, R.drawable.ic_arrow_down)
                         }
                         tipDesc.visibility = View.GONE
                     }
                 }
 
                 /* Tip link to official documentation */
-                view.findViewById<MaterialButton>(R.id.onboarding_permission_appslinks_tip_buttonDocumentation).setOnClickListener {
-                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com/training/app-links/verify-android-applinks")))
-                }
+                view.findViewById<MaterialButton>(R.id.onboarding_permission_appslinks_tip_buttonDocumentation)
+                    .setOnClickListener {
+                        startActivity(
+                            Intent(
+                                Intent.ACTION_VIEW,
+                                Uri.parse("https://developer.android.com/training/app-links/verify-android-applinks")
+                            )
+                        )
+                    }
 
                 /* Tip for opening system settings Play Store */
-                view.findViewById<MaterialButton>(R.id.onboarding_permission_appslinks_tip_buttonSettings).setOnClickListener {
-                    startActivity(Intent(ACTION_APPLICATION_DETAILS_SETTINGS).apply {
-                        data = Uri.fromParts("package", playStorePackageName, null)
-                    })
-                }
+                view.findViewById<MaterialButton>(R.id.onboarding_permission_appslinks_tip_buttonSettings)
+                    .setOnClickListener {
+                        startActivity(Intent(ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                            data = Uri.fromParts("package", playStorePackageName, null)
+                        })
+                    }
             }
 
         } else {
-            Log.i("OnboardingAppsLinks", "Play Store is not present among the apps, the tip was hidden.") // Sending notification absence a Play Store to Logcat.
+            Log.i(
+                "OnboardingAppsLinks",
+                "Play Store is not present among the apps, the tip was hidden."
+            ) // Sending notification absence a Play Store to Logcat.
         }
 
     }
@@ -148,13 +164,17 @@ class PermissionsFragment : BaseFragment<FragmentOnboardingPermissionsBinding>()
             )
         }
 
-        permissions.add(
-            Permission(
-                PermissionType.DOZE_WHITELIST,
-                getString(R.string.onboarding_permission_doze),
-                getString(R.string.onboarding_permission_doze_desc)
+        if (context?.let {
+                PackageUtil.isTv(it)
+            } == false) {
+            permissions.add(
+                Permission(
+                    PermissionType.DOZE_WHITELIST,
+                    getString(R.string.onboarding_permission_doze),
+                    getString(R.string.onboarding_permission_doze_desc)
+                )
             )
-        )
+        }
 
         if (isTAndAbove()) {
             permissions.add(
@@ -166,7 +186,9 @@ class PermissionsFragment : BaseFragment<FragmentOnboardingPermissionsBinding>()
             )
         }
 
-        if (isSAndAbove()) {
+        if (context?.let {
+                PackageUtil.isTv(it)
+            } == false) {
             permissions.add(
                 Permission(
                     PermissionType.APP_LINKS,
