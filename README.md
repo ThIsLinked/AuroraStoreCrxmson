@@ -27,26 +27,26 @@ such a misunderstanding. Use them in case of pure use – they look
 exactly as they were supposed to in the specification.
 ```
 
-* Modernity of the root of the project.
-* Some UI/UX edits and improvements + changed default color to Crimson, v31 and above – system dynamic color;
-* The list colors for accent is taken from the [Material Design palette](https://m2.material.io/design/color/the-color-system.html#color-theme-creation);
+* Modernity of the project;
+* Redesigned the UI and UX;
+* Replaced the list of accents with a list of [Material Design palette](https://m2.material.io/design/color/the-color-system.html#color-theme-creation);
 * On the application page, some elements are now available for highlighting with the cursor (so that the text can be copied to the clipboard);
 * Redesigned and/or rearranged sections and items in settings;
-* Restoring the switch to download files to the device's internal storage;
+* Restoring the switch to download files to the device's internal storage. You can specify your own path if you wish.;
 * Restoring full functionality of [Deep Links](https://developer.android.com/training/app-links/deep-linking) (edit [#7082](https://4pda.to/forum/index.php?showtopic=887569&view=findpost&p=124420039));
 * Added mono-profiles: xxhdpi, API 27, all languages and actuality architectures - ARMv7, ARM64v8, x86 and x64. *The original source of the original configuration – [#2896](https://4pda.to/forum/index.php?showtopic=887569&view=findpost&p=106493433);*
 * Redesigned launcher icon: VectorDrawable rendering only, API 26 and above – adaptive method, API 33 and above – monochrome method (optiomal);
 * Redesigned banner for Android TV;
-* Self-update redirected to Crxmson repository. You will receive notifications if I post an update (the function can be disabled in the settings);
 * Integrated network configuration to establish cleartext traffic. This allows traffic-modifying firewalls such as AdGuard to be used seamlessly over of Aurora;
 * There are many other changes that I can't categorize in the main changelog. Keep an eye on my change logs during updates to keep up to date with changes throughout the repository...
 
 > ### Only in the apk's published in my performance:
 > * Removal of obfuscation and/or minification;
 > * Removed stock profiles;
-> * Cleanup Smali from garbage, include debug lines;
-> * Cleanup resources from garbage;
+> * Cleaned Smali from garbage, include debug lines;
+> * Cleaned resources from garbage;
 > * Removed mdpi, ldpi and ldrtl;
+> * Recycled dex files;
 > * Optimization of apk at archive level;
 > * Sign dhwh v1+v2+v3 (on 4PDA);
 > * Sign ThIsLinked v1+v2+v3 (on the general web);
@@ -80,7 +80,7 @@ exactly as they were supposed to in the specification.
 *Please note that these are early screenshots and may not reflect current releases.*
 
 <details><summary>[click spoiler]</summary>
-<img src="Screenshots/Screenshot_1.webp" alt="Screenshot_1" /><img src="Screenshots/Screenshot_2.webp" alt="Screenshot_2" /><img src="Screenshots/Screenshot_2-amber.webp" alt="Screenshot_2-amber" /><img src="Screenshots/Screenshot_2-indigo.webp" alt="Screenshot_2-indigo" /><img src="Screenshots/Screenshot_2-dark.webp" alt="Screenshot_2-dark" /><img src="Screenshots/Screenshot_2-black.webp" alt="Screenshot_2-black" /><img src="Screenshots/Screenshot_3.webp" alt="Screenshot_3" /><img src="Screenshots/Screenshot_4.webp" alt="Screenshot_4" /><img src="Screenshots/Screenshot_5.webp" alt="Screenshot_5" /><img src="Screenshots/Screenshot_6.webp" alt="Screenshot_6" /><img src="Screenshots/Screenshot_7.webp" alt="Screenshot_7" /><img src="Screenshots/Screenshot_8.webp" alt="Screenshot_8" /><img src="Screenshots/Screenshot_8-listAccents.webp" alt="Screenshot_8-listAccents" /><img src="Screenshots/Screenshot_9.webp" alt="Screenshot_9" />
+<img src="_ScreenshortsDemo/Screenshot_1.webp" alt="Screenshot_1" /><img src="_ScreenshortsDemo/Screenshot_2.webp" alt="Screenshot_2" /><img src="_ScreenshortsDemo/Screenshot_2-amber.webp" alt="Screenshot_2-amber" /><img src="_ScreenshortsDemo/Screenshot_2-indigo.webp" alt="Screenshot_2-indigo" /><img src="_ScreenshortsDemo/Screenshot_2-dark.webp" alt="Screenshot_2-dark" /><img src="_ScreenshortsDemo/Screenshot_2-black.webp" alt="Screenshot_2-black" /><img src="_ScreenshortsDemo/Screenshot_3.webp" alt="Screenshot_3" /><img src="_ScreenshortsDemo/Screenshot_4.webp" alt="Screenshot_4" /><img src="_ScreenshortsDemo/Screenshot_5.webp" alt="Screenshot_5" /><img src="_ScreenshortsDemo/Screenshot_6.webp" alt="Screenshot_6" /><img src="_ScreenshortsDemo/Screenshot_7.webp" alt="Screenshot_7" /><img src="_ScreenshortsDemo/Screenshot_8.webp" alt="Screenshot_8" /><img src="_ScreenshortsDemo/Screenshot_8-listAccents.webp" alt="Screenshot_8-listAccents" /><img src="_ScreenshortsDemo/Screenshot_9.webp" alt="Screenshot_9" />
 </details>
 
 # Gratitudes
