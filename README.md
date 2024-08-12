@@ -1,4 +1,4 @@
-<img id="logo" align="center" src="README-logo.webp"  alt="Aurora Store Crxmson" />
+<img id="logo" src="README-logo.webp"  alt="Aurora Store Crxmson" />
 
 A moddify/fork the original [Aurora Store source project](https://gitlab.com/AuroraOSS/AuroraStore). Developable for non-commercial purposes for end-personal use.
 
@@ -7,12 +7,12 @@ A moddify/fork the original [Aurora Store source project](https://gitlab.com/Aur
 
 *This project is intended for the CIS territory. There is no localizations for other regions. Except for English USA - it acts as default localization.*
 
-**Current status project:** Waiting for updates <img src="README-kitten.webp"  alt=" =^.^= " style="width: 35px;" />
+**Current status project:** Waiting for updates <img style="width: 35px;" src="README-kitten.webp" alt=" =^.^= " />
 
 ###### @ 2024 [ThIsLinked](https://t.me/thislinked) / [dhwh](https://4pda.to/forum/index.php?showuser=9870529)
 
 # Main changes from original
-
+<div id="notechanges">
 > **Note:**
 ```
 This changelog may have fewer items than what actually appears in the latest builds.
@@ -26,7 +26,7 @@ published by me, do not have such a defect, since I corrected them from
 such a misunderstanding. Use them in case of pure use – they look
 exactly as they were supposed to in the specification.
 ```
-
+</div>
 * Modernity of the project;
 * Redesigned the UI and UX;
 * Replaced the list of accents with a list of [Material Design palette](https://m2.material.io/design/color/the-color-system.html#color-theme-creation);
@@ -77,10 +77,22 @@ exactly as they were supposed to in the specification.
 
 # Screenshots
 
-*Please note that these are early screenshots and may not reflect current releases.*
+*[Please note that these are early screenshots and may not reflect current releases.](https://github.com/ThIsLinked/AuroraStoreCrxmson#notechanges)*
 
 <details><summary>[click spoiler]</summary>
-<img src="_ScreenshortsDemo/Screenshot_1.webp" alt="Screenshot_1" /><img src="_ScreenshortsDemo/Screenshot_2.webp" alt="Screenshot_2" /><img src="_ScreenshortsDemo/Screenshot_2-amber.webp" alt="Screenshot_2-amber" /><img src="_ScreenshortsDemo/Screenshot_2-indigo.webp" alt="Screenshot_2-indigo" /><img src="_ScreenshortsDemo/Screenshot_2-dark.webp" alt="Screenshot_2-dark" /><img src="_ScreenshortsDemo/Screenshot_2-black.webp" alt="Screenshot_2-black" /><img src="_ScreenshortsDemo/Screenshot_3.webp" alt="Screenshot_3" /><img src="_ScreenshortsDemo/Screenshot_4.webp" alt="Screenshot_4" /><img src="_ScreenshortsDemo/Screenshot_5.webp" alt="Screenshot_5" /><img src="_ScreenshortsDemo/Screenshot_6.webp" alt="Screenshot_6" /><img src="_ScreenshortsDemo/Screenshot_7.webp" alt="Screenshot_7" /><img src="_ScreenshortsDemo/Screenshot_8.webp" alt="Screenshot_8" /><img src="_ScreenshortsDemo/Screenshot_8-listAccents.webp" alt="Screenshot_8-listAccents" /><img src="_ScreenshortsDemo/Screenshot_9.webp" alt="Screenshot_9" />
+<img style="height:585px" src="_ScreenshortsDemo/Screenshot_1.webp" alt="Screenshot_1" />
+<img style="height:585px" src="_ScreenshortsDemo/Screenshot_2.webp" alt="Screenshot_2" />
+<img style="height:585px" src="_ScreenshortsDemo/Screenshot_3.webp" alt="Screenshot_3" />
+<img style="height:585px" src="_ScreenshortsDemo/Screenshot_4.webp" alt="Screenshot_4" />
+<img style="height:585px" src="_ScreenshortsDemo/Screenshot_5.webp" alt="Screenshot_5" />
+<img style="height:585px" src="_ScreenshortsDemo/Screenshot_6.webp" alt="Screenshot_6" />
+<img style="height:585px" src="_ScreenshortsDemo/Screenshot_7.webp" alt="Screenshot_7" />
+<img style="height:585px" src="_ScreenshortsDemo/Screenshot_8.webp" alt="Screenshot_8" />
+<img style="height:585px" src="_ScreenshortsDemo/Screenshot_9.webp" alt="Screenshot_9" />
+<img style="height:585px" src="_ScreenshortsDemo/Screenshot_10.webp" alt="Screenshot_10" />
+<img style="height:585px" src="_ScreenshortsDemo/Screenshot_11.webp" alt="Screenshot_11" />
+<img style="height:585px" src="_ScreenshortsDemo/Screenshot_12.webp" alt="Screenshot_12" />
+<img style="height:585px" src="_ScreenshortsDemo/Screenshot_13.webp" alt="Screenshot_13" />
 </details>
 
 # Gratitudes
