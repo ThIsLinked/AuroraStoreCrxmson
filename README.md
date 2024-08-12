@@ -13,19 +13,20 @@ A moddify/fork the original [Aurora Store source project](https://gitlab.com/Aur
 
 # Main changes from original
 <div id="notechanges">
+
 > **Note:**
-```
-This changelog may have fewer items than what actually appears in the latest builds.
-This happens because I may forget to update it or otherwise edit it.
-Always check for changes in the real binary build.
-```
-```
-Android Studio mangles the code of some resources at compiling time.
-Use the source code only for research or custom variants. The apk's,
-published by me, do not have such a defect, since I corrected them from
-such a misunderstanding. Use them in case of pure use – they look
-exactly as they were supposed to in the specification.
-```
+>```
+>This changelog may have fewer items than what actually appears in the latest builds.
+>This happens because I may forget to update it or otherwise edit it.
+>Always check for changes in the real binary build.
+>```
+>```
+>Android Studio mangles the code of some resources at compiling time.
+>Use the source code only for research or custom variants. The apk's,
+>published by me, do not have such a defect, since I corrected them from
+>such a misunderstanding. Use them in case of pure use – they look
+>exactly as they were supposed to in the specification.
+>```
 </div>
 * Modernity of the project;
 * Redesigned the UI and UX;
@@ -92,7 +93,7 @@ exactly as they were supposed to in the specification.
 <img style="height:585px" src="_ScreenshortsDemo/Screenshot_10.webp" alt="Screenshot_10" />
 <img style="height:585px" src="_ScreenshortsDemo/Screenshot_11.webp" alt="Screenshot_11" />
 <img style="height:585px" src="_ScreenshortsDemo/Screenshot_12.webp" alt="Screenshot_12" />
-<img style="height:585px" src="_ScreenshortsDemo/Screenshot_13.webp" alt="Screenshot_13" />
+<img style="width:480px" src="_ScreenshortsDemo/Screenshot_13.webp" alt="Screenshot_13" />
 </details>
 
 # Gratitudes
