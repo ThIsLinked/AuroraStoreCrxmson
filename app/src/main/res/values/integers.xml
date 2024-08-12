@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer name="app_versionCode">60</integer>
-    <integer name="app_versionCode_nightly">240811</integer>
-    <integer name="app_versionCode_moddify">24081101</integer>
+    <integer name="app_versionCode_nightly">240812</integer>
+    <integer name="app_versionCode_moddify">24081201</integer>
     <integer name="maxLines_general">99</integer>
 </resources>

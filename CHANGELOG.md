@@ -1,10 +1,10 @@
-> **v4.5.1-nightly-11.08.24 (60)**
-> * Pulled up to nightly 11.08.24 (include stable 4.5.1);
+> **v4.5.1-nightly-12.08.24 (60)**
+> * Pulled up to nightly 12.08.24 (include stable 4.5.1);
 > * Returned the ability to download apk's in user-specified external storage rather than to own directory Aurora (to section "/data/data/...");
 > * More massive interface layout editing compared to past versions of the mod;
 > * A few edits and corrections in the settings;
 > * Project refinement and cleanup;
-> * More many other other changes, not very significant, that I'll get tired of listing....
+> * More many other other changes, not very significant, that I'll get tired of listing...
 
 > **v4.3.5-nightly-04.11.23 (53)**
 > * Pulled up to nightly 04.11.23;
