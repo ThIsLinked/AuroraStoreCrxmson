@@ -1,0 +1,5 @@
+{
+    "versionName": "4.5.1",
+    "versionCode": 24081201,
+    "changelog": " • Pulled up to nightly 12.08.24 (include stable 4.5.1);\n • Returned the ability to download apk's in user-specified external storage rather than to own directory Aurora (to section \"/data/data/...\");\n • More massive interface layout editing compared to past versions of the mod;\n • A few edits and corrections in the settings;\n • Project refinement and cleanup;\n • More many other other changes, not very significant, that I'll get tired of listing..."
+}
