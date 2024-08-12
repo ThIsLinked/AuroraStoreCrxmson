@@ -78,7 +78,7 @@ exactly as they were supposed to in the specification.
 
 # Screenshots
 
-*[Please note that these are early screenshots and may not reflect current releases.](https://github.com/ThIsLinked/AuroraStoreCrxmson#notechanges)*
+*Please note that these are early screenshots and may not reflect current releases.*
 
 <details><summary>[click spoiler]</summary>
 <img style="height:585px;" src="_ScreenshortsDemo/Screenshot_1.webp" alt="Screenshot_1" />
