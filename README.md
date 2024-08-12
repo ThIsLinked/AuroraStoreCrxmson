@@ -2,8 +2,9 @@
 
 A moddify/fork the original [Aurora Store source project](https://gitlab.com/AuroraOSS/AuroraStore). Developable for non-commercial purposes for end-personal use.
 
-* [Moddification post on the 4PDA forum](https://4pda.to/forum/index.php?showtopic=887569&view=findpost&p=116441910)
-* [Topic Aurora Store on the 4PDA forum](https://4pda.to/forum/index.php?showtopic=887569)
+<a href="https://t.me/AuroraCrxmson"><img id="cardTelegramGroup" style="width: 192px;" src="README-card_telegramGroup.svg"  alt="Telegram group card" /></a>
+<a href="https://4pda.to/forum/index.php?showtopic=887569&view=findpost&p=116441910"><img id="cardPost4PDA" style="width: 192px;" src="README-card_postOn4PDA.svg"  alt="Post on 4PDA card" /></a>
+<a href="https://4pda.to/forum/index.php?showtopic=887569"><img id="cardTopic4PDA" style="width: 192px;" src="README-card_topicOn4PDA.svg"  alt="Topic on 4PDA card" /></a>
 
 *This project is intended for the CIS territory. There is no localizations for other regions. Except for English USA - it acts as default localization.*
 
