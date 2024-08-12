@@ -22,6 +22,7 @@ class TelegramCrxmsonDialog : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return MaterialAlertDialogBuilder(requireContext())
+            .setCancelable(false)
             .setIcon(R.drawable.ic_telegram)
             .setTitle(R.string.telegramCrxmsonDialog_title)
             .setMessage(R.string.telegramCrxmsonDialog_summary)
@@ -32,7 +33,6 @@ class TelegramCrxmsonDialog : DialogFragment() {
                         Uri.parse(Constants.TELEGRAM_CRXMSON_LINK)
                     )
                 )
-                save(Preferences.PREFERENCE_TELEGRAM_CRXMSON_INTRO, true)
                 dialog?.dismiss()
             }
             .create()

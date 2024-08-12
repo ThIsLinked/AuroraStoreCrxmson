@@ -34,6 +34,7 @@ import com.aurora.store.util.Preferences
 import com.aurora.store.util.Preferences.PREFERENCE_DEFAULT_SELECTED_TAB
 import com.aurora.store.util.Preferences.PREFERENCE_INTRO
 import com.aurora.store.util.Preferences.PREFERENCE_TELEGRAM_CRXMSON_INTRO
+import com.aurora.store.util.save
 import com.aurora.store.view.ui.commons.BaseFragment
 import com.aurora.store.viewmodel.auth.AuthViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -55,6 +56,7 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>() {
 
         if (!Preferences.getBoolean(requireContext(), PREFERENCE_TELEGRAM_CRXMSON_INTRO)) {
             findNavController().navigate(R.id.telegramCrxmsonDialog)
+            save(PREFERENCE_TELEGRAM_CRXMSON_INTRO, true)
         }
 
         // Toolbar
