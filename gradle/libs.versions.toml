@@ -32,7 +32,7 @@ shimmerVersion = "0.5.0"
 shizukuVersion = "13.1.5"
 swiperefreshlayoutVersion = "1.1.0"
 viewpager2Version = "1.1.0"
-workVersion = "2.9.0"
+workVersion = "2.9.1"
 
 [libraries]
 airbnb-epoxy-android = { module = "com.airbnb.android:epoxy", version.ref = "epoxyVersion" }
