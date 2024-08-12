@@ -29,4 +29,5 @@
         app:menu="@menu/menu_bottom_nav"
         app:menuGravity="center"
         tools:viewBindingType="com.google.android.material.navigation.NavigationBarView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

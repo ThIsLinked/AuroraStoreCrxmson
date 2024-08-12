@@ -122,6 +122,7 @@
     <string name="app_list_rating" translatable="false">%1$s • %2$s★ • %3$s</string>
     <string name="app_updater_service_notif_text">Enables background app download</string>
     <string name="app_updater_service_notif_title">Background app download</string>
+    <string name="app_versionName" translatable="false">4.5.1-nightly-240812 (by ThIsLinked // dhwh)</string>
     <string name="app_view_rating" translatable="false">%1$s • %2$s★</string>
     <string name="bad_request">Failed to request a session.<i>Try again</i> or try again later.</string>
     <string name="categoryapps_notFound">Nothing was found for this category…</string>
