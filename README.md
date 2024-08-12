@@ -1,4 +1,4 @@
-<img id="logo" src="README-logo.webp"  alt="Aurora Store Crxmson" />
+<img id="logo" src="README-logo.svg"  alt="Aurora Store Crxmson logo" />
 
 A moddify/fork the original [Aurora Store source project](https://gitlab.com/AuroraOSS/AuroraStore). Developable for non-commercial purposes for end-personal use.
 
@@ -81,7 +81,7 @@ exactly as they were supposed to in the specification.
 *Please note that these are early screenshots and may not reflect current releases.*
 
 <details><summary>[click spoiler]</summary>
-<img style="height:585px;" src="_ScreenshortsDemo/Screenshot_1.webp" alt="Screenshot_1" />
+<img style="width:192px;" src="_ScreenshortsDemo/Screenshot_1.webp" alt="Screenshot_1" />
 <img style="height:585px;" src="_ScreenshortsDemo/Screenshot_2.webp" alt="Screenshot_2" />
 <img style="height:585px;" src="_ScreenshortsDemo/Screenshot_3.webp" alt="Screenshot_3" />
 <img style="height:585px;" src="_ScreenshortsDemo/Screenshot_4.webp" alt="Screenshot_4" />
