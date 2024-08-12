@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Aurora Store
+  ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
+  ~  Copyright (C) 2023, grrfe <grrfe@420blaze.it>
+  ~
+  ~  Aurora Store is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 2 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  Aurora Store is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string-array name="pref_themes" tools:ignore="InconsistentArrays">
+        <item>@string/pref_ui_theme_system</item>
+        <item>@string/pref_ui_theme_light</item>
+        <item>@string/pref_ui_theme_dark</item>
+        <item>@string/pref_ui_theme_black</item>
+        <item>@string/pref_ui_theme_dark_x</item>
+        <item>@string/pref_ui_theme_darkord</item>
+    </string-array>
+    <string-array name="pref_themes_values" tools:ignore="InconsistentArrays">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+</resources>
