@@ -82,12 +82,16 @@ class UpdatesFragment : BaseFragment<FragmentUpdatesBinding>() {
             viewModel.updates
                 .combine(viewModel.downloadsList) { uList, dList ->
                     uList?.associateWith { a ->
-                        dList.find { it.packageName == a.packageName && it.versionCode == a.versionCode }
+                        dList.find {
+                            it.packageName == a.packageName && it.versionCode == a.versionCode
+                        }
                     }
                 }.collectLatest { map ->
                     updateController(map)
                     viewModel.updateAllEnqueued =
-                        map?.values?.all { it?.isRunning == true } ?: false
+                        map?.values?.all {
+                            it?.isRunning == true
+                        } ?: false
                 }
         }
 
@@ -205,4 +209,5 @@ class UpdatesFragment : BaseFragment<FragmentUpdatesBinding>() {
     private fun cancelAll() {
         viewModel.cancelAll()
     }
+
 }
