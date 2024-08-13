@@ -21,6 +21,7 @@ package com.aurora.store.view.ui.updates
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -94,6 +95,33 @@ class UpdatesFragment : BaseFragment<FragmentUpdatesBinding>() {
                         } ?: false
                 }
         }
+
+        /*
+            All tint SwipeRefresh inherits the colors of the current theme.
+        */
+        // TintSwipeRefresh: Start
+        //
+        // Color background
+        val obtainStyledAttrBackgroundColorAccent = requireContext().obtainStyledAttributes(intArrayOf(android.R.attr.colorBackground))
+        val attrBackgroundColorAccent = obtainStyledAttrBackgroundColorAccent.getResourceId(0, R.color.colorWhite)
+        obtainStyledAttrBackgroundColorAccent.recycle()
+        context?.let {
+            ContextCompat.getColor(it, attrBackgroundColorAccent)
+        }?.let {
+            binding.swipeRefreshLayout.setProgressBackgroundColorSchemeColor(it)
+        }
+
+        //
+        // Color accent
+        val obtainStyledAttrColorAccent = requireContext().obtainStyledAttributes(intArrayOf(androidx.appcompat.R.attr.colorAccent))
+        val attrColorAccent = obtainStyledAttrColorAccent.getResourceId(0, R.color.colorAccent)
+        obtainStyledAttrColorAccent.recycle()
+        context?.let {
+            ContextCompat.getColor(it, attrColorAccent)
+        }?.let {
+            binding.swipeRefreshLayout.setColorSchemeColors(it)
+        }
+        // TintSwipeRefresh: End
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.fetchingUpdates.collect {
