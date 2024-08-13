@@ -30,7 +30,6 @@ import com.aurora.store.R
 import com.aurora.store.data.event.InstallerEvent
 import com.aurora.store.data.model.MinimalApp
 import com.aurora.store.databinding.FragmentAppsBinding
-import com.aurora.store.view.epoxy.views.HeaderViewModel_
 import com.aurora.store.view.epoxy.views.app.AppListViewModel_
 import com.aurora.store.view.epoxy.views.shimmer.AppListViewShimmerModel_
 import com.aurora.store.view.ui.commons.BaseFragment
@@ -87,11 +86,7 @@ class InstalledAppsFragment : BaseFragment<FragmentAppsBinding>() {
                     )
                 }
             } else {
-                add(
-                    HeaderViewModel_()
-                        .id("header")
-                        .title(getString(R.string.myapps_installed, appList.size))
-                )
+                binding.txtTitle.text = getString(R.string.myapps_installed, appList.size)
                 appList.forEach { app ->
                     add(
                         AppListViewModel_()
