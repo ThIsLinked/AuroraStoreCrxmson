@@ -82,7 +82,7 @@ exactly as they were supposed to in the specification.
 *Please note that these are early screenshots and may not reflect current releases.*
 
 <details><summary>[click spoiler]</summary>
-<img style="width:192px;" src="_ScreenshortsDemo/Screenshot_1.webp" alt="Screenshot_1" />
+<img style="height:585px;" src="_ScreenshortsDemo/Screenshot_1.webp" alt="Screenshot_1" />
 <img style="height:585px;" src="_ScreenshortsDemo/Screenshot_2.webp" alt="Screenshot_2" />
 <img style="height:585px;" src="_ScreenshortsDemo/Screenshot_3.webp" alt="Screenshot_3" />
 <img style="height:585px;" src="_ScreenshortsDemo/Screenshot_4.webp" alt="Screenshot_4" />
