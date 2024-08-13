@@ -34,7 +34,7 @@ exactly as they were supposed to in the specification.
 * Replaced the list of accents with a list of [Material Design palette](https://m2.material.io/design/color/the-color-system.html#color-theme-creation);
 * On the application page, some elements are now available for highlighting with the cursor (so that the text can be copied to the clipboard);
 * Redesigned and/or rearranged sections and items in settings;
-* Restoring the switch to download files to the device's internal storage. You can specify your own path if you wish.;
+* Restoring the switch to download files to the device's internal storage. You can specify your own path if you wish;
 * Restoring full functionality of [Deep Links](https://developer.android.com/training/app-links/deep-linking) (edit [#7082](https://4pda.to/forum/index.php?showtopic=887569&view=findpost&p=124420039));
 * Added mono-profiles: xxhdpi, API 27, all languages and actuality architectures - ARMv7, ARM64v8, x86 and x64. *The original source of the original configuration – [#2896](https://4pda.to/forum/index.php?showtopic=887569&view=findpost&p=106493433);*
 * Redesigned launcher icon: VectorDrawable rendering only, API 26 and above – adaptive method, API 33 and above – monochrome method (optiomal);
