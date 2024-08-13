@@ -88,7 +88,9 @@
     <color name="ic_banner_foreground_8">@color/ic_launcher_foreground_8</color>
     <color name="ic_banner_foreground_9">@color/ic_launcher_foreground_9</color>
     <color name="ic_launcher_background_end">@color/crimsonPrimary</color>
+    <color name="ic_launcher_background_end_clone">#ff343459</color>
     <color name="ic_launcher_background_start">@color/crimson</color>
+    <color name="ic_launcher_background_start_clone">@color/material_royalBlue</color>
     <color name="ic_launcher_foreground">@color/ic_logo_foreground</color>
     <color name="ic_launcher_foreground_10">@color/ic_logo_foreground_10</color>
     <color name="ic_launcher_foreground_11">@color/ic_logo_foreground_11</color>
