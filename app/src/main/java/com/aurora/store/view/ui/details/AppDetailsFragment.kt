@@ -114,7 +114,6 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
 
     private var streamBundle: StreamBundle? = StreamBundle()
 
-    private val isExternal: Boolean get() = activity?.intent?.action != Intent.ACTION_MAIN
     private var downloadStatus = DownloadStatus.UNAVAILABLE
     private var isUpdatable: Boolean = false
     private var autoDownload: Boolean = false

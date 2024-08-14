@@ -16,8 +16,8 @@ fun loadLanguage(context: Context) {
         "ru",
         "uk"
     )
-    val locale = when (val language =
-        listNames[PreferenceManager.getDefaultSharedPreferences(context)
+    val locale = when (
+        val language = listNames[PreferenceManager.getDefaultSharedPreferences(context)
             .getInt("PREFERENCE_LANGUAGE", 0)]) {
         "systemValue" -> {
             Resources.getSystem().configuration.locales.get(0)

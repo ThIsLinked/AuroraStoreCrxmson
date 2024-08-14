@@ -32,11 +32,6 @@ fun Long.toDate(): String {
     return DateFormat.format("dd/MM/yy", calendar).toString()
 }
 
-fun isValidPackageName(packageName: String): Boolean {
-    val packageRegex = "^[a-zA-Z][a-zA-Z0-9_]*(\\.[a-zA-Z][a-zA-Z0-9_]*)*$".toRegex()
-    return packageName.matches(packageRegex)
-}
-
 /**
  * Computes a darker color from the given color.
  * @param color The color to darken.
