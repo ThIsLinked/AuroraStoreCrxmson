@@ -22,8 +22,6 @@ package com.aurora.extensions
 import android.graphics.Color
 import android.text.format.DateFormat
 import androidx.annotation.ColorInt
-import java.io.PrintWriter
-import java.io.StringWriter
 import java.util.Calendar
 import java.util.Locale
 import javax.annotation.Nullable
@@ -32,14 +30,6 @@ fun Long.toDate(): String {
     val calendar = Calendar.getInstance(Locale.getDefault())
     calendar.timeInMillis = this
     return DateFormat.format("dd/MM/yy", calendar).toString()
-}
-
-fun Throwable.stackTraceToString(): String {
-    val stringWriter = StringWriter(1024)
-    val printWriter = PrintWriter(stringWriter)
-    printStackTrace(printWriter)
-    printWriter.close()
-    return stringWriter.toString()
 }
 
 fun isValidPackageName(packageName: String): Boolean {
@@ -81,7 +71,7 @@ fun lightenColor(@ColorInt color: Int, factor: Float = 0.5f, @Nullable alpha: In
 }
 
 /**
- * Computes a contrasting color from the given color.
+ * Computes a contrasting color (B & W only) from the given color.
  * @param color The color to contrast.
  * @return The contrasting color.
  */

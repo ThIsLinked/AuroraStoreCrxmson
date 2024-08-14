@@ -57,23 +57,19 @@
             app:layout_constraintTop_toBottomOf="@id/layout_view_toolbar_frame"
             tools:listitem="@layout/view_app_list" />
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/filter_fab"
-            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_large"
-            android:text="@string/action_filter"
-            android:textAppearance="@style/TextAppearance.Aurora.SubTitle.Alt"
-            android:textColor="@color/colorWhite"
-            app:backgroundTint="@color/colorAccent"
-            app:icon="@drawable/ic_filter"
-            app:iconTint="@color/colorWhite"
+            android:layout_margin="?android:listPreferredItemPaddingStart"
+            android:contentDescription="@string/action_filter"
+            app:backgroundTint="?colorAccent"
             app:layout_constrainedHeight="true"
             app:layout_constrainedWidth="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:srcCompat="@drawable/ic_filter"
+            app:tint="?android:colorBackground" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

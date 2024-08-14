@@ -9,6 +9,7 @@ import android.util.Log
 import androidx.hilt.work.HiltWorker
 import androidx.work.CoroutineWorker
 import androidx.work.Data
+import androidx.work.ForegroundInfo
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.OutOfQuotaPolicy
 import androidx.work.WorkManager
@@ -121,6 +122,13 @@ class ExportWorker @AssistedInject constructor(
         }
 
         return Result.success()
+    }
+
+    override suspend fun getForegroundInfo(): ForegroundInfo {
+        return ForegroundInfo(
+            notificationId,
+            NotificationUtil.getExportNotification(appContext)
+        )
     }
 
     private fun notifyStatus(packageName: String, uri: Uri, success: Boolean = true) {

@@ -125,7 +125,7 @@
         <item name="scrimBlack">@color/colorScrimBlack</item>
         <item name="colorShimmer">@color/colorShimmerDark</item>
         <item name="colorStroke">@color/colorStrokeDark</item>
-        <item name="chipStyle">@style/Widget.Material3.Chip.Filter</item>
+        <item name="chipStyle">@style/AppTheme.FilterChip</item>
         <item name="preferenceTheme">@style/AppTheme.PreferenceThemeOverlay</item>
     </style>
     <style name="AppTheme.DarkX" parent="AppTheme.Dark">
@@ -146,6 +146,11 @@
         <item name="colorShimmer">@color/colorShimmerDarkord</item>
         <item name="colorStroke">@color/colorStrokeDarkord</item>
     </style>
+    <style name="AppTheme.FilterChip" parent="@style/Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@drawable/filter_chip_background</item>
+        <item name="chipStrokeColor">?colorControlHighlight</item>
+        <item name="chipCornerRadius">@dimen/edge_infinity</item>
+    </style>
     <style name="AppTheme.Light" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorPrimary">@color/colorAccent</item>
@@ -159,7 +164,7 @@
         <item name="scrimBlack">@color/colorScrimBlack</item>
         <item name="colorShimmer">@color/colorShimmer</item>
         <item name="colorStroke">@color/colorStroke</item>
-        <item name="chipStyle">@style/Widget.Material3.Chip.Filter</item>
+        <item name="chipStyle">@style/AppTheme.FilterChip</item>
         <item name="preferenceTheme">@style/AppTheme.PreferenceThemeOverlay</item>
     </style>
     <style name="AppTheme.PreferenceThemeOverlay" parent="@style/PreferenceThemeOverlay">
@@ -256,7 +261,7 @@
         <item name="scrimBlack">@color/colorScrimBlack</item>
         <item name="colorShimmer">@color/colorShimmer</item>
         <item name="colorStroke">@color/colorStroke</item>
-        <item name="chipStyle">@style/Widget.Material3.Chip.Filter</item>
+        <item name="chipStyle">@style/AppTheme.FilterChip</item>
         <item name="preferenceTheme">@style/AppTheme.PreferenceThemeOverlay</item>
     </style>
     <style name="TextAppearance.Aurora.Chip" parent="TextAppearance.Aurora.SubTitle">

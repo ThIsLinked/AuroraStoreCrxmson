@@ -203,6 +203,16 @@ object NotificationUtil {
             .build()
     }
 
+    fun getExportNotification(context: Context): Notification {
+        return NotificationCompat.Builder(context, Constants.NOTIFICATION_CHANNEL_ALERT)
+            .setSmallIcon(R.drawable.ic_file_copy)
+            .setColor(context.getStyledAttributeColor(R.color.colorAccent))
+            .setContentTitle(context.getString(R.string.export_app_title))
+            .setContentText(context.getString(R.string.export_app_summary))
+            .setOngoing(false)
+            .build()
+    }
+
     fun getExportStatusNotification(
         context: Context,
         displayName: String,

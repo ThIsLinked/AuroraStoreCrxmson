@@ -50,6 +50,7 @@ import androidx.navigation.fragment.findNavController
 import coil.compose.SubcomposeAsyncImage
 import coil.request.ImageRequest
 import com.aurora.extensions.accentColor
+import com.aurora.extensions.backgroundColor
 import com.aurora.extensions.darkenColor
 import com.aurora.extensions.getStyledAttributeColor
 import com.aurora.extensions.lightenColor
@@ -89,15 +90,15 @@ class MoreDialogFragment : DialogFragment() {
             setContent {
                 AuroraTheme {
                     if (isSystemInDarkTheme()) {
-                        primaryColor = Color(darkenColor(requireContext().accentColor(), 0.25f))
-                        onPrimaryColor = Color(lightenColor(primaryColor.toArgb()))
-                        secondaryColor = Color(darkenColor(requireContext().accentColor(), 0.15f))
-                        onSecondaryColor = Color(lightenColor(primaryColor.toArgb()))
+                        primaryColor = Color(requireContext().backgroundColor())
+                        onPrimaryColor = Color(lightenColor(primaryColor.toArgb(), 0.85f))
+                        secondaryColor = Color(darkenColor(primaryColor.toArgb(), 0.75f))
+                        onSecondaryColor = Color(lightenColor(secondaryColor.toArgb(), 0.85f))
                     } else {
                         primaryColor = Color(lightenColor(requireContext().accentColor(), 0.85f))
-                        onPrimaryColor = Color(darkenColor(primaryColor.toArgb()))
-                        secondaryColor = Color(lightenColor(requireContext().accentColor(), 0.95f))
-                        onSecondaryColor = Color(darkenColor(primaryColor.toArgb()))
+                        onPrimaryColor = Color(darkenColor(primaryColor.toArgb(), 0.15f))
+                        secondaryColor = Color(lightenColor(primaryColor.toArgb(), 0.75f))
+                        onSecondaryColor = Color(darkenColor(secondaryColor.toArgb(), 0.15f))
                     }
 
                     Column(
@@ -107,7 +108,7 @@ class MoreDialogFragment : DialogFragment() {
                             .verticalScroll(rememberScrollState())
                             .padding(10.dp),
                         verticalArrangement = Arrangement.spacedBy(
-                            5.dp,
+                            4.dp,
                             Alignment.CenterVertically
                         )
                     ) {
@@ -121,25 +122,27 @@ class MoreDialogFragment : DialogFragment() {
                             modifier = Modifier
                                 .clip(
                                     RoundedCornerShape(
-                                        topStart = 5.dp,
-                                        topEnd = 5.dp,
-                                        bottomStart = 20.dp,
-                                        bottomEnd = 20.dp
+                                        topStart = 2.dp,
+                                        topEnd = 2.dp,
+                                        bottomStart = 25.dp,
+                                        bottomEnd = 25.dp
                                     )
                                 )
-                                //.background(color = secondaryColor)
+                            //.background(color = secondaryColor)
                         ) {
                             getOptions().fastForEach { option ->
                                 OptionItem(
                                     option = option,
-                                    tintColor = onSecondaryColor
+                                    tintColor = onPrimaryColor,
+                                    textColor = onSecondaryColor
                                 )
                             }
                         }
                         getExtraOptions().fastForEach { option ->
                             OptionItem(
                                 option = option,
-                                tintColor = onPrimaryColor
+                                tintColor = onPrimaryColor,
+                                textColor = onPrimaryColor
                             )
                         }
                     }
@@ -175,10 +178,10 @@ class MoreDialogFragment : DialogFragment() {
                 .fillMaxWidth()
                 /*.clip(
                     RoundedCornerShape(
-                        topStart = 20.dp,
-                        topEnd = 20.dp,
-                        bottomStart = 5.dp,
-                        bottomEnd = 5.dp
+                        topStart = 25.dp,
+                        topEnd = 25.dp,
+                        bottomStart = 2.dp,
+                        bottomEnd = 2.dp
                     )
                 )
                 .background(color = backgroundColor)*/
@@ -193,11 +196,13 @@ class MoreDialogFragment : DialogFragment() {
             ) {
                 SubcomposeAsyncImage(
                     model = ImageRequest.Builder(LocalContext.current)
-                        .data(if (authProvider.isAnonymous) {
-                            R.drawable.ic_account_anonymous
-                        } else {
-                            authProvider.authData?.userProfile?.artwork?.url
-                        })
+                        .data(
+                            if (authProvider.isAnonymous) {
+                                R.drawable.ic_account_anonymous
+                            } else {
+                                authProvider.authData?.userProfile?.artwork?.url
+                            }
+                        )
                         .placeholder(R.drawable.bg_placeholder)
                         .crossfade(true)
                         .build(),
@@ -256,14 +261,18 @@ class MoreDialogFragment : DialogFragment() {
     }
 
     @Composable
-    private fun OptionItem(option: Option, tintColor: Color = Color.Black) {
+    private fun OptionItem(
+        option: Option,
+        tintColor: Color = Color.Blue,
+        textColor: Color = Color.Black
+    ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .clickable {
                     findNavController().navigate(option.destinationID)
                 }
-                .padding(15.dp),
+                .padding(12.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.Start)
         ) {
@@ -278,7 +287,7 @@ class MoreDialogFragment : DialogFragment() {
             Text(
                 modifier = Modifier.fillMaxWidth(),
                 text = stringResource(id = option.title),
-                color = tintColor,
+                color = textColor,
                 fontSize = 15.sp,
             )
         }

@@ -107,7 +107,6 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
     @Inject
     lateinit var authProvider: AuthProvider
 
-
     private lateinit var permissionProvider: PermissionProvider
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<LinearLayout>
 
@@ -115,7 +114,7 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
 
     private var streamBundle: StreamBundle? = StreamBundle()
 
-    private var isExternal = false
+    private val isExternal: Boolean get() = activity?.intent?.action != Intent.ACTION_MAIN
     private var downloadStatus = DownloadStatus.UNAVAILABLE
     private var isUpdatable: Boolean = false
     private var autoDownload: Boolean = false
@@ -188,7 +187,6 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
             app = args.app!!
             inflatePartialApp()
         } else {
-            isExternal = true
             app = App(args.packageName)
         }
 
@@ -256,9 +254,17 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
             viewModel.userReview.collect {
                 if (it.commentId.isNotEmpty()) {
                     binding.layoutDetailsReview.userStars.rating = it.rating.toFloat()
-                    Toast.makeText(requireContext(), getString(R.string.toast_rated_success), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireContext(),
+                        getString(R.string.toast_rated_success),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 } else {
-                    Toast.makeText(requireContext(), getString(R.string.toast_rated_failed), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireContext(),
+                        getString(R.string.toast_rated_failed),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         }
@@ -274,7 +280,8 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.exodusReport.collect { report ->
                 if (report == null) {
-                    binding.layoutDetailsPrivacy.txtStatus.text = getString(R.string.failed_to_fetch_report)
+                    binding.layoutDetailsPrivacy.txtStatus.text =
+                        getString(R.string.failed_to_fetch_report)
                     return@collect
                 }
 
@@ -282,14 +289,27 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
                     binding.layoutDetailsPrivacy.txtStatus.apply {
                         setTextColor(ContextCompat.getColor(requireContext(), R.color.colorRed))
                         text = if (report.trackers.size == 1) {
-                            getString(R.string.exodus_substring_onlyone, report.trackers.size, report.version)
+                            getString(
+                                R.string.exodus_substring_onlyone,
+                                report.trackers.size,
+                                report.version
+                            )
                         } else {
-                            getString(R.string.exodus_substring, report.trackers.size, report.version)
+                            getString(
+                                R.string.exodus_substring,
+                                report.trackers.size,
+                                report.version
+                            )
                         }
                     }
 
                     binding.layoutDetailsPrivacy.headerPrivacy.addClickListener {
-                        findNavController().navigate(AppDetailsFragmentDirections.actionAppDetailsFragmentToDetailsExodusFragment(app.displayName, report))
+                        findNavController().navigate(
+                            AppDetailsFragmentDirections.actionAppDetailsFragmentToDetailsExodusFragment(
+                                app.displayName,
+                                report
+                            )
+                        )
                     }
                 } else {
                     binding.layoutDetailsPrivacy.txtStatus.apply {
@@ -327,9 +347,11 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.favourite.collect {
                 if (it) {
-                    binding.toolbar.menu?.findItem(R.id.action_favourite)?.setIcon(R.drawable.ic_favorite_checked)
+                    binding.toolbar.menu?.findItem(R.id.action_favourite)
+                        ?.setIcon(R.drawable.ic_favorite_checked)
                 } else {
-                    binding.toolbar.menu?.findItem(R.id.action_favourite)?.setIcon(R.drawable.ic_favorite_unchecked)
+                    binding.toolbar.menu?.findItem(R.id.action_favourite)
+                        ?.setIcon(R.drawable.ic_favorite_unchecked)
                 }
             }
         }
@@ -444,7 +466,8 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
                     AppDetailsFragmentDirections.actionAppDetailsFragmentToDevAppsFragment(app.developerName)
                 )
             }
-            txtLine3.text = getString(R.string.details_appinfo_line3, app.versionName, app.versionCode)
+            txtLine3.text =
+                getString(R.string.details_appinfo_line3, app.versionName, app.versionCode)
             packageName.text = app.packageName
 
             val tags = mutableListOf<String>()
@@ -546,7 +569,8 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
             }
 
             binding.layoutDetailsInstall.apply {
-                txtProgressPercent.text = getString(R.string.layout_details_install_progressPercent_dynamic, progress)
+                txtProgressPercent.text =
+                    getString(R.string.layout_details_install_progressPercent_dynamic, progress)
                 progressDownload.apply {
                     this.progress = progress
                     isIndeterminate = progress < 1
@@ -582,7 +606,12 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
                         PackageUtil.getInstalledVersion(requireContext(), app.packageName)
 
                     if (isUpdatable && !needsExtendedUpdate || isUpdatable && isExtendedUpdateEnabled) {
-                        binding.layoutDetailsApp.txtLine3.text = getString(R.string.details_appinfo_line3_update, installedVersion, app.versionName ,app.versionCode)
+                        binding.layoutDetailsApp.txtLine3.text = getString(
+                            R.string.details_appinfo_line3_update,
+                            installedVersion,
+                            app.versionName,
+                            app.versionCode
+                        )
                         btn.setText(R.string.action_update)
                         btn.addOnClickListener {
                             if (app.versionCode == 0) {
@@ -702,7 +731,8 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
 
             app.changes.apply {
                 txtChangelog.text = if (isEmpty()) {
-                    val spanText = SpannableString(context?.getString(R.string.details_changelog_unavailable))
+                    val spanText =
+                        SpannableString(context?.getString(R.string.details_changelog_unavailable))
                     spanText.setSpan(StyleSpan(Typeface.ITALIC), 0, spanText.length, 0)
                     spanText
                 } else {
@@ -914,7 +944,12 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
                     )
                 }
             }
-            headerPermission.setSubTitle(getString(R.string.details_permission_count, app.permissions.size))
+            headerPermission.setSubTitle(
+                getString(
+                    R.string.details_permission_count,
+                    app.permissions.size
+                )
+            )
         }
     }
 
@@ -934,13 +969,21 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
         report.entries.groupBy { it.type }.forEach { (type, entries) ->
             when (type) {
                 EntryType.DATA_COLLECTED -> {
-                    binding.layoutDetailsDataSafety.dataCollect.title = HtmlCompat.fromHtml(entries.first().description, HtmlCompat.FROM_HTML_MODE_COMPACT).toString()
-                    binding.layoutDetailsDataSafety.dataCollect.subTitle = entries.first().subEntries.joinToString(", ") { it.name }.ifBlank { null }
+                    binding.layoutDetailsDataSafety.dataCollect.title = HtmlCompat.fromHtml(
+                        entries.first().description,
+                        HtmlCompat.FROM_HTML_MODE_COMPACT
+                    ).toString()
+                    binding.layoutDetailsDataSafety.dataCollect.subTitle =
+                        entries.first().subEntries.joinToString(", ") { it.name }.ifBlank { null }
                 }
 
                 EntryType.DATA_SHARED -> {
-                    binding.layoutDetailsDataSafety.dataShare.title = HtmlCompat.fromHtml(entries.first().description, HtmlCompat.FROM_HTML_MODE_COMPACT).toString()
-                    binding.layoutDetailsDataSafety.dataShare.subTitle = entries.first().subEntries.joinToString(", ") { it.name }.ifBlank { null }
+                    binding.layoutDetailsDataSafety.dataShare.title = HtmlCompat.fromHtml(
+                        entries.first().description,
+                        HtmlCompat.FROM_HTML_MODE_COMPACT
+                    ).toString()
+                    binding.layoutDetailsDataSafety.dataShare.subTitle =
+                        entries.first().subEntries.joinToString(", ") { it.name }.ifBlank { null }
                 }
 
                 else -> {}

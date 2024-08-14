@@ -35,7 +35,7 @@
     <string name="about_moddify" translatable="false">Powered moddify by ThIsLinked aka Roser // dhwh</string>
     <string name="about_telegram_summary">Join the Aurora Support group for discussions or suggestions.</string>
     <string name="about_telegram_title" translatable="false">@string/sample_telegramLabel</string>
-    <string name="about_version" translatable="false">v4.5.1 (60) // Nightly by 11.08.24</string>
+    <string name="about_version" translatable="false">v4.5.1 (60) // Nightly by 15.08.24</string>
     <string name="access_denied_using_vpn">Access denied. Do you use VPN or other spoofing tools?</string>
     <string name="account_anonymous">Anonymous</string>
     <string name="account_anonymous_email" translatable="false">anonymous@gmail.com</string>
@@ -209,6 +209,8 @@
     <string name="exodus_substring_onlyone">@string/exodus_substring</string>
     <string name="exodus_view_report">View report</string>
     <string name="expand">Expand</string>
+    <string name="export_app_title">File Exporter</string>
+    <string name="export_app_summary">Hold on, exporting your file</string>
     <string name="export_app_summary_fail">Failed to exported app bundle</string>
     <string name="export_app_summary_success">Successfully exported app bundle</string>
     <string name="failed_apk_export">Failed to export APKs</string>
