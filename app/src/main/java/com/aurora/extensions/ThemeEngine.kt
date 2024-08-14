@@ -24,6 +24,7 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.WindowInsetsControllerCompat
+import com.aurora.store.R
 import com.aurora.store.util.CommonUtil
 import com.aurora.store.util.Preferences
 
@@ -85,3 +86,27 @@ private fun AppCompatActivity.setSystemBarConfiguration(light: Boolean) {
         }
     }
 }
+/*
+    Allows you to inherit the colors of the current theme and pass the value on call.
+*/
+//
+// AttrInheritsColors: End
+//
+// For background layer
+fun attrBackgroundColor(context: Context) : Int {
+    val obtainStyledAttrBackgroundColor = context.obtainStyledAttributes(intArrayOf(android.R.attr.colorBackground))
+    val attrBackgroundColor = obtainStyledAttrBackgroundColor.getResourceId(0, R.color.colorWhite)
+    obtainStyledAttrBackgroundColor.recycle()
+    return attrBackgroundColor
+}
+//
+// For foreground layer
+fun attrForegroundColor(context: Context) : Int {
+    val obtainStyledAttrForegroundColor = context.obtainStyledAttributes(intArrayOf(androidx.appcompat.R.attr.colorAccent))
+    val attrForegroundColor = obtainStyledAttrForegroundColor.getResourceId(0, R.color.colorAccent)
+    obtainStyledAttrForegroundColor.recycle()
+    return attrForegroundColor
+}
+//
+// AttrInheritsColors: End
+//
