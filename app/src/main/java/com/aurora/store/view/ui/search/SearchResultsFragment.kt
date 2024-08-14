@@ -46,6 +46,7 @@ import com.aurora.store.view.epoxy.views.app.NoAppViewModel_
 import com.aurora.store.view.epoxy.views.shimmer.AppListViewShimmerModel_
 import com.aurora.store.view.ui.commons.BaseFragment
 import com.aurora.store.viewmodel.search.SearchResultViewModel
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.textfield.TextInputEditText
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -75,7 +76,6 @@ class SearchResultsFragment : BaseFragment<FragmentSearchResultBinding>(),
             searchView = inputSearch
             imgActionPrimary.setOnClickListener {
                 findNavController().navigateUp()
-                findNavController().navigateUp() // Duplicating execution to properly return to the previous page.
             }
             imgActionSecondary.setOnClickListener {
                 findNavController().navigate(R.id.downloadFragment)
@@ -105,7 +105,11 @@ class SearchResultsFragment : BaseFragment<FragmentSearchResultBinding>(),
         binding.recycler.addOnScrollListener(endlessRecyclerOnScrollListener)
 
         // Filter
-        binding.filterFab.setOnClickListener {
+        //binding.filterFab.setOnClickListener {
+        //    findNavController().navigate(R.id.filterSheet)
+        //}
+        val filterFab = view.findViewById<FloatingActionButton>(R.id.filter_fab)
+        filterFab.setOnClickListener {
             findNavController().navigate(R.id.filterSheet)
         }
 
