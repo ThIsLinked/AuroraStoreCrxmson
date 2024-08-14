@@ -35,7 +35,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/action_update"
-            android:textAppearance="@style/TextAppearance.Aurora.Line1" />
+            android:textAppearance="@style/TextAppearance.Aurora.Line1"
+            android:textColor="?android:colorBackground" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnQueued"
@@ -54,7 +55,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/action_cancel"
-            android:textAppearance="@style/TextAppearance.Aurora.Line1" />
+            android:textAppearance="@style/TextAppearance.Aurora.Line1"
+            android:textColor="?android:colorBackground" />
 
     </ViewFlipper>
 

@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:text="@string/action_update_all"
         android:textAppearance="@style/TextAppearance.Aurora.Line1"
-        android:textColor="?colorAccent"
+        android:textColor="?android:colorBackground"
         app:layout_constrainedHeight="true"
         app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="parent"
