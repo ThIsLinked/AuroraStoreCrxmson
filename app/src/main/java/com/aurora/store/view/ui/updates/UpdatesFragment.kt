@@ -26,6 +26,9 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.aurora.Constants
+import com.aurora.extensions.applyColors
+import com.aurora.extensions.attrBackgroundColor
+import com.aurora.extensions.attrForegroundColor
 import com.aurora.extensions.browse
 import com.aurora.store.MobileNavigationDirections
 import com.aurora.store.PermissionType
@@ -99,29 +102,25 @@ class UpdatesFragment : BaseFragment<FragmentUpdatesBinding>() {
         /*
             All tint SwipeRefresh inherits the colors of the current theme.
         */
+        //
         // TintSwipeRefresh: Start
         //
-        // Color background
-        val obtainStyledAttrBackgroundColorAccent = requireContext().obtainStyledAttributes(intArrayOf(android.R.attr.colorBackground))
-        val attrBackgroundColorAccent = obtainStyledAttrBackgroundColorAccent.getResourceId(0, R.color.colorWhite)
-        obtainStyledAttrBackgroundColorAccent.recycle()
+        // Background layer
         context?.let {
-            ContextCompat.getColor(it, attrBackgroundColorAccent)
+            ContextCompat.getColor(it, attrBackgroundColor(requireContext()))
         }?.let {
             binding.swipeRefreshLayout.setProgressBackgroundColorSchemeColor(it)
         }
-
         //
-        // Color accent
-        val obtainStyledAttrColorAccent = requireContext().obtainStyledAttributes(intArrayOf(androidx.appcompat.R.attr.colorAccent))
-        val attrColorAccent = obtainStyledAttrColorAccent.getResourceId(0, R.color.colorAccent)
-        obtainStyledAttrColorAccent.recycle()
+        // Foreground layer
         context?.let {
-            ContextCompat.getColor(it, attrColorAccent)
+            ContextCompat.getColor(it, attrForegroundColor(requireContext()))
         }?.let {
             binding.swipeRefreshLayout.setColorSchemeColors(it)
         }
+        //
         // TintSwipeRefresh: End
+        //
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.fetchingUpdates.collect {
@@ -136,8 +135,11 @@ class UpdatesFragment : BaseFragment<FragmentUpdatesBinding>() {
             viewModel.fetchUpdates()
         }
 
-        binding.searchFab.setOnClickListener {
-            findNavController().navigate(R.id.searchSuggestionFragment)
+        binding.searchFab.apply {
+            applyColors()
+            setOnClickListener {
+                findNavController().navigate(R.id.searchSuggestionFragment)
+            }
         }
     }
 
