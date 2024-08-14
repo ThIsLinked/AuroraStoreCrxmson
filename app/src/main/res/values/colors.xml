@@ -24,7 +24,7 @@
     <color name="colorAccent03">@color/material_red_600</color>
     <color name="colorAccent04">@color/material_pink_600</color>
     <color name="colorAccent05">@color/material_purple_600</color>
-    <color name="colorAccent06">@color/material_deep_orange_600</color>
+    <color name="colorAccent06">@color/material_deep_purple_600</color>
     <color name="colorAccent07">@color/material_indigo_600</color>
     <color name="colorAccent08">@color/material_blue_600</color>
     <color name="colorAccent09">@color/material_light_blue_600</color>
