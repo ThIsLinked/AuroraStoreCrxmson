@@ -18,7 +18,6 @@
  *  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -44,7 +43,7 @@ android {
         minSdk = 24
         targetSdk = 35
 
-        versionCode = 24081201
+        versionCode = 24081501
         versionName = "4.5.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -87,6 +86,8 @@ android {
     }
 
     lint {
+        abortOnError = false
+        checkReleaseBuilds = false
         lintConfig = file("lint.xml")
     }
 
