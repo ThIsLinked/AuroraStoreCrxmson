@@ -26,6 +26,8 @@
     <dimen name="cluster_size">128dp</dimen>
     <item format="float" name="colorScrimAccent_opacity" type="dimen">0.27</item>
     <dimen name="crimson_marginStart_toEndOf_label">5sp</dimen>
+    <dimen name="divider_dash_height">21dp</dimen>
+    <dimen name="divider_link_height">@dimen/divider_dash_height</dimen>
     <dimen name="edge_infinity">9999dp</dimen>
     <dimen name="edge_regular">24dp</dimen>
     <dimen name="edge_small">12dp</dimen>
@@ -41,7 +43,7 @@
     <dimen name="icon_size_avatar">108dp</dimen>
     <dimen name="icon_size_category">32dp</dimen>
     <dimen name="icon_size_cluster">80dp</dimen>
-    <item name="icon_size_dash" type="dimen">@dimen/icon_size_link</item>
+    <dimen name="icon_size_dash">@dimen/icon_size_link</dimen>
     <dimen name="icon_size_default">24dp</dimen>
     <dimen name="icon_size_infoDev">32dp</dimen>
     <dimen name="icon_size_large">72dp</dimen>
