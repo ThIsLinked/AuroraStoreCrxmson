@@ -402,16 +402,8 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
 
             setOnMenuItemClickListener {
                 when (it.itemId) {
-                    R.id.action_share -> {
-                        requireContext().share(app)
-                    }
-
                     R.id.action_favourite -> {
                         viewModel.toggleFavourite(app)
-                    }
-
-                    R.id.action_uninstall -> {
-                        AppInstaller.uninstall(requireContext(), app.packageName)
                     }
 
                     R.id.menu_download_manual -> {
@@ -421,6 +413,22 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
                         )
                     }
 
+                    R.id.menu_download_manager -> {
+                        findNavController().navigate(R.id.downloadFragment)
+                    }
+
+                    R.id.menu_open_external -> {
+                        requireContext().browse("${Constants.SHARE_URL}${app.packageName}")
+                    }
+
+                    R.id.action_share -> {
+                        requireContext().share(app)
+                    }
+
+                    R.id.action_uninstall -> {
+                        AppInstaller.uninstall(requireContext(), app.packageName)
+                    }
+
                     R.id.menu_app_settings -> {
                         val intent = Intent().apply {
                             action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
@@ -428,14 +436,6 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
                         }
 
                         startActivity(intent)
-                    }
-
-                    R.id.menu_download_manager -> {
-                        findNavController().navigate(R.id.downloadFragment)
-                    }
-
-                    R.id.menu_open_external -> {
-                        requireContext().browse("${Constants.SHARE_URL}${app.packageName}")
                     }
                 }
                 true

@@ -18,7 +18,6 @@
  *  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.jetbrains.kotlin.android) apply false

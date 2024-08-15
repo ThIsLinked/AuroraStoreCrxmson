@@ -119,8 +119,13 @@ class DownloadFragment : BaseFragment<FragmentDownloadBinding>() {
     }
 
     private fun openDownloadMenuSheet(packageName: String) {
-        findNavController().navigate(DownloadFragmentDirections.actionDownloadFragmentToDownloadMenuSheet(downloadList.find {
-            it.packageName == packageName
-        }!!))
+        val download = (
+                downloadList.find {
+                    it.packageName == packageName
+                }!!
+                )
+        findNavController().navigate(
+            DownloadFragmentDirections.actionDownloadFragmentToDownloadMenuSheet(download)
+        )
     }
 }
