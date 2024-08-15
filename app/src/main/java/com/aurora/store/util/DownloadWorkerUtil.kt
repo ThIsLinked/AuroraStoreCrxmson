@@ -23,6 +23,7 @@ import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import java.io.File
 
 /**
  * Helper class to work with the [DownloadWorker].
@@ -118,7 +119,6 @@ class DownloadWorkerUtil @Inject constructor(
     suspend fun clearDownload(packageName: String, versionCode: Int) {
         Log.i(tag, "Clearing downloads for $packageName ($versionCode)")
         downloadDao.delete(packageName)
-        //PathUtil.getAppDownloadDir(context, packageName, versionCode).deleteRecursively()
     }
 
     /**
@@ -127,6 +127,7 @@ class DownloadWorkerUtil @Inject constructor(
     suspend fun clearAllDownloads() {
         Log.i(tag, "Clearing all downloads!")
         downloadDao.deleteAll()
+        File(PathUtil.getDownloadDirectory(context)).deleteRecursively()
     }
 
     /**

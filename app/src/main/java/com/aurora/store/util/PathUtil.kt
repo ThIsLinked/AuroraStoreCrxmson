@@ -31,7 +31,7 @@ object PathUtil {
     private const val LIBRARIES = "libraries"
     private const val SPOOF = "SpoofConfigs"
 
-    private fun getDownloadDirectory(context: Context): String {
+    fun getDownloadDirectory(context: Context): String {
         return if (context.isExternalStorageEnable()) {
             getExternalPath(context)
         } else {
