@@ -37,7 +37,7 @@
 
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="@dimen/margin_xxsmall"
-        android:layout_height="@dimen/icon_size_default"
+        android:layout_height="@dimen/divider_link_height"
         android:layout_gravity="center_vertical"
         android:layout_marginStart="?android:attr/listPreferredItemPaddingStart" />
 
