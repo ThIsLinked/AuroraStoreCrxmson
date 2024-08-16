@@ -135,11 +135,8 @@ class UpdatesFragment : BaseFragment<FragmentUpdatesBinding>() {
             viewModel.fetchUpdates()
         }
 
-        binding.searchFab.apply {
-            applyColors()
-            setOnClickListener {
-                findNavController().navigate(R.id.searchSuggestionFragment)
-            }
+        binding.searchFab.setOnClickListener {
+            findNavController().navigate(R.id.searchSuggestionFragment)
         }
     }
 

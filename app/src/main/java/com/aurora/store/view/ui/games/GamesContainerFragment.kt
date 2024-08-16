@@ -26,7 +26,6 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.aurora.extensions.applyColors
 import com.aurora.store.MobileNavigationDirections
 import com.aurora.store.R
 import com.aurora.store.data.providers.AuthProvider
@@ -70,16 +69,9 @@ class GamesContainerFragment : BaseFragment<FragmentAppsGamesBinding>() {
         }
 
         // ViewPager
-        val isForYouEnabled = Preferences.getBoolean(
-            requireContext(),
-            Preferences.PREFERENCE_FOR_YOU
-        )
+        val isForYouEnabled = Preferences.getBoolean(requireContext(), Preferences.PREFERENCE_FOR_YOU)
 
-        binding.pager.adapter = ViewPagerAdapter(
-            childFragmentManager,
-            viewLifecycleOwner.lifecycle,
-            isForYouEnabled
-        )
+        binding.pager.adapter = ViewPagerAdapter(childFragmentManager, viewLifecycleOwner.lifecycle, isForYouEnabled)
 
         binding.pager.isUserInputEnabled = false
 
@@ -100,11 +92,8 @@ class GamesContainerFragment : BaseFragment<FragmentAppsGamesBinding>() {
             tab.text = tabTitles[position]
         }.attach()
 
-        binding.searchFab.apply {
-            applyColors()
-            setOnClickListener {
-                findNavController().navigate(R.id.searchSuggestionFragment)
-            }
+        binding.searchFab.setOnClickListener {
+            findNavController().navigate(R.id.searchSuggestionFragment)
         }
     }
 
