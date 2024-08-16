@@ -279,40 +279,26 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.exodusReport.collect { report ->
                 if (report == null) {
-                    binding.layoutDetailsPrivacy.txtStatus.text =
-                        getString(R.string.failed_to_fetch_report)
+                    binding.layoutDetailsPrivacy.txtStatus.text = getString(R.string.failed_to_fetch_report)
                     return@collect
                 }
 
                 if (report.trackers.isNotEmpty()) {
                     binding.layoutDetailsPrivacy.txtStatus.apply {
-                        setTextColor(ContextCompat.getColor(requireContext(), R.color.colorRed))
+                        setTextColor(ContextCompat.getColor(requireContext(), R.color.colorAccent03))
                         text = if (report.trackers.size == 1) {
-                            getString(
-                                R.string.exodus_substring_onlyone,
-                                report.trackers.size,
-                                report.version
-                            )
+                            getString(R.string.exodus_substring_onlyone, report.trackers.size, report.version)
                         } else {
-                            getString(
-                                R.string.exodus_substring,
-                                report.trackers.size,
-                                report.version
-                            )
+                            getString(R.string.exodus_substring, report.trackers.size, report.version)
                         }
                     }
 
                     binding.layoutDetailsPrivacy.headerPrivacy.addClickListener {
-                        findNavController().navigate(
-                            AppDetailsFragmentDirections.actionAppDetailsFragmentToDetailsExodusFragment(
-                                app.displayName,
-                                report
-                            )
-                        )
+                        findNavController().navigate(AppDetailsFragmentDirections.actionAppDetailsFragmentToDetailsExodusFragment(app.displayName, report))
                     }
                 } else {
                     binding.layoutDetailsPrivacy.txtStatus.apply {
-                        setTextColor(ContextCompat.getColor(requireContext(), R.color.colorGreen))
+                        setTextColor(ContextCompat.getColor(requireContext(), R.color.colorAccent12))
                         text = getString(R.string.exodus_no_tracker)
                     }
                 }
@@ -465,8 +451,13 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
                     AppDetailsFragmentDirections.actionAppDetailsFragmentToDevAppsFragment(app.developerName)
                 )
             }
-            txtLine3.text =
-                getString(R.string.details_appinfo_line3, app.versionName, app.versionCode)
+            txtLine2.apply {
+                text = app.developerName
+                setOnClickListener {
+                    findNavController().navigate(AppDetailsFragmentDirections.actionAppDetailsFragmentToDevAppsFragment(app.developerName))
+                }
+            }
+            txtLine3.text = getString(R.string.details_appinfo_line3, app.versionName, app.versionCode)
             packageName.text = app.packageName
 
             val tags = mutableListOf<String>()
@@ -937,9 +928,7 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
             headerPermission.addClickListener {
                 if (app.permissions.isNotEmpty()) {
                     findNavController().navigate(
-                        AppDetailsFragmentDirections.actionAppDetailsFragmentToPermissionBottomSheet(
-                            app
-                        )
+                        AppDetailsFragmentDirections.actionAppDetailsFragmentToPermissionBottomSheet(app)
                     )
                 }
             }
