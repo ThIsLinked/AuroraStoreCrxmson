@@ -221,6 +221,10 @@
             android:defaultValue=""
             app:argType="string"
             app:nullable="true" />
+        <deepLink
+            android:autoVerify="@bool/appsLinks_verified"
+            app:action="android.intent.action.VIEW"
+            app:uri="play.google.com/store/apps/dev?id={devId}" />
     </fragment>
     <fragment
         android:id="@+id/streamBrowseFragment"
@@ -276,6 +280,20 @@
             android:name="packageName"
             android:defaultValue=""
             app:argType="string" />
+        <!-- Android Market (deprecated) -->
+        <deepLink
+            android:autoVerify="@bool/appsLinks_verified"
+            app:action="android.intent.action.VIEW"
+            app:uri="market:///details?id={packageName}" />
+        <deepLink
+            android:autoVerify="@bool/appsLinks_verified"
+            app:action="android.intent.action.VIEW"
+            app:uri="market.android.com/details?id={packageName}" />
+        <!-- Google Play (formerly Android Market) -->
+        <deepLink
+            android:autoVerify="@bool/appsLinks_verified"
+            app:action="android.intent.action.VIEW"
+            app:uri="play.google.com/store/apps/details?id={packageName}" />
         <action
             android:id="@+id/action_splashFragment_to_navigation_apps"
             app:destination="@id/appsContainerFragment"
