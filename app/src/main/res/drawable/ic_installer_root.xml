@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    Content created by ThIsLinked / dhwh (unless otherwise noted) under licensed GPL v2.0 and is strictly prohibited for purposes of plagiarism.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0">
+    <path
+        android:fillColor="@android:color/black"
+        android:pathData="M6.9994049,15.9469366H3.9733491l0.4475908-2.683403h3.0003572l0.3940511-2.7637119h-3.051755l0.4197502-2.6844735 h3.0281978L8.948245,3h2.8932781L11.132659,7.8153481h2.9468174L14.7904816,3h2.9211178l-0.7388458,4.8153481h3.0538979 l-0.4218922,2.6844735h-3.0260563l-0.3940506,2.7637119h3.0795956l-0.4218922,2.683403h-3.0538969L15.0260563,21h-2.9211187 l0.7645445-5.0530634H9.9205236L9.1581202,21H6.2627006L6.9994049,15.9469366z M13.3149319,13.3160028l0.4218912-2.8686504 h-3.051755l-0.4218912,2.8686504H13.3149319z" />
+</vector>

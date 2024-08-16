@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    The content has been edited by the author ThIsLinked / dhwh, inherits licenced GPLv3.0, but prohibits the use of this material for plagiarism purposes.
+    
+    Source: https://github.com/RikkaApps/Shizuku/blob/master/manager/src/main/res/drawable/ic_system_icon.xml
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0">
+    <path
+        android:fillAlpha="0.65"
+        android:fillColor="@android:color/black"
+        android:pathData="M16.5,4.2059999h-9L3,12l4.5,7.7940006h9L21,12C21,12,16.5,4.2060003,16.5,4.2059999z" />
+    <path
+        android:fillColor="@android:color/black"
+        android:pathData="M16.2029991,12.4770002c-1.0046473-0.1947594-2.0373507-0.1947594-3.0419989,0 c0,0-2.0609999-1.4399996-3.0420008-1.2600002c-0.4675293-1.0326271-1.2611723-1.8831863-2.2589993-2.4210005 C6.9912667,9.4271584,6.385664,10.35639,6.1590004,11.4060001c-0.9860978,0.3114576-1.853035,0.9176855-2.4840002,1.7370005 L7.5,19.7940006h7.0830002c0.6965246-1.3289795,0.9518547-2.8451996,0.7290001-4.3290005 C16.0643921,14.6657057,16.3947525,13.5578318,16.2029991,12.4770002z" />
+</vector>

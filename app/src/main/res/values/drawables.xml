@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="ic_permission_android" type="drawable">@drawable/ic_android</item>
+    <item name="ic_installer_native" type="drawable">@drawable/ic_android</item>
+</resources>
