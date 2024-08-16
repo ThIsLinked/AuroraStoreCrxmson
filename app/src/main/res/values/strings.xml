@@ -34,7 +34,7 @@
     <string name="about_moddify" translatable="false">Powered moddify by ThIsLinked aka Roser // dhwh</string>
     <string name="about_telegram_summary">Join the Aurora Support group for discussions or suggestions.</string>
     <string name="about_telegram_title" translatable="false">@string/sample_telegramLabel</string>
-    <string name="about_version" translatable="false">v4.5.1 (60) // Nightly by 15.08.24</string>
+    <string name="about_version" translatable="false">v4.5.1 (60) // Nightly by 16.08.24</string>
     <string name="access_denied_using_vpn">Access denied. Do you use VPN or other spoofing tools?</string>
     <string name="account_anonymous">Anonymous</string>
     <string name="account_anonymous_email" translatable="false">anonymous@gmail.com</string>
@@ -120,7 +120,7 @@
     <string name="app_list_rating" translatable="false">%1$s • %2$s★ • %3$s</string>
     <string name="app_updater_service_notif_text">Enables background app download</string>
     <string name="app_updater_service_notif_title">Background app download</string>
-    <string name="app_versionName" translatable="false">4.5.1-nightly-240812 (by ThIsLinked // dhwh)</string>
+    <string name="app_versionName" translatable="false">4.5.1-nightly-240816 (by ThIsLinked // dhwh)</string>
     <string name="app_view_rating" translatable="false">%1$s • %2$s★</string>
     <string name="bad_request">Failed to request a session.<i>Try again</i> or try again later.</string>
     <string name="blacklist_line3">%1$s (%2$s)</string>
