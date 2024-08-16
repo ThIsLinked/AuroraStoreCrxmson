@@ -13,17 +13,19 @@ open class DeepLink : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val uri = intent.data
-        val format: String = if ((uri ?: return).path == "/store/apps/dev") {
-            String.format(
-                "https://play.google.com/store/apps/dev?id=%s",
-                uri.getQueryParameter("id")
-            )
-        } else {
-            String.format(
-                "https://play.google.com/store/apps/details?id=%s",
-                uri.getQueryParameter("id")
-            )
-        }
+        val format: String = (
+                if ((uri ?: return).path == "/store/apps/dev") {
+                    String.format(
+                        "https://play.google.com/store/apps/dev?id=%s",
+                        uri.getQueryParameter("id")
+                    )
+                } else {
+                    String.format(
+                        "https://play.google.com/store/apps/details?id=%s",
+                        uri.getQueryParameter("id")
+                    )
+                }
+                )
         val intent = Intent(Intent.ACTION_VIEW)
         intent.setClassName(
             "com.aurora.store",
