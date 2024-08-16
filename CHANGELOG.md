@@ -1,4 +1,11 @@
 > **v4.5.1-nightly-12.08.24 (60)**
+> * Pulled up to nightly 16.08.24;
+> * UI and UX changes;
+> * In the «Updates» tab, all SwipeRefresh shades now inherit the colors of the current theme;
+> * Changed the visual appearance and order of the installers list;
+> * [Clone by me] The icon now has a Royal Blue color fill to better differentiate between the original and the clone;
+
+> **v4.5.1-nightly-12.08.24 (60)**
 > * Pulled up to nightly 12.08.24 (include stable 4.5.1);
 > * Returned the ability to download apk's in user-specified external storage rather than to own directory Aurora (to section "/data/data/...");
 > * More massive interface layout editing compared to past versions of the mod;
