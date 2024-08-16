@@ -19,7 +19,6 @@
   ~
   -->
 <resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="blacklist_line3">%1$s (%2$s)</string>
     <string name="about_4pda_post_summary">Modification post on 4PDA</string>
     <string name="about_4pda_post_title">Post on 4PDA</string>
     <string name="about_4pda_topic_summary">Discussion of Aurora on 4PDA</string>
@@ -106,8 +105,7 @@
     <string name="add_dispenser_hint">Dispenser URL</string>
     <string name="add_dispenser_summary">Add a token dispenser to Aurora Store. Token dispensers provide account credentials to Aurora Store for logging in anonymously.</string>
     <string name="add_dispenser_title">Add dispenser</string>
-    <string name="am_installer_desc">App Manager is required. And root or ADB permissions if MUIU optimization is enabled.</string>
-    <string name="am_installer_subtitle">Installs using a third-party installer.</string>
+    <string name="am_installer_subtitle">Installs using a third-party installer. App Manager is required. And root or ADB permissions if MUIU optimization is enabled.</string>
     <string name="amazon_appstore_desc">Amazon Appstore is an app store for Android-compatible platforms operated by Amazon.</string>
     <string name="android_market_desc">Android Market was an online store offering software applications designed for Android devices, retired in 2017.</string>
     <string name="app_label" translatable="false">Aurora Store Crxmson</string>
@@ -125,6 +123,7 @@
     <string name="app_versionName" translatable="false">4.5.1-nightly-240812 (by ThIsLinked // dhwh)</string>
     <string name="app_view_rating" translatable="false">%1$s • %2$s★</string>
     <string name="bad_request">Failed to request a session.<i>Try again</i> or try again later.</string>
+    <string name="blacklist_line3">%1$s (%2$s)</string>
     <string name="categoryapps_notFound">Nothing was found for this category…</string>
     <string name="check_connectivity">Check internet connectivity</string>
     <string name="check_updates">Check for updates</string>
@@ -209,10 +208,10 @@
     <string name="exodus_substring_onlyone">@string/exodus_substring</string>
     <string name="exodus_view_report">View report</string>
     <string name="expand">Expand</string>
-    <string name="export_app_title">File Exporter</string>
     <string name="export_app_summary">Hold on, exporting your file</string>
     <string name="export_app_summary_fail">Failed to exported app bundle</string>
     <string name="export_app_summary_success">Successfully exported app bundle</string>
+    <string name="export_app_title">File Exporter</string>
     <string name="failed_apk_export">Failed to export APKs</string>
     <string name="failed_app_link">Unsupported, please try associating links manually</string>
     <string name="failed_generating_session">Failed to generate session, error code: <xliff:g id="status_code">%1$d</xliff:g></string>
@@ -268,8 +267,7 @@
     <string name="menu_license">License</string>
     <string name="menu_terms">Terms of service</string>
     <string name="myapps_installed" tools:ignore="PluralsCandidate">%1$d installed</string>
-    <string name="native_installer_desc">Allows you to install an application on behalf of the Play Store package.</string>
-    <string name="native_installer_subtitle">Intent based installer. Does not support splits apk.</string>
+    <string name="native_installer_subtitle">Intent based installer. Does not support splits apk. Allows you to install an application on behalf of the Play Store package.</string>
     <string name="no_dispensers_available">No dispensers available</string>
     <string name="notification_channel_alert">Quick notification</string>
     <string name="notification_channel_general">General notification</string>
@@ -392,27 +390,24 @@
     <string name="remove_dispenser_summary">Are you sure you want to remove this dispenser?</string>
     <string name="remove_dispenser_title">Remove dispenser</string>
     <string name="requesting_new_session">Requesting a new session…</string>
-    <string name="root_installer_desc">Root permission required.</string>
-    <string name="root_installer_subtitle">Shell based installer. Allows installation without user confirmation.</string>
+    <string name="root_installer_subtitle">Shell based installer. Allows installation without user confirmation. Root permission required.</string>
     <string name="sample_systemValue">System value</string>
+    <string name="sample_telegramLabel" translatable="false">Telegram</string>
     <string name="search_hint">Search for Apps &amp; Games</string>
     <string name="server_maintenance">The server is currently under maintenance.</string>
     <string name="server_unreachable">The server is unavailable.</string>
-    <string name="services_installer_desc">Requires Aurora Services.</string>
-    <string name="services_installer_subtitle">Allows installation without user confirmation.</string>
+    <string name="services_installer_subtitle">Allows installation without user confirmation. Requires Aurora Services.</string>
     <string name="session_enjoy">Log in and enjoy.</string>
     <string name="session_good">Woah! All good.</string>
     <string name="session_init">Preparing…</string>
-    <string name="session_installer_desc">Recommended.</string>
-    <string name="session_installer_subtitle">Allows you to install splits apk.</string>
+    <string name="session_installer_subtitle">Allows you to install splits apk. Recommended.</string>
     <string name="session_login">Waiting for authorization…</string>
     <string name="session_scrapped">Last session scrapped.</string>
     <string name="session_verifying">Session verification check…</string>
     <string name="sheet_manual_download_line3" translatable="false">%1$s (%2$d)</string>
     <string name="sheet_manual_download_versionCode_hint" translatable="false">%1$d</string>
     <string name="sheet_manual_download_versionCode_preset" translatable="false">%1$d</string>
-    <string name="shizuku_installer_desc">Requires Shizuku or Sui, needs to be setup and permission granted</string>
-    <string name="shizuku_installer_subtitle">Has the advantages of all other installers.</string>
+    <string name="shizuku_installer_subtitle">Has the advantages of all other installers. Requires Shizuku or Sui, needs to be setup and permission granted.</string>
     <string name="source_code_subtitle">Find out what\'s inside</string>
     <string name="source_code_title">Source code</string>
     <string name="spoof_apply">Make sure you re-login to apply the spoof</string>
@@ -518,5 +513,4 @@
     <string name="update_available" tools:ignore="PluralsCandidate">%1$d available</string>
     <string name="verifying_new_session">New session verification…</string>
     <string name="version" translatable="false">v<xliff:g id="version_name">%1$s</xliff:g>(<xliff:g id="version_code">%2$d</xliff:g>)</string>
-    <string name="sample_telegramLabel" translatable="false">Telegram</string>
 </resources>
