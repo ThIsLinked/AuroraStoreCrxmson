@@ -484,4 +484,5 @@
         android:id="@+id/forceRestartDialog"
         android:name="com.aurora.store.view.ui.commons.ForceRestartDialog"
         android:label="@string/force_restart_title" />
+
 </navigation>

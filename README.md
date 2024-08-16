@@ -53,8 +53,8 @@ exactly as they were supposed to in the specification.
 > * Removed mdpi, ldpi and ldrtl;
 > * Recycled dex files;
 > * Optimization of apk at archive level;
-> * Sign dhwh v1+v2+v3 (on 4PDA);
-> * Sign ThIsLinked v1+v2+v3 (on the general web);
+> * Sign dhwh v2+v3 (on 4PDA);
+> * Sign ThIsLinked v2+v3 (on the general web);
 > <details><summary>Signature dhwh hash</summary>
 >
 > _**HEX/DEC:** 0x97d83e3e (-1747435970)_
