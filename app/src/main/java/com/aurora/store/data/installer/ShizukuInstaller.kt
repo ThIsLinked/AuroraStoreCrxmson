@@ -33,6 +33,7 @@ import android.os.Build
 import android.os.IBinder
 import android.os.IInterface
 import androidx.annotation.RequiresApi
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.app.PendingIntentCompat
 import com.aurora.extensions.isOAndAbove
 import com.aurora.extensions.isSAndAbove
@@ -65,9 +66,9 @@ class ShizukuInstaller @Inject constructor(
         fun getInstallerInfo(context: Context): InstallerInfo {
             return InstallerInfo(
                 id = 5,
+                img = AppCompatResources.getDrawable(context, R.drawable.ic_installer_shizuku)!!,
                 title = context.getString(R.string.pref_install_mode_shizuku),
-                subtitle = context.getString(R.string.shizuku_installer_subtitle),
-                description = context.getString(R.string.shizuku_installer_desc)
+                subtitle = context.getString(R.string.shizuku_installer_subtitle)
             )
         }
     }

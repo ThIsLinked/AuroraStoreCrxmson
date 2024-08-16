@@ -80,28 +80,18 @@ class AppInstaller @Inject constructor(
         }
 
         fun getAvailableInstallersInfo(context: Context): List<InstallerInfo> {
-            val installers = mutableListOf(
-                SessionInstaller.getInstallerInfo(context),
-                NativeInstaller.getInstallerInfo(context)
+            val installersList = mutableListOf(
+                SessionInstaller.getInstallerInfo(context)
             )
-
-            if (hasRootAccess()) {
-                installers.add(RootInstaller.getInstallerInfo(context))
+            if (isOAndAbove()) {
+                installersList.add(ShizukuInstaller.getInstallerInfo(context))
             }
+            installersList.add(AMInstaller.getInstallerInfo(context))
+            installersList.add(RootInstaller.getInstallerInfo(context))
+            installersList.add(ServiceInstaller.getInstallerInfo(context))
+            installersList.add(NativeInstaller.getInstallerInfo(context))
 
-            if (hasAuroraService(context)) {
-                installers.add(ServiceInstaller.getInstallerInfo(context))
-            }
-
-            if (hasAppManager(context)) {
-                installers.add(AMInstaller.getInstallerInfo(context))
-            }
-
-            if (isOAndAbove() && hasShizukuOrSui(context)) {
-                installers.add(ShizukuInstaller.getInstallerInfo(context))
-            }
-
-            return installers
+            return installersList
         }
 
         fun notifyInstallation(context: Context, displayName: String, packageName: String) {

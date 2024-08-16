@@ -29,6 +29,7 @@ import android.content.pm.PackageInstaller.PACKAGE_SOURCE_STORE
 import android.content.pm.PackageInstaller.SessionParams
 import android.content.pm.PackageManager
 import android.os.Process
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.app.PendingIntentCompat
 import com.aurora.extensions.isOAndAbove
 import com.aurora.extensions.isSAndAbove
@@ -112,9 +113,9 @@ class SessionInstaller @Inject constructor(
         fun getInstallerInfo(context: Context): InstallerInfo {
             return InstallerInfo(
                 id = 0,
+                img = AppCompatResources.getDrawable(context, R.drawable.ic_installer_session)!!,
                 title = context.getString(R.string.pref_install_mode_session),
-                subtitle = context.getString(R.string.session_installer_subtitle),
-                description = context.getString(R.string.session_installer_desc)
+                subtitle = context.getString(R.string.session_installer_subtitle)
             )
         }
     }

@@ -2,6 +2,7 @@ package com.aurora.store.data.installer
 
 import android.content.Context
 import android.content.Intent
+import androidx.appcompat.content.res.AppCompatResources
 import com.aurora.store.R
 import com.aurora.store.data.model.InstallerInfo
 import com.aurora.store.data.room.download.Download
@@ -27,9 +28,9 @@ class AMInstaller @Inject constructor(
         fun getInstallerInfo(context: Context): InstallerInfo {
             return InstallerInfo(
                 id = 4,
+                img = AppCompatResources.getDrawable(context, R.drawable.ic_installer_appmanager)!!,
                 title = context.getString(R.string.pref_install_mode_am),
-                subtitle = context.getString(R.string.am_installer_subtitle),
-                description = context.getString(R.string.am_installer_desc)
+                subtitle = context.getString(R.string.am_installer_subtitle)
             )
         }
     }

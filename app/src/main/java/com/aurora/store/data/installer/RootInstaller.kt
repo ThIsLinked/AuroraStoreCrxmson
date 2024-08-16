@@ -20,6 +20,7 @@
 package com.aurora.store.data.installer
 
 import android.content.Context
+import androidx.appcompat.content.res.AppCompatResources
 import com.aurora.store.AuroraApp
 import com.aurora.store.R
 import com.aurora.store.data.event.InstallerEvent
@@ -43,9 +44,9 @@ class RootInstaller @Inject constructor(
         fun getInstallerInfo(context: Context): InstallerInfo {
             return InstallerInfo(
                 id = 2,
+                img = AppCompatResources.getDrawable(context, R.drawable.ic_installer_root)!!,
                 title = context.getString(R.string.pref_install_mode_root),
-                subtitle = context.getString(R.string.root_installer_subtitle),
-                description = context.getString(R.string.root_installer_desc)
+                subtitle = context.getString(R.string.root_installer_subtitle)
             )
         }
     }
@@ -68,7 +69,7 @@ class RootInstaller @Inject constructor(
                     context.getString(R.string.installer_status_failure),
                     context.getString(R.string.installer_root_unavailable)
                 )
-                Log.e(" >>>>>>>>>>>>>>>>>>>>>>>>>> NO ROOT ACCESS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+                Log.e(">>>>>>>>>>>>>>>>>>>>>>>>>> NO ROOT ACCESS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
             }
         }
     }

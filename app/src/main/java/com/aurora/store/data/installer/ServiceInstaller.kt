@@ -29,6 +29,7 @@ import android.os.Handler
 import android.os.IBinder
 import android.os.Looper
 import android.os.RemoteException
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.FileProvider
 import com.aurora.services.IPrivilegedCallback
 import com.aurora.services.IPrivilegedService
@@ -66,9 +67,9 @@ class ServiceInstaller @Inject constructor(
         fun getInstallerInfo(context: Context): InstallerInfo {
             return InstallerInfo(
                 id = 3,
+                img = AppCompatResources.getDrawable(context, R.drawable.ic_installer_services)!!,
                 title = context.getString(R.string.pref_install_mode_services),
-                subtitle = context.getString(R.string.services_installer_subtitle),
-                description = context.getString(R.string.services_installer_desc)
+                subtitle = context.getString(R.string.services_installer_subtitle)
             )
         }
     }

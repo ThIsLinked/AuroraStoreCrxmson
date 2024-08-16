@@ -19,11 +19,13 @@
 
 package com.aurora.store.data.model
 
+import android.graphics.drawable.Drawable
+
 data class InstallerInfo(
     var id: Int,
+    var img: Drawable,
     var title: String,
     var subtitle: String,
-    var description: String
 ) {
     override fun equals(other: Any?): Boolean {
         return when (other) {

@@ -17,18 +17,29 @@
   ~
   -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?android:selectableItemBackground"
-    tools:ignore="Overdraw">
+    android:padding="?android:listPreferredItemPaddingStart">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img"
+        android:layout_width="@dimen/icon_size_default"
+        android:layout_height="@dimen/icon_size_default"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        app:tint="?android:attr/colorAccent"
+        app:tintMode="src_in"
+        tools:src="@drawable/ic_installer_native"/>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_marginEnd="?android:attr/listPreferredItemPaddingStart"
+        android:layout_marginHorizontal="?android:attr/listPreferredItemPaddingStart"
         android:layout_toStartOf="@id/radiobutton"
+        android:layout_toEndOf="@id/img"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -47,16 +58,6 @@
             android:layout_marginTop="@dimen/margin_xsmall"
             android:maxLines="@integer/maxLines_general"
             tools:text="@string/session_installer_subtitle" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/line3"
-            style="@style/AuroraTextStyle.Line2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_xsmall"
-            android:maxLines="@integer/maxLines_general"
-            android:textStyle="italic"
-            tools:text="@string/session_installer_desc" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

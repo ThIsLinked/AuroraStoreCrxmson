@@ -21,6 +21,7 @@ package com.aurora.store.data.installer
 
 import android.content.Context
 import android.content.Intent
+import androidx.appcompat.content.res.AppCompatResources
 import com.aurora.extensions.runOnUiThread
 import com.aurora.store.R
 import com.aurora.store.data.model.InstallerInfo
@@ -42,9 +43,9 @@ class NativeInstaller @Inject constructor(
         fun getInstallerInfo(context: Context): InstallerInfo {
             return InstallerInfo(
                 id = 1,
+                img = AppCompatResources.getDrawable(context, R.drawable.ic_installer_native)!!,
                 title = context.getString(R.string.pref_install_mode_native),
-                subtitle = context.getString(R.string.native_installer_subtitle),
-                description = context.getString(R.string.native_installer_desc)
+                subtitle = context.getString(R.string.native_installer_subtitle)
             )
         }
     }

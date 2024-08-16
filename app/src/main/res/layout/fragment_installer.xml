@@ -40,8 +40,6 @@
         android:layout_height="match_parent"
         android:clipToPadding="false"
         android:overScrollMode="ifContentScrolls"
-        android:padding="?android:attr/listPreferredItemPaddingStart"
-        app:itemSpacing="?android:attr/listPreferredItemPaddingStart"
         tools:listitem="@layout/view_installer" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

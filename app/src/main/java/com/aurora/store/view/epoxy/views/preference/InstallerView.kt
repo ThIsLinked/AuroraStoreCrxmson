@@ -29,6 +29,7 @@ import com.aurora.store.data.model.InstallerInfo
 import com.aurora.store.databinding.ViewInstallerBinding
 import com.aurora.store.view.epoxy.views.BaseModel
 import com.aurora.store.view.epoxy.views.BaseView
+import coil.load
 
 @ModelView(
     autoLayout = ModelView.Size.MATCH_WIDTH_WRAP_HEIGHT,
@@ -42,9 +43,9 @@ class InstallerView @JvmOverloads constructor(
 
     @ModelProp
     fun installer(installer: InstallerInfo) {
+        binding.img.load(installer.img)
         binding.line1.text = installer.title
         binding.line2.text = installer.subtitle
-        binding.line3.text = installer.description
     }
 
     @ModelProp
