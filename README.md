@@ -28,19 +28,22 @@ exactly as they were supposed to in the specification.
 ```
 <p></p>
 
+> [!CAUTION]
+> Minimum OS version is Android 7.0 (API 24)
+
 > **List:**
-* Modernity of the project;
-* Redesigned the UI and UX;
-* Replaced the list of accents with a list of [Material Design palette](https://m2.material.io/design/color/the-color-system.html#color-theme-creation);
-* On the application page, some elements are now available for highlighting with the cursor (so that the text can be copied to the clipboard);
-* Redesigned and/or rearranged sections and items in settings;
-* Restoring the switch to download files to the device's internal storage. You can specify your own path if you wish;
-* Restoring full functionality of [Deep Links](https://developer.android.com/training/app-links/deep-linking) (edit [#7082](https://4pda.to/forum/index.php?showtopic=887569&view=findpost&p=124420039));
-* Added mono-profiles: xxhdpi, API 27, all languages and actuality architectures - ARMv7, ARM64v8, x86 and x64. *The original source of the original configuration – [#2896](https://4pda.to/forum/index.php?showtopic=887569&view=findpost&p=106493433);*
-* Redesigned launcher icon: VectorDrawable rendering only, API 26 and above – adaptive method, API 33 and above – monochrome method (optiomal);
-* Redesigned banner for Android TV;
-* Integrated network configuration to establish cleartext traffic. This allows traffic-modifying firewalls such as AdGuard to be used seamlessly over of Aurora;
-* There are many other changes that I can't categorize in the main changelog. Keep an eye on my change logs during updates to keep up to date with changes throughout the repository...
+> * Modernity of the project;
+> * Redesigned the UI and UX;
+> * Replaced the list of accents with a list of [Material Design palette](https://m2.material.io/design/color/the-color-system.html#color-theme-creation);
+> * On the application page, some elements are now available for highlighting with the cursor (so that the text can be copied to the clipboard);
+> * Redesigned and/or rearranged sections and items in settings;
+> * Restoring the switch to download files to the device's internal storage. You can specify your own path if you wish;
+> * Restoring full functionality of [Deep Links](https://developer.android.com/training/app-links/deep-linking) (edit [#7082](https://4pda.to/forum/index.php?showtopic=887569&view=findpost&p=124420039));
+> * Added mono-profiles: xxhdpi, API 27, all languages and actuality architectures - ARMv7, ARM64v8, x86 and x64. *The original source of the original configuration – [#2896](https://4pda.to/forum/index.php?showtopic=887569&view=findpost&p=106493433);*
+> * Redesigned launcher icon: VectorDrawable rendering only, API 26 and above – adaptive method, API 33 and above – monochrome method (optiomal);
+> * Redesigned banner for Android TV;
+> * Integrated network configuration to establish cleartext traffic. This allows traffic-modifying firewalls such as AdGuard to be used seamlessly over of Aurora;
+> * There are many other changes that I can't categorize in the main changelog. Keep an eye on my change logs during updates to keep up to date with changes throughout the repository...
 
 > ### Only in the apk's published in my performance:
 > * Removal of obfuscation and/or minification;
@@ -100,7 +103,7 @@ exactly as they were supposed to in the specification.
 # Gratitudes
 
 * vladrevers ([GitLab](https://gitlab.com/vladrevers), [4PDA](https://4pda.to/forum/index.php?showuser=5081201)) – Help in Smali and educational directions;
-* Maximoff ([official site](https://maximoff.su/), [GitLab](https://gitlab.com/maximoff), [4PDA](https://4pda.to/forum/index.php?showuser=4424665)) – Source code for implementing functions;
+* Maximoff ([GitLab](https://gitlab.com/maximoff), [4PDA](https://4pda.to/forum/index.php?showuser=4424665)) – Source code for implementing functions;
 * tigr1234566 ([Telegram](https://t.me/tommyhellatigr), [4PDA](https://4pda.to/forum/index.php?showuser=6432902)) – Tester;
 * master1274 ([GitLab](https://gitlab.com/anikin.rusl), [4PDA](https://4pda.to/forum/index.php?showuser=5042804)) – Tester;
 
