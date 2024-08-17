@@ -1,4 +1,4 @@
-> **v4.5.1-nightly-12.08.24 (60)**
+> **v4.5.1-nightly-16.08.24 (60)**
 > * Pulled up to nightly 16.08.24;
 > * UI and UX changes;
 > * In the «Updates» tab, all SwipeRefresh shades now inherit the colors of the current theme;
