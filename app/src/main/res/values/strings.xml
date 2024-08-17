@@ -105,7 +105,7 @@
     <string name="add_dispenser_hint">Dispenser URL</string>
     <string name="add_dispenser_summary">Add a token dispenser to Aurora Store. Token dispensers provide account credentials to Aurora Store for logging in anonymously.</string>
     <string name="add_dispenser_title">Add dispenser</string>
-    <string name="am_installer_subtitle">Installs using a third-party installer. App Manager is required. And root or ADB permissions if MUIU optimization is enabled.</string>
+    <string name="am_installer_subtitle">Installs using a third-party installer. App Manager is required. And root or ADB permissions if MIUI optimization is enabled.</string>
     <string name="amazon_appstore_desc">Amazon Appstore is an app store for Android-compatible platforms operated by Amazon.</string>
     <string name="android_market_desc">Android Market was an online store offering software applications designed for Android devices, retired in 2017.</string>
     <string name="app_label" translatable="false">Aurora Store Crxmson</string>

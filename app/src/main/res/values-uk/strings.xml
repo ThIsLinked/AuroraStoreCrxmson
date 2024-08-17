@@ -79,7 +79,7 @@
     <string name="add_dispenser_hint">URL розподільника</string>
     <string name="add_dispenser_summary">Додайте розподільник жетонів до Aurora Store. Розподільники токенів надають облікові дані Aurora Store для анонімного входу.</string>
     <string name="add_dispenser_title">Додати розподільник</string>
-    <string name="am_installer_subtitle">Встановлює за допомогою стороннього інсталятора. Потрібно App Manager. А також право root або ADB, якщо включена оптимізація MUIU.</string>
+    <string name="am_installer_subtitle">Встановлює за допомогою стороннього інсталятора. Потрібно App Manager. А також право root або ADB, якщо включена оптимізація MIUI.</string>
     <string name="amazon_appstore_desc">Amazon Appstore — крамниця застосунків для Android-сумісних платформ, що працюють на Amazon.</string>
     <string name="android_market_desc">Android Маркет — інтернет-магазин, що пропонував програмне забезпечення для Android-пристроїв, припинив свою діяльність у 2017 році.</string>
     <string name="app_language">Мова застосунку</string>
