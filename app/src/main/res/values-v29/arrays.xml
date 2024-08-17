@@ -19,14 +19,14 @@
   -->
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string-array name="pref_themes" tools:ignore="InconsistentArrays">
-        <item>@string/pref_ui_theme_system</item>
-        <item>@string/pref_ui_theme_light</item>
-        <item>@string/pref_ui_theme_dark</item>
-        <item>@string/pref_ui_theme_black</item>
-        <item>@string/pref_ui_theme_dark_x</item>
-        <item>@string/pref_ui_theme_darkord</item>
+        <item>@string/sample_systemValue</item>
+        <item>Light</item>
+        <item>Dark</item>
+        <item>Black</item>
+        <item>Dark X</item>
+        <item>Darkord</item>
     </string-array>
-    <string-array name="pref_themes_values" tools:ignore="InconsistentArrays">
+    <string-array name="pref_themes_values" translatable="false" tools:ignore="InconsistentArrays">
         <item>0</item>
         <item>1</item>
         <item>2</item>
