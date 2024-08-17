@@ -18,7 +18,7 @@
   ~
   -->
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <array name="auto_size_text_sizes">
+    <array name="auto_size_text_sizes" translatable="false">
         <item>12sp</item>
         <item>13sp</item>
         <item>14sp</item>
@@ -29,7 +29,7 @@
         <item>19sp</item>
         <item>20sp</item>
     </array>
-    <array name="auto_size_text_sizes_large">
+    <array name="auto_size_text_sizes_large" translatable="false">
         <item>24sp</item>
         <item>25sp</item>
         <item>26sp</item>
@@ -56,16 +56,16 @@
         <item>47sp</item>
         <item>48sp</item>
     </array>
-    <array name="com_google_android_gms_fonts_certs">
+    <array name="com_google_android_gms_fonts_certs" translatable="false">
         <item>@array/com_google_android_gms_fonts_certs_dev</item>
         <item>@array/com_google_android_gms_fonts_certs_prod</item>
     </array>
-    <string-array name="com_google_android_gms_fonts_certs_dev" tools:ignore="Typos">
+    <string-array name="com_google_android_gms_fonts_certs_dev" translatable="false" tools:ignore="Typos">
         <item>
             MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPWW+wPPKQmsHxajtWjmQwWfna8mZuSeJS48LIgAZlKkpFeVyxW0qMBujb8X8ETrWy550NaFtI6t9+u7hZeTfHwqNvacKhp1RbE6dBRGWynwMVX8XW8N1+UjFaq6GCJukT4qmpN2afb8sCjUigq0GuMwYXrFVee74bQgLHWGJwPmvmLHC69EH6kWr22ijx4OKXlSIx2xT1AsSHee70w5iDBiK4aph27yH3TxkXy9V89TDdexAcKk/cVHYNnDBapcavl7y0RiQ4biu8ymM8Ga/nmzhRKya6G0cGw8CAQOjgfwwgfkwHQYDVR0OBBYEFI0cxb6VTEM8YYY6FbBMvAPyT+CyMIHJBgNVHSMEgcEwgb6AFI0cxb6VTEM8YYY6FbBMvAPyT+CyoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JMrSu1xuTKEBahWRbqHsXclaXjoBADb0kkjVEJu/Lh5hgYZnOjvlba8Ld7HCKePCVePoTJBdI4fvugnL8TsgK05aIskyY0hKI9L8KfqfGTl1lzOv2KoWD0KWwtAWPoGChZxmQ+nBli+gwYMzM1vAkP+aayLe0a1EQimlOalO762r0GXO0ks+UeXde2Z4e+8S/pf7pITEI/tP+MxJTALw9QUWEv9lKTk+jkbqxbsh8nfBUapfKqYn0eidpwq2AzVp3juYl7//fKnaPhJD9gs=
         </item>
     </string-array>
-    <string-array name="com_google_android_gms_fonts_certs_prod" tools:ignore="Typos">
+    <string-array name="com_google_android_gms_fonts_certs_prod" translatable="false" tools:ignore="Typos">
         <item>
             MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCNMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0I9Y4sypEwPpt1TTcvZApxsdyxMJZ2JORland2qSGT2y5b+3JKkedxiLDmpHpDsz2WCbdxgxRczfey5YZnTJ4VZbH0xqWVW/8lGmPav5xVwnIiJS6HXk+BVKZF+JcWjAsb/GEuq/eFdpuzSqeYTcfi6idkyugwfYwXFU1+5fZKUaRKYCwkkFQVfcAs1fXA5V+++FGfvjJ/CxURaSxaBvGdGDhfXE28LWuT9ozCl5xw4Yq5OGazvV24mZVSoOO0yZ31j7kYvtwYK6NeADwbSxDdJEqO4k//0zOHKrUiGYXtqw/A0LFFtqoZKFjnkCAQOjgdkwgdYwHQYDVR0OBBYEFMd9jMIhF1Ylmn/Tgt9r45jk14alMIGmBgNVHSMEgZ4wgZuAFMd9jMIhF1Ylmn/Tgt9r45jk14aloXikdjB0MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLR29vZ2xlIEluYy4xEDAOBgNVBAsTB0FuZHJvaWQxEDAOBgNVBAMTB0FuZHJvaWSCCQDC4IdGZEowjTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBAUAA4IBAQBt0lLO74UwLDYKqs6Tm8/yzKkEu116FmH4rkaymUIE0P9KaMftGlMexFlaYjzmB2OxZyl6euNXEsQH8gjwyxCUKRJNexBiGcCEyj6z+a1fuHHvkiaai+KL8W1EyNmgjmyy8AW7P+LLlkR+ho5zEHatRbM/YAnqGcFh5iZBqpknHf1SKMXFh4dd239FJ1jWYfbMDMy3NS5CTMQ2XFI1MvcyUTdZPErjQfTbQe3aDQsQcafEQPD+nqActifKZ0Np0IS9L9kR/wbNvyz6ENwPiTrjV2KRkEjH78ZMcUQXg0L3BYHJ3lc69Vs5Ddf9uUGGMYldX3WfMBEmh/9iFBDAaTCK
         </item>
@@ -112,53 +112,57 @@
         <item>4.5</item>
         <item>4.7</item>
     </string-array>
-    <string-array name="link_icons">
+    <string-array name="link_icons" translatable="false">
         <item>@drawable/ic_telegram</item>
         <item>@drawable/ic_github</item>
         <item>@drawable/ic_build</item>
         <item>@drawable/ic_4pda</item>
+        <item>@drawable/ic_gitlab</item>
     </string-array>
     <string-array name="link_subtitle">
-        <item>@string/about_telegram_summary</item>
-        <item>@string/about_github_summary</item>
-        <item>@string/about_4pda_post_summary</item>
-        <item>@string/about_4pda_topic_summary</item>
+        <item>Join the Aurora Support group for discussions or suggestions.</item>
+        <item>Modification source code.</item>
+        <item>Modification post on 4PDA.</item>
+        <item>Discussion of Aurora on 4PDA.</item>
+        <item>Official repo of the original Aurora.</item>
     </string-array>
     <string-array name="link_titles">
-        <item>@string/about_telegram_title</item>
-        <item>@string/about_github_title</item>
-        <item>@string/about_4pda_post_title</item>
-        <item>@string/about_4pda_topic_title</item>
+        <item>@string/sample_telegramLabel</item>
+        <item>@string/sample_githubLabel</item>
+        <item>Post on 4PDA</item>
+        <item>Topic on 4PDA</item>
+        <item>Original</item>
     </string-array>
-    <string-array name="link_urls">
+    <string-array name="link_urls" translatable="false">
         <item>https://t.me/AuroraCrxmson</item>
         <item>https://github.com/ThIsLinked/AuroraStoreCrxmson</item>
         <item>https://4pda.to/forum/index.php?showtopic=887569&amp;view=findpost&amp;p=116441910</item>
         <item>https://4pda.to/forum/index.php?showtopic=887569</item>
+        <item>https://gitlab.com/AuroraOSS/AuroraStore</item>
     </string-array>
-    <string-array name="pref_accent" tools:ignore="InconsistentArrays">
-        <item>@string/ui_accent_1</item>
-        <item>@string/ui_accent_2</item>
-        <item>@string/ui_accent_3</item>
-        <item>@string/ui_accent_4</item>
-        <item>@string/ui_accent_5</item>
-        <item>@string/ui_accent_6</item>
-        <item>@string/ui_accent_7</item>
-        <item>@string/ui_accent_8</item>
-        <item>@string/ui_accent_9</item>
-        <item>@string/ui_accent_10</item>
-        <item>@string/ui_accent_11</item>
-        <item>@string/ui_accent_12</item>
-        <item>@string/ui_accent_13</item>
-        <item>@string/ui_accent_14</item>
-        <item>@string/ui_accent_15</item>
-        <item>@string/ui_accent_16</item>
-        <item>@string/ui_accent_17</item>
-        <item>@string/ui_accent_18</item>
-        <item>@string/ui_accent_19</item>
-        <item>@string/ui_accent_20</item>
+    <string-array name="pref_accent" translatable="false" tools:ignore="InconsistentArrays">
+        <item>Crimson</item>
+        <item>Royal Blue</item>
+        <item>Red</item>
+        <item>Pink</item>
+        <item>Purple</item>
+        <item>Deep Purple</item>
+        <item>Indigo</item>
+        <item>Blue</item>
+        <item>Light Blue</item>
+        <item>Cyan</item>
+        <item>Teal</item>
+        <item>Green</item>
+        <item>Light Green</item>
+        <item>Lime</item>
+        <item>Yellow</item>
+        <item>Amber</item>
+        <item>Orange</item>
+        <item>Deep Orange</item>
+        <item>Brown</item>
+        <item>Blue Grey</item>
     </string-array>
-    <string-array name="pref_accent_values" tools:ignore="InconsistentArrays">
+    <string-array name="pref_accent_values" translatable="false" tools:ignore="InconsistentArrays">
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -180,12 +184,12 @@
         <item>19</item>
         <item>20</item>
     </string-array>
-    <string-array name="pref_default_tab">
+    <string-array name="pref_default_tab" translatable="false">
         <item>@string/title_apps</item>
         <item>@string/title_games</item>
         <item>@string/title_updates</item>
     </string-array>
-    <string-array name="pref_default_tab_values">
+    <string-array name="pref_default_tab_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
@@ -209,13 +213,13 @@
         <item>3</item>
     </string-array>
     <string-array name="pref_themes" tools:ignore="InconsistentArrays">
-        <item>@string/pref_ui_theme_light</item>
-        <item>@string/pref_ui_theme_dark</item>
-        <item>@string/pref_ui_theme_black</item>
-        <item>@string/pref_ui_theme_dark_x</item>
-        <item>@string/pref_ui_theme_darkord</item>
+        <item>Light</item>
+        <item>Dark</item>
+        <item>Black</item>
+        <item>Dark X</item>
+        <item>Darkord</item>
     </string-array>
-    <string-array name="pref_themes_values" tools:ignore="InconsistentArrays">
+    <string-array name="pref_themes_values" translatable="false" tools:ignore="InconsistentArrays">
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -223,19 +227,19 @@
         <item>5</item>
     </string-array>
     <string-array name="pref_updates_auto">
-        <item>@string/pref_updates_auto_off</item>
-        <item>@string/pref_updates_auto_notify</item>
-        <item>@string/pref_updates_auto_install</item>
+        <item>Do not auto-update apps</item>
+        <item>Check and notify for available updates</item>
+        <item>Check and install available updates automatically</item>
     </string-array>
-    <string-array name="pref_updates_auto_values">
+    <string-array name="pref_updates_auto_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
     </string-array>
-    <string-array name="pref_vending_version" translatable="false">
-        <item>@string/pref_vending_version_device</item>
-        <item>7.9.80.Q-all [0] [PR] 159305549</item>
-        <item>22.0.17-21 [0] [PR] 332555730</item>
+    <string-array name="pref_vending_version">
+        <item>Default (from device config)</item>
+        <item>7.9.80.Q–all [0] [PR] 159305549</item>
+        <item>22.0.17–21 [0] [PR] 332555730</item>
     </string-array>
     <string-array name="pref_vending_version_codes" translatable="false">
         <item>-1</item>
