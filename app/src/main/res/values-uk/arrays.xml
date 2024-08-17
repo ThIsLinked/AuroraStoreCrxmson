@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Aurora Store
+  ~  Copyright (C) 2021, Rahul Kumar Patel <whyorean@gmail.com>
+  ~  Copyright (C) 2023, grrfe <grrfe@420blaze.it>
+  ~
+  ~  Aurora Store is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 2 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  Aurora Store is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string-array name="link_subtitle">
+        <item>Загальна група з Crxmson.</item>
+        <item>Вихідний код модифікації.</item>
+        <item>Пост модифікації на 4PDA.</item>
+        <item>Обговорення Аврори на 4PDA.</item>
+        <item>Оф. репо оригінальної Аврори.</item>
+    </string-array>
+    <string-array name="link_titles">
+        <item>@string/sample_telegramLabel</item>
+        <item>@string/sample_githubLabel</item>
+        <item>Пост на 4PDA</item>
+        <item>Тема на 4PDA</item>
+        <item>Оригінал</item>
+    </string-array>
+    <string-array name="pref_themes" tools:ignore="InconsistentArrays">
+        <item>Світла</item>
+        <item>Темна</item>
+        <item>Чорна</item>
+        <item>Темна X</item>
+        <item>Darkord</item>
+    </string-array>
+    <string-array name="pref_updates_auto">
+        <item>Не оновлювати застосунки автоматично</item>
+        <item>Перевіряти та повідомляти про доступні оновлення</item>
+        <item>Автоматична перевірка та встановлення доступних оновлень</item>
+    </string-array>
+    <string-array name="pref_vending_version">
+        <item>Типово (з конфігурації пристрою)</item>
+        <item>7.9.80.Q–all [0] [PR] 159305549</item>
+        <item>22.0.17–21 [0] [PR] 332555730</item>
+    </string-array>
+</resources>
