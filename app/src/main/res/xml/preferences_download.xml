@@ -103,7 +103,7 @@
             app:key="PREFERENCE_UPDATES_AUTO"
             app:layout="@layout/item_preference"
             app:singleLineTitle="false"
-            app:summary="@string/pref_updates_auto_desc"
+            app:summary=""
             app:title="@string/pref_updates_auto"
             app:useSimpleSummaryProvider="true" />
 
