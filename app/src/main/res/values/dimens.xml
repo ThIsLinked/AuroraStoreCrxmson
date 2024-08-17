@@ -20,11 +20,11 @@
     <dimen name="account_avatar">108dp</dimen>
     <dimen name="account_email">18sp</dimen>
     <dimen name="account_name">24sp</dimen>
-    <item format="float" name="background_translucent05" type="dimen">0.05</item>
-    <item format="float" name="background_translucent10" type="dimen">0.1</item>
-    <item format="float" name="background_translucent25" type="dimen">0.25</item>
+    <item name="background_translucent05" format="float" type="dimen">0.05</item>
+    <item name="background_translucent10" format="float" type="dimen">0.1</item>
+    <item name="background_translucent25" format="float" type="dimen">0.25</item>
     <dimen name="cluster_size">128dp</dimen>
-    <item format="float" name="colorScrimAccent_opacity" type="dimen">0.27</item>
+    <item name="colorScrimAccent_opacity" format="float" type="dimen">0.27</item>
     <dimen name="crimson_marginStart_toEndOf_label">5sp</dimen>
     <dimen name="divider_dash_height">21dp</dimen>
     <dimen name="divider_link_height">@dimen/divider_dash_height</dimen>
@@ -82,6 +82,6 @@
     <dimen name="screenshot_height_mini">120dp</dimen>
     <dimen name="screenshot_width">108dp</dimen>
     <dimen name="screenshot_width_mini">68dp</dimen>
-    <item format="float" name="sheet_divider" type="dimen">0.5</item>
+    <item name="sheet_divider" format="float" type="dimen">0.5</item>
     <dimen name="width_button">200dp</dimen>
 </resources>
