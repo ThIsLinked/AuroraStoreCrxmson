@@ -19,21 +19,13 @@
   ~
   -->
 <resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="about_4pda_post_summary">Modification post on 4PDA</string>
-    <string name="about_4pda_post_title">Post on 4PDA</string>
-    <string name="about_4pda_topic_summary">Discussion of Aurora on 4PDA</string>
-    <string name="about_4pda_topic_title">Topic on 4PDA</string>
     <string name="about_aurora_store_subtitle">Learn more about Aurora Store</string>
     <string name="about_aurora_store_summary">Aurora Store enables you to search and download apps from the official Google Play store. You can check app descriptions, screenshots, updates, other users\' comments, and download the APK directly from Google Play to your device. To use Aurora Store, you need to have a Google Play account, and log in to your Google Play account when you first open and configure Aurora Store.\n\nUnlike a traditional app store, Aurora Store does not own, license or distribute any apps. All the apps, app descriptions, screenshots and other content in Aurora Store are directly accessed, downloaded and/or displayed from Google Play. Aurora Store works exactly like a door or a browser, allowing you to log in to your Google Play account and find the apps from Google Play.\n\nPlease note that Aurora Store does not have any approval, sponsorship or authorization from Google, Google Play, any apps downloaded through Aurora Store or any app developers; neither does Aurora Store have any affiliation, cooperation or connection with them.</string>
     <string name="about_aurora_store_title">About Aurora Store</string>
     <string name="about_desc">A client that allows you to download applications from the Play Store.</string>
-    <string name="about_github_summary">Modification source code.</string>
-    <string name="about_github_title" translatable="false">GitHub</string>
     <string name="about_label_end" translatable="false">@string/app_label_crimson</string>
     <string name="about_label_start" translatable="false">@string/app_label_short</string>
     <string name="about_moddify" translatable="false">Powered moddify by ThIsLinked aka Roser // dhwh</string>
-    <string name="about_telegram_summary">Join the Aurora Support group for discussions or suggestions.</string>
-    <string name="about_telegram_title" translatable="false">@string/sample_telegramLabel</string>
     <string name="about_version" translatable="false">v4.5.1 (60) // Nightly by 16.08.24</string>
     <string name="access_denied_using_vpn">Access denied. Do you use VPN or other spoofing tools?</string>
     <string name="account_anonymous">Anonymous</string>
@@ -123,7 +115,7 @@
     <string name="app_versionName" translatable="false">4.5.1-nightly-240816 (by ThIsLinked // dhwh)</string>
     <string name="app_view_rating" translatable="false">%1$s • %2$s★</string>
     <string name="bad_request">Failed to request a session.<i>Try again</i> or try again later.</string>
-    <string name="blacklist_line3">%1$s (%2$s)</string>
+    <string name="blacklist_line3" translatable="false">%1$s (%2$s)</string>
     <string name="categoryapps_notFound">Nothing was found for this category…</string>
     <string name="check_connectivity">Check internet connectivity</string>
     <string name="check_updates">Check for updates</string>
@@ -208,10 +200,10 @@
     <string name="exodus_substring_onlyone">@string/exodus_substring</string>
     <string name="exodus_view_report">View report</string>
     <string name="expand">Expand</string>
-    <string name="export_app_summary">Hold on, exporting your file</string>
+    <string name="export_app_summary">Hold on, exporting your file…</string>
     <string name="export_app_summary_fail">Failed to exported app bundle</string>
     <string name="export_app_summary_success">Successfully exported app bundle</string>
-    <string name="export_app_title">File Exporter</string>
+    <string name="export_app_title">File exporter</string>
     <string name="failed_apk_export">Failed to export APKs</string>
     <string name="failed_app_link">Unsupported, please try associating links manually</string>
     <string name="failed_generating_session">Failed to generate session, error code: <xliff:g id="status_code">%1$d</xliff:g></string>
@@ -357,24 +349,14 @@
     <string name="pref_ui_no_for_you_desc">Display For You Pages on home screen</string>
     <string name="pref_ui_similar_apps">Similar and related apps</string>
     <string name="pref_ui_similar_apps_desc">Display similar and related clusters on app details page</string>
-    <string name="pref_ui_theme_black">Black</string>
-    <string name="pref_ui_theme_dark">Dark</string>
-    <string name="pref_ui_theme_dark_x">Dark X</string>
-    <string name="pref_ui_theme_darkord">Discord</string>
-    <string name="pref_ui_theme_light">Light</string>
     <string name="pref_ui_theme_system" translatable="false">@string/sample_systemValue</string>
     <string name="pref_ui_theme_title">Theme</string>
     <string name="pref_ui_title">Customization</string>
     <string name="pref_updates_auto">Auto-update apps</string>
-    <string name="pref_updates_auto_desc">Configure auto-updates behaviour</string>
-    <string name="pref_updates_auto_install">Check &amp; install available updates automatically</string>
-    <string name="pref_updates_auto_notify">Check &amp; notify for available updates</string>
-    <string name="pref_updates_auto_off">Do not auto-update apps</string>
     <string name="pref_updates_check_frequency">Automatic updates frequency</string>
     <string name="pref_updates_check_frequency_desc">Configure intervals for auto and self updates, in hour.</string>
     <string name="pref_updates_incompatible">Incompatible updates</string>
     <string name="pref_updates_incompatible_desc">Show updates for incompatible or disabled apps that may fail to install</string>
-    <string name="pref_vending_version_device">Default (from device config)</string>
     <string name="pref_vending_version_tip">All values other than the default are set over the value from the spoof profile (even if the native device is specified).\n\nAfter changing this parameter, you need anyway to reauthorize your account and restart to Aurora.</string>
     <string name="pref_vending_version_title">Play Store version</string>
     <string name="privacy_policy_subtitle">Learn how Aurora Store uses your data</string>
@@ -391,9 +373,10 @@
     <string name="remove_dispenser_title">Remove dispenser</string>
     <string name="requesting_new_session">Requesting a new session…</string>
     <string name="root_installer_subtitle">Shell based installer. Allows installation without user confirmation. Root permission required.</string>
+    <string name="sample_githubLabel" translatable="false">GitHub</string>
     <string name="sample_systemValue">System value</string>
     <string name="sample_telegramLabel" translatable="false">Telegram</string>
-    <string name="search_hint">Search for Apps &amp; Games</string>
+    <string name="search_hint">Search for Apps and Games</string>
     <string name="server_maintenance">The server is currently under maintenance.</string>
     <string name="server_unreachable">The server is unavailable.</string>
     <string name="services_installer_subtitle">Allows installation without user confirmation. Requires Aurora Services.</string>
@@ -432,7 +415,7 @@
     <string name="title_advanced">Advanced</string>
     <string name="title_app_settings">System settings</string>
     <string name="title_apps">Apps</string>
-    <string name="title_apps_games">My apps &amp; games</string>
+    <string name="title_apps_games">My apps and games</string>
     <string name="title_apps_library">Apps in library</string>
     <string name="title_apps_sale">Apps on sale</string>
     <string name="title_apps_sale_provider">Provider - bestappsales.com</string>
@@ -489,27 +472,6 @@
     <string name="toast_rated_failed">Could not submit rating</string>
     <string name="toast_rated_success">Rated, it may take a while to show</string>
     <string name="toast_spoof_applied">Device spoof applied.</string>
-    <string name="ui_accent_0" translatable="false">@string/sample_systemValue</string>
-    <string name="ui_accent_1" translatable="false">Crimson</string>
-    <string name="ui_accent_10" translatable="false">Cyan</string>
-    <string name="ui_accent_11" translatable="false">Teal</string>
-    <string name="ui_accent_12" translatable="false">Green</string>
-    <string name="ui_accent_13" translatable="false">Light Green</string>
-    <string name="ui_accent_14" translatable="false">Lime</string>
-    <string name="ui_accent_15" translatable="false">Yellow</string>
-    <string name="ui_accent_16" translatable="false">Amber</string>
-    <string name="ui_accent_17" translatable="false">Orange</string>
-    <string name="ui_accent_18" translatable="false">Deep Orange</string>
-    <string name="ui_accent_19" translatable="false">Brown</string>
-    <string name="ui_accent_2" translatable="false">Royal Blue</string>
-    <string name="ui_accent_20" translatable="false">Blue Grey</string>
-    <string name="ui_accent_3" translatable="false">Red</string>
-    <string name="ui_accent_4" translatable="false">Pink</string>
-    <string name="ui_accent_5" translatable="false">Purple</string>
-    <string name="ui_accent_6" translatable="false">Deep Purple</string>
-    <string name="ui_accent_7" translatable="false">Indigo</string>
-    <string name="ui_accent_8" translatable="false">Blue</string>
-    <string name="ui_accent_9" translatable="false">Light Blue</string>
     <string name="update_available" tools:ignore="PluralsCandidate">%1$d available</string>
     <string name="verifying_new_session">New session verification…</string>
     <string name="version" translatable="false">v<xliff:g id="version_name">%1$s</xliff:g>(<xliff:g id="version_code">%2$d</xliff:g>)</string>

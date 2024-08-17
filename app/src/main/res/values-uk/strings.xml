@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="about_4pda_post_summary">Пост модифікації на 4PDA</string>
-    <string name="about_4pda_post_title">Пост на 4PDA</string>
-    <string name="about_4pda_topic_summary">Обговорення Аврори на 4PDA</string>
-    <string name="about_4pda_topic_title">Тема на 4PDA</string>
     <string name="about_aurora_store_subtitle">Дізнатися більше про Aurora Store</string>
     <string name="about_aurora_store_summary">Aurora Store дозволяє шукати та завантажувати застосунки з офіційної крамниці Google Play. Ви можете переглядати описи застосунків, знімки екрана, оновлення, коментарі інших користувачів і завантажувати APK безпосередньо з Google Play на свій пристрій. Щоб використовувати Aurora Store, вам потрібно мати обліковий запис Google Play і увійти до нього, коли ви вперше відкриваєте та налаштовуєте Aurora Store.\n\nНа відміну від традиційного магазину застосунків, Aurora Store не володіє, не ліцензує та не розповсюджує жодні застосунки. Усі програми, їхні описи, знімки екрана та інший вміст у Aurora Store доступні, завантажуються та/або показуються безпосередньо з Google Play. Aurora Store працює так само, як двері або браузер, дозволяючи вам увійти у свій обліковий запис Google Play і знайти застосунки з Google Play.\n\nЗверніть увагу, що Aurora Store не має жодного схвалення, спонсорства чи авторизації від Google, Google Play, будь-яких застосунків, завантажених через Aurora Store, або будь-яких розробників програм; також Aurora Store не має жодного зв’язку, співпраці чи зв’язку з ними.</string>
     <string name="about_aurora_store_title">Про Aurora Store</string>
     <string name="about_desc">Клієнт, що дає змогу завантажувати додатки зі сховища Play Store.</string>
-    <string name="about_github_summary">Вихідний код модифікації.</string>
-    <string name="about_telegram_summary">Загальна група з Crxmson.</string>
     <string name="access_denied_using_vpn">Доступ заборонено. Використовуєте VPN або інші засоби підміни?</string>
     <string name="account_anonymous">Анонімно</string>
     <string name="account_google">Google</string>
@@ -165,8 +159,10 @@
     <string name="exodus_substring_onlyone">%1$d виявлений у v%2$s</string>
     <string name="exodus_view_report">Переглянути звіт</string>
     <string name="expand">Розгорнути</string>
+    <string name="export_app_summary">Зачекайте, експортуємо файл…</string>
     <string name="export_app_summary_fail">Набір застосунків не вдалося експортувати</string>
     <string name="export_app_summary_success">Набір застосунків успішно еспортовано</string>
+    <string name="export_app_title">Експорт файлу</string>
     <string name="failed_apk_export">Не вдалося експортувати APK-файли</string>
     <string name="failed_app_link">Не підтримується, спробуйте пов’язати посилання вручну</string>
     <string name="failed_generating_session">Не вдалося згенерувати сеанс, код помилки: <xliff:g id="status_code">%1$d</xliff:g></string>
@@ -291,23 +287,13 @@
     <string name="pref_ui_no_for_you_desc">Показувати сторінки на головному екрані</string>
     <string name="pref_ui_similar_apps">Подібні та пов’язані застосунки</string>
     <string name="pref_ui_similar_apps_desc">Показ подібних і пов\'язаних кластерів на сторінці відомостей про застосунок</string>
-    <string name="pref_ui_theme_black">Чорна</string>
-    <string name="pref_ui_theme_dark">Темна</string>
-    <string name="pref_ui_theme_dark_x">Темна X</string>
-    <string name="pref_ui_theme_darkord">Discord</string>
-    <string name="pref_ui_theme_light">Світла</string>
     <string name="pref_ui_theme_title">Тема</string>
     <string name="pref_ui_title">Зовнішній вигляд</string>
     <string name="pref_updates_auto">Автооновлення застосунків</string>
-    <string name="pref_updates_auto_desc">Налаштувати поведінку автооновлень</string>
-    <string name="pref_updates_auto_install">Автоматична перевірка та встановлення доступних оновлень</string>
-    <string name="pref_updates_auto_notify">Перевіряти та повідомляти про доступні оновлення</string>
-    <string name="pref_updates_auto_off">Не оновлювати застосунки автоматично</string>
     <string name="pref_updates_check_frequency">Частота автоматичних оновлень</string>
     <string name="pref_updates_check_frequency_desc">Налаштуйте інтервали для автоматичних і самооновлень, у годинах.</string>
     <string name="pref_updates_incompatible">Несумісні оновлення</string>
     <string name="pref_updates_incompatible_desc">Показувати оновлення для несумісних або вимкнених застосунків, які можуть не встановитися</string>
-    <string name="pref_vending_version_device">Типово (з конфігурації пристрою)</string>
     <string name="pref_vending_version_tip">Усі значення, крім за замовчуванням, встановлюються поверх значення з профілю підміни (навіть якщо вказано рідний пристрій).\n\nПісля зміни цього параметра вам у будь-якому разі необхідно переавторизуватися в акаунті та перезайти в Аврору.</string>
     <string name="pref_vending_version_title">Версія Play Store</string>
     <string name="privacy_policy_subtitle">Дізнайтеся, як Aurora Store використовує ваші дані</string>
