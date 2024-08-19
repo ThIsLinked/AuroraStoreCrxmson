@@ -89,7 +89,7 @@ object PackageUtil {
     fun isUpdatable(context: Context, packageName: String, versionCode: Long): Boolean {
         return try {
             val packageInfo = getPackageInfo(context, packageName)
-            return versionCode > PackageInfoCompat.getLongVersionCode(packageInfo)
+            return (versionCode > PackageInfoCompat.getLongVersionCode(packageInfo))
         } catch (e: PackageManager.NameNotFoundException) {
             false
         }
@@ -218,26 +218,10 @@ object PackageUtil {
         val flags: Int = PackageManager.GET_META_DATA
         var packageInfoList: List<PackageInfo> = packageManager.getInstalledPackages(flags)
 
-        val isGoogleFilterEnabled = Preferences.getBoolean(
-            context,
-            Preferences.PREFERENCE_FILTER_GOOGLE
-        )
-
-        val isAuroraOnlyUpdateEnabled = Preferences.getBoolean(
-            context,
-            Preferences.PREFERENCE_FILTER_AURORA_ONLY,
-            false
-        )
-
-        val isFDroidFilterEnabled = Preferences.getBoolean(
-            context,
-            Preferences.PREFERENCE_FILTER_FDROID
-        )
-
-        val isExtendedUpdateEnabled = Preferences.getBoolean(
-            context,
-            Preferences.PREFERENCE_UPDATES_EXTENDED
-        )
+        val isGoogleFilterEnabled = Preferences.getBoolean(context, Preferences.PREFERENCE_FILTER_GOOGLE)
+        val isAuroraOnlyUpdateEnabled = Preferences.getBoolean(context, Preferences.PREFERENCE_FILTER_AURORA_ONLY, false)
+        val isFDroidFilterEnabled = Preferences.getBoolean(context, Preferences.PREFERENCE_FILTER_FDROID)
+        val isExtendedUpdateEnabled = Preferences.getBoolean(context, Preferences.PREFERENCE_UPDATES_EXTENDED)
 
         packageInfoList = packageInfoList.filter { it.isApp() }
 
@@ -271,7 +255,9 @@ object PackageUtil {
         }
 
         if (!isExtendedUpdateEnabled) {
-            packageInfoList = packageInfoList.filter { it.applicationInfo!!.enabled }
+            packageInfoList = packageInfoList.filter {
+                it.applicationInfo!!.enabled
+            }
         }
 
         /*Filter F-Droid apps*/

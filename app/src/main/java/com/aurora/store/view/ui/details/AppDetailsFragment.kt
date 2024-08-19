@@ -578,22 +578,13 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
             binding.layoutDetailsInstall.btnDownload.let { btn ->
                 btn.setButtonState(true)
                 if (app.isInstalled) {
-                    val isExtendedUpdateEnabled = Preferences.getBoolean(
-                        requireContext(), Preferences.PREFERENCE_UPDATES_EXTENDED
-                    )
+                    val isExtendedUpdateEnabled : Boolean = (Preferences.getBoolean(requireContext(), Preferences.PREFERENCE_UPDATES_EXTENDED))
                     val needsExtendedUpdate = !app.certificateSetList.any {
-                        it.certificateSet in CertUtil.getEncodedCertificateHashes(
-                            requireContext(), app.packageName
-                        )
+                        it.certificateSet in CertUtil.getEncodedCertificateHashes(requireContext(), app.packageName)
                     }
-                    isUpdatable = PackageUtil.isUpdatable(
-                        requireContext(),
-                        app.packageName,
-                        app.versionCode.toLong()
-                    )
+                    isUpdatable = PackageUtil.isUpdatable(requireContext(), app.packageName, app.versionCode.toLong())
 
-                    val installedVersion =
-                        PackageUtil.getInstalledVersion(requireContext(), app.packageName)
+                    val installedVersion = (PackageUtil.getInstalledVersion(requireContext(), app.packageName))
 
                     if (isUpdatable && !needsExtendedUpdate || isUpdatable && isExtendedUpdateEnabled) {
                         binding.layoutDetailsApp.txtLine3.text = getString(

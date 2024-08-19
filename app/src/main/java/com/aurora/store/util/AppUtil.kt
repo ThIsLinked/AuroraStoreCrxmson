@@ -33,7 +33,7 @@ class AppUtil @Inject constructor(
     @ApplicationContext private val context: Context
 ) {
     private val tag : String = AppUtil::class.java.simpleName
-    private val isExtendedUpdateEnabled get() = Preferences.getBoolean(context, Preferences.PREFERENCE_UPDATES_EXTENDED)
+    private val isExtendedUpdateEnabled : Boolean get() = Preferences.getBoolean(context, Preferences.PREFERENCE_UPDATES_EXTENDED)
     val updates = updateDao.updates()
         .map { list ->
             list.filter {
