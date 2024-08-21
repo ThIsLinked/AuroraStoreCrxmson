@@ -26,7 +26,7 @@
     <string name="about_label_end" translatable="false">@string/app_label_crimson</string>
     <string name="about_label_start" translatable="false">@string/app_label_short</string>
     <string name="about_moddify" translatable="false">Powered moddify by ThIsLinked aka Roser // dhwh</string>
-    <string name="about_version" translatable="false">v4.5.1 (60) // Nightly by 16.08.24</string>
+    <string name="about_version" translatable="false">v4.6.0 (61) // Nightly by 21.08.24</string>
     <string name="access_denied_using_vpn">Access denied. Do you use VPN or other spoofing tools?</string>
     <string name="account_anonymous">Anonymous</string>
     <string name="account_anonymous_email" translatable="false">anonymous@gmail.com</string>
@@ -112,7 +112,7 @@
     <string name="app_list_rating" translatable="false">%1$s • %2$s★ • %3$s</string>
     <string name="app_updater_service_notif_text">Enables background app download</string>
     <string name="app_updater_service_notif_title">Background app download</string>
-    <string name="app_versionName" translatable="false">4.5.1-nightly-240816 (by ThIsLinked // dhwh)</string>
+    <string name="app_versionName" translatable="false">4.6.0-nightly-240821 // moddify by ThIsLinked &amp; dhwh</string>
     <string name="app_view_rating" translatable="false">%1$s • %2$s★</string>
     <string name="bad_request">Failed to request a session.<i>Try again</i> or try again later.</string>
     <string name="blacklist_line3" translatable="false">%1$s (%2$s)</string>
@@ -127,7 +127,7 @@
     <string name="details_beta_description">You will see new features and bugs before the public does. Give your feedback to developers to help them improve.</string>
     <string name="details_beta_subscribed">You\'re a beta tester</string>
     <string name="details_changelog">Changelog</string>
-    <string name="details_changelog_unavailable">Changelog not provided</string>
+    <string name="details_changelog_unavailable">Changelog not provided…</string>
     <string name="details_contains_ads">Contains Ads</string>
     <string name="details_data_safety_subtitle">Data privacy and security practices declared by developer.</string>
     <string name="details_data_safety_title">Data safety</string>

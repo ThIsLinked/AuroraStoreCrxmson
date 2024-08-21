@@ -90,7 +90,7 @@
     <string name="details_beta_description">Вы увидите новые функции и ошибки раньше остальных. Оставляйте свои отзывы разработчикам, чтобы помочь им улучшить работу.</string>
     <string name="details_beta_subscribed">Вы бета-тестер</string>
     <string name="details_changelog">Журнал изменений</string>
-    <string name="details_changelog_unavailable">Журнал изменений не представлен</string>
+    <string name="details_changelog_unavailable">Журнал изменений не представлен…</string>
     <string name="details_contains_ads">Содержит рекламу</string>
     <string name="details_data_safety_subtitle">Практика конфиденциальности и безопасности данных, заявленная разработчиком.</string>
     <string name="details_data_safety_title">Безопасность данных</string>
