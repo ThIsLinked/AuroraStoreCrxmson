@@ -30,17 +30,16 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnPositive"
-            style="@style/Widget.Material3.Button.TonalButton"
+            style="@style/Widget.Material3.Button.TextButton.Dialog.Flush"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/action_update"
-            android:textAppearance="@style/TextAppearance.Aurora.Line1"
-            android:textColor="?android:colorBackground" />
+            android:textAppearance="@style/TextAppearance.Aurora.Line1" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnQueued"
-            style="@style/Widget.Material3.Button.TonalButton"
+            style="@style/Widget.Material3.Button.TextButton.Dialog.Flush"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -50,13 +49,12 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnNegative"
-            style="@style/Widget.Material3.Button.TonalButton"
+            style="@style/Widget.Material3.Button.TextButton.Dialog.Flush"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/action_cancel"
-            android:textAppearance="@style/TextAppearance.Aurora.Line1"
-            android:textColor="?android:colorBackground" />
+            android:textAppearance="@style/TextAppearance.Aurora.Line1" />
 
     </ViewFlipper>
 
