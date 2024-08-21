@@ -76,9 +76,7 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:divider="@drawable/divider"
-                        android:orientation="vertical"
-                        android:showDividers="middle">
+                        android:orientation="vertical">
 
                         <include
                             android:id="@+id/layout_detail_description"
@@ -96,6 +94,7 @@
                             android:id="@+id/epoxy_recycler_stream"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="?android:listPreferredItemPaddingStart"
                             android:clipToPadding="false"
                             android:orientation="vertical"
                             android:overScrollMode="ifContentScrolls"
