@@ -227,9 +227,9 @@
         <item>5</item>
     </string-array>
     <string-array name="pref_updates_auto">
-        <item>Do not auto-update apps</item>
-        <item>Check and notify for available updates</item>
-        <item>Check and install available updates automatically</item>
+        <item>Do not check.</item>
+        <item>Check and notify</item>
+        <item>Check and install automatically.</item>
     </string-array>
     <string-array name="pref_updates_auto_values" translatable="false">
         <item>0</item>

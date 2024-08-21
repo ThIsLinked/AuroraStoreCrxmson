@@ -40,9 +40,9 @@
         <item>Darkord</item>
     </string-array>
     <string-array name="pref_updates_auto">
-        <item>Не обновлять приложения автоматически</item>
-        <item>Проверять доступные обновления и уведомлять о них</item>
-        <item>Проверять доступные обновления и устанавливать их автоматически</item>
+        <item>Не проверять.</item>
+        <item>Проверять и уведомлять.</item>
+        <item>Проверять и устанавливать автоматически.</item>
     </string-array>
     <string-array name="pref_vending_version">
         <item>По умолчанию (с конфигурации устройства)</item>

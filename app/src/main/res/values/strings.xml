@@ -289,11 +289,11 @@
     <string name="onboarding_title_welcome">Welcome</string>
     <string name="onboarding_welcome_select">How you doing?</string>
     <string name="permissions_denied">Required permissions were denied. Please grant them in order to continue the action</string>
-    <string name="pref_abandon_session">Force clear installation sessions</string>
-    <string name="pref_abandon_session_desc">Clear abandon or pending installation sessions</string>
+    <string name="pref_abandon_session">Clear the queue</string>
+    <string name="pref_abandon_session_desc">Clear canceled or pending installation sessions.</string>
     <string name="pref_app_download">Downloads</string>
-    <string name="pref_aurora_only">Aurora Store apps only</string>
-    <string name="pref_aurora_only_desc">Show only Aurora Store installed apps in Updates and Installed apps</string>
+    <string name="pref_aurora_only">Aurora Store only</string>
+    <string name="pref_aurora_only_desc">Show only Aurora Store installed apps in «Updates» and «Installed».</string>
     <string name="pref_category_downloads">Downloads</string>
     <string name="pref_category_filters">Filters</string>
     <string name="pref_category_install">Install</string>
@@ -306,29 +306,29 @@
     <string name="pref_clear_device_owner_title">Clear device owner</string>
     <string name="pref_common_extra">Extras</string>
     <string name="pref_dialog_to_apply_restart">This setting will be applied after you restart the app</string>
-    <string name="pref_dispenser_summary">View and manage token dispensers for anonymous logins</string>
+    <string name="pref_dispenser_summary">View and manage token dispensers for anonymous auth.</string>
     <string name="pref_dispenser_title">Manage dispensers</string>
     <string name="pref_download_directory_error">Selected path is not writable</string>
     <string name="pref_downloader_external">External storage</string>
     <string name="pref_downloader_external_desc">Download files to external storage</string>
     <string name="pref_downloader_path_title">Path</string>
     <string name="pref_downloader_wifi_title">Download using WiFi only</string>
-    <string name="pref_filter_fdroid_summary">Ignore F-Droid apps from Updates and Installed apps</string>
-    <string name="pref_filter_fdroid_title">Filter F-Droid apps</string>
-    <string name="pref_filter_google_summary">Ignore Google apps from Updates and Installed apps</string>
-    <string name="pref_filter_google_title">Filter Google apps</string>
+    <string name="pref_filter_fdroid_summary">Ignore F-Droid apps from «Updates» and «Installed».</string>
+    <string name="pref_filter_fdroid_title" translatable="false">F-Droid</string>
+    <string name="pref_filter_google_summary">Ignore Google apps from «Updates» and «Installed».</string>
+    <string name="pref_filter_google_title" translatable="false">Google</string>
     <string name="pref_filters_tip">Click on this tip to find out which filter the packages belong to.</string>
     <string name="pref_filters_tip_dialogSummary"><b>From Aurora Store:</b>\n<i>— com.aurora.store</i>\n<i>— com.aurora.store.debug</i>\n<i>— com.aurora.store.nightly</i>\n<i>— com.aurora.services</i>\n\n<b>From Google:</b>\n<i>— com.chrome.beta</i>\n<i>— com.chrome.canary</i>\n<i>— com.chrome.dev</i>\n<i>— com.android.chrome</i>\n\n<i>— As well as those with the \"<b>com.google</b>\" fragment in the package name.</i>\n\n<b>From F-Droid:</b>\n<i>— org.fdroid.basic</i>\n<i>— org.fdroid.fdroid</i>\n<i>— org.fdroid.fdroid.privileged</i>\n\n<i>— As well as those that have the F-Droid signature at the apk level.</i></string>
     <string name="pref_filters_tip_dialogTitle">Difference between filters</string>
-    <string name="pref_install_delete_summary">Downloaded APKs will be deleted immediately after installation</string>
-    <string name="pref_install_delete_title">Delete APK post-install</string>
+    <string name="pref_install_delete_summary">Delete installation files after successful installation.</string>
+    <string name="pref_install_delete_title">Delete files</string>
     <string name="pref_install_mode_am" translatable="false">App Manager</string>
-    <string name="pref_install_mode_native">Native (Deprecated)</string>
+    <string name="pref_install_mode_native">Native (deprecated)</string>
     <string name="pref_install_mode_root" translatable="false">Root</string>
-    <string name="pref_install_mode_services">Aurora Services (Deprecated)</string>
+    <string name="pref_install_mode_services">Aurora Services (deprecated)</string>
     <string name="pref_install_mode_session">Session</string>
     <string name="pref_install_mode_shizuku" translatable="false">Shizuku/Sui</string>
-    <string name="pref_install_mode_summary">Select mode of APK installation</string>
+    <string name="pref_install_mode_summary">What method will to install the files?</string>
     <string name="pref_install_mode_title">Installation method</string>
     <string name="pref_network_current_proxy_summary">(not specified)</string>
     <string name="pref_network_current_proxy_title">Current address</string>
@@ -338,25 +338,25 @@
     <string name="pref_network_proxy_title" translatable="false">@string/pref_category_proxy</string>
     <string name="pref_network_proxy_url">Proxy URL</string>
     <string name="pref_network_proxy_url_message">Enter a valid proxy URL to pass all data through the proxy.</string>
-    <string name="pref_network_title">Networking</string>
+    <string name="pref_network_title">Network</string>
     <string name="pref_ui_accent_title">Accent</string>
     <string name="pref_ui_lang_systemValue" translatable="false">@string/sample_systemValue</string>
     <string name="pref_ui_lang_title">Language</string>
     <string name="pref_ui_lang_toast">Restart Aurora if the changes are not fully applied.</string>
     <string name="pref_ui_layout">Layout</string>
-    <string name="pref_ui_layout_tab">Select default tab</string>
-    <string name="pref_ui_no_for_you">For You Pages</string>
-    <string name="pref_ui_no_for_you_desc">Display For You Pages on home screen</string>
-    <string name="pref_ui_similar_apps">Similar and related apps</string>
-    <string name="pref_ui_similar_apps_desc">Display similar and related clusters on app details page</string>
+    <string name="pref_ui_layout_tab">Default tab</string>
+    <string name="pref_ui_no_for_you">Recommendations</string>
+    <string name="pref_ui_no_for_you_desc">Display recommendations on the main screen</string>
+    <string name="pref_ui_similar_apps">Similar and related</string>
+    <string name="pref_ui_similar_apps_desc">Display similar and related apps on app details page</string>
     <string name="pref_ui_theme_system" translatable="false">@string/sample_systemValue</string>
     <string name="pref_ui_theme_title">Theme</string>
-    <string name="pref_ui_title">Customization</string>
+    <string name="pref_ui_title">Interface</string>
     <string name="pref_updates_auto">Auto-update apps</string>
-    <string name="pref_updates_check_frequency">Automatic updates frequency</string>
-    <string name="pref_updates_check_frequency_desc">Configure intervals for auto and self updates, in hour.</string>
-    <string name="pref_updates_incompatible">Incompatible updates</string>
-    <string name="pref_updates_incompatible_desc">Show updates for incompatible or disabled apps that may fail to install</string>
+    <string name="pref_updates_check_frequency">Auto-updates frequency</string>
+    <string name="pref_updates_check_frequency_desc">Auto-start period, in hours.</string>
+    <string name="pref_updates_incompatible">Problematic updates</string>
+    <string name="pref_updates_incompatible_desc">Show updates for disabled apps and those with a different signature.</string>
     <string name="pref_vending_version_tip">All values other than the default are set over the value from the spoof profile (even if the native device is specified).\n\nAfter changing this parameter, you need anyway to reauthorize your account and restart to Aurora.</string>
     <string name="pref_vending_version_title">Play Store version</string>
     <string name="privacy_policy_subtitle">Learn how Aurora Store uses your data</string>
