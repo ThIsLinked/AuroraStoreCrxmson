@@ -46,8 +46,8 @@ class DetailsClusterViewModel @Inject constructor(
     authProvider: AuthProvider
 ) : ViewModel() {
 
-    private var appDetailsHelper = AppDetailsHelper(authProvider.authData!!)
-        .using(HttpClient.getPreferredClient(context))
+    private var appDetailsHelper =
+        AppDetailsHelper(authProvider.authData!!).using(HttpClient.getPreferredClient(context))
     private var streamHelper = StreamHelper(authProvider.authData!!)
 
 
@@ -121,4 +121,5 @@ class DetailsClusterViewModel @Inject constructor(
 
         return streamBundle
     }
+
 }

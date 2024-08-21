@@ -37,7 +37,7 @@ class ProxyURLDialog : DialogFragment() {
             .setMessage(R.string.pref_network_proxy_url_message)
             .setView(view)
             .setPositiveButton(getString(R.string.add), null)
-            .setNegativeButton(getString(android.R.string.cancel)) { _, _ -> dialog?.dismiss()}
+            .setNegativeButton(getString(android.R.string.cancel)) { _, _ -> dialog?.dismiss() }
             .create()
 
         alertDialog.setOnShowListener {

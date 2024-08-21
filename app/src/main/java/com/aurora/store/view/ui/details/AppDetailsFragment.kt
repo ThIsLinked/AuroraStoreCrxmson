@@ -279,26 +279,50 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.exodusReport.collect { report ->
                 if (report == null) {
-                    binding.layoutDetailsPrivacy.txtStatus.text = getString(R.string.failed_to_fetch_report)
+                    binding.layoutDetailsPrivacy.txtStatus.text =
+                        getString(R.string.failed_to_fetch_report)
                     return@collect
                 }
 
                 if (report.trackers.isNotEmpty()) {
                     binding.layoutDetailsPrivacy.txtStatus.apply {
-                        setTextColor(ContextCompat.getColor(requireContext(), R.color.colorAccent03))
+                        setTextColor(
+                            ContextCompat.getColor(
+                                requireContext(),
+                                R.color.colorAccent03
+                            )
+                        )
                         text = if (report.trackers.size == 1) {
-                            getString(R.string.exodus_substring_onlyone, report.trackers.size, report.version)
+                            getString(
+                                R.string.exodus_substring_onlyone,
+                                report.trackers.size,
+                                report.version
+                            )
                         } else {
-                            getString(R.string.exodus_substring, report.trackers.size, report.version)
+                            getString(
+                                R.string.exodus_substring,
+                                report.trackers.size,
+                                report.version
+                            )
                         }
                     }
 
                     binding.layoutDetailsPrivacy.headerPrivacy.addClickListener {
-                        findNavController().navigate(AppDetailsFragmentDirections.actionAppDetailsFragmentToDetailsExodusFragment(app.displayName, report))
+                        findNavController().navigate(
+                            AppDetailsFragmentDirections.actionAppDetailsFragmentToDetailsExodusFragment(
+                                app.displayName,
+                                report
+                            )
+                        )
                     }
                 } else {
                     binding.layoutDetailsPrivacy.txtStatus.apply {
-                        setTextColor(ContextCompat.getColor(requireContext(), R.color.colorAccent12))
+                        setTextColor(
+                            ContextCompat.getColor(
+                                requireContext(),
+                                R.color.colorAccent12
+                            )
+                        )
                         text = getString(R.string.exodus_no_tracker)
                     }
                 }
@@ -454,10 +478,15 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
             txtLine2.apply {
                 text = app.developerName
                 setOnClickListener {
-                    findNavController().navigate(AppDetailsFragmentDirections.actionAppDetailsFragmentToDevAppsFragment(app.developerName))
+                    findNavController().navigate(
+                        AppDetailsFragmentDirections.actionAppDetailsFragmentToDevAppsFragment(
+                            app.developerName
+                        )
+                    )
                 }
             }
-            txtLine3.text = getString(R.string.details_appinfo_line3, app.versionName, app.versionCode)
+            txtLine3.text =
+                getString(R.string.details_appinfo_line3, app.versionName, app.versionCode)
             packageName.text = app.packageName
 
             val tags = mutableListOf<String>()
@@ -578,13 +607,24 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
             binding.layoutDetailsInstall.btnDownload.let { btn ->
                 btn.setButtonState(true)
                 if (app.isInstalled) {
-                    val isExtendedUpdateEnabled : Boolean = (Preferences.getBoolean(requireContext(), Preferences.PREFERENCE_UPDATES_EXTENDED))
+                    val isExtendedUpdateEnabled: Boolean = (Preferences.getBoolean(
+                        requireContext(),
+                        Preferences.PREFERENCE_UPDATES_EXTENDED
+                    ))
                     val needsExtendedUpdate = !app.certificateSetList.any {
-                        it.certificateSet in CertUtil.getEncodedCertificateHashes(requireContext(), app.packageName)
+                        it.certificateSet in CertUtil.getEncodedCertificateHashes(
+                            requireContext(),
+                            app.packageName
+                        )
                     }
-                    isUpdatable = PackageUtil.isUpdatable(requireContext(), app.packageName, app.versionCode.toLong())
+                    isUpdatable = PackageUtil.isUpdatable(
+                        requireContext(),
+                        app.packageName,
+                        app.versionCode.toLong()
+                    )
 
-                    val installedVersion = (PackageUtil.getInstalledVersion(requireContext(), app.packageName))
+                    val installedVersion =
+                        (PackageUtil.getInstalledVersion(requireContext(), app.packageName))
 
                     if (isUpdatable && !needsExtendedUpdate || isUpdatable && isExtendedUpdateEnabled) {
                         binding.layoutDetailsApp.txtLine3.text = getString(
@@ -872,20 +912,15 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
             val carouselController =
                 DetailsCarouselController(object : GenericCarouselController.Callbacks {
                     override fun onHeaderClicked(streamCluster: StreamCluster) {
-                        if (streamCluster.clusterBrowseUrl.isNotEmpty())
-                            openStreamBrowseFragment(
-                                streamCluster.clusterBrowseUrl,
-                                streamCluster.clusterTitle
-                            )
-                        else
+                        if (streamCluster.clusterBrowseUrl.isNotEmpty()) {
+                            openStreamBrowseFragment(streamCluster.clusterBrowseUrl, streamCluster.clusterTitle)
+                        } else {
                             toast(getString(R.string.toast_page_unavailable))
+                        }
                     }
 
                     override fun onClusterScrolled(streamCluster: StreamCluster) {
-                        detailsClusterViewModel.observeCluster(
-                            it,
-                            streamCluster
-                        )
+                        detailsClusterViewModel.observeCluster(it, streamCluster)
                     }
 
                     override fun onAppClick(app: App) {
@@ -903,9 +938,7 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
                         carouselController.setData(streamBundle)
                     }
 
-                    else -> {
-
-                    }
+                    else -> {}
                 }
             }
 
@@ -919,7 +952,9 @@ class AppDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
             headerPermission.addClickListener {
                 if (app.permissions.isNotEmpty()) {
                     findNavController().navigate(
-                        AppDetailsFragmentDirections.actionAppDetailsFragmentToPermissionBottomSheet(app)
+                        AppDetailsFragmentDirections.actionAppDetailsFragmentToPermissionBottomSheet(
+                            app
+                        )
                     )
                 }
             }

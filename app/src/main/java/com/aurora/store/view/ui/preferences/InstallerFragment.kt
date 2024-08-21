@@ -56,7 +56,8 @@ class InstallerFragment : BaseFragment<FragmentInstallerBinding>() {
         shizukuAlive = false
     }
 
-    private val shizukuResultListener = Shizuku.OnRequestPermissionResultListener { _: Int, result: Int ->
+    private val shizukuResultListener =
+        Shizuku.OnRequestPermissionResultListener { _: Int, result: Int ->
             if (result == PackageManager.PERMISSION_GRANTED) {
                 this.installerId = 5
                 save(PREFERENCE_INSTALLER_ID, 5)

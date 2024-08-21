@@ -59,7 +59,8 @@ class UIPreference : BasePreferenceFragment() {
             }
         }
 
-        val themePreference: AuroraListPreference? = findPreference(Preferences.PREFERENCE_THEME_TYPE)
+        val themePreference: AuroraListPreference? =
+            findPreference(Preferences.PREFERENCE_THEME_TYPE)
         themePreference?.let {
             it.setOnPreferenceChangeListener { _, newValue ->
                 val themeId = Integer.parseInt(newValue.toString())
@@ -69,7 +70,8 @@ class UIPreference : BasePreferenceFragment() {
             }
         }
 
-        val accentPreference: AuroraListPreference? = findPreference(Preferences.PREFERENCE_THEME_ACCENT)
+        val accentPreference: AuroraListPreference? =
+            findPreference(Preferences.PREFERENCE_THEME_ACCENT)
         accentPreference?.let {
             it.setOnPreferenceChangeListener { _, newValue ->
                 val accentId = Integer.parseInt(newValue.toString())

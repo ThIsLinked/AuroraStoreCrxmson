@@ -24,14 +24,12 @@ import android.app.admin.DevicePolicyManager
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.provider.Settings
 import android.view.View
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.fragment.findNavController
 import androidx.preference.EditTextPreference
@@ -78,22 +76,26 @@ class DownloadPreference : PreferenceFragmentCompat() {
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
                 val state = isRAndAbove() && Environment.isExternalStorageManager()
                 if (state) {
-                    downloadDirectoryPreference?.summary = PathUtil.getExternalPath(requireContext())
+                    downloadDirectoryPreference?.summary =
+                        PathUtil.getExternalPath(requireContext())
                 } else {
                     notifyPermissionState(isRAndAbove() && Environment.isExternalStorageManager())
                 }
             }
 
-        startForPermissions = registerForActivityResult(ActivityResultContracts.RequestPermission()) {
-            if (it) {
-                @Suppress("KotlinConstantConditions")
-                notifyPermissionState(it)
-            } else {
-                downloadExternalPreference?.isChecked = false
+        startForPermissions =
+            registerForActivityResult(ActivityResultContracts.RequestPermission()) {
+                if (it) {
+                    @Suppress("KotlinConstantConditions")
+                    notifyPermissionState(it)
+                } else {
+                    downloadExternalPreference?.isChecked = false
+                }
             }
-        }
 
-        updatesIntervalPreference?.isEnabled = context?.let { Preferences.getInteger(it, PREFERENCE_UPDATES_AUTO).toString() }!! != 0.toString()
+        updatesIntervalPreference?.isEnabled = context?.let {
+            Preferences.getInteger(it, PREFERENCE_UPDATES_AUTO).toString()
+        }!! != 0.toString()
 
     }
 
@@ -132,44 +134,47 @@ class DownloadPreference : PreferenceFragmentCompat() {
                         devicePolicyManager.clearDeviceOwnerApp(packageName)
                         activity?.recreate()
                     },
-                    { dialog: DialogInterface, _: Int -> dialog.dismiss() }
+                    { dialog: DialogInterface, _: Int ->
+                        dialog.dismiss()
+                    }
                 )
                 true
             }
         }
 
         findPreference<AuroraListPreference>(PREFERENCE_UPDATES_AUTO)?.setOnPreferenceChangeListener { _, newValue ->
-                val value = newValue.toString().toInt()
-                when (value) {
-                    0 -> {
-                        UpdateWorker.cancelAutomatedCheck(requireContext())
-                        updatesIntervalPreference?.let {
-                            it.isEnabled = false
-                        }
+            val value = newValue.toString().toInt()
+            when (value) {
+                0 -> {
+                    UpdateWorker.cancelAutomatedCheck(requireContext())
+                    updatesIntervalPreference?.let {
+                        it.isEnabled = false
                     }
+                }
 
-                    1 -> {
+                1 -> {
+                    UpdateWorker.scheduleAutomatedCheck(requireContext())
+                    updatesIntervalPreference?.let {
+                        it.isEnabled = true
+                    }
+                }
+
+                else -> {
+                    if (requireContext().isIgnoringBatteryOptimizations()) {
                         UpdateWorker.scheduleAutomatedCheck(requireContext())
                         updatesIntervalPreference?.let {
                             it.isEnabled = true
                         }
-                    }
-                    else -> {
-                        if (requireContext().isIgnoringBatteryOptimizations()) {
-                            UpdateWorker.scheduleAutomatedCheck(requireContext())
-                            updatesIntervalPreference?.let {
-                                it.isEnabled = true
-                            }
-                            return@setOnPreferenceChangeListener true
-                        } else {
-                            findNavController().navigate(
-                                MobileNavigationDirections.actionGlobalDozeWarningSheet(true)
-                            )
-                        }
+                        return@setOnPreferenceChangeListener true
+                    } else {
+                        findNavController().navigate(
+                            MobileNavigationDirections.actionGlobalDozeWarningSheet(true)
+                        )
                     }
                 }
-                value != 2
             }
+            value != 2
+        }
 
         findPreference<SeekBarPreference>(PREFERENCE_UPDATES_CHECK_INTERVAL)
             ?.setOnPreferenceChangeListener { _, _ ->
@@ -178,7 +183,6 @@ class DownloadPreference : PreferenceFragmentCompat() {
             }
     }
 
-    @RequiresApi(Build.VERSION_CODES.R)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -189,7 +193,6 @@ class DownloadPreference : PreferenceFragmentCompat() {
 
         downloadExternalPreference = findPreference(Preferences.PREFERENCE_DOWNLOAD_EXTERNAL)
         downloadDirectoryPreference = findPreference(Preferences.PREFERENCE_DOWNLOAD_DIRECTORY)
-        updatesIntervalPreference = findPreference(PREFERENCE_UPDATES_CHECK_INTERVAL)
 
 
         downloadExternalPreference?.let { switchPreferenceCompat ->
