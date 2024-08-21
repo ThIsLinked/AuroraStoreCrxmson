@@ -1,3 +1,12 @@
+> **v4.6.0-nightly-21.08.24 (61)**
+> * Pulled up to nightly 21.08.24 (include stable 4.6.0);
+> * UI correction;
+> * Updated localizations;
+> * Returned a link to the off. repo of the original author;
+> * Updated structure in files (on project lvl);
+> * Some conversions in the code and resource files (on project lvl);
+> * Minor changed;
+
 > **v4.5.1-nightly-16.08.24 (60)**
 > * Pulled up to nightly 16.08.24;
 > * UI and UX changes;
