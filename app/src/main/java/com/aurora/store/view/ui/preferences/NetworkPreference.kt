@@ -26,8 +26,6 @@ import androidx.appcompat.widget.Toolbar
 import androidx.navigation.fragment.findNavController
 import androidx.preference.Preference
 import androidx.preference.SwitchPreferenceCompat
-//import com.aurora.extensions.runOnUiThread
-//import com.aurora.extensions.toast
 import com.aurora.store.R
 import com.aurora.store.util.Preferences
 import com.aurora.store.util.Preferences.PREFERENCE_PROXY_CURRENT_URL
@@ -44,6 +42,26 @@ class NetworkPreference : BasePreferenceFragment(),
     SharedPreferences.OnSharedPreferenceChangeListener {
 
     private lateinit var sharedPreferences: SharedPreferences
+
+    private var proxyCurrentPreference: Preference? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        proxyCurrentPreference = findPreference(PREFERENCE_PROXY_CURRENT_URL)
+
+        proxyCurrentPreference?.let { _ ->
+            proxyCurrentPreference?.summary =
+                if (Preferences.getString(requireContext(), PREFERENCE_PROXY_URL).isNotBlank()) {
+                    context?.let {
+                        Preferences.getString(it, PREFERENCE_PROXY_URL)
+                    }
+                } else {
+                    getString(R.string.pref_network_current_proxy_summary)
+                }
+        }
+
+    }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences_network, rootKey)
@@ -79,14 +97,6 @@ class NetworkPreference : BasePreferenceFragment(),
             }
         }
 
-        findPreference<Preference>(PREFERENCE_PROXY_CURRENT_URL)?.apply {
-            summary = if (Preferences.getString(requireContext(), PREFERENCE_PROXY_URL).isNotBlank()) {
-                Preferences.getString(context, PREFERENCE_PROXY_URL)
-            } else {
-                getString(R.string.pref_network_current_proxy_summary)
-            }
-        }
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -104,7 +114,8 @@ class NetworkPreference : BasePreferenceFragment(),
 
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
         if (key == PREFERENCE_PROXY_URL) {
-            findPreference<SwitchPreferenceCompat>(PREFERENCE_PROXY_ENABLED)?.isChecked = Preferences.getString(requireContext(), PREFERENCE_PROXY_URL).isNotBlank()
+            findPreference<SwitchPreferenceCompat>(PREFERENCE_PROXY_ENABLED)?.isChecked =
+                Preferences.getString(requireContext(), PREFERENCE_PROXY_URL).isNotBlank()
         }
     }
 }
