@@ -1,5 +1,5 @@
-> **v4.6.0-nightly-21.08.24 (61)**
-> * Pulled up to nightly 21.08.24 (include stable 4.6.0);
+> **v4.6.0-nightly-25.08.24 (61)**
+> * Pulled up to nightly 25.08.24 (include stable 4.6.0);
 > * UI correction;
 > * Updated localizations;
 > * Returned a link to the off. repo of the original author;
