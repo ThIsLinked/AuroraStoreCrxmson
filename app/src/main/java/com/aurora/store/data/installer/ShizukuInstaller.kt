@@ -45,7 +45,7 @@ import com.aurora.store.data.installer.AppInstaller.Companion.EXTRA_VERSION_CODE
 import com.aurora.store.data.model.InstallerInfo
 import com.aurora.store.data.receiver.InstallerStatusReceiver
 import com.aurora.store.data.room.download.Download
-import com.aurora.store.util.Log
+import android.util.Log
 import com.aurora.store.util.PackageUtil.isSharedLibraryInstalled
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dev.rikka.tools.refine.Refine
@@ -72,6 +72,8 @@ class ShizukuInstaller @Inject constructor(
             )
         }
     }
+
+    private val tag = ShizukuInstaller::class.java.simpleName
 
     // Taken from LSPatch (https://github.com/LSPosed/LSPatch)
     private fun IBinder.wrap() = ShizukuBinderWrapper(this)
@@ -101,7 +103,7 @@ class ShizukuInstaller @Inject constructor(
         super.install(download)
 
         if (isAlreadyQueued(download.packageName)) {
-            Log.i("${download.packageName} already queued")
+            Log.i(tag, "${download.packageName} already queued")
         } else {
             download.sharedLibs.forEach {
                 // Shared library packages cannot be updated
@@ -127,7 +129,7 @@ class ShizukuInstaller @Inject constructor(
         sharedLibPkgName: String = "",
         displayName: String = ""
     ) {
-        Log.i("Received session install request for ${sharedLibPkgName.ifBlank { packageName }}")
+        Log.i(tag, "Received session install request for ${sharedLibPkgName.ifBlank { packageName }}")
 
         val (sessionId, session) = kotlin.runCatching {
             val params = SessionParams(SessionParams.MODE_FULL_INSTALL)
@@ -159,7 +161,7 @@ class ShizukuInstaller @Inject constructor(
         }
 
         try {
-            Log.i("Writing splits to session for ${sharedLibPkgName.ifBlank { packageName }}")
+            Log.i(tag, "Writing splits to session for ${sharedLibPkgName.ifBlank { packageName }}")
             getFiles(packageName, versionCode, sharedLibPkgName).forEach {
                 it.inputStream().use { input ->
                     session.openWrite(
@@ -190,7 +192,7 @@ class ShizukuInstaller @Inject constructor(
                 true
             )
 
-            Log.i("Starting install session for $packageName")
+            Log.i(tag, "Starting install session for $packageName")
             session.commit(pendingIntent!!.intentSender)
             session.close()
         } catch (exception: Exception) {

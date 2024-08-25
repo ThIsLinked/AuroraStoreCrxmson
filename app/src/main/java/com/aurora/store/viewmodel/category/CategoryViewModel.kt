@@ -20,7 +20,6 @@
 package com.aurora.store.viewmodel.category
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -30,10 +29,9 @@ import com.aurora.gplayapi.helpers.CategoryHelper
 import com.aurora.gplayapi.helpers.contracts.CategoryContract
 import com.aurora.store.CategoryStash
 import com.aurora.store.data.model.ViewState
-import com.aurora.store.data.network.HttpClient
+import com.aurora.store.data.network.IProxyHttpClient
 import com.aurora.store.data.providers.AuthProvider
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -41,13 +39,13 @@ import javax.inject.Inject
 @HiltViewModel
 @SuppressLint("StaticFieldLeak") // false positive, see https://github.com/google/dagger/issues/3253
 class CategoryViewModel @Inject constructor(
-    @ApplicationContext private val context: Context,
-    authProvider: AuthProvider
+    authProvider: AuthProvider,
+    httpClient: IProxyHttpClient
 ) : ViewModel() {
     private val tag = CategoryViewModel::class.java.simpleName
 
     private val categoryHelper: CategoryHelper = CategoryHelper(authProvider.authData!!)
-        .using(HttpClient.getPreferredClient(context))
+        .using(httpClient)
 
     private var stash: CategoryStash = mutableMapOf(
         Category.Type.APPLICATION to emptyList(),

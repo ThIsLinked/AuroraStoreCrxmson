@@ -46,7 +46,8 @@ android {
         versionCode = 24082101
         versionName = "4.6.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.aurora.store.HiltInstrumentationTestRunner"
+        testInstrumentationRunnerArguments["disableAnalytics"] = "true"
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -160,7 +161,10 @@ dependencies {
 
     //Test
     testImplementation(libs.junit)
+    testImplementation(libs.androidx.junit)
+    testImplementation(libs.google.truth)
     androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.google.truth)
     androidTestImplementation(libs.androidx.espresso.core)
 
     //Hilt
@@ -168,6 +172,9 @@ dependencies {
     ksp(libs.hilt.androidx.compiler)
     implementation(libs.hilt.android.core)
     implementation(libs.hilt.androidx.work)
+
+    kspAndroidTest(libs.hilt.android.compiler)
+    androidTestImplementation(libs.hilt.android.testing)
 
     //Room
     ksp(libs.androidx.room.compiler)

@@ -20,17 +20,15 @@
 package com.aurora.store.viewmodel.browse
 
 import android.annotation.SuppressLint
-import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.aurora.gplayapi.data.models.StreamCluster
 import com.aurora.gplayapi.helpers.ExpandedBrowseHelper
-import com.aurora.store.data.network.HttpClient
+import com.aurora.store.data.network.IProxyHttpClient
 import com.aurora.store.data.providers.AuthProvider
-import com.aurora.store.util.Log
+import android.util.Log
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.supervisorScope
@@ -39,12 +37,14 @@ import javax.inject.Inject
 @HiltViewModel
 @SuppressLint("StaticFieldLeak") // false positive, see https://github.com/google/dagger/issues/3253
 class ExpandedStreamBrowseViewModel @Inject constructor(
-    @ApplicationContext private val context: Context,
-    authProvider: AuthProvider
+    authProvider: AuthProvider,
+    httpClient: IProxyHttpClient
 ) : ViewModel() {
 
+    private val tag = ExpandedStreamBrowseViewModel::class.java.simpleName
+
     private val streamHelper: ExpandedBrowseHelper = ExpandedBrowseHelper(authProvider.authData!!)
-        .using(HttpClient.getPreferredClient(context))
+        .using(httpClient)
 
     val liveData: MutableLiveData<StreamCluster> = MutableLiveData()
     var streamCluster: StreamCluster = StreamCluster()
@@ -66,7 +66,7 @@ class ExpandedStreamBrowseViewModel @Inject constructor(
     }
 
     fun next() {
-        Log.e("NEXT CALED")
+        Log.e(tag, "NEXT CALED")
         viewModelScope.launch(Dispatchers.IO) {
             supervisorScope {
                 try {
@@ -82,9 +82,10 @@ class ExpandedStreamBrowseViewModel @Inject constructor(
                     liveData.postValue(streamCluster)
 
                     if (!streamCluster.hasNext()) {
-                        Log.i("End of Bundle")
+                        Log.i(tag, "End of Bundle")
                     }
-                } catch (_: Exception) {
+                } catch (exception: Exception) {
+                    Log.e(tag, "Failed to fetch next stream", exception)
                 }
             }
         }

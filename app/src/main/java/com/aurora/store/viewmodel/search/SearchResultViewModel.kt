@@ -20,7 +20,6 @@
 package com.aurora.store.viewmodel.search
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -30,11 +29,10 @@ import com.aurora.gplayapi.data.models.SearchBundle
 import com.aurora.gplayapi.helpers.SearchHelper
 import com.aurora.gplayapi.helpers.contracts.SearchContract
 import com.aurora.gplayapi.helpers.web.WebSearchHelper
-import com.aurora.store.data.network.HttpClient
+import com.aurora.store.data.network.IProxyHttpClient
 import com.aurora.store.data.providers.AuthProvider
 import com.aurora.store.data.providers.FilterProvider
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.supervisorScope
@@ -44,14 +42,15 @@ import javax.inject.Inject
 @SuppressLint("StaticFieldLeak") // false positive, see https://github.com/google/dagger/issues/3253
 class SearchResultViewModel @Inject constructor(
     val filterProvider: FilterProvider,
-    @ApplicationContext private val context: Context,
-    private val authProvider: AuthProvider
+    private val authProvider: AuthProvider,
+    httpClient: IProxyHttpClient
 ) : ViewModel() {
 
     private val tag = SearchResultViewModel::class.java.simpleName
 
     private val webSearchHelper: WebSearchHelper = WebSearchHelper()
-    private val searchHelper: SearchHelper = SearchHelper(authProvider.authData!!).using(HttpClient.getPreferredClient(context))
+    private val searchHelper: SearchHelper = SearchHelper(authProvider.authData!!)
+        .using(httpClient)
 
     val liveData: MutableLiveData<SearchBundle> = MutableLiveData()
 

@@ -20,6 +20,7 @@
 package com.aurora.store.data.providers
 
 import android.content.Context
+import android.util.Log
 import com.aurora.Constants
 import com.aurora.Constants.ACCOUNT_SIGNED_IN
 import com.aurora.gplayapi.data.models.AuthData
@@ -28,8 +29,7 @@ import com.aurora.gplayapi.helpers.AuthValidator
 import com.aurora.store.R
 import com.aurora.store.data.model.AccountType
 import com.aurora.store.data.model.Auth
-import com.aurora.store.data.network.HttpClient
-import com.aurora.store.util.Log
+import com.aurora.store.data.network.IProxyHttpClient
 import com.aurora.store.util.Preferences
 import com.aurora.store.util.Preferences.PREFERENCE_AUTH_DATA
 import com.aurora.store.util.Preferences.PREFERENCE_DISPENSER_URLS
@@ -46,10 +46,13 @@ import javax.inject.Singleton
 @Singleton
 class AuthProvider @Inject constructor(
     @ApplicationContext private val context: Context,
-    private val gson: Gson
+    private val gson: Gson,
+    private val spoofProvider: SpoofProvider,
+    private val httpClient: IProxyHttpClient
 ) {
 
-    private val spoofProvider: SpoofProvider get() = SpoofProvider(context)
+    private val tag = AuthProvider::class.java.simpleName
+
     val properties: Properties
         get() {
             val currentProperties = if (spoofProvider.isDeviceSpoofEnabled()) {
@@ -77,8 +80,7 @@ class AuthProvider @Inject constructor(
 
     val isAnonymous: Boolean
         get() {
-            val name =
-                Preferences.getString(context, Constants.ACCOUNT_TYPE, AccountType.GOOGLE.name)
+            val name = Preferences.getString(context, Constants.ACCOUNT_TYPE, AccountType.GOOGLE.name)
             return AccountType.valueOf(name) == AccountType.ANONYMOUS
         }
 
@@ -103,7 +105,7 @@ class AuthProvider @Inject constructor(
         return withContext(Dispatchers.IO) {
             try {
                 AuthValidator(authData ?: return@withContext false)
-                    .using(HttpClient.getPreferredClient(context))
+                    .using(httpClient)
                     .isValid()
             } catch (exception: Exception) {
                 false
@@ -112,7 +114,7 @@ class AuthProvider @Inject constructor(
     }
 
     private fun getSavedAuthData(): AuthData? {
-        Log.i("Loading saved AuthData")
+        Log.i(tag, "Loading saved AuthData")
         val rawAuth: String = Preferences.getString(context, PREFERENCE_AUTH_DATA)
         return if (rawAuth.isNotEmpty()) {
             gson.fromJson(rawAuth, AuthData::class.java)
@@ -135,7 +137,7 @@ class AuthProvider @Inject constructor(
                     locale = locale
                 )
             } catch (exception: Exception) {
-                Log.e("Failed to generate Session", exception)
+                Log.e(tag, "Failed to generate Session", exception)
                 return@withContext null
             }
         }
@@ -144,10 +146,7 @@ class AuthProvider @Inject constructor(
     private suspend fun buildAnonymousAuthData(): AuthData? {
         return withContext(Dispatchers.IO) {
             try {
-                val playResponse = HttpClient
-                    .getPreferredClient(context)
-                    .getAuth(dispenserURL!!)
-
+                val playResponse = httpClient.getAuth(dispenserURL!!)
                 val auth = gson.fromJson(String(playResponse.responseBytes), Auth::class.java)
                 return@withContext AuthHelper.build(
                     email = auth.email,
@@ -158,7 +157,7 @@ class AuthProvider @Inject constructor(
                     locale = locale
                 )
             } catch (exception: Exception) {
-                Log.e("Failed to generate AuthData", exception)
+                Log.e(tag, "Failed to generate AuthData", exception)
                 return@withContext null
             }
         }
@@ -172,11 +171,7 @@ class AuthProvider @Inject constructor(
             val versionStrings = resources.getStringArray(R.array.pref_vending_version)
 
             currentProperties.setProperty("Vending.version", versionCodes[vendingVersionIndex])
-            currentProperties.setProperty(
-                "Vending.versionString",
-                versionStrings[vendingVersionIndex]
-            )
+            currentProperties.setProperty("Vending.versionString", versionStrings[vendingVersionIndex])
         }
     }
-
 }

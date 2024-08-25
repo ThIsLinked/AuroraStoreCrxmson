@@ -20,7 +20,6 @@
 package com.aurora.store.viewmodel.subcategory
 
 import android.annotation.SuppressLint
-import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -30,10 +29,9 @@ import com.aurora.gplayapi.helpers.contracts.CategoryStreamContract
 import com.aurora.gplayapi.helpers.contracts.StreamContract
 import com.aurora.gplayapi.helpers.web.WebCategoryStreamHelper
 import com.aurora.store.data.model.ViewState
-import com.aurora.store.data.network.HttpClient
-import com.aurora.store.util.Log
+import com.aurora.store.data.network.IProxyHttpClient
+import android.util.Log
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.supervisorScope
@@ -42,11 +40,13 @@ import javax.inject.Inject
 @HiltViewModel
 @SuppressLint("StaticFieldLeak") // false positive, see https://github.com/google/dagger/issues/3253
 class CategoryStreamViewModel @Inject constructor(
-    @ApplicationContext private val context: Context
+    httpClient: IProxyHttpClient
 ) : ViewModel() {
 
+    private val tag = CategoryStreamViewModel::class.java.simpleName
+
     private var webCategoryStreamHelper = WebCategoryStreamHelper()
-        .using(HttpClient.getPreferredClient(context))
+        .using(httpClient)
 
     val liveData: MutableLiveData<ViewState> = MutableLiveData()
 
@@ -92,7 +92,7 @@ class CategoryStreamViewModel @Inject constructor(
                         //Post updated to UI
                         liveData.postValue(ViewState.Success(stash))
                     } else {
-                        Log.i("End of Bundle")
+                        Log.i(tag, "End of Bundle")
                     }
                 } catch (e: Exception) {
                     liveData.postValue(ViewState.Error(e.message))
@@ -111,7 +111,7 @@ class CategoryStreamViewModel @Inject constructor(
                         updateCluster(category, streamCluster.id, newCluster)
                         liveData.postValue(ViewState.Success(stash))
                     } else {
-                        Log.i("End of cluster")
+                        Log.i(tag, "End of cluster")
                         streamCluster.clusterNextPageUrl = String()
                     }
                 } catch (e: Exception) {

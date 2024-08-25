@@ -30,12 +30,16 @@ import com.aurora.store.view.epoxy.views.preference.LocaleViewModel_
 import com.aurora.store.view.ui.commons.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.Locale
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class LocaleSpoofFragment : BaseFragment<FragmentGenericRecyclerBinding>() {
 
     private val tag = LocaleSpoofFragment::class.java.simpleName
-    private lateinit var spoofProvider: SpoofProvider
+
+    @Inject
+    lateinit var spoofProvider: SpoofProvider
+
     private lateinit var locale: Locale
 
     companion object {
@@ -50,7 +54,6 @@ class LocaleSpoofFragment : BaseFragment<FragmentGenericRecyclerBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        spoofProvider = SpoofProvider(requireContext())
         locale = if (spoofProvider.isLocaleSpoofEnabled()) {
             spoofProvider.getSpoofLocale()
         } else {
@@ -70,20 +73,20 @@ class LocaleSpoofFragment : BaseFragment<FragmentGenericRecyclerBinding>() {
             locales
                 .sortedBy { it.displayName }
                 .forEach {
-                add(
-                    LocaleViewModel_()
-                        .id(it.language)
-                        .markChecked(locale == it)
-                        .checked { _, checked ->
-                            if (checked) {
-                                locale = it
-                                saveSelection(it)
-                                requestModelBuild()
+                    add(
+                        LocaleViewModel_()
+                            .id(it.language)
+                            .markChecked(locale == it)
+                            .checked { _, checked ->
+                                if (checked) {
+                                    locale = it
+                                    saveSelection(it)
+                                    requestModelBuild()
+                                }
                             }
-                        }
-                        .locale(it)
-                )
-            }
+                            .locale(it)
+                    )
+                }
         }
     }
 

@@ -31,7 +31,7 @@ import com.aurora.extensions.showDialog
 import com.aurora.store.R
 import com.aurora.store.data.installer.AppInstaller
 import com.aurora.store.databinding.FragmentInstallerBinding
-import com.aurora.store.util.Log
+import android.util.Log
 import com.aurora.store.util.Preferences
 import com.aurora.store.util.Preferences.PREFERENCE_INSTALLER_ID
 import com.aurora.store.util.save
@@ -44,15 +44,17 @@ import rikka.sui.Sui
 @AndroidEntryPoint
 class InstallerFragment : BaseFragment<FragmentInstallerBinding>() {
 
+    private val tag = InstallerFragment::class.java.simpleName
+
     private var installerId: Int = 0
 
     private var shizukuAlive = Sui.isSui()
     private val shizukuAliveListener = Shizuku.OnBinderReceivedListener {
-        Log.d("ShizukuInstaller Alive!")
+        Log.d(tag, "ShizukuInstaller Alive!")
         shizukuAlive = true
     }
     private val shizukuDeadListener = Shizuku.OnBinderDeadListener {
-        Log.d("ShizukuInstaller Dead!")
+        Log.d(tag, "ShizukuInstaller Dead!")
         shizukuAlive = false
     }
 

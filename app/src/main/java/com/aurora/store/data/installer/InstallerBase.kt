@@ -26,13 +26,15 @@ import com.aurora.store.AuroraApp
 import com.aurora.store.BuildConfig
 import com.aurora.store.data.event.InstallerEvent
 import com.aurora.store.data.room.download.Download
-import com.aurora.store.util.Log
+import android.util.Log
 import com.aurora.store.util.PathUtil
 import com.aurora.store.util.Preferences
 import com.aurora.store.util.Preferences.PREFERENCE_AUTO_DELETE
 import java.io.File
 
 abstract class InstallerBase(protected var context: Context) : IInstaller {
+
+    private val tag = InstallerBase::class.java.simpleName
 
     var download: Download? = null
         private set
@@ -64,7 +66,7 @@ abstract class InstallerBase(protected var context: Context) : IInstaller {
     }
 
     open fun postError(packageName: String, error: String?, extra: String?) {
-        Log.e("Service Error :$error")
+        Log.e(tag, "Service Error :$error")
 
         val event = InstallerEvent.Failed(packageName).apply {
             this.error = error ?: ""

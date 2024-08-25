@@ -20,7 +20,7 @@
 package com.aurora.store.viewmodel.details
 
 import android.annotation.SuppressLint
-import android.content.Context
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -31,11 +31,9 @@ import com.aurora.gplayapi.helpers.AppDetailsHelper
 import com.aurora.gplayapi.helpers.StreamHelper
 import com.aurora.gplayapi.helpers.contracts.StreamContract
 import com.aurora.store.data.model.ViewState
-import com.aurora.store.data.network.HttpClient
+import com.aurora.store.data.network.IProxyHttpClient
 import com.aurora.store.data.providers.AuthProvider
-import com.aurora.store.util.Log
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.supervisorScope
@@ -44,12 +42,14 @@ import javax.inject.Inject
 @HiltViewModel
 @SuppressLint("StaticFieldLeak") // false positive, see https://github.com/google/dagger/issues/3253
 class DevProfileViewModel @Inject constructor(
-    @ApplicationContext private val context: Context,
-    authProvider: AuthProvider
+    authProvider: AuthProvider,
+    httpClient: IProxyHttpClient
 ) : ViewModel() {
 
+    private val tag = DevProfileViewModel::class.java.simpleName
+
     private var appDetailsHelper = AppDetailsHelper(authProvider.authData!!)
-        .using(HttpClient.getPreferredClient(context))
+        .using(httpClient)
     private var streamHelper = StreamHelper(authProvider.authData!!)
 
     val liveData: MutableLiveData<ViewState> = MutableLiveData()
@@ -83,7 +83,7 @@ class DevProfileViewModel @Inject constructor(
                         devStream = devStream.copy(streamBundle = streamBundle)
                         liveData.postValue(ViewState.Success(devStream))
                     } else {
-                        Log.i("End of cluster")
+                        Log.i(tag, "End of cluster")
                         streamCluster.clusterNextPageUrl = String()
                     }
                 } catch (e: Exception) {

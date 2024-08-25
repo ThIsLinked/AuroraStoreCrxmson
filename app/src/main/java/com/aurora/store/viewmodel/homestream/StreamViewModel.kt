@@ -20,7 +20,7 @@
 package com.aurora.store.viewmodel.homestream
 
 import android.annotation.SuppressLint
-import android.content.Context
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -30,10 +30,8 @@ import com.aurora.gplayapi.helpers.contracts.StreamContract
 import com.aurora.gplayapi.helpers.web.WebStreamHelper
 import com.aurora.store.HomeStash
 import com.aurora.store.data.model.ViewState
-import com.aurora.store.data.network.HttpClient
-import com.aurora.store.util.Log
+import com.aurora.store.data.network.IProxyHttpClient
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.supervisorScope
@@ -42,11 +40,13 @@ import javax.inject.Inject
 @HiltViewModel
 @SuppressLint("StaticFieldLeak") // false positive, see https://github.com/google/dagger/issues/3253
 class StreamViewModel @Inject constructor(
-    @ApplicationContext private val context: Context
+    httpClient: IProxyHttpClient
 ) : ViewModel() {
 
+    private val tag = StreamViewModel::class.java.simpleName
+
     private var webStreamHelper = WebStreamHelper()
-        .using(HttpClient.getPreferredClient(context))
+        .using(httpClient)
 
     val liveData: MutableLiveData<ViewState> = MutableLiveData()
 
@@ -91,7 +91,7 @@ class StreamViewModel @Inject constructor(
                         //Post updated to UI
                         liveData.postValue(ViewState.Success(stash))
                     } else {
-                        Log.i("End of Bundle")
+                        Log.i(tag, "End of Bundle")
                     }
                 } catch (e: Exception) {
                     liveData.postValue(ViewState.Error(e.message))
@@ -110,7 +110,7 @@ class StreamViewModel @Inject constructor(
                         updateCluster(category, streamCluster.id, newCluster)
                         liveData.postValue(ViewState.Success(stash))
                     } else {
-                        Log.i("End of cluster")
+                        Log.i(tag, "End of cluster")
                         streamCluster.clusterNextPageUrl = String()
                     }
                 } catch (e: Exception) {

@@ -41,8 +41,10 @@ import androidx.core.content.ContextCompat
 import com.aurora.Constants
 import com.aurora.gplayapi.data.models.App
 import com.aurora.store.R
-import com.aurora.store.util.Log
+import android.util.Log
 import com.aurora.store.util.Preferences
+
+private const val TAG = "Context"
 
 val Context.inflater: LayoutInflater
     get() = LayoutInflater.from(this)
@@ -51,8 +53,8 @@ fun Context.browse(url: String) {
     try {
         val customTabsIntent = CustomTabsIntent.Builder()
         customTabsIntent.build().launchUrl(this, Uri.parse(url))
-    } catch (e: Exception) {
-        Log.e(e.message)
+    } catch (exception: Exception) {
+        Log.e(TAG, "Failed to open custom tab", exception)
     }
 }
 
@@ -66,7 +68,7 @@ fun Context.share(app: App) {
         }
         startActivity(Intent.createChooser(sendIntent, getString(R.string.action_share)))
     } catch (exception: Exception) {
-        Log.e("Failed to share app", exception)
+        Log.e(TAG, "Failed to share app", exception)
     }
 }
 
@@ -78,8 +80,8 @@ fun Context.openInfo(packageName: String) {
                 Uri.parse("package:$packageName")
             )
         )
-    } catch (_: Exception) {
-
+    } catch (exception: Exception) {
+        Log.e(TAG, "Failed to open app info page", exception)
     }
 }
 

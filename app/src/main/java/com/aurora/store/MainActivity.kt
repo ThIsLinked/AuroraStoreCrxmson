@@ -24,8 +24,11 @@ import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.View
 import androidx.activity.addCallback
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.ColorUtils
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.FloatingWindow
 import androidx.navigation.fragment.NavHostFragment
@@ -45,8 +48,8 @@ import com.aurora.store.view.ui.sheets.NetworkDialogSheet
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import ru.maximoff.aurora.store.loadLanguage
 import javax.inject.Inject
+import ru.maximoff.aurora.store.loadLanguage
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -54,7 +57,7 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var appUtil: AppUtil
 
-    private lateinit var b: ActivityMainBinding
+    private lateinit var B: ActivityMainBinding
 
     // TopLevelFragments
     private val topLevelFrags = listOf(
@@ -68,16 +71,25 @@ class MainActivity : AppCompatActivity() {
         // This is needed thanks to OEMs breaking the MY_PACKAGE_REPLACED API
         MigrationReceiver.runMigrationsIfRequired(this)
 
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
 
         loadLanguage(this)
 
         applyThemeAccent()
 
-        b = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(b.root)
+        B = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(B.root)
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        // Adjust root view's paddings for edgeToEdge display
+        ViewCompat.setOnApplyWindowInsetsListener(B.root) { root, windowInsets ->
+            val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
+            root.setPadding(insets.left, insets.top, insets.right, 0)
+            windowInsets
+        }
+
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
 
         this.lifecycleScope.launch {
@@ -85,10 +97,11 @@ class MainActivity : AppCompatActivity() {
                 when (it) {
                     NetworkStatus.AVAILABLE -> {
                         if (!supportFragmentManager.isDestroyed && isIntroDone()) {
-                            val fragment =
-                                supportFragmentManager.findFragmentByTag(NetworkDialogSheet.TAG)
+                            val fragment = supportFragmentManager
+                                .findFragmentByTag(NetworkDialogSheet.TAG)
                             fragment?.let {
-                                supportFragmentManager.beginTransaction().remove(fragment)
+                                supportFragmentManager.beginTransaction()
+                                    .remove(fragment)
                                     .commitAllowingStateLoss()
                             }
                         }
@@ -105,7 +118,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        b.navView.apply {
+        B.navView.apply {
             val alphaColor = ColorUtils.setAlphaComponent(this@MainActivity.accentColor(), 100)
             setupWithNavController(navController)
             itemActiveIndicatorColor = ColorStateList.valueOf(alphaColor)
@@ -136,8 +149,8 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, navDestination, _ ->
             if (navDestination !is FloatingWindow) {
                 when (navDestination.id) {
-                    in topLevelFrags -> b.navView.visibility = View.VISIBLE
-                    else -> b.navView.visibility = View.GONE
+                    in topLevelFrags -> B.navView.visibility = View.VISIBLE
+                    else -> B.navView.visibility = View.GONE
                 }
             }
         }
@@ -161,7 +174,7 @@ class MainActivity : AppCompatActivity() {
 
         lifecycleScope.launch {
             appUtil.updates.collectLatest { list ->
-                b.navView.getOrCreateBadge(R.id.updatesFragment).apply {
+                B.navView.getOrCreateBadge(R.id.updatesFragment).apply {
                     isVisible = !list.isNullOrEmpty()
                     number = list?.size ?: 0
                 }
@@ -172,5 +185,4 @@ class MainActivity : AppCompatActivity() {
     private fun isIntroDone(): Boolean {
         return Preferences.getBoolean(this@MainActivity, Preferences.PREFERENCE_INTRO)
     }
-
 }
