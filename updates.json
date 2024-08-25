@@ -1,5 +1,5 @@
 {
-    "versionName": "4.5.1",
-    "versionCode": 24081601,
-    "changelog": " • Pulled up to nightly 16.08.24;\n • UI and UX changes;\n • Returned (perhaps temporarily) the original deep links;\n • In the «Updates» tab, all SwipeRefresh shades now inherit the colors of the current theme (see \"Edit #1\");\n • Changed the visual appearance and order of the installers list (see \"Edit #2\");\n • [Clone by me] The icon now has a Royal Blue color fill to better differentiate between the original and the clone;"
+    "versionName": "4.6.0",
+    "versionCode": 24082101,
+    "changelog": " • Pulled up to nightly 25.08.24 (include stable 4.6.0);\n • UI correction;\n • Updated localizations;\n • Returned a link to the off. repo of the original author;\n • Updated structure in files (on project lvl);\n • Some conversions in the code and resource files (on project lvl);\n • Minor changed;"
 }
