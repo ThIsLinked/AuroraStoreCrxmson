@@ -7,9 +7,9 @@
     android:startY="0.0"
     android:type="linear">
     <item
-        android:color="@color/crimson"
+        android:color="@color/ic_launcher_background_start"
         android:offset="0.0" />
     <item
-        android:color="@color/crimsonPrimary"
+        android:color="@color/ic_launcher_background_end"
         android:offset="1.0" />
 </gradient>
