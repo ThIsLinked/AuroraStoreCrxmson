@@ -43,7 +43,7 @@ android {
         minSdk = 24
         targetSdk = 35
 
-        versionCode = 24082101
+        versionCode = 24082501
         versionName = "4.6.0"
 
         testInstrumentationRunner = "com.aurora.store.HiltInstrumentationTestRunner"

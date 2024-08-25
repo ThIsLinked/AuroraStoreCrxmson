@@ -17,7 +17,7 @@
  *  along with Aurora Store.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-rootProject.name = "Aurora Store Crxmson v4.6.0-nightly-21.08.24 (61)"
+rootProject.name = "Aurora Store Crxmson v4.6.0-nightly-25.08.24 (61)"
 include(":app")
 
 pluginManagement {
